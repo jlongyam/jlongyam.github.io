@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0;
+}
+#main_editor {
+  height: 100%;
+  font: 1em ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  padding: 2.5%;
+}
+.CodeMirror {
+  /* height: 100%; */
+  font-family: inherit;
+}
+.CodeMirror-foldmarker {
+  color: inherit ;
+  font-family: inherit;
+  font-weight: 400 ;
+  text-shadow: none;
+  border: 1px solid #373737;
+}

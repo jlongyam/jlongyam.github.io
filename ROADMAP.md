@@ -1,8 +1,9 @@
 # ROADMAP
 
 ## Initial
- 
-- [ ] collect snippet
-- [x] add included version info
-- [x] add template
-- [x] create build
+
+- [NO] project oriented
+- [NO] collect snippet
+- [OK] add included version info
+- [OK] add template
+- [OK] create build
