@@ -14,13 +14,12 @@ body {
   line-height: 1.5em;
   margin: 0;
 }
-#main_editor {
+#root {
   height: 100%;
   font: 1em ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   padding: 2.5%;
 }
 .CodeMirror {
-  /* height: 100%; */
   font-family: inherit;
 }
 .CodeMirror-foldmarker {

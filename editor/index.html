@@ -5,7 +5,6 @@
   <meta http-equiv='content-type' content='text/html'>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
   <title>Editor</title>
-  <link rel="stylesheet" href="native-style.css">
   <link rel="stylesheet" href="../lib/codemirror-5.36.0/lib/codemirror.css">
   <link rel="stylesheet" href="../lib/codemirror-5.36.0/theme/pastel-on-dark.css">
   <link rel="stylesheet" href="../lib/codemirror-5.36.0/addon/fold/foldgutter.css">
@@ -19,23 +18,9 @@
   <script src="../lib/codemirror-5.36.0/addon/fold/comment-fold.js"></script>
   <script src="../lib/codemirror-5.36.0/keymap/sublime.js"></script>
   <script src="css.example.js"></script>
+  <script src="editor.js"></script>
 </head>
 <body>
-  <main id="main_editor"></main>
-  <script>
-    var myCodeMirror = CodeMirror(main_editor, {
-      value: example.css,
-      mode:  "css",
-      theme: "pastel-on-dark",
-      lineNumbers: true,
-      lineWrapping: true,
-      foldGutter: true,
-      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-      foldOptions : {
-        widget: "..."
-      },
-      keyMap: "sublime"
-    });
-  </script>
+  <div id="root"></div>
 </body>
 </html>
