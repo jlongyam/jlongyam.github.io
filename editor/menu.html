@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>Editor layout</title>
+  <link rel="stylesheet" href="../lib/dhtmlxSuite-8.1.2/suite_gpl/codebase/suite.css">
+  <script src="../lib/dhtmlxSuite-8.1.2/suite_gpl/codebase/suite.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>layout</h1>
+  </header>
+  <main>
+    <br>
+    <div id="layout_row" style="height: 300px; border: 1px solid gray"></div>
+  </main>
+  <script src="menu.data.js"></script>
+  <script>
+    let layout_row = new dhx.Layout('layout_row', {
+      type: 'line',
+      rows: [
+        { id: 'header', html: '<div id="menu"></div>' },
+        {
+          cols: [
+            { id: 'sideL', width: '200px', collapsable: true, resizable: true, html: 'SideL' },
+            { id: 'content', header: 'Content', resizable: true, html: 'CONTENT' },
+            { id: 'sideR', width: '200px', collapsable: true, html: 'SideR' }
+          ],
+          resizable: true
+        },
+        { id: 'footer', header: 'Footer', height: '120px', collapsable: true, html: 'CONTENT' }
+      ]
+    })
+    layout_row.getCell('footer').collapse()
+    const menu = new dhx.Menu('menu', {
+			css: "dhx_widget--bordered",
+			data: dataset
+		})
+  </script>
+</body>
+</html>

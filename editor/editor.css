@@ -1,22 +1,12 @@
-html {
+html,
+body,
+#root, 
+#cm_editor {
   height: 100%;
 }
-body {
-  height: 100%;
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; *//*
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 0;*/
-}
-#root {
-  height: 100%;
-  font: 1em ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  /* padding: 2.5%; */
-}
-
 .CodeMirror {
-  font-family: inherit;
+  font-family: Consolas;
+  height: 100%;
 }
 .CodeMirror-foldmarker {
   color: inherit ;

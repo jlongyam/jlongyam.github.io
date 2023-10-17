@@ -1,9 +1,3 @@
----
-sidebar_label: setTheme()
-title: Themes - setTheme Method 
-description: You can explore the setTheme method in the documentation of the DHTMLX JavaScript UI library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Suite.
----
-
 # setTheme()
 
 @short: sets the theme by its name
@@ -24,7 +18,8 @@ description: You can explore the setTheme method in the documentation of the DHT
 
 #### Examples
 
-~~~js {22,25} title="Example 1"
+```js
+
 const layout = new dhx.Layout("layout", {
     type: "space",
     cols: [
@@ -50,7 +45,7 @@ dhx.setTheme("dark"); // apply "dark" theme to the default container
 
 // or
 dhx.setTheme("dark", "cell-2"); // apply "dark" theme to Layout cell with "cell-2" ID
-~~~
+```
 
 ~~~html {13} title="Example 2"
 <section class="dhx_sample-container">
