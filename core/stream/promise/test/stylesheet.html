@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>promise.stylesheet</title>
+<style>#output { border: 2px solid gray; padding: 5px }</style>
+<script>function draw( o ) { root.innerHTML += o }</script>
+<script>function log( s ) { output.textContent += s + '\n' }</script>
+<script src="../promise.js"></script>
+</head>
+<body>
+  <div id="root">
+    <pre id="output">CONTENT</pre>
+  </div>
+<script>
+//work
+//promise.stylesheet(['stylesheet.css'])
+//work
+//promise.stylesheet(['stylesheet.css', 'stylesheet.alt.css'])
+promise.stylesheet(['stylesheet.css']).then(()=> {
+  log( '\nPromised...' )
+})
+</script>
+</body>
+</html>

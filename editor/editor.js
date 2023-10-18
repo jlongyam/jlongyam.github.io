@@ -1,10 +1,51 @@
+const editor = {}
+let dhtmlx_context_initialize = ()=> {
+  const contextMenu = new dhx.ContextMenu(null, {
+    data: datasetContextMenu
+  })
+  document.getElementById('cm_editor').addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    contextMenu.showAt(e);
+  })
+}
+editor.initialize = ()=> {
+  let code_editor = CodeMirror( cm_editor, {
+    value: example.css,
+    mode:  { name: "css" },
+    // theme: "pastel-on-dark",
+    lineNumbers: true,
+    lineWrapping: false,
+    foldGutter: true,
+    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    foldOptions : {
+      widget: "..."
+    },
+    keyMap: "sublime",
+    scrollbarStyle: "simple"
+  })
+  dhtmlx_context_initialize()
+}
+let dhtmlx_tabbar_initialize = ()=> {
+  const tabbar =  new dhx.Tabbar("dhtmlx_tab", {
+    css: 'dhx_widget--bordered',
+    tabAlign: 'left',
+    mode: 'top',
+    views: [
+      { id: 'tab1', tab: 'css.example.js', html: '<div id="cm_editor"></div>' }
+    ]
+  })
+  promise.wait(100).then(()=> {
+    editor.initialize()
+  })
+}
+
 let dhtmlx_menu_initialize = ()=> {
   const menu = new dhx.Menu('dhtmlx_menu', {
-    // css: 'dhx_widget--bordered',
-    data: /*dataset*/[{
+    css: 'dhx_widget--bordered',
+    data: dataset/*[{
       id: 'file', value: 'File', items: [{
-        id: 'new', value: 'New', icon: 'dxi dxi-file-outline' },{
-        id: 'exit', value: 'Exit', 
+        id: 'new', value: 'New', icon: 'mdi mdi-file' },{
+        id: 'exit', value: 'Exit', icon: 'mdi mdi-exit-to-app', 
       }]}, {
         type: 'separator'  
       },{
@@ -13,10 +54,11 @@ let dhtmlx_menu_initialize = ()=> {
       id: 'help', value: 'Help', items: [{
         id: 'about', value: 'About'
       }]
-    }]
+    }]*/
   })
+  dhtmlx_tabbar_initialize()
 } 
-let dhtmlx_initialize = (cb)=> {
+let dhtmlx_initialize = ()=> {
   let layout = new dhx.Layout('root', {
     type: 'line',
     rows: [
@@ -24,39 +66,19 @@ let dhtmlx_initialize = (cb)=> {
       {
         cols: [
           { id: 'sideL', width: '200px', collapsable: true, html: 'SideL' },
-          { id: 'main', html: '<div id="cm_editor"></div>' },
+          { id: 'main', html: '<div id="dhtmlx_tab"></div>', padding: '5px' },
           { id: 'sideR', width: '200px', collapsable: true, html: 'SideR' }
-        ],
-        resizable: true
+        ]
       },
-      { id: 'footer', header: 'Console', height: 'auto', collapsable: true, html: '&nbsp;', padding: '5px' }
-    ]
+      { id: 'footer', header: 'Footer', height: 'auto' }
+    ]    
   })
-  layout.getCell('footer').collapse()
+  layout.getCell('footer').hide()
   layout.getCell('sideL').hide()
   layout.getCell('sideR').hide()
-  //
   dhtmlx_menu_initialize()
-  if(cb) cb.call()
 }
-const editor = {}
-editor.initialize = ()=> {
-  dhtmlx_initialize(()=> {
-    let code_editor = CodeMirror( cm_editor, {
-      value: example.css,
-      mode:  "css",
-      theme: "pastel-on-dark",
-      lineNumbers: true,
-      lineWrapping: true,
-      foldGutter: true,
-      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-      foldOptions : {
-        widget: "..."
-      },
-      keyMap: "sublime"
-    })
-  })
-}
+
 window.addEventListener('DOMContentLoaded', (e)=> {
-  editor.initialize()
+  dhtmlx_initialize()
 })

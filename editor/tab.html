@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>Editor layout</title>
+  <link rel="stylesheet" href="../lib/dhtmlxSuite-8.1.2/suite_gpl/codebase/suite.css">
+  <script src="../lib/dhtmlxSuite-8.1.2/suite_gpl/codebase/suite.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>layout</h1>
+  </header>
+  <main>
+    <br>
+    <div id="layout_row" style="height: 300px; border: 1px solid gray"></div>
+  </main>
+  <script src="menu.data.js"></script>
+  <script>
+    let layout_row = new dhx.Layout('layout_row', {
+      type: 'line',
+      rows: [
+        { id: 'header', height: 'auto', html: '<div id="menu"></div>' },
+        {
+          cols: [
+            { id: 'sideL', width: '200px', collapsable: true, resizable: true, html: 'SideL' },
+            { id: 'content', header: 'Content', resizable: true, html: '<div id="tabbar"><div id="main" style="height:100%"></div></div>' },
+            { id: 'sideR', width: '200px', collapsable: true, html: 'SideR' }
+          ],
+          resizable: true
+        },
+        { id: 'footer', header: 'Footer', height: '120px', collapsable: true, html: 'CONTENT' }
+      ]
+    })
+    layout_row.getCell('footer').collapse()
+    const menu = new dhx.Menu('menu', {
+			css: "dhx_widget--bordered",
+			data: dataset
+		})
+    const contextMenu = new dhx.ContextMenu(null, {
+			data: datasetContextMenu
+		})
+    main.addEventListener("contextmenu", function (e) {
+			e.preventDefault();
+			contextMenu.showAt(e);
+		})
+    
+    let tabbar = new dhx.Tabbar("tabbar", {
+				css: "dhx_widget--bordered",
+				tabAlign: 'left',// center | right
+				mode: 'top', // left | right | bottom
+        closable: ["1", "3"],
+        disabled: ["4"],
+				views: [
+					{ id: "1", tab: "Vilnius", html: "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Vilnius(Lithuanian pronunciation: [ˈvʲɪlʲnʲʊs]</strong> , see also other names) is the capital of Lithuania and its largest city, with a population of 574,147 as of 2018. Vilnius is in the southeast part of Lithuania and is the second largest city in the Baltic states. Vilnius is the seat of the main government institutions of Lithuania and the Vilnius District Municipality.</p></div>" },
+					{ id: "2", tab: "Paris", html: "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Paris (French pronunciation: ​[paʁi]</strong> is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, science, as well as the arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which has an estimated official 2019 population of 12,213,364, or about 18 percent of the population of France.</p></div>" },
+					{ id: "3", tab: "London", html: "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>London</strong> is the capital and largest city of both England and the United Kingdom, as well as the largest city within the European Union. Standing on the River Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea, London has been a major settlement for two millennia. Londinium was founded by the Romans</p></div>" },
+					{ id: "4", tab: "Rome", html: "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><storng>Rome (Latin and Italian: Roma [ˈroːma]</storng> is the capital city and a special comune of Italy (named Comune di Roma Capitale). Rome also serves as the capital of the Lazio region. With 2,872,800 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. It is the fourth most populous city in the European Union by population within city limits. It is the centre of the Metropolitan City of Rome, which has a population of 4,355,725 residents, thus making it the most populous metropolitan city in Italy.</p></div>" }
+				]
+			})
+  </script>
+</body>
+</html>

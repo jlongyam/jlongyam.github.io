@@ -20,11 +20,11 @@
     let layout_row = new dhx.Layout('layout_row', {
       type: 'line',
       rows: [
-        { id: 'header', html: '<div id="menu"></div>' },
+        { id: 'header', height: 'auto', html: '<div id="menu"></div>' },
         {
           cols: [
             { id: 'sideL', width: '200px', collapsable: true, resizable: true, html: 'SideL' },
-            { id: 'content', header: 'Content', resizable: true, html: 'CONTENT' },
+            { id: 'content', header: 'Content', resizable: true, html: '<div id="main" style="height:100%">main</div>' },
             { id: 'sideR', width: '200px', collapsable: true, html: 'SideR' }
           ],
           resizable: true
@@ -36,6 +36,13 @@
     const menu = new dhx.Menu('menu', {
 			css: "dhx_widget--bordered",
 			data: dataset
+		})
+    const contextMenu = new dhx.ContextMenu(null, {
+			data: datasetContextMenu
+		})
+    document.querySelector("#main").addEventListener("contextmenu", function (e) {
+			e.preventDefault();
+			contextMenu.showAt(e);
 		})
   </script>
 </body>

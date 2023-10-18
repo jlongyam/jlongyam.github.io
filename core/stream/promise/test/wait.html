@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>promise.wait</title>
+<style>#output { border: 2px solid gray; padding: 5px }</style>
+<script>function draw( o ) { root.innerHTML += o }</script>
+<script>function log( s ) { output.textContent += s + '\n' }</script>
+<script src="../promise.js"></script>
+</head>
+<body>
+  <div id="root">
+    <pre id="output"></pre>
+  </div>
+<script>
+log( 'wait ..' )
+promise.wait( 1000 ).then(()=> {
+  log( '3' )
+})
+promise.wait( 2000 ).then(()=> {
+  log( '2' )
+})
+promise.wait( 3000 ).then(()=> {
+  log( '1' )
+})
+promise.wait( 4000 ).then(()=> {
+  draw( '<h1>Hello World</h1>' )
+})
+</script>
+</body>
+</html>

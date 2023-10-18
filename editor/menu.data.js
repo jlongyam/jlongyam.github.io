@@ -1,5 +1,26 @@
 const dataset = [
 	{
+		id: 'file',
+		value: "File",
+		items: [
+			{
+				id: 'file_new',
+				value: 'New',
+				icon: 'mdi mdi-file'
+			},{
+				id: 'file_load',
+				value: 'Load',
+				icon: 'mdi mdi-upload'
+			},{
+				type: "separator"
+			},{
+				id: 'file_save',
+				value: 'Save',
+				icon: 'mdi mdi-content-save'
+			}
+		]
+	},
+	{
 		id: "edit",
 		value: "Edit",
 		hotKey: "ctrl-z",

@@ -1,6 +1,7 @@
 html,
 body,
-#root, 
+#root,
+#dhtmlx_tab,
 #cm_editor {
   height: 100%;
 }
@@ -13,5 +14,16 @@ body,
   font-family: inherit;
   font-weight: 400 ;
   text-shadow: none;
-  border: 1px solid #373737;
+  border: 1px solid #e7e7e7;
+}
+.CodeMirror-foldgutter {
+  width: 1.2em;
+}
+.CodeMirror-foldgutter-folded:after {
+  font-family: 'Material Design Icons';
+  content: '\f142';
+}
+.CodeMirror-foldgutter-open:after {
+  font-family: 'Material Design Icons';
+  content: "\f140";
 }
