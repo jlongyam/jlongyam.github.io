@@ -8,8 +8,7 @@ description: You can explore the Image Button properties of Ribbon in the docume
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "imageButton",
 		id?: string | number,
@@ -30,7 +29,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

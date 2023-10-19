@@ -12,15 +12,13 @@ You can manipulate with Tree items via the API of the **selection** object. It i
 
 Starting from v7.0, you can activate selection of items via the [](../selection/api/selection_enable_method.md) method of the selection object.
 
-~~~js
-tree.selection.enable();
-~~~
+```javascript
+```
 
 To disable selection of items in Tree, make use of the [](../selection/api/selection_disable_method.md) method of the selection object:
 
-~~~js
-tree.selection.disable();
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Disable / enable selection](https://snippet.dhtmlx.com/g6cmggqt)
 
@@ -30,37 +28,32 @@ tree.selection.disable();
 
 To select a particular Tree item, make use of the **add()** method of the **selection** object. As a parameter the method takes the id of an item. 
 
-~~~js
-const id = tree.selection.getId(); // -> "2"
+```javascript
 tree.selection.add("2");
-~~~
+```
 
 ## Unselecting an item
 
 To remove selection from a selected item, apply the **remove()** method of the **selection** object. The method may take the id of an item as a parameter:
 
-~~~js
-tree.selection.remove("2"); 
-~~~
+```javascript
+```
 
 Starting from v7.0, the method unselects all previously selected items when calling without parameters:
 
-~~~js
-tree.selection.remove();
-~~~
+```javascript
+```
 
 ## Getting id of a selected item
 
 You can get the id of the currently selected item with the **getId()** method of the **selection** object:
 
-~~~js
-const selected = tree.selection.getId(); // -> "2"
-~~~
+```javascript
+```
 
 ## Getting object of a selected item
 
 It is also possible to get the object of a selected item using the **getItem()** method of the **selection** object:
 
-~~~js
-const item = tree.selection.getItem();
-~~~
+```javascript
+```

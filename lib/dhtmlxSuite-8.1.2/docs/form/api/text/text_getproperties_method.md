@@ -31,8 +31,7 @@ form.getItem("text").getProperties();
 
 The returned object of the **Text** control looks like:
 
-~~~js
-{
+```javascript
 	height: "content",
 	helpMessage: "",
 	hiddenLabel: false,
@@ -43,7 +42,7 @@ The returned object of the **Text** control looks like:
 	padding: 0,
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/text/api_text_properties.md).
 

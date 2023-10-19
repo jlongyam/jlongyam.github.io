@@ -17,7 +17,7 @@ To add DHTMLX Sidebar into an application, you need to take the following simple
 - [Initialize Sidebar](#initialize-sidebar) with the object constructor
 - [Load data into Sidebar](#load-data-into-sidebar)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@ To add DHTMLX Sidebar into an application, you need to take the following simple
         </script>
     </body>
 </html>
-~~~
+```
 
 **Related sample**: [Sidebar. Initialization with config.data](https://snippet.dhtmlx.com/y8y7iw42)
 
@@ -46,18 +46,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Sidebar and give it an id, e.g. "sidebar_container":
 
-~~~html
+```html
 <div id="sidebar_container"></div>
-~~~
+```
 
 ## Initialize Sidebar
 
@@ -66,11 +66,10 @@ Initialize Sidebar with the `dhx.Sidebar` object constructor. The constructor ta
 - the HTML object on the page that serves as the sidebar container
 - an object with [configuration properties](#configuration-properties). If this argument is not passed to the constructor, the settings will be default
 
-~~~js
-const sidebar = new dhx.Sidebar("sidebar_container", {
+```javascript
 	// config options
 });
-~~~
+```
 
 ### Configuration properties
 

@@ -44,8 +44,7 @@ form.getItem("combo").getProperties();
 
 The returned object of the **Combo** control looks like:
 
-~~~js
-{
+```javascript
 	errorMessage: "",
 	filter: undefined,
 	height: "content",
@@ -70,7 +69,7 @@ The returned object of the **Combo** control looks like:
 	virtual: false,
 	width: "content"	
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/combo/api_combo_properties.md).
 

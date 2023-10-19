@@ -34,8 +34,7 @@ form.getItem("simplevault").getProperties();
 
 The returned object of the **SimpleVault** control looks like:
 
-~~~js
-{
+```javascript
 	"width": "content",
     "height": "content",
     "css": "",
@@ -59,7 +58,7 @@ The returned object of the **SimpleVault** control looks like:
     "padding": undefined,
     "validation": undefined
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/simplevault/api_simplevault_properties.md).
 

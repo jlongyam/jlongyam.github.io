@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case):
 
-~~~html
+```html
 <style>
 	.my_first_class {
 		/*some styles*/
@@ -28,19 +28,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [](dataview/api/dataview_css_config.md) property in the DataView configuration:
 
-~~~js
-const dataview = new dhx.DataView("dataview_container", { 
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-font-color-primary: #fff;
@@ -60,13 +59,13 @@ For example:
     	template
 	});
 </script>
-~~~
+```
 
 ## Custom styling of items
 
 You can style particular cells in the dataview. For example, apply some color to each even item, as in:
 
-~~~html
+```html
 <style>
 	.bg-gray {
 		background: #efefef;
@@ -83,7 +82,7 @@ You can style particular cells in the dataview. For example, apply some color to
 		}
 	});
 </script>
-~~~
+```
 
 The image below and the related sample demonstrate another example of customization of Dataview items:
 
@@ -96,7 +95,7 @@ The image below and the related sample demonstrate another example of customizat
 You can apply your own styles for selection of items and focus with the help of the corresponding CSS classes: **.dhx_dataview-item--selected** and **.dhx_dataview-item--focus**. There is no need to use any
 additional custom classes.
 
-~~~html
+```html
 <style>
 	.dhx_dataview-item--selected {
 		border-color: transparent;
@@ -108,7 +107,7 @@ additional custom classes.
 <script>
 	const dataview = new dhx.DataView("dataview_container", {itemsInRow: 3});
 </script>
-~~~
+```
 
 ![Custom selection styles](../assets/dataview/custom_selection_styles.png)
 

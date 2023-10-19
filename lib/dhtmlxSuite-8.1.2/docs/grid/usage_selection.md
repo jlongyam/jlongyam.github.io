@@ -12,15 +12,13 @@ You can manipulate with Grid cells via the API of the selection object. It is po
 
 Starting from v7.0, you can activate selection of cells via the [](grid/api/selection/selection_enable_method.md) method of the selection object.
 
-~~~js
-grid.selection.enable();
-~~~
+```javascript
+```
 
 To disable selection of cells in Grid, make use of the [](grid/api/selection/selection_disable_method.md) method of the selection object:
 
-~~~js
-grid.selection.disable();
-~~~
+```javascript
+```
 
 ## Setting selection to cells
 
@@ -53,8 +51,7 @@ You can set selection to one or more rows or cells using the [setCell()](grid/ap
 
 The example below shows how to highlight the first cell in the "Yearly Change" column:
 
-~~~js {6}
-const grid = new dhx.Grid("grid_container", {
+```javascript
     columns: [
 		// columns config
 	],
@@ -66,7 +63,7 @@ const grid = new dhx.Grid("grid_container", {
 const row = grid.data.getItem(grid.data.getId(0));
 const column = grid.getColumn("yearlyChange");
 grid.selection.setCell(row, column);
-~~~
+```
 
 **Related sample**: [Grid. Multiselection](https://snippet.dhtmlx.com/4nj0e9ye)
 
@@ -78,8 +75,7 @@ You can highlight the desired cells when the [multiselection:true](grid/api/grid
 
 ![](../assets/grid/desired_setcell.png)
 
-~~~js {5,6}
-const grid = new dhx.Grid("grid_container", {
+```javascript
     columns: [
 		// columns config
 	],
@@ -91,7 +87,7 @@ const grid = new dhx.Grid("grid_container", {
 grid.selection.setCell(grid.data.getId(0),"yearlyChange");
 grid.selection.setCell(grid.data.getId(1),"netChange", true, false);
 grid.selection.setCell(grid.data.getId(3),"netChange", true, false);
-~~~
+```
 
 **Related sample**: [Grid. Multiselection](https://snippet.dhtmlx.com/4nj0e9ye)
 
@@ -101,10 +97,9 @@ It is also possible to select a range of cells at once:
 
 For that, manipulate the **ctrlUp** and **shiftUp** parameters accordingly:
 
-~~~js
-grid.selection.setCell(grid.data.getId(1),"yearlyChange");
+```javascript
 grid.selection.setCell(grid.data.getId(3),"density", false, true);
-~~~
+```
 
 **Related sample**: [Grid. Multiselection](https://snippet.dhtmlx.com/4nj0e9ye)
 
@@ -132,8 +127,7 @@ Starting from v7.0, you can remove selection from a selected cell/row or from hi
     </tbody>
 </table>
 
-~~~js
-// unselects all previously selected cells
+```javascript
 grid.selection.removeCell();
  
 // unselects all previously selected cells of the specified row
@@ -141,7 +135,7 @@ grid.selection.removeCell(rowId);
  
 // removes selection from the specified cell
 grid.selection.removeCell(rowId, colId);
-~~~
+```
 
 To make the process of unselecting cells more flexible, you can apply the related events of the selection object:
 
@@ -152,17 +146,15 @@ To make the process of unselecting cells more flexible, you can apply the relate
 
 To get the object of a selected Grid cell, use the [getCell()](grid/api/selection/selection_getcell_method.md) method of the selection object:
 
-~~~js
-const selectedCell = grid.selection.getCell();
+```javascript
 // -> {row: {…}, column: {…}}
-~~~
+```
 
 To get the object of multiple selected cells, use the [getCells()](grid/api/selection/selection_getcells_method.md) method of the selection object:
 
-~~~js
-const selectedCells = grid.selection.getCells();
+```javascript
 // -> [{…}, {…}, {…}]
 0: {row: {…}, column: {…}}
 1: {row: {…}, column: {…}}
 2: {row: {…}, column: {…}}
-~~~
+```

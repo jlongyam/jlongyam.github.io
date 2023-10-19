@@ -19,14 +19,12 @@ A string/number or an array with the ID(s) of the options from data collection t
 
 When the `multiselection` property of Combo control isn't specified or is set to *false*, the method returns a string/number value with the ID of the currently selected option:
 
-~~~js
-const value = form.getItem("combo").getValue();
+```javascript
 // -> "id_2"
-~~~
+```
 
 If `multiselection` is enabled, the method returns an array of string/number values with the IDs of the currently selected options:
 
-~~~js
-const value = form.getItem("combo").getValue();
+```javascript
 // -> ['id_1', 'id_2']
-~~~
+```

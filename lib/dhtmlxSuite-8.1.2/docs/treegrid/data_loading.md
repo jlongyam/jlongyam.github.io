@@ -17,8 +17,7 @@ First, you need to prepare a data set that will be loaded into TreeGrid.
 
 DHTMLX TreeGrid expects loaded data in the JSON format. Here is an example of an appropriate data set:
 
-~~~js
-const dataset = [
+```javascript
     {
         "id": 0,
         "a": 1,
@@ -36,7 +35,7 @@ const dataset = [
     },
     // more columns
 ];
-~~~
+```
 
 Each object in the data set contains configuration of a grid row. The structure of a row is rather flexible. It may include:
 
@@ -61,14 +60,13 @@ Each object in the data set contains configuration of a grid row. The structure 
 
 You can specify data you want to load into TreeGrid on the initialization stage. Make use of the [data](treegrid/api/treegrid_data_config.md) configuration property, as in:
 
-~~~js
-const treegrid = new dhx.TreeGrid("treegrid_container", {
+```javascript
     columns: [
         // columns config
     ],
     data: dataset
 });
-~~~
+```
 
 **Related sample**: [TreeGrid. Initialization with config.data](https://snippet.dhtmlx.com/kob9385v)
 
@@ -83,14 +81,13 @@ There are two ways to load data into TreeGrid after its initialization:
 
 To load data from a local data source, use the **parse** method of Tree Collection. Pass [a predefined data set](#preparing-data-set) as a parameter of this method:
 
-~~~js
-const treegrid = new dhx.TreeGrid("treegrid_container", {
+```javascript
     columns: [
         // columns config
     ]
 });
 treegrid.data.parse(dataset);
-~~~
+```
 
 **Related sample**: [TreeGrid. Initialization with data.parse()](https://snippet.dhtmlx.com/jc8gn40c)
 
@@ -98,14 +95,13 @@ treegrid.data.parse(dataset);
 
 To load data from an external file, make use of the **load** method of Tree Collection. It takes the URL of the file with data as a parameter:
 
-~~~js
-const treegrid = new dhx.TreeGrid("treegrid_container", {
+```javascript
     columns: [
         // columns config
     ]
 });
 treegrid.data.load("../common/dataset.json");
-~~~
+```
 
 **Related sample**: [TreeGrid. Initialization with data.load()](https://snippet.dhtmlx.com/44rmxlmq)
 
@@ -113,26 +109,23 @@ The component will make an AJAX call and expect the remote URL to provide valid 
 
 Data loading is asynchronous, so you need to wrap any after-loading code into a promise:
 
-~~~js
-treegrid.data.load("/some/data").then(function(){
+```javascript
    // some logic here
 });
-~~~
+```
 
 ## Saving and restoring state
 
 To save the current state of a treegrid, use the **serialize** method of Tree Collection. It converts the data of a treegrid into an array of JSON objects. 
 Each JSON object contains the configuration of a separate row.
 
-~~~js
-const state = treegrid1.data.serialize();
-~~~
+```javascript
+```
 
 Then you can parse the data stored in the saved state array to a different treegrid. For example:
 
-~~~js
-// creating a new treegrid
+```javascript
 const treegrid2 = new dhx.TreeGrid("treegrid_container2");
 // parsing the state of treegrid1 into treegrid2
 treegrid2.data.parse(state);
-~~~
+```

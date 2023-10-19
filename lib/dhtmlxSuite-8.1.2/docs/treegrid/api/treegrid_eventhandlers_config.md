@@ -65,8 +65,7 @@ const treeGrid = new dhx.TreeGrid("treegrid_container", {
 
 An example of adding event handlers to the HTML elements defined in the data set of TreeGrid is given below:
 
-~~~js {7,23-29}
-const data = [
+```javascript
 	{
 		"name": "A Time to Kill",
 		"price": "12.25",
@@ -96,7 +95,7 @@ const grid = new dhx.Grid("grid", {
 		} 
 	} 
 });
-~~~
+```
 
 @changelog: added in v7.0
 

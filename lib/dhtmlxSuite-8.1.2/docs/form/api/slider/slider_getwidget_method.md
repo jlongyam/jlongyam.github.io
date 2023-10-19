@@ -23,7 +23,6 @@ It is possible to use methods of DHTMLX Slider via the **getWidget()** method of
 
 For example, you can disable a Slider control. To do this, you need to get the widget attached to the Slider control and then use the [disable()](slider/api/slider_disable_method.md) method of this widget.
 
-~~~js
-const slider = form.getItem("slider").getWidget();  // -> DHTMLX Slider
+```javascript
 slider.disable(); // disables slider
-~~~
+```

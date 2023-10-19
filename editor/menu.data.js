@@ -8,9 +8,9 @@ const dataset = [
 				value: 'New',
 				icon: 'mdi mdi-file'
 			},{
-				id: 'file_load',
-				value: 'Load',
-				icon: 'mdi mdi-upload'
+				id: 'file_open',
+				value: 'Open',
+				icon: 'mdi mdi-folder-open'
 			},{
 				type: "separator"
 			},{

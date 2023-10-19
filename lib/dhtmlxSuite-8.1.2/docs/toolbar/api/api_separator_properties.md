@@ -8,15 +8,14 @@ description: You can explore the Separator properties of Toolbar in the document
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "separator",
 		id?: string | number,
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

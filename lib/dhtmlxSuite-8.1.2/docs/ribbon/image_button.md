@@ -14,13 +14,12 @@ This is a button with an image. Unlike a [button](ribbon/button.md), it does not
 
 ImageButton can be easily added to a ribbon with the help of the **add()** method of the **data** module:
 
-~~~js
-ribbon.data.add({
+```javascript
     type: "imageButton",
     count: 10,
     src: "../img/avatar.png"
 });
-~~~
+```
 
 ### Properties
 

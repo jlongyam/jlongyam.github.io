@@ -32,8 +32,7 @@ form.getItem("checkbox").getProperties();
 
 The returned object of the **Checkbox** control looks like:
 
-~~~js
-{
+```javascript
 	css:"",
 	errorMessage: "",
 	height: "content",
@@ -49,7 +48,7 @@ The returned object of the **Checkbox** control looks like:
 	text: "I agree",
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox/api_checkbox_properties.md).
 

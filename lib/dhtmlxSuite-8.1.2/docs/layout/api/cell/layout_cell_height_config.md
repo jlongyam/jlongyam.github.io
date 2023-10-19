@@ -23,8 +23,7 @@ const layout = new dhx.Layout("layout_container", {
 
 Starting from v7.0, the height of a cell can be automatically adjusted to the height of its content. For that, set the **height** configuration option to *"content"*:
 
-~~~js {5}
-const layout = new dhx.Layout("layout_container", {
+```javascript
     cols: [
         { 
             header: "Cell header", 
@@ -32,7 +31,7 @@ const layout = new dhx.Layout("layout_container", {
         }
     ]
 });
-~~~
+```
 
 [comment]: # (@related: layout/initialization.md#initialize-layout layout/cell_configuration.md#cell-size)
 

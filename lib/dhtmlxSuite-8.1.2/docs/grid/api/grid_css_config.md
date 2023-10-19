@@ -13,7 +13,7 @@ description: You can explore the css config of Grid in the documentation of the 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-font-color-primary: #fff;
@@ -38,17 +38,16 @@ description: You can explore the css config of Grid in the documentation of the 
     	css: "custom",
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Styling (custom CSS)](https://snippet.dhtmlx.com/c5tr3s5r)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Grid:
 
-~~~js
-const grid = new dhx.Grid("grid_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

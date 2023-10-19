@@ -17,7 +17,7 @@ To add DHTMLX Form into an application, you need to take the following simple st
 - [Define Form structure](#define-form-structure)
 - [Initialize Form](#initialize-form) with the object constructor
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@ To add DHTMLX Form into an application, you need to take the following simple st
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -44,18 +44,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Form and give it an id, e.g. "form_container":
 
-~~~html
+```html
 <div id="form_container"></div>
-~~~
+```
 
 ## Define Form structure
 
@@ -74,8 +74,7 @@ Thus, the structure of your form will look like this:
 To add controls inside a form, you should put them into a layout, either a vertical one (the **rows** attribute), or a horizontal one (the **cols** attribute). In the example below controls are arranged vertically, one under
 another:
 
-~~~js
-rows: [
+```javascript
     {
     	type: "input",
     	label: "Name",
@@ -112,7 +111,7 @@ rows: [
     	color: "primary"
     }
 ]
-~~~
+```
 
 ## Initialize Form
 
@@ -121,8 +120,7 @@ Initialize Form with the `dhx.Form` object constructor. The constructor takes tw
 - the HTML object on the page that serves as the form container. 
 - a configuration object which (besides config options) contains an array of form controls defined as objects with a set of attributes 
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	css: "dhx_widget--bordered",
 	rows: [
 		{
@@ -135,7 +133,7 @@ const form = new dhx.Form("form_container", {
 		// more form controls
 	]
 });
-~~~
+```
 
 ### Configuration properties
 

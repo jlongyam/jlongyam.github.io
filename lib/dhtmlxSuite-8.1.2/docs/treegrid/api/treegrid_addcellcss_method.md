@@ -18,7 +18,7 @@ description: You can explore the addCellCss method of TreeGrid in the documentat
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .myCustomClass{
         background:greenyellow;
@@ -29,7 +29,7 @@ description: You can explore the addCellCss method of TreeGrid in the documentat
     ...
     grid.addCellCss("1", "b", "myCustomClass");
 </script>
-~~~
+```
 
 **Related sample**: [TreeGrid. Add cell CSS](https://snippet.dhtmlx.com/smjecfzp)
 

@@ -28,8 +28,7 @@ The method invokes the [](form/api/calendar/calendar_afterchangeproperties_event
 
 It is possible to change values of the following configuration attributes of the **DatePicker** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	dateFormat: string,
 	disabledDates: function,
@@ -58,7 +57,7 @@ It is possible to change values of the following configuration attributes of the
 	weekStart: string,
 	width: string|number|"content",
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/calendar/api_calendar_properties.md).
 

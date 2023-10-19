@@ -12,12 +12,11 @@ You can apply different languages to the interface of DHTMLX Form, specifically 
 
 The default (English) locale for Form SimpleVault control looks like this:
 
-~~~js
-const en = {
+```javascript
 	simpleVaultText: "Drag & drop files or folders here or",
 	simpleVaultLabel: "browse files"
 };
-~~~
+```
 
 ## Custom locale
 
@@ -25,29 +24,26 @@ To use a different locale, your need to:
 
 - define necessary language settings: provide translation for all text labels, e.g. the German locale for the SimpleVault control looks like this:
 
-~~~js
-const de = {
+```javascript
     simpleVaultText: "Drag & Drop Dateien oder Ordner hier oder",
 	simpleVaultLabel: "Suchen Sie Dateien durch"
 };
-~~~
+```
 
 - apply the language settings by calling the **dhx.i18n.setLocale()** method before Form initialization:
 
-~~~js
-dhx.i18n.setLocale("form", de);
+```javascript
 const form = new dhx.Form("form_container");
-~~~
+```
 
 **Related sample**: [Form. Localization](https://snippet.dhtmlx.com/x8n18cr4)
 
 - apply the language settings by calling the **dhx.i18n.setLocale()** method with the name of the control as a parameter for ColorPicker, DatePicker, Combo, TimePicker controls before Form initialization:
 
-~~~js {2}
-dhx.i18n.setLocale("form", de);
+```javascript
 dhx.i18n.setLocale("colorpicker", de);
 const form = new dhx.Form("form_container");
-~~~
+```
 
 :::tip
 The localization of the ColorPicker, DatePicker, Combo controls is the same as the localization of the widgets: [ColorPicker](colorpicker/localizing_colorpicker.md), [Calendar](calendar/localizing_calendar.md) and [Combo](combobox/localization.md).

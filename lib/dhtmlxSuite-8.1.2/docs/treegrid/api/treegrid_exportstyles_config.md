@@ -26,8 +26,7 @@ By default, the **exportStyles** property is disabled. Thus, when you export Tre
 
 If you want some styles to be exported, set string values with the absolute paths to the desired styles to the **exportStyles** array:
 
-~~~js
-const treegrid = new dhx.TreeGrid("treegrid_container", {
+```javascript
 	columns: [
 		// columns config
 	],
@@ -37,7 +36,7 @@ const treegrid = new dhx.TreeGrid("treegrid_container", {
     ],
 	data: dataset
 });
-~~~
+```
 
 :::tip
 You must use only absolute paths not relative ones.

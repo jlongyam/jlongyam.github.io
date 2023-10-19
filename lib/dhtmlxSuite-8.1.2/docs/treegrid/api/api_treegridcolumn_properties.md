@@ -8,8 +8,7 @@ description: You can explore the Column properties of TreeGrid in the documentat
 
 ### Usage
 
-~~~js
-columns:[
+```javascript
   {
     id: string | number,
     width?: number,
@@ -72,7 +71,7 @@ columns:[
   },
   // more column objects
 ]
-~~~
+```
 
 ### Description
 

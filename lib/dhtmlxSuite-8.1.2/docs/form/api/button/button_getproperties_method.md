@@ -34,8 +34,7 @@ form.getItem("button").getProperties();
 
 The returned object of the **Button** control looks like:
 
-~~~js
-{
+```javascript
 	circle: false, 
 	color: "primary",
 	full: false,
@@ -50,7 +49,7 @@ The returned object of the **Button** control looks like:
 	view: "flat",
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/button/api_button_properties.md).
 

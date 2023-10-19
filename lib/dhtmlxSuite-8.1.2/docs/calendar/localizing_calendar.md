@@ -14,8 +14,7 @@ You can apply different languages to the interface of dhtmlxCalendar. You just n
 
 The default locale for Calendar looks like this:
 
-~~~js
-const en = {
+```javascript
 	// short names of months
 	monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -28,7 +27,7 @@ const en = {
 	days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", 
     			"Friday", "Saturday"]
 };
-~~~
+```
 
 ## Custom locale
 
@@ -36,8 +35,7 @@ To use a different locale, your need to:
 
 - define necessary language settings: provide full and short names of months, as well as full and short names of days of a week:
 
-~~~js
-const de = {
+```javascript
 	// short names of months
 	monthsShort: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", 
     			 "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
@@ -50,13 +48,12 @@ const de = {
 	days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", 
     			"Freitag", "Samstag"]
 };
-~~~
+```
 
 - apply the language settings by calling the **dhx.i18n.setLocale()** method before Calendar initialization:
 
-~~~js
-dhx.i18n.setLocale("calendar", de);
+```javascript
 const calendar = new dhx.Calendar("calendar_container");
-~~~
+```
 
 **Related sample**: [Calendar. Localization](https://snippet.dhtmlx.com/tn40a0w8)

@@ -16,8 +16,7 @@ A control for adding some text.
 
 You can easily add a Text control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{
 			type: "text",
@@ -27,7 +26,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -39,9 +38,8 @@ You can manipulate a Text control by using methods or events of the object retur
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("text").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

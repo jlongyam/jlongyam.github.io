@@ -16,11 +16,10 @@ This is a simple button that can have an icon. Button can have two states and a 
 
 A button can be easily added to a toolbar with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-toolbar.data.add({
+```javascript
     type:"button", value:"Best button"
 });
-~~~
+```
 
 ### Properties
 
@@ -30,35 +29,32 @@ You can provide the [following properties](toolbar/api/api_button_properties.md)
 
 A button can have an icon which is set through the corresponding option [icon](toolbar/customization.md#icons):
 
-~~~js
-{
+```javascript
     type:"button", value:"Done",
     icon:"dxi dxi-check"
 }
-~~~
+```
 
 ## Adding a badge with a number
 
 You can add a number badge to the button to display information like the number of new messages. The badge is set via the **count** property:
 
-~~~js
-{
+```javascript
     type:"button", value:"Done",
     icon:"dxi dxi-check",
     count:10
 }
-~~~
+```
 
 ## Adding HTML content
 
 You can add any custom HTML content to a button with the help of the **html** property:
 
-~~~js
-{
+```javascript
     type: "button",
     html: "<div class='user-button'><img src='../avatars/Avatar.jpg'/></div>",
 }
-~~~
+```
 
 **Related sample**: [Toolbar. Item HTML content](https://snippet.dhtmlx.com/5n2b8x84)
 
@@ -66,10 +62,9 @@ You can add any custom HTML content to a button with the help of the **html** pr
 
 To hide/show a button, you should pass the ID of the button to the [hide()](toolbar/api/toolbar_hide_method.md) / [show()](toolbar/api/toolbar_show_method.md) Toolbar methods:
 
-~~~js
-toolbar.show(id);
+```javascript
 toolbar.hide(id);
-~~~
+```
 
 **Related sample**: [Toolbar. Hide / show items](https://snippet.dhtmlx.com/cldp89u4)
 
@@ -77,10 +72,9 @@ toolbar.hide(id);
 
 Any button in the toolbar can be [enabled](toolbar/api/toolbar_enable_method.md)/[disabled](toolbar/api/toolbar_disable_method.md):
 
-~~~js
-toolbar.enable(id);
+```javascript
 toolbar.disable(id);
-~~~
+```
 
 **Related sample**: [Toolbar. Enable / disable items](https://snippet.dhtmlx.com/ovblenaf)
 
@@ -88,12 +82,11 @@ toolbar.disable(id);
 
 You can add a tooltip to a button:
 
-~~~js {4}
-{
+```javascript
     type:"button", 
     value:"Click", 
     tooltip:"Click me and find out why"
 }
-~~~
+```
 
 **Related sample**: [Toolbar. Tooltips](https://snippet.dhtmlx.com/105levtd)

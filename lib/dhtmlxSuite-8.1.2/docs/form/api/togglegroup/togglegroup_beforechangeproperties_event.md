@@ -26,8 +26,7 @@ form.getItem("toggleGroup").events.on("beforeChangeProperties", function(propert
 @descr:
 The **properties** object of the **ToggleGroup** control looks like:
 
-~~~js
-{
+```javascript
     css: string,
     full: boolean,
     gap: number,
@@ -37,12 +36,11 @@ The **properties** object of the **ToggleGroup** control looks like:
     padding: string | number,
     width: string|number|"content"
 }
-~~~
+```
 
 The **properties** object object of a **toggle** of the **ToggleGroup** control looks like:
 
-~~~js
-{
+```javascript
     full: boolean,
     icon: string,
     offIcon: string,
@@ -50,6 +48,6 @@ The **properties** object object of a **toggle** of the **ToggleGroup** control 
     text: string,
     value: string | number
 }
-~~~
+```
 
 You will find the description of all these properties [here](form/api/togglegroup/api_togglegroup_properties.md).

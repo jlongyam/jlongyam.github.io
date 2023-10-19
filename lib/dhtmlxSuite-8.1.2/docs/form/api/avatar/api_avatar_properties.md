@@ -8,8 +8,7 @@ description: You can explore the Properties of the Avatar control of Form in the
 
 ### Usage
 
-~~~js
-{
+```javascript
     type: "avatar",
     name?: string,
     id?: string,
@@ -54,7 +53,7 @@ description: You can explore the Properties of the Avatar control of Form in the
     headerParams?: { [key: string]: any },
     updateFromResponse?: boolean  // true by default 
 }
-~~~
+```
 
 ### Description
 

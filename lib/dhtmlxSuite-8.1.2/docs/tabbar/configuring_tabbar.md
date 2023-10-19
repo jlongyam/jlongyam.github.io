@@ -15,19 +15,17 @@ description: You can explore the configuration of Tabbar in the documentation of
 You can equip each Tabbar tab with a close button to make it easily closable via interface. To enable close buttons in all tabs at once, make use of the 
 [](tabbar/api/tabbar_closable_config.md) configuration property:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     closable:true
 });
-~~~
+```
 
 You can also add close buttons for separate tabs by setting an array with ids of the tabs as a value for the [](tabbar/api/tabbar_closable_config.md) property:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     closable: ["paris", "london"]
 });
-~~~
+```
 
 ## Disabled tabs
 
@@ -35,8 +33,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 
 By default, all tabs in Tabbar are enabled. It is possible to make one or several tabs disabled using the [](tabbar/api/tabbar_disabled_config.md) configuration property:
 
-~~~js
-// make one tab disabled
+```javascript
 const tabbar = new dhx.Tabbar("tabbar_container", {
     disabled: "London"
 });
@@ -45,7 +42,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 const tabbar = new dhx.Tabbar("tabbar_container", {
     disabled: ["Paris", "Rome"]
 });
-~~~
+```
 
 **Related sample**: [Tabbar. Rich configuration (close, disable, overflow, active tab)](https://snippet.dhtmlx.com/xqthiy66)
 
@@ -58,22 +55,20 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 When initialized with default settings, Tabbar is located at the top of a page. You can locate DHTMLX Tabbar at any desired side of your application by using any other value of the [mode](tabbar/api/tabbar_mode_config.md) property. 
 Besides "top", it can also take "bottom","left" or "right" values. e.g.:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     mode: "left"
 });
-~~~
+```
 
 ## Size of tabs
 
 DHTMLX Tabbar allows you to control the height and width of tabs with the help of appropriate configuration options - [tabWidth](tabbar/api/tabbar_tabwidth_config.md) and [tabHeight](tabbar/api/tabbar_tabheight_config.md). By default, they are set to 200px and 45px, correspondingly. This is how you can change the default settings:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     tabWidth: 190,
     tabHeight: 50
 });
-~~~
+```
 
 **Related sample**: [Tabbar. Tab size](https://snippet.dhtmlx.com/yy841z3j)
 
@@ -92,8 +87,7 @@ The structure of Tabbar should be defined during initialization of the component
 - **tabHeight** - the height of a tab (for more information, see [](tabbar/api/tabbar_views_config.md))
 
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
 	views:[
 		{ tab: "left", css:"panel flex", header:"Left"},
 		{ tab: "west", css:"panel flex", header:"West"},
@@ -101,7 +95,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 		{ tab: "right", css:"panel flex", header:"Right" }
 	]
 });
-~~~
+```
 
 **Related sample**: [Tabbar. Tab size](https://snippet.dhtmlx.com/yy841z3j)
 
@@ -109,8 +103,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 
 When the width or height of tabs are not specified, you can configure the tabs so that their width/height would automatically adjust to the size of the container of Tabbar. For this purpose, make use of the [](tabbar/api/tabbar_tabautowidth_config.md)/[](tabbar/api/tabbar_tabautoheight_config.md) properties of Tabbar.
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     views:[
         { tab: "left", css:"panel flex", header:"Left"},
         { tab: "west", css:"panel flex", header:"West"},
@@ -120,7 +113,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
     tabAutoWidth: true,
     mode: "top"
 });
-~~~
+```
 
 **Related sample**: [Tabbar. Tab auto width](https://snippet.dhtmlx.com/mlzko8am)
 
@@ -134,11 +127,10 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 
 It is possible to render a tabbar without any content. Use the [noContent](tabbar/api/tabbar_nocontent_config.md) option for this purpose:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     noContent:true
 });
-~~~
+```
 
 **Related sample**: [Tabbar. Without content](https://snippet.dhtmlx.com/7jzrifql)
 
@@ -148,8 +140,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 
 Starting from v7.0, there is the ability to set alignment for tabs via the [tabAlign](tabbar/api/tabbar_tabalign_config.md) configuration option of Tabbar:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     views:[
         { tab: "left", css:"panel flex", header:"Left"},
         { tab: "west", css:"panel flex", header:"West"},
@@ -158,7 +149,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
     ],
     tabAlign: "center"
 });
-~~~
+```
 
 **Related sample**: [Tabbar. Tab align](https://snippet.dhtmlx.com/bctscs71)
 

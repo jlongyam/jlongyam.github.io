@@ -10,11 +10,10 @@ description: You can explore the event handling of Window in the documentation o
 
 You can attach event listeners with the **dhxWindow.events.on()** method:
 
-~~~js
-dhxWindow.events.on("move", function(position, oldPosition, side) {
+```javascript
     console.log("The window is moved to " + position.left, position.top)
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ dhxWindow.events.on("move", function(position, oldPosition, side) {
 
 To detach events, use **dhxWindow.events.detach()**:
 
-~~~js
-dhxWindow.events.on("move", function(position, oldPosition, side) {
+```javascript
     console.log("The window is moved to " + position.left, position.top)
 });
 
 dhxWindow.events.detach("move");
-~~~
+```
 
 ## Calling events
 
 To call events, use **dhxWindow.events.fire()**:
 
-~~~js
-dhxWindow.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

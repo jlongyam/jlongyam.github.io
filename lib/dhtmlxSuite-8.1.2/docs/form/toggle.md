@@ -18,8 +18,7 @@ A special button control that changes its state from pressed to the unpressed on
 
 You can easily add a Toggle control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{            
             type: "toggle",
@@ -31,7 +30,7 @@ const form = new dhx.Form("form_container", {
         }
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -43,9 +42,8 @@ You can manipulate a Toggle control by using methods or events of the object ret
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("toggle").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

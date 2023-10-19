@@ -29,20 +29,18 @@ toolbar.paint();
 
 To work with all children of a particular control, pass one more parameter to **map()** - the ID of the control:
 
-~~~js
-toolbar.data.map((item)=>{
+```javascript
     // disable items
     item.disabled = true;
 },"menu_1");
 toolbar.paint();
-~~~
+```
 
 If you want to iterate only through immediate children, set the third parameter to _false_:
 
-~~~js
-toolbar.data.map((item)=>{
+```javascript
     // add a css class to each item
     item.css = "highlight";
 },"menu_1",false);
 toolbar.paint();
-~~~
+```

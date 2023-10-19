@@ -14,8 +14,7 @@ The Block control is used for grouping related controls.
 
 This is the basic syntax of a block with two buttons in a row:
 
-~~~js
-{
+```javascript
     type: "block",
     title: "Action",        
     items: [
@@ -23,7 +22,7 @@ This is the basic syntax of a block with two buttons in a row:
         { id: "cut", icon: "mdi mdi-content-cut", value: "Cut" }
     ]
 }
-~~~
+```
 
 ### Properties
 
@@ -33,19 +32,17 @@ You can provide the [following properties](ribbon/api/api_block_properties.md) i
 
 A block can be added to a ribbon with the help of the **add()** method of TreeCollection:
 
-~~~js
-ribbon.data.add({
+```javascript
     title:"File",
     type:"block",
     id:"files",
     direction:"row"
 });
-~~~
+```
 
 Controls for this block can be added afterwards with the same method:
 
-~~~js
-ribbon.data.add({
+```javascript
     type:"button",
     icon:"dxi dxi-plus",
     value:"New"
@@ -55,7 +52,7 @@ ribbon.data.add({
     type:"iconButton",
     icon:"dxi dxi-file"
 },-1,"files");
-~~~
+```
 
 **add()** in this case receives three parameters:
 
@@ -80,8 +77,7 @@ ribbon.data.add({
 
 You can add any custom HTML content to an item of the block with the help of the **html** property:
 
-~~~js
-{
+```javascript
 	type: "block",
 	title: "Progress",
 	items: [
@@ -91,7 +87,7 @@ You can add any custom HTML content to an item of the block with the help of the
 		}
 	]
 };
-~~~
+```
 
 **Related sample**: [Ribbon. Item HTML content](https://snippet.dhtmlx.com/3djaib6o)
 
@@ -99,8 +95,7 @@ You can add any custom HTML content to an item of the block with the help of the
 
 You can add blocks inside blocks to create complex blocks with several rows and columns, e.g.:
 
-~~~js
-{
+```javascript
     title:"File",
     type:"block",
     direction:"col", 
@@ -127,22 +122,20 @@ You can add blocks inside blocks to create complex blocks with several rows and 
         }
     ]
 }
-~~~
+```
 
 ## Hiding/showing blocks
 
 To hide/show a block, you should pass its ID to the **hide() / show()** methods:
 
-~~~js
-ribbon.show(id);
+```javascript
 ribbon.hide(id);
-~~~
+```
 
 ## Disabling/enabling blocks
 
 A block can be enabled/disabled:
 
-~~~js
-ribbon.enable(id);
+```javascript
 ribbon.disable(id);
-~~~
+```

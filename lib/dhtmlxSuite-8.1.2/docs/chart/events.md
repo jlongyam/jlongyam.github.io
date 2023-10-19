@@ -10,11 +10,10 @@ description: You can explore the event handling of Chart in the documentation of
 
 You can attach event listeners with the **chart.events.on()** method:
 
-~~~js
-chart.events.on("resize", function({width:500, height:500}){
+```javascript
     console.log("The size of the chart has changed");
 });
-~~~
+```
 
 **Related sample**: [Chart. Events](https://snippet.dhtmlx.com/a1b9yfwo)
 
@@ -22,22 +21,20 @@ chart.events.on("resize", function({width:500, height:500}){
 
 To detach events, use the **chart.events.detach()** method:
 
-~~~js
-chart.events.on("resize", function({width:500, height:500}){
+```javascript
     console.log("The size of the chart has changed");
 });
 
 chart.events.detach("resize");
-~~~
+```
 
 ## Calling events
 
 To call events, use the **chart.events.fire()** method:
 
-~~~js
-chart.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

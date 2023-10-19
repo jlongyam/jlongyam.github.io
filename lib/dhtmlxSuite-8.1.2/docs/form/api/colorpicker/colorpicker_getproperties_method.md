@@ -31,8 +31,7 @@ form.getItem("colorpicker").getProperties();
 
 The returned object of the **ColorPicker** control looks like:
 
-~~~js
-{
+```javascript
 	customColors: [],
 	editable: false,
 	errorMessage: "",
@@ -54,7 +53,7 @@ The returned object of the **ColorPicker** control looks like:
 	validation: undefined,
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/colorpicker/api_colorpicker_properties.md).
 

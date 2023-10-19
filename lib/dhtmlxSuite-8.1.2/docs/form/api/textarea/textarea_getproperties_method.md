@@ -33,8 +33,7 @@ form.getItem("textarea").getProperties();
 
 The returned object of the **Textarea** control looks like:
 
-~~~js
-{
+```javascript
 	errorMessage: "",
 	height: "content",
 	helpMessage: "",
@@ -53,7 +52,7 @@ The returned object of the **Textarea** control looks like:
 	validation: undefined,
 	width: 400
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/textarea/api_textarea_properties.md).
 

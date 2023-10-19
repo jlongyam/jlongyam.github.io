@@ -31,8 +31,7 @@ form.getItem("datepicker").getProperties();
 
 The returned object of the **DatePicker** control looks like:
 
-~~~js
-{
+```javascript
 	dateFormat: "%d/%m/%y",
 	disabledDates: undefined,
 	editable: false,
@@ -60,7 +59,7 @@ The returned object of the **DatePicker** control looks like:
 	weekStart: "sunday",
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/calendar/api_calendar_properties.md).
 

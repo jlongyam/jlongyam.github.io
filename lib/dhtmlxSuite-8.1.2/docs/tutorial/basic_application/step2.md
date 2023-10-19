@@ -17,17 +17,16 @@ To set the main scheme of our app we should start by initializing the Layout. La
 
 1\. Create an HTML container where the layout will be placed later.
 
-~~~html title="index.html"
+```html
 <div id="layout"></div>
-~~~
+```
 
 2\. Create a Layout object and place it into the HTML container that we’ve just created. 
 
 {{snippet
 'index.html' file 
 }}
-~~~js title="script.js"
-var layout = new dhx.Layout("layout", {  
+```javascript
     height: "700px", // it’s important to set the height of the layout
     width: "1600px",
     rows: [
@@ -52,7 +51,7 @@ var layout = new dhx.Layout("layout", {
 		}
 	]
 });
-~~~
+```
 <i> We divide the layout into two rows. The first row will contain a toolbar. The second row will be divided into two columns: one for Grid and another for Chart. </i>
 
 You can read more information about [Configuration of a cell](layout/configuration.md#configurationofcell) and  about [Styling of Layout cells](layout/customization.md#stylinglayoutcells).

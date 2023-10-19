@@ -24,8 +24,7 @@ const state = form.getItem("toggle").getValue(); // -> true/false
 
 - If the **value** property is not set for a control, the method returns the state of the control:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
         {
             name: "toggle",
@@ -40,12 +39,11 @@ const form = new dhx.Form("form_container", {
 });
 
 const state = form.getItem("toggle").getValue(); // -> true/false
-~~~
+```
 
 - If the **value** property is defined, the method returns a string/number value. In addition, if the **selected** option is set to *true*, the method returns the value of a control, otherwise - returns an empty string (""):
 
-~~~js {10-11}
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
         {
             name: "toggle",
@@ -61,4 +59,4 @@ const form = new dhx.Form("form_container", {
 });
 
 const value = form.getItem("toggle").getValue(); // -> ""
-~~~
+```

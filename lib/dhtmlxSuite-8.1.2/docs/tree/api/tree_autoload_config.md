@@ -26,11 +26,10 @@ To control the process of auto-load, use the related [beforeItemLoad](tree_colle
 
 Here is an example of sending an HTTP GET request to the server using the Express library:
 
-~~~js
-app.get("/backend/autoload", (req, res) => {
+```javascript
     const currentData = treeData.filter(i => i.parent === req.query.id);
     return res.send(currentData);
 })
-~~~
+```
 
 [comment]: # (@related: tree/initialization_of_dhtmlxtree.md#initialize-tree)

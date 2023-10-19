@@ -10,26 +10,24 @@ description: You can explore the event handling of Calendar in the documentation
 
 You can attach event listeners with the **calendar.events.on()** method of the *events* module:
 
-~~~js
-calendar.events.on("change",function(date, oldDate, byClick){
+```javascript
     console.log("Change selection from "+oldDate+" to "+date);
     console.log(click);
 });
-~~~
+```
 
 For example, Calendar can be attached to an input that will display the date selected in Calendar:
 
-~~~html
+```html
 <input type="text" id="date" />
-~~~
+```
 
-~~~js
-const calendar = new dhx.Calendar("calendar_container");
+```javascript
 calendar.events.on("change",(date)=>{ 
     document.getElementById("date").value = date.getFullYear() +
         "-" + (date.getMonth() + 1) + "-" +date.getDate();
 });
-~~~
+```
 
 Several handlers can be attached to one event, and all of them will be executed.
 
@@ -41,22 +39,20 @@ Several handlers can be attached to one event, and all of them will be executed.
 
 To detach an event listener, use **calendar.events.detach()**:
 
-~~~js
-calendar.events.on("change",function(date, oldDate, byClick){
+```javascript
     console.log("Change selection from "+oldDate+" to "+date);
     console.log(click);
 });
 calendar.events.detach("change");
-~~~
+```
 
 ## Calling events
 
 To call an event, use **calendar.events.fire()**:
 
-~~~js
-calendar.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

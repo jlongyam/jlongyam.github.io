@@ -37,8 +37,7 @@ You can apply the options below to configure the legend for charts with the foll
 
 ### Usage
 
-~~~js
-legend?: {
+```javascript
 	series: string[],
 	direction?: "row" | "column", // "row" by default
 	form?: "rect" | "circle", // "rect" by default
@@ -48,7 +47,7 @@ legend?: {
 	size?: number,
 	valign?: "top" | "middle" | "bottom", // "top" by default
 }
-~~~
+```
 
 ### Description
 
@@ -101,8 +100,7 @@ You can apply the options below to configure the legend for charts with the foll
 
 ### Usage
 
-~~~js
-legend?: {
+```javascript
 	values: {
 		text: string;
 		color: string;
@@ -115,7 +113,7 @@ legend?: {
 	size?: number,
 	valign?: "top" | "middle" | "bottom", // "top" by default
 }
-~~~
+```
 
 ### Description
 
@@ -173,8 +171,7 @@ You can apply the options below to configure the legend for charts with the ["tr
 
 ### Usage
 
-~~~js
-legend: {
+```javascript
 	type?: "groupName" | "range", // "groupName" by default
 	treeSeries: [
 		{
@@ -196,7 +193,7 @@ legend: {
 	size?: number,
 	valign?: "top" | "middle" | "bottom", // "top" by default
 }
-~~~
+```
 
 ### Description
 
@@ -272,8 +269,7 @@ You can apply the options below to configure the legend for charts with the ["ca
 
 ### Usage
 
-~~~js
-legend?: {
+```javascript
 	values?: {
 		text?: string,
 		tick?: number, // 10 by default
@@ -286,7 +282,7 @@ legend?: {
 	size?: number,
 	valign?: "top" | "middle" | "bottom", // "top" by default
 }
-~~~
+```
 
 ### Description
 

@@ -24,11 +24,10 @@ You can add any handler to the events of Menu. To do this, use the **menu.events
 </table>
 <br/>
 
-~~~js
-menu.events.on("click", function(id,e){
+```javascript
     console.log(id);
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -40,21 +39,19 @@ Several handlers can be attached to one and the same event, and all of them will
 
 There is a simple way of removing an event handler with the **menu.events.detach()** method:
 
-~~~js
-menu.events.on("click", function(id, e){
+```javascript
     console.log(id);
 });
 
 menu.events.detach("click"); 
-~~~
+```
 
 ## Calling events
 
 A custom event can be called with the **fire()** method of the **events** module:
 
-~~~js
-menu.events.fire(evName,[args]);
-~~~
+```javascript
+```
 
 ## List of supported events
 

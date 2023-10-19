@@ -42,10 +42,9 @@ To begin with, you should configure the environment for your project.
 
 You can use a ready project with configured settings from <a href="https://github.com/DHTMLX/optimus-starter-app/tree/main" target="_blank">GitHub</a>. To run the project on the local server, use:
 
-~~~js
-npm install
+```javascript
 npm start
-~~~
+```
 
 <br>
 
@@ -53,15 +52,13 @@ npm start
 
 - to install "dhx-optimus":
 
-~~~js
-npm i dhx-optimus
-~~~
+```javascript
+```
 
 - to install the "dhx-optimus-store" state manager:
 
-~~~js
-npm i dhx-optimus-store
-~~~
+```javascript
+```
 
 {{note DHTMLX Optimus requires the files of the DHTMLX Suite library as dependencies. Thus, you'll need to add js/css files of DHTMLX Suite to provide the correct work of DHTMLX Optimus.}}
 
@@ -76,7 +73,7 @@ Let's consider how we've created our demo application:
 
 1\. First, we've created a new *index.html* file in the *src* folder and defined a container to render our app there: 
 
-~~~html title="src/index.html"
+```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -87,16 +84,15 @@ Let's consider how we've created our demo application:
 		<section id="app" class="main__container"></section>
 	</body>
 </html>
-~~~
+```
 
 2\. Next, we've created an *index.js* file - the entry point of the app. 
 
-~~~js title="src/index.js"
-import "./assets/css/index.css"; // import css styles
+```javascript
 import { App } from "dhx-optimus";
 
 export class MyApp extends App {}
-~~~
+```
 
 Here we've created the MyApp class that renders our application. The MyApp class is inherited from the App class included from the "dhx-optimus" library. 
 
@@ -104,22 +100,20 @@ Here we've created the MyApp class that renders our application. The MyApp class
 
 {{note We recommend that you use the capital letter at the beginning of the name of the file that have a view => TopLayout.js. This is the common practice.}}
 
-~~~js title="src/views/TopLayout.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class TopLayout extends View {
 	init() {
 		return `<h1>Hello Optimus!</h1>`;
 	}
 }
-~~~
+```
 
 As you can see, we've created the TopLayout class that is inherited from the View class included from the "dhx-optimus" library. To create the initial view, we've returned an HTML element in the **init()** method. 
 
 4\. Then, to render the just created view, we've included the view into the *index.js* file and rendered it via the **show()** method:
 
-~~~js title="src/index.js" {4,7-9}
-import "./assets/css/index.css";
+```javascript
 
 import { App } from "dhx-optimus";
 import { TopLayout } from "./views/TopLayout";
@@ -129,13 +123,13 @@ export class MyApp extends App {
 		this.show(null, TopLayout); 
 	}
 }
-~~~
+```
 
 You can find more details on API methods [below](optimus_guides.md#api).
 
 5\. Finally, we've initialized our application via updating the code of the *index.html* file with the following:
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -155,7 +149,7 @@ You can find more details on API methods [below](optimus_guides.md#api).
 		</script>
 	</body>
 </html>
-~~~
+```
 
 Everything is pretty straightforward here:
 
@@ -187,8 +181,7 @@ Note, that:
 - The **init()** method defines the initial view to show;
 - The *show()* method allows rendering the main View of the app
 
-~~~js
-import { App } from "dhx-optimus";
+```javascript
 import { TopLayout } from "./views/TopLayout";
 
 export class MyApp extends App {
@@ -196,7 +189,7 @@ export class MyApp extends App {
 		this.show(null, TopLayout);
 	}
 }
-~~~
+```
 
 ### View class
 
@@ -215,8 +208,7 @@ Here are some examples:
 
 - the example of the View returned as an HTML element:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class TopLayout extends View {
 	init() {
@@ -226,20 +218,19 @@ export class TopLayout extends View {
 		console.log(`This root container:`, root);
 	}
 }
-~~~
+```
 
 As a result, the parent container of the View will be returned to the console, as in:
 
-~~~html
+```html
 <section id="app" class="main__container">
 	<h1>Hello Optimus!</h1>
 </section>
-~~~
+```
 
 - the example of the View returned as a DHTMLX widget:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class DataView extends View {
 	init() {
@@ -259,14 +250,13 @@ export class DataView extends View {
 		return this.dataView;
 	}
 }
-~~~
+```
 
 The example is pretty simple. We've just initialized the DHTMLX DataView widget and returned it as a view.
 
 - the example of the View returned as a DHTMLX widget that contains several Views:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { DataView } from "./content/DataView";
@@ -291,7 +281,7 @@ export class TopLayout extends View {
 		return this.layout;
 	}
 }
-~~~
+```
 
 The above sample shows that the DHTMLX Layout component possesses the *init* property. The property allows you to display the View in the specified cell of the layout via the *show()* method in a short form.
 
@@ -309,8 +299,7 @@ The advantages of the class inherited from the Component class are:
 
 Let's consider the Component class on the example of DHTMLX Uploader:
 
-~~~js
-import { Component } from "dhx-optimus";
+```javascript
 
 export default class Uploader extends Component {
 	init() {
@@ -320,7 +309,7 @@ export default class Uploader extends Component {
 		...
 	}
 }
-~~~
+```
 
 The above code shows that:
 
@@ -332,8 +321,7 @@ The Component class also provides access to the events of the app via the **fire
 
 The following example shows that it is possible to use the class inherited from the Component class by calling it in the class inherited from the App class via the [use()](optimus_guides.md#api) method.
 
-~~~js
-import { App } from "dhx-optimus";
+```javascript
 
 import TopLayout from "./views/TopLayout";
 import Uploader from "./components/Uploader";
@@ -348,7 +336,7 @@ export class FileExplorer extends App {
 		...
 	}
 }
-~~~
+```
 
 
 ## Subscribing to global events 
@@ -359,8 +347,7 @@ Let's consider an example. We want to display different content in the View, bas
 
 To subscribe to the global **viewChange** event, we'll apply the *this.on()* method:
 
-~~~js {24-26}
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -388,14 +375,13 @@ export class TopLayout extends View {
 		});
 	}
 }
-~~~
+```
 
 The event will change the views via the *this.show()* method.
 
 To call the **viewChange** event, we'll use the *this.fire()* API:
 
-~~~js {35}
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() {
@@ -433,14 +419,13 @@ export class ToolbarView extends View {
 		});
 	}
 }
-~~~
+```
 
 As you can see, whenever the user clicks the button in the toolbar, the *this.fire()* method will be called and the handler will be executed.
 
 We should also pass the changed state to the child component:  
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class EmptyView extends View {
 	init() {
@@ -450,15 +435,14 @@ export class EmptyView extends View {
 			</div>`;
 	}
 }
-~~~
+```
 
 Here we are! After clicking the button in the toolbar, the necessary content will be displayed in the View. 
 
 <br/>
 The following code sample shows that the global event, defined in the App class, is available from any point of the application:
 
-~~~js
-import { App } from "dhx-optimus";
+```javascript
 import { TopLayout } from "./views/TopLayout";
 
 export class MyApp extends App {
@@ -470,7 +454,7 @@ export class MyApp extends App {
 		});
 	}
 }
-~~~
+```
 
 
 ## Passing data to child components
@@ -479,8 +463,7 @@ There is a possibility to pass data from parent components to the child componen
 
 Let's take a look at the code snippet from the previous point:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 ...
 
@@ -495,18 +478,16 @@ export class TopLayout extends View {
 		});
 	}
 }
-~~~
+```
 
 We've added an event handler to the **viewChange** event of the global event bus. When the id is changed, the **show(target, view, params)** method is called. The method takes 3 parameters, but we're interested in the last one. It allows passing an object with the necessary parameters. For instance:
 
-~~~js
-this.show(this.layout.getCell("content"), EmptyView, { content: id });
-~~~
+```javascript
+```
 
 It is possible to get this parameter in the child component:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class EmptyView extends View {
 	init() {
@@ -516,7 +497,7 @@ export class EmptyView extends View {
 			</div>`;
 	}
 }
-~~~
+```
 
 ## Initializing the app's global state
 
@@ -528,8 +509,7 @@ Let's consider how you can create a global store, retrieve the state of the stor
 
 At first, we've initialized the global state of the app in the App class via creating the global store and subscribing to the changes of the store. To retrieve the current state of the store, we've used the **getState()** method.
 
-~~~js
-import { App } from "dhx-optimus";
+```javascript
 import Store from "dhx-optimus-store";
 
 import { TopLayout } from "./views/TopLayout";
@@ -553,12 +533,11 @@ export class MyApp extends App {
 		});
 	}
 }
-~~~
+```
 
 Then, we've used the toolbar component to generate the changes of the state there. The *fire()* method calls the handler each time the user clicks the button in the toolbar: 
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() {
@@ -578,7 +557,7 @@ export class ToolbarView extends View {
 		});
 	}
 }
-~~~
+```
 
 The above code implements the following logic:
 
@@ -589,8 +568,7 @@ The above code implements the following logic:
 
 Using the **observe** method helps to asynchronously observe the changes made to the global store from any point of the application:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -609,7 +587,7 @@ export class TopLayout extends View {
 		);
 	}
 }
-~~~
+```
  
 ## Working with widgets of Suite
 
@@ -625,8 +603,7 @@ The small and fast microframework is intended to build DHTMLX-based apps easier 
 
 In most cases creating a View based on the component of the Suite library is pretty simple:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class CalendarView extends View {
 	init() {
@@ -641,7 +618,7 @@ export class CalendarView extends View {
 		console.log("Calendar is destroy");
 	}
 }
-~~~
+```
 
 In the above example, we've initialized the view that returns DHTMLX Calendar. 
 
@@ -659,8 +636,7 @@ Let's create the view based on DHTMLX Window and then render it in the TopLayout
 
 The initialization of the DHTMLX Window component is the same as initialization of the other components:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class WindowView extends View {
 	init() {
@@ -677,12 +653,11 @@ export class WindowView extends View {
 		console.log("DHX Window is destroy");
 	}
 }
-~~~
+```
 
 But rendering of the View based on DHTMLX Window will look like this:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 ...
 import { WindowView } from "./WindowView";
 ...
@@ -696,12 +671,11 @@ export class TopLayout extends View {
 		this.show(null, WindowView);
 	}
 }
-~~~
+```
 
 To listen to the changes made to the global state, we should update the code of *WindowView* and apply the **observe()** method.  As a result, the *WindowView* will be rendered when switching to the second page of the app:  
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 export class WindowView extends View {
 	init() {
@@ -722,7 +696,7 @@ export class WindowView extends View {
 	}
 	destroy() { ... }
 }
-~~~
+```
 
 Thus, it is possible to display the DHTMLX Window based View in any necessary View.
 
@@ -733,8 +707,7 @@ Let's consider 3 methods of rendering a View via the **show()** method, one of w
 
 1\. It is possible to render views with the help of the **show()** method:
 
-~~~js {20-21}
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -759,12 +732,11 @@ export class TopLayout extends View {
 		return this.layout;
 	}
 }
-~~~
+```
 
 2\. It is possible to call the **show()** method right in the layout via the *init* option. The option returns the current Layout cell as a parameter. You can use this way when you need to get the static layout without changing the view.
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -786,12 +758,11 @@ export class TopLayout extends View {
 		});
 	}
 }
-~~~
+```
 
 3\. You can also combine the above two methods if you need to change views in the Layout cell:
 
-~~~js
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { DataView } from "./content/DataView";
@@ -833,7 +804,7 @@ export class TopLayout extends View {
 		);
 	}
 }
-~~~
+```
 
 ## API
 

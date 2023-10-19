@@ -9,8 +9,7 @@ To apply changes made in a grid row through the form in the window we need to pr
 
 First we need to check which one of the footer buttons was clicked. We can use the <b>Click</b> event handler of the window footer to do this.
 
-~~~js
-dhxWindow.footer.events.on("Click", function(id, e){
+```javascript
 	// we call the getValue() method of the Form 
     // to get the current value of the item
 	item = form.getValue(); 
@@ -36,7 +35,7 @@ dhxWindow.footer.events.on("Click", function(id, e){
 		}
 	}
 });
-~~~
+```
 
 ##Adding functionality to the Apply button
 
@@ -44,20 +43,18 @@ Now let's describe the steps we need to take to provide the possibility to edit 
 
 1\. Check whether the form is filled out correctly by using the <b>validate()</b> method of the Form component:
 
-~~~js
-case 'apply': {
+```javascript
 	if (form.validate()){
    	}                
     break;
 }
-~~~
+```
 
 2\. Define what to do with a grid row - either to add or edit it - check whether its id is empty:
 
 - if the item Id is empty, we will add a new item into the grid:
 
-~~~js
-if (item.id == ""){
+```javascript
     item.id = grid.data.getLength() + 1; // assigning an id to a new item
     item.modified = getFormatDate();  
     // adding a new item through the add() method of Data Collection. 
@@ -66,19 +63,18 @@ if (item.id == ""){
     grid.data.add(item, 0);     
     dhxWindow.hide(); // the window is hiding
 }
-~~~
+```
 
 - If the Id isn't empty, we will update the current row in the grid via the <b>update()</b> method of Data Collection:
 
-~~~js
-else {                       
+```javascript
     item.modified = getFormatDate(); 
     // It takes 2 parameters: the id of the item 
     // which needs to be updated and the item to be updated
     grid.data.update(item.id, item);     
     dhxWindow.hide();
 }
-~~~
+```
 
 
 <div id="tutorial_step">

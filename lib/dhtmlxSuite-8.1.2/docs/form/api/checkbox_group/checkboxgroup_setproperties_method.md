@@ -54,8 +54,7 @@ The method invokes the [](form/api/checkbox_group/checkboxgroup_afterchangeprope
 
 It is possible to change the values of the following configuration attributes of the **CheckboxGroup** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number|"content",
@@ -71,19 +70,18 @@ It is possible to change the values of the following configuration attributes of
 	successMessage: string,
 	width: string|number|"content"
 }
-~~~
+```
 
 It is possible to change the values of the following configuration attributes of a **checkbox** of the CheckboxGroup control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	padding: string | number,
 	text: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox_group/api_checkboxgroup_properties.md).
 

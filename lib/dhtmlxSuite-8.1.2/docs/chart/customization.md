@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
     .my_first_class {
         /*some styles*/
@@ -28,19 +28,18 @@ For this you need to take the following steps:
         /*some styles*/
     }
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [](chart/api/chart_css_config.md) property in the Chart configuration:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-background-primary: #444;
@@ -77,7 +76,7 @@ For example:
         ]
     });
 </script>
-~~~
+```
 
 ## Adding template to scale labels
 
@@ -87,8 +86,7 @@ For example:
 
 While configuring chart scales you can add a template for the labels of the scales by using the **textTemplate** configuration option of [scales](chart/configuration_properties.md#scales):
 
-~~~js {7-9}
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type:"line",
     css: "dhx_widget--bg_white dhx_widget--bordered",
     scales: {
@@ -108,7 +106,7 @@ const chart = new dhx.Chart("chart_container", {
         }
     ]
 });
-~~~
+```
 
 ## Adding color gradient for bars
 
@@ -118,8 +116,7 @@ const chart = new dhx.Chart("chart_container", {
 
 It is possible to define a color gradient for bars with the help of the **gradient** option of [series](chart/configuration_properties.md#series). You need to set its value as a function that takes the color of the series filling in Hex format as a parameter:
 
-~~~js {16-31}
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type:"bar",
     css: "dhx_widget--bg_white dhx_widget--bordered",
     scales: {
@@ -153,7 +150,7 @@ const chart = new dhx.Chart("chart_container", {
         }
     ]
 });
-~~~
+```
 
 ## Adding template to tooltips
 
@@ -163,8 +160,7 @@ const chart = new dhx.Chart("chart_container", {
 
 You can easily define a template for showing values of data items in tooltip via the **tooltipTemplate** option of [series](chart/configuration_properties.md#series):
 
-~~~js {1-3,18,23}
-function tooltipTemplate(p) {
+```javascript
   return "x: " + p[1] + ", y: " + p[0];
 };
 
@@ -193,7 +189,7 @@ const chart = new dhx.Chart("chart_container", {
         usePointType: true,
     }
 });
-~~~
+```
 
 ## Adding template to text values of data items in bars
 
@@ -203,8 +199,7 @@ const chart = new dhx.Chart("chart_container", {
 
 The **showTextTemplate** option of [series](chart/configuration_properties.md#series) lets you an opportunity to add a template to values that are shown for data items in bars:
 
-~~~js {20-22,29-31}
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type: "bar",
     css: "dhx_widget--bg_white dhx_widget--bordered",
     scales: {
@@ -244,4 +239,4 @@ const chart = new dhx.Chart("chart_container", {
         valign: "middle"
     }
 });
-~~~
+```

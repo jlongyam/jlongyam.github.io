@@ -12,12 +12,11 @@ This is an item that contains some text.
 
 A Title control can be added to a ribbon with the help of the **add()** method of TreeCollection:
 
-~~~js
-ribbon.data.add({
+```javascript
     type: "title",
 	value: "APP NAME"
 });
-~~~
+```
 
 ### Properties
 
@@ -27,7 +26,6 @@ You can provide the [following properties](ribbon/api/api_title_properties.md) i
 
 Title can be hidden and shown with the help of the related methods. Pass the id of a Title control as a parameter.
 
-~~~js
-ribbon.show(id);
+```javascript
 ribbon.hide(id);
-~~~
+```

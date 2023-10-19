@@ -10,11 +10,10 @@ description: You can explore the event handling of Colorpicker in the documentat
 
 You can attach event listeners with the **colorpicker.events.on()** method:
 
-~~~js
-colorpicker.events.on("modeChange", function(view) {
+```javascript
    console.log("Selected mode: " + view); 
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ colorpicker.events.on("modeChange", function(view) {
 
 To detach events, use **colorpicker.events.detach()**:
 
-~~~js
-colorpicker.events.on("modeChange", function(view) {
+```javascript
    console.log("Selected mode: " + view); 
 });
 
 colorpicker.events.detach("modeChange");
-~~~
+```
 
 ## Calling events
 
 To call events, use **colorpicker.events.fire()**:
 
-~~~js
-colorpicker.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

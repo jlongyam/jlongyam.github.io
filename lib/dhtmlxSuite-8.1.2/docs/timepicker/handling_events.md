@@ -10,11 +10,10 @@ description: You can explore the event handling of Timepicker in the documentati
 
 You can attach event listeners with the **timepicker.events.on()** method:
 
-~~~js
-timepicker.events.on("change", function(value){
+```javascript
     console.log("The value of a timepicker has changed to "+ value);
 });
-~~~
+```
 
 **Related sample**: [Timepicker. Events](https://snippet.dhtmlx.com/5ccptwy7)
 
@@ -24,20 +23,18 @@ timepicker.events.on("change", function(value){
 
 To detach events, use **timepicker.events.detach()**:
 
-~~~js
-timepicker.events.on("change", function(value){
+```javascript
     console.log("The value of a timepicker has changed to "+ value);
 });
 timepicker.events.detach("Change");
-~~~
+```
 
 ## Calling events
 
 To call events, use **timepicker.events.fire()**:
 
-~~~js
-timepicker.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 The list of events is available in the [API section](timepicker/api/api_overview.md#events).

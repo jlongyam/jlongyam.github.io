@@ -8,8 +8,7 @@ description: You can explore the Properties of the Toggle Group control of Form 
 
 ## Usage
 
-~~~js
-{
+```javascript
     type: "toggleGroup",
     name?: string,
     id?: string,
@@ -44,7 +43,7 @@ description: You can explore the Properties of the Toggle Group control of Form 
     height?: string | number | "content", // "content" by default
     padding?: string | number // "8px" by default
 }
-~~~
+```
 
 ## Description
 

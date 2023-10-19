@@ -23,8 +23,7 @@ method of the **Date** object
 
 For example:
 
-~~~js
-// set the value as a string
+```javascript
 timepicker.setValue("00:39");
 
 // set the value as a Date object
@@ -35,7 +34,7 @@ timepicker.setValue([6,20,"AM"]);
 
 // set the value as a number
 timepicker.setValue(1559288966422);
-~~~
+```
 
 **Related sample**: [Timepicker. Set Timepicker value](https://snippet.dhtmlx.com/6r8lkhbg)
 
@@ -45,8 +44,7 @@ You can get the value of TimePicker either as an object or as a string via the [
 
 - **asObject** - (*boolean*) optional, specifies that the value will be returned as an object, false by default
 
-~~~js
-// return value as a string in the 24-hour format
+```javascript
 const val1 = timepicker.getValue(); // -> "00:39"
 
 // return value as an object in the 24-hour format
@@ -57,7 +55,7 @@ const val3 = timepicker2.getValue(); // -> "06:00AM"
 
 // return value as an object in the 12-hour format
 const val4 = timepicker2.getValue(true); // -> {hour: 6, minute: 0, AM: true}
-~~~
+```
 
 **Related sample**: [Timepicker. Get Timepicker value](https://snippet.dhtmlx.com/k4atpgnd)
 

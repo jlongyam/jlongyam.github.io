@@ -63,17 +63,15 @@ To call the event of DataCollection, you may use either of the two syntaxes:
 
 - common syntax (via the **data** object of the component)
 
-~~~js
-chart.data.events.on("afterAdd", function(newItem){
+```javascript
     console.log("A new item is added");
 });
-~~~
+```
 
 - or short syntax (right through the component)
 
-~~~js
-chart.events.on("afterAdd", function(newItem){
+```javascript
     console.log("A new item is added");
 });
-~~~
+```
 :::

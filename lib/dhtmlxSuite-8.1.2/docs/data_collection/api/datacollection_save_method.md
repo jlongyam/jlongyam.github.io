@@ -30,21 +30,19 @@ The method will send one of the following requests to the backend:
 
 Data saving is asynchronous, so you need to return a promise - the result of the saving operation. To do this, use the **saveData** property that returns a "promise" object:
 
-~~~js
-const data = new DataCollection();
+```javascript
 data.save(loader);
 return data.saveData.then(function () {
     // now your data is saved
 });
-~~~
+```
 
 Use the [isSaved](data_collection/api/datacollection_issaved_method.md) method to know whether the changes are saved:
 
-~~~js
-grid.data.saveData.then(function () {
+```javascript
 	console.log(grid.data.isSaved());
 });
-~~~
+```
 
 @changelog:
 Before v7.2, the method sent the `POST` request to the backend on each change of data. <br>

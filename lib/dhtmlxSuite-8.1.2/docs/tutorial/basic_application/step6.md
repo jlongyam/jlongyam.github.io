@@ -11,8 +11,7 @@ The process of initializing a chart is similar to creating a grid or a toolbar.
 
 1\. First, initialize the chart with the dhx.Chart object constructor in the following way:  
 
-~~~js
-var chart = new dhx.Chart(null, { 
+```javascript
 	type: "pie", //the type of the chart is pie
 	series: [ 
 		//an array of series objects
@@ -38,14 +37,13 @@ var chart = new dhx.Chart(null, {
 		}
 	]
 });
-~~~
+```
 
 2\. Then attach the chart to the "chart-cell" of Layout as in:
 
-~~~js
-// attaching the chart to the "chart-cell" of the layout
+```javascript
 layout.cell("chart-cell").attach(chart);
-~~~
+```
 
 You can learn more about chart configuration options in the [Configuration](chart/configuration_properties.md) article.
 

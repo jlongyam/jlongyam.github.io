@@ -9,8 +9,7 @@ Before displaying data in the chart we need to process grid data.
 
 To do that, we'll create a  <b>getCountUsers()</b> function given below:
 
-~~~js
-function getCountUsers(){     
+```javascript
     vipUser = grid.data.reduce(function(acc, item) {    
     	return item.vip ? acc + 1 : acc;           
     }, 0);
@@ -28,28 +27,25 @@ function getCountUsers(){
     	}            
     return pieData; //return the processed data for the chart
 };
-~~~
+```
 
 Let's look at its logic in detail.
 
 First, we count the number of VIP users through the <b>reduce()</b> method of Data Collection:
 
-~~~js
-vipUser = grid.data.reduce(function(acc, item) {    
+```javascript
 	return item.vip ? acc + 1 : acc;           
 }, 0);
-~~~
+```
 
 After that we determine the total number of users by using the <b>getLength()</b> method of Tree Collection and then calculate the number of default users.
 
-~~~js
-defUser = grid.data.getLength() - vipUser;
-~~~
+```javascript
+```
 
 Finally, we create an array to add data about the number of default and vip users with the help of the **push()** operation. 
 
-~~~js
-var pieData = []; // create an array
+```javascript
 
 if (vipUser > 0) { 
 	pieData.push( { value: vipUser, color: "#394E79", 
@@ -59,7 +55,7 @@ if  (defUser > 0) {
 	pieData.push( { value: defUser, color: "#5E83BA", 
         text: "Default Users" })
 };           
-~~~
+```
 
 As a result of the <b>getCountUsers()</b> function call we get a dataset for the chart.
 
@@ -69,19 +65,17 @@ After processing grid data, we need to show it in the chart.
 
 To display the data loaded in the chart, we will use the <b>Load</b> event of data_collection/api/refs/datacollection.md. Inside the event handler we'll call the <b>parse()</b> method to parse data in the chart.
 
-~~~js
-grid.data.events.on("Load", function(){
+```javascript
 	chart.data.parse(getCountUsers());
 });
-~~~
+```
 
 When data is changed in the grid, we should update the chart data as well. For this purpose we'll use the <b>Change</b> event of data_collection/api/refs/datacollection.md.
 
-~~~js
-grid.data.events.on("Change", function(id,status,updatedItem){
+```javascript
 	chart.data.parse(getCountUsers());
 });
-~~~
+```
 
 ##Get the result
 

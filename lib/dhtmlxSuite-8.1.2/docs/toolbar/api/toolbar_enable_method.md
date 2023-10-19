@@ -24,9 +24,8 @@ toolbar.enable(["cancel_btn","del_btn"]);
 
 Starting from v7.0, it is possible to enable all items at once by using the method without the parameter:
 
-~~~js
-// enables all Toolbar items
+```javascript
 toolbar.enable();
-~~~
+```
 
 [comment]: # (@related: toolbar/common_methods.md#disabling-and-enabling-controls)

@@ -43,8 +43,7 @@ form.getItem("select").getProperties();
 
 The returned object of the **Select** control looks like:
 
-~~~js
-{
+```javascript
 	errorMessage: "",
 	height: "content",
 	helpMessage: "",
@@ -59,7 +58,7 @@ The returned object of the **Select** control looks like:
 	validation: undefined,
 	width: "200px"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/select/api_select_properties.md).
 

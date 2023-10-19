@@ -48,7 +48,7 @@ Block and elements' names are separated from modifier names by a double hyphen: 
 
 Here's what markup looks like using a form-group example:
 
-~~~html 
+```html
 <!-- Form-group block -->
 <div class="dhx_form-group ">
 	<!-- Label block -->
@@ -62,7 +62,7 @@ Here's what markup looks like using a form-group example:
 		</div>
 	</div>
 </div>
-~~~
+```
 
 ## Button
 
@@ -100,7 +100,7 @@ Here's what markup looks like using a form-group example:
 
 Here is an example how you can specify a markup for a button:
 
-~~~html
+```html
 <!-- Create a link button with red color-->
 <button type="button" class="dhx_button dhx_button--color_danger dhx_button--view_link">
 	<!-- The button has the "plus" icon-->	
@@ -108,7 +108,7 @@ Here is an example how you can specify a markup for a button:
 	<!-- The "Send text" button-->
 	<span class="dhx_button__text">Send</span>
 </button>
-~~~
+```
 
 ## Label
 
@@ -120,9 +120,9 @@ Here is an example how you can specify a markup for a button:
 
 You can style a &lt;label&gt; element, as in:
 
-~~~html
+```html
 <label for="element-id" class="dhx_label">Email</label>
-~~~
+```
 
 ## Checkbox
 
@@ -141,7 +141,7 @@ You can style a &lt;label&gt; element, as in:
 
 You can change the appearance of a native browser checkbox by using a markup given below:
 
-~~~html
+```html
 <!-- Create a label for a checkbox and put it and an input in one line inside the form-group-->
 <label class="dhx_form-group dhx_checkbox dhx_form-group--inline" style="margin-left: calc(116px);">
 	<!-- Hide a native browser checkbox but save its behavior-->	
@@ -151,7 +151,7 @@ You can change the appearance of a native browser checkbox by using a markup giv
 	<!-- Style the checkbox label-->
 	<span class="dhx_label ">I am checkbox</span>
 </label>
-~~~
+```
 
 ## Radiobutton
 
@@ -170,7 +170,7 @@ You can change the appearance of a native browser checkbox by using a markup giv
 
 You can apply a markup to style a radiobutton, like this:
 
-~~~html
+```html
 <!-- Create a label for a radiobutton and put it and an input in one line inside the form-group-->
 <label class="dhx_form-group dhx_radiobutton dhx_form-group--inline" style="margin-left: calc(116px);">
 	<!-- Hide a native browser radiobutton but save its behavior-->	
@@ -180,7 +180,7 @@ You can apply a markup to style a radiobutton, like this:
 	<!-- Style the radiobutton label-->
 	<span class="dhx_label ">I am radiobutton</span>
 </label>
-~~~
+```
 
 ## Input
 
@@ -209,7 +209,7 @@ You can apply a markup to style a radiobutton, like this:
 
 An example of the input markup is given below:
 
-~~~html
+```html
 <!-- Create a form-group and put an input and its label in one line-->
 <div class="dhx_form-group dhx_form-group--inline">
 	<!-- Create the label for the input and style it-->
@@ -227,7 +227,7 @@ An example of the input markup is given below:
 		<span class="dhx_input__caption">Message text</span>
 	</div>
 </div>
-~~~
+```
 
 ## Select
 
@@ -239,7 +239,7 @@ An example of the input markup is given below:
 
 The markup of select looks like this:
 
-~~~html
+```html
 <!-- Create a form-group and put an input and its label in one line-->
 <div class="dhx_form-group dhx_form-group--inline">
 	<!-- Create the label for the select and style it-->
@@ -263,7 +263,7 @@ The markup of select looks like this:
 		<span class="dhx_input__caption">Choose the number 5</span>
 	</div>
 </div>
-~~~
+```
 
 ## Extra classes
 
@@ -288,11 +288,10 @@ The DHTMLX library also provides you with a set of CSS classes that you can appl
 
 Here is an example of Ribbon customization:
 
-~~~js
-const ribbon = new dhx.Ribbon("ribbon", {
+```javascript
     css:"dhx_widget--bg_white"
 });
-~~~
+```
 
 ### List of CSS classes for styling a Layout cell:
 
@@ -313,8 +312,7 @@ const ribbon = new dhx.Ribbon("ribbon", {
 
 An example of customization of a Layout cell is given below:
 
-~~~js
-const layout = new dhx.Layout("layout", {
+```javascript
     css: "dhx_layout-cell--bordered",
     rows: [{
         id: "toolbar",
@@ -324,4 +322,4 @@ const layout = new dhx.Layout("layout", {
         height: "60px"
     }]
 });
-~~~
+```

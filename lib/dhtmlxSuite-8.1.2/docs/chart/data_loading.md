@@ -21,8 +21,7 @@ DHTMLX Chart expects loaded data in the JSON format. Here are examples of approp
 
 A data set for these chart types can look like this:
 
-~~~js
-const dataset = [
+```javascript
     { "month": "`02", "company A": 20, "company B": 52, "company C": 72},
     { "month": "`03", "company A": 5, "company B": 33, "company C": 90},
     { "month": "`04", "company A": 55, "company B": 30, "company C": 81},
@@ -34,7 +33,7 @@ const dataset = [
     { "month": "`10", "company A": 10, "company B": 24, "company C": 50},
     { "month": "`11", "company A": 17, "company B": 40, "company C": 78}
 ]
-~~~
+```
 
 Each object in the data set contains a number of *key:value* pairs for data titles and values.
 
@@ -66,15 +65,14 @@ A data set for Pie, Pie3D and Donut charts differs a little bit and includes the
 
 You need to provide the "color":"value" properties to color the sections of these types of Chart. For example:
 
-~~~js
-const pie_dataset = [
+```javascript
 	{ "id": "Jan", "value": 44.33, "color": "#394E79", "month": "Jan"},
 	{ "id": "Feb", "value": 22.12, "color": "#5E83BA", "month": "Feb"},
 	{ "id": "Mar", "value": 53.21, "color": "#C2D2E9", "month": "Mar"},
 	{ "id": "Apr", "value": 34.25, "color": "#9A8BA5", "month": "Apr"},
 	{ "id": "May", "value": 24.65, "color": "#E3C5D5", "month": "May"}
 ];
-~~~
+```
 
 - **Treemap chart**
 
@@ -104,15 +102,14 @@ A data set for Treemap chart has also another structure and may include the foll
 
 For example:
 
-~~~js
-const treeMapData = [
+```javascript
     { id: "2020", month: "2020" },
     { id: "Jan", value: 144.33, month: "Jan", parent: "2020" },
     { id: "Feb", value: 22.12, month: "Feb", parent: "2020" },
     { id: "Mar", value: 53.21, month: "Mar", parent: "2020" },
     // more data
 ];
-~~~
+```
 
 - **Calendar heatmap chart**
 
@@ -136,8 +133,7 @@ A data set for Heatmap chart should include the following properties:
 </table>
 <br/>
 
-~~~js
-const heatMapData = [
+```javascript
 	{ id: "100", value: 50, date: new Date(2022, 2, 2) },
 	{ id: "101", value: 100, date: new Date(2022, 4, 1) },
 	{ id: "102", value: 10, date: new Date(2022, 4, 4) },
@@ -147,14 +143,13 @@ const heatMapData = [
 	{ id: "300", value: 22, date: new Date(2022, 9, 6) },
 	{ id: "501", value: 100, date: new Date(2023, 1, 1) },
 ];
-~~~
+```
 
 ## Loading data on initialization
 
 You can load [a predefined data set](#preparing-data-set) into Chart on the initialization stage. Use the [data](chart/api/chart_data_config.md) configuration property, as in:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type: "area",
 	scales: {
         "bottom": {
@@ -193,7 +188,7 @@ const chart = new dhx.Chart("chart_container", {
     },
     data: dataset
 });
-~~~
+```
 
 ## Loading data after initialization
 
@@ -206,8 +201,7 @@ There are two ways to load data into Chart after its initialization:
 
 To load data from an external file, make use of the [load()](data_collection/api/datacollection_load_method.md) method of [DataCollection](data_collection.md). It takes the URL of the file with data as a parameter:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type: "bar",
     scales: { 
         // scales config 
@@ -220,17 +214,16 @@ const chart = new dhx.Chart("chart_container", {
 });
 
 chart.data.load("../common/dataset.json");
-~~~
+```
 
 The component will make an AJAX call and expect the remote URL to provide valid JSON data.
 
 Data loading is asynchronous, so you need to wrap any after-loading code into a promise:
 
-~~~js
-chart.data.load("/some/data").then(function(){
+```javascript
    // some logic here
 });
-~~~
+```
 
 **Related sample**: [Chart. Load data](https://snippet.dhtmlx.com/qah8exx2)
 
@@ -238,8 +231,7 @@ chart.data.load("/some/data").then(function(){
 
 To load data from a local data source, use the [parse()](data_collection/api/datacollection_parse_method.md) method of [DataCollection](data_collection.md). Pass [a predefined data set](#preparing-data-set) as a parameter of this method:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type: "bar",
     scales: { 
         // scales config 
@@ -252,7 +244,7 @@ const chart = new dhx.Chart("chart_container", {
 });
 
 chart.data.parse(dataset);
-~~~
+```
 
 **Related sample**: [Chart. Bar chart initialization](https://snippet.dhtmlx.com/id9nbujd)
 
@@ -261,17 +253,15 @@ chart.data.parse(dataset);
 To save the current state of a chart, use the **serialize()** method of [DataCollection](data_collection.md). It converts the data of a chart into an array of JSON objects. 
 Each JSON object contains a set of *key:value* pairs for data titles and values.
 
-~~~js
-const state = chart1.data.serialize();
-~~~
+```javascript
+```
 
 Then you can parse the data stored in the saved state array to a different chart. For example:
 
-~~~js
-// creating a new chart
+```javascript
 const chart2 = new dhx.Chart(document.body);
 // parsing the state of chart1 into chart2
 chart2.data.parse(state);
-~~~
+```
 
 **Related sample**: [Chart. Serialize](https://snippet.dhtmlx.com/rqvvpopp)

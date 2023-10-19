@@ -8,8 +8,7 @@ description: You can explore the Button properties of Toolbar in the documentati
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "button",
 		id?: string | number,
@@ -38,7 +37,7 @@ const data = [
 	},
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

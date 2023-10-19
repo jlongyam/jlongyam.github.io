@@ -10,25 +10,22 @@ description: You can explore how to work with List in the documentation of the D
 
 To set focus on a List item, make use of the [](list/api/list_setfocus_method.md) method. It takes the id of an item as a parameter:
 
-~~~js
-list.setFocus("7");
-~~~
+```javascript
+```
 
 **Related sample**: [List. Set active index](https://snippet.dhtmlx.com/ermcjx3d)
 
 To get the id of a List item in focus, use the [](list/api/list_getfocus_method.md) method. It will return the id of an item in focus:
 
-~~~js
-list.getFocus(); // -> "6"
-~~~
+```javascript
+```
 
 ## Editing items
 
 You can edit a particular List item with the help of the [](list/api/list_edititem_method.md) method. It takes as a parameter the id of an item:
 
-~~~js
-list.editItem("1");
-~~~
+```javascript
+```
 
 **Related sample**: [List. Edit items](https://snippet.dhtmlx.com/6wsxgswc)
 
@@ -58,9 +55,8 @@ It is possible to add more items into the initialized List on the fly. Use the [
 </table>
 <br/>
 
-~~~js
-list.data.add({value:"New item"},1);
-~~~
+```javascript
+```
 
 **Related sample**: [List. Add new item with Form](https://snippet.dhtmlx.com/f7cbdiqg)
 
@@ -83,11 +79,10 @@ You can change config options of the item via the [update()](../../data_collecti
 
 For example, you can change the value of an item:
 
-~~~js
-list.data.update("option_id",{
+```javascript
 	value:"Nice item"
 });
-~~~
+```
 
 **Related sample**: [List. Editing item using Form](https://snippet.dhtmlx.com/6jpn7a6h)
 
@@ -95,15 +90,13 @@ list.data.update("option_id",{
 
 To remove an item, make use of the [remove()](../../data_collection/api/datacollection_remove_method/) method of Data Collection. Pass the id of the item that should be removed to the method:
 
-~~~js
-list.data.remove("option_id");
-~~~
+```javascript
+```
 
 To remove all items at once, use the [removeAll()](../../data_collection/api/datacollection_removeall_method/) method of DataCollection:
 
-~~~js
-list.data.removeAll();
-~~~
+```javascript
+```
 
 **Related sample**: [List. Delete item](https://snippet.dhtmlx.com/wmozu18g)
 
@@ -113,13 +106,12 @@ You can filter List data by the specified criteria with the help of the [filter(
 
 Check all details on the parameters of the method in the [Data Collection API](data_collection.md).
 
-~~~js
-list.data.filter({
+```javascript
 	by:"value",
 	match:2,
 	compare:(value,match,item)=>{ return parseFloat(value) % 2 == 0}
 });
-~~~
+```
 
 **Related sample**: [List. Filtering](https://snippet.dhtmlx.com/k8kvmy8v)
 
@@ -131,12 +123,11 @@ It is possible to sort data in List via the [sort()](../../data_collection/api/d
 
 Check all details on the parameters of the method in the [Data Collection API](data_collection.md).
 
-~~~js
-list.data.sort({ 
+```javascript
 	by:"value",
 	dir:"desc"
 });
-~~~
+```
 
 **Related sample**: [List. Sorting](https://snippet.dhtmlx.com/876meu9a)
 

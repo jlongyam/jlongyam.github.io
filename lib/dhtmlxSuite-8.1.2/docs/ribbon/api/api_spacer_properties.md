@@ -8,14 +8,13 @@ description: You can explore the Spacer properties of Ribbon in the documentatio
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "spacer",
 		id?: string | number,
 	}
 ]
-~~~
+```
 
 ### Description
 

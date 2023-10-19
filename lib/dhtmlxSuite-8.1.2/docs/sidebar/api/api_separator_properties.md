@@ -8,15 +8,14 @@ description: You can explore the Separator properties of Sidebar in the document
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "separator",
 		id?: string | number,
     },
 	// more Sidebar controls
 ]
-~~~
+```
 
 ### Description
 

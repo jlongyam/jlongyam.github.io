@@ -18,8 +18,7 @@ A control that allows a user to enter a simple multi-line text.
 
 You can easily add a Textarea control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{
 			type: "textarea",
@@ -31,7 +30,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -43,9 +42,8 @@ You can manipulate a Textarea control by using methods or events of the object r
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("textarea").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

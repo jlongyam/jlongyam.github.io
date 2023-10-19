@@ -75,8 +75,7 @@ const tree = new dhx.Tree("tree", {
 
 You can disable displaying of a checkbox for a tree item via the [update](tree_collection/api/treecollection_update_method.md) method of tree collection.
 
-~~~js
-tree.data.update("Books", {checkbox:false});
-~~~
+```javascript
+```
 
 [comment]: # (@related: tree/initialization_of_dhtmlxtree.md#initialize-tree tree/loading_data.md#preparing-data-set)

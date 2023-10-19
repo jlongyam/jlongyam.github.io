@@ -12,8 +12,7 @@ description: You can explore the palette config of Colorpicker in the documentat
 
 @default: 
 
-~~~js
-// Default array of colors of the Colorpicker
+```javascript
 const palette = [
 	["#D4DAE4","#B0B8CD","#949DB1","#727A8C","#5E6677","#3F4757","#1D2534"],
 	["#FFCDD2","#FE9998","#F35C4E","#E94633","#D73C2D","#CA3626","#BB2B1A"],
@@ -26,7 +25,7 @@ const palette = [
 	["#D6BDCC","#C492AC","#A9537C","#963A64","#81355A","#6E3051","#4C2640"],
 	["#D2C5C1","#B4A09A","#826358","#624339","#5D4037","#4E342E","#3E2723"]
 ];
-~~~
+```
 
 @example:
 const colorpicker = new dhx.Colorpicker("colorpicker_container", {

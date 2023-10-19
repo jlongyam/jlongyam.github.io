@@ -8,8 +8,7 @@ description: You can explore the ImageButton properties of Toolbar in the docume
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "imageButton",
 		id?: string | number,
@@ -29,7 +28,7 @@ const data = [
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

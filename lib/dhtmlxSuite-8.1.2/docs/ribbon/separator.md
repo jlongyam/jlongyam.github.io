@@ -14,11 +14,10 @@ This is a control that adds a line separating items/groups of items from each ot
 
 A separator can be added between menu options:
 
-~~~js
-ribbon.data.add({
+```javascript
     type:"separator"
 });
-~~~
+```
 
 **Related sample**: [Ribbon. Separator](https://snippet.dhtmlx.com/wqhahyw8)
 
@@ -30,7 +29,6 @@ You can provide the [following properties](ribbon/api/api_separator_properties.m
 
 You can hide and show Separator with the methods of Ribbon:
 
-~~~js
-ribbon.showItem(id);
+```javascript
 ribbon.hideItem(id);
-~~~
+```

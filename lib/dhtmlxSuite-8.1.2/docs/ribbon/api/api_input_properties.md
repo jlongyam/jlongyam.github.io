@@ -8,8 +8,7 @@ description: You can explore the Input properties of Ribbon in the documentation
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "input",
 		id?: string | number,
@@ -27,7 +26,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

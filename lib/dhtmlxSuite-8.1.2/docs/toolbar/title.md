@@ -16,12 +16,11 @@ This is an item that contains some text.
 
 A Title control can be added to a toolbar with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-toolbar.data.add({
+```javascript
     type: "title",
 	value: "APP NAME"
 });
-~~~
+```
 
 ### Properties
 
@@ -31,10 +30,9 @@ You can provide [the following properties](toolbar/api/api_title_properties.md) 
 
 Title can be hidden and shown with the help of the [show()](toolbar/api/toolbar_show_method.md)/[hide()](toolbar/api/toolbar_hide_method.md)  methods. Pass the id of a Title control as a parameter.
 
-~~~js
-toolbar.show(id);
+```javascript
 toolbar.hide(id);
-~~~
+```
 
 **Related sample**: [Toolbar. Hide / show items](https://snippet.dhtmlx.com/cldp89u4)
 
@@ -42,12 +40,11 @@ toolbar.hide(id);
 
 You can add a tooltip to a Title control:
 
-~~~js
-{
+```javascript
     type:"title",
     value:"2K",
     tooltip:"Your subscribers"
 }
-~~~
+```
 
 **Related sample**: [Toolbar. Tooltips](https://snippet.dhtmlx.com/105levtd)

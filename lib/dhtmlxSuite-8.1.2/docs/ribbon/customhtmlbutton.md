@@ -16,12 +16,11 @@ This is an item that contains any custom HTML content (for example, an image, ic
 
 Any custom HTML content can be easily added to a ribbon with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-ribbon.data.add({
+```javascript
 	type: "customHTML",
 	html: "<div id='preloader'><div id='loader'></div></div >"
 });
-~~~
+```
 
 **Related sample**: [Ribbon. Custom HTML](https://snippet.dhtmlx.com/c0i0q3cu)
 

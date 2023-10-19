@@ -24,9 +24,8 @@ toolbar.hide(["cancel_btn","del_btn"]);
 
 Starting from v7.0, it is possible to hide all items at once by using the method without the parameter:
 
-~~~js
-// hides all Toolbar items
+```javascript
 toolbar.hide();
-~~~
+```
 
 [comment]: # (@related: toolbar/common_methods.md#hiding-and-showing-controls)

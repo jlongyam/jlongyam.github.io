@@ -29,12 +29,11 @@ tabbar.events.on("beforeChange", function(id, prev){
 
 For instance, you can define the logic for blocking the ability to switch between even tabs:
 
-~~~js
-tabbar.events.on("beforeChange", (id, prev) => {
+```javascript
     const tabIndex =
         tabbar.config.views.findIndex(tabObj => tabObj.tab === tabbar.getCell(id).config.tab);
     if (tabIndex % 2 === 1) return false;
 });
-~~~
+```
 
 @changelog: added in v7.3

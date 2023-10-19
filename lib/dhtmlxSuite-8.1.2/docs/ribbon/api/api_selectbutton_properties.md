@@ -8,8 +8,7 @@ description: You can explore the Select Button properties of Ribbon in the docum
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "selectButton",
 		id?: string | number,
@@ -28,7 +27,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

@@ -13,7 +13,7 @@ description: You can explore the css config of Menu in the documentation of the 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.custom,.custom--popup-menu {
 		--dhx-background-primary: #3A434A;
@@ -36,17 +36,16 @@ description: You can explore the css config of Menu in the documentation of the 
 	    css: "custom",
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Menu. Styling (custom CSS)](https://snippet.dhtmlx.com/kfy2th5n)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Menu:
 
-~~~js
-const menu = new dhx.Menu("menu_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

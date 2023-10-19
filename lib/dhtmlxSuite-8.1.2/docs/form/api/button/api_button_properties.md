@@ -8,8 +8,7 @@ description: You can explore the Properties of the Button control of Form in the
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "button",
 	name?: string,
 	id?: string,
@@ -34,7 +33,7 @@ description: You can explore the Properties of the Button control of Form in the
 	size?: "small" | "medium", // "medium" by default
 	view?: "flat" | "link", // "flat" by default
 }
-~~~
+```
 
 ### Description
 

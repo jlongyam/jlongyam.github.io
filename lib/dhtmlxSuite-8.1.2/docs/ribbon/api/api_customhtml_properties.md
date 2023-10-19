@@ -8,8 +8,7 @@ description: You can explore the custom HTML Button properties of Ribbon in the 
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "customHTML",
 		id?: string | number,
@@ -19,7 +18,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

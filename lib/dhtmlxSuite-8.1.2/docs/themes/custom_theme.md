@@ -8,7 +8,7 @@ description: You can explore the custom theme of DHTMLX Suite in the documentati
 
 You can easily configure your own theme via overriding values of the internal CSS variables:
 
-~~~html
+```html
 <style>
     [data-dhx-theme='custom-theme-dark'] {
         /* font */
@@ -55,6 +55,6 @@ You can easily configure your own theme via overriding values of the internal CS
         /* end DHTMLX Toolbar service variables */
     }
 </style>
-~~~
+```
 
 **Related sample:** [Suite. Custom themes (skins)](https://snippet.dhtmlx.com/1eh4ks4f?mode=wide)

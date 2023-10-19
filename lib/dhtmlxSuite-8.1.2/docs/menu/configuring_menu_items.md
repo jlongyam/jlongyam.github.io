@@ -20,8 +20,7 @@ MenuItem is a drop-down list of options.
 
 You can add a MenuItem control into the menu with the help of the **add()** method of Tree Collection:
 
-~~~js
-menu.data.add({
+```javascript
 	type:"menuItem", value:"Menu", items:[
 		{ type:"menuItem", value:"Option 1" },
 		{ type:"menuItem", value:"Option 2" },
@@ -29,7 +28,7 @@ menu.data.add({
 		{ type:"menuItem", value:"Option Infinite" }
 	]
 });
-~~~
+```
 
 **Related sample**: [Menu. Menu Item](https://snippet.dhtmlx.com/qkxeer2h)
 
@@ -47,15 +46,14 @@ This is an item that contains any custom HTML content (for example, an image, ic
 
 Any custom HTML content can be easily added to a menu with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-menu.data.add({
+```javascript
     id: "input",
 	parent: "edit",
     type: "customHTML",
 	html: "<img src='../logo.svg' alt=''/>",
 	css: "custom-image"
 });
-~~~
+```
 
 **Related sample**: [Menu. Custom HTML](https://snippet.dhtmlx.com/nk65jfmx)
 
@@ -73,11 +71,10 @@ This is a horizontal (between menu options) or vertical (between menu items) lin
 
 A new Separator can be created with the help of the **add()** method of Tree Collection:
 
-~~~js
-menu.data.add({
+```javascript
 	type:"separator"
 });
-~~~
+```
 
 **Related sample**: [Menu. Separator](https://snippet.dhtmlx.com/71tybx5j)
 
@@ -95,11 +92,10 @@ This item takes space on the toolbar and is used for aligning controls.
 
 A new Spacer can be created with the help of the **add()** method of Tree Collection:
 
-~~~js
-menu.data.add({
+```javascript
 	type:"spacer"
 });
-~~~
+```
 
 **Related sample**: [Menu. Spacer](https://snippet.dhtmlx.com/fjaolual)
 

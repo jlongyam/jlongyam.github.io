@@ -8,15 +8,14 @@ description: You can explore the Spacer properties of Sidebar in the documentati
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "spacer",
 		id?: string | number,
     },
 	// more Sidebar controls
 ]
-~~~
+```
 
 ### Description
 

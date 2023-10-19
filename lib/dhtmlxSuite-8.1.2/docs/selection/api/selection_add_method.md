@@ -23,6 +23,5 @@ component.selection.add("2");
 
 Starting from v7.0, the method selects all unselected items when calling without parameters (in **List/DataView**):
 
-~~~js
-component.selection.add();
-~~~
+```javascript
+```

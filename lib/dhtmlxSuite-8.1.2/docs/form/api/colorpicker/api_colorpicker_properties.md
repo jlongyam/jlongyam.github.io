@@ -8,8 +8,7 @@ description: You can explore the Properties of the Colorpicker control of Form i
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "colorpicker",
 	name?: string,
 	id?: string,
@@ -44,7 +43,7 @@ description: You can explore the Properties of the Colorpicker control of Form i
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

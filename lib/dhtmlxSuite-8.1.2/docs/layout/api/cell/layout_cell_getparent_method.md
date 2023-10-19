@@ -20,8 +20,7 @@ layout.getCell("1").getParent();
 
 An example of a returned config object:
 
-~~~js
-{
+```javascript
 	id: "u1558363920909",
     full: true,
     header: "Main Block Header",
@@ -36,4 +35,4 @@ An example of a returned config object:
         }
     ]
 }
-~~~
+```

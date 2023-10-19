@@ -10,11 +10,10 @@ description: You can explore the event handling of Tree in the documentation of 
 
 You can attach event listeners with the **tree.events.on()** method:
 
-~~~js
-tree.events.on("itemClick", function(id, e){
+```javascript
     console.log("The item with the id "+ id +" was clicked.");
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ tree.events.on("itemClick", function(id, e){
 
 To detach events, use **tree.events.detach()**:
 
-~~~js
-tree.events.on("itemClick", function(id, e){
+```javascript
     console.log("The item with the id "+ id +" was clicked.");
 });
 
 tree.events.detach("itemClick");
-~~~
+```
 
 ## Calling events
 
 To call events, use **tree.events.fire()**:
 
-~~~js
-tree.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

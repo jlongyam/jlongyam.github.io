@@ -14,7 +14,7 @@ Let's start our tutorial with preparing a file for our future app:
 Now we need to include ".js" and ".css" files of the DHTMLX Suite library to the main file of our future app.
 You can use CDN links to do this.
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +30,7 @@ You can use CDN links to do this.
 </body>
 </html>
 
-~~~
+```
 
 <div id="tutorial_step">
     <a id="next_step" href="tutorial/basic_application/step2.md"></a>

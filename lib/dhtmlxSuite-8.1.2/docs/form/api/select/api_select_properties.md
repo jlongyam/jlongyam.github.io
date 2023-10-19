@@ -8,8 +8,7 @@ description: You can explore the Properties of the Select control of Form in the
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "select",
 	name?: string,
 	id?: string,
@@ -44,7 +43,7 @@ description: You can explore the Properties of the Select control of Form in the
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

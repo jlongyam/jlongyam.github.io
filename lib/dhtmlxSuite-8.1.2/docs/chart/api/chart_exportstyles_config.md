@@ -39,8 +39,7 @@ By default, the **exportStyles** property is disabled. Thus, when you export Cha
 
 If you want some styles to be exported, set string values with the absolute paths to the desired styles to the **exportStyles** array:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type:"area",
     scales: {
     	"bottom" : {
@@ -63,7 +62,7 @@ const chart = new dhx.Chart("chart_container", {
         "https://mySite.com/secondExportStyle.css"
     ]
 });
-~~~
+```
 
 :::tip
 You must use only absolute paths not relative ones.

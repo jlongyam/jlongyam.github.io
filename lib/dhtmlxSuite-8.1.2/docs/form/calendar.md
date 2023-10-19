@@ -18,8 +18,7 @@ An input with a calendar attached to it for selecting a date.
 
 You can easily add a DatePicker control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{
 			type: "datepicker",
@@ -29,7 +28,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ## Properties
 
@@ -41,13 +40,12 @@ You can manipulate a DatePicker control by using methods or events of the object
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("datepicker").getValue();
+```javascript
 // -> "03/06/19"
 
 const value = form.getItem("datepicker").getValue(true);
 // -> Mon Jun 03 2019 00:00:00 GMT+0300
-~~~
+```
 
 ### Methods
 
@@ -63,10 +61,9 @@ There is a possibility to use methods of DHTMLX Calendar via the [getWidget()](f
 
 For example, you can show the current month in the control. To do this, you need to get the widget attached to the DatePicker control and then use the [showDate()](calendar/api/calendar_showdate_method.md) method of this widget.
 
-~~~js
-const datepicker = form.getItem("datepicker").getWidget();  // -> DHTMLX Calendar
+```javascript
 datepicker.showDate(null,"month"); // shows the current month
-~~~
+```
 
 **Related sample**: [Form. Get widget of control](https://snippet.dhtmlx.com/0aqkdsi7)
 

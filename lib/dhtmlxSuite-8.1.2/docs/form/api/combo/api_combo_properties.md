@@ -8,8 +8,7 @@ description: You can explore the Properties of the Combo Box control of Form in 
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "combo",
 	name?: string,
 	id?: string,
@@ -47,7 +46,7 @@ description: You can explore the Properties of the Combo Box control of Form in 
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

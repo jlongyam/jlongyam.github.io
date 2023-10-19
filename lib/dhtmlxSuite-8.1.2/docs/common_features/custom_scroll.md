@@ -16,20 +16,18 @@ The custom scroll is available for the following DHTMLX components: List, DataVi
 
 To add the feature into your application, you need to set the **enable** property of the **dhx.scrollViewConfig** global variable to *true* before initialization of the widgets:
 
-~~~js
-// enable the custom scroll for all available widgets
+```javascript
 dhx.scrollViewConfig.enable = true;
 
 // initialize a widget
 const list = new dhx.List("list_container", {
     itemHeight: 30
 });
-~~~
+```
 
 or apply the **enable()** method of the **scrollView** object after initialization of the widget:
 
-~~~js
-// initialize the widget
+```javascript
 const list = new dhx.List("list_container", {
     template: listTemplate,
     itemHeight: 52,
@@ -40,7 +38,7 @@ list.data.load(data);
 
 // enable custom scroll
 list.scrollView.enable();
-~~~
+```
 
 For more details on the custom scroll configuration, read [this article](../../helpers/custom_scroll/). 
 

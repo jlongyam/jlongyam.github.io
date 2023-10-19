@@ -23,14 +23,13 @@ Initialize LazyDataProxy with the dhx.LazyDataProxy object constructor. The cons
 - **url** - (*string*) the URL which the component will use to load data after its initialization
 - **config** - (*object*) a configuration object which contains parameters for loading data from the server
 
-~~~js
-new dhx.LazyDataProxy("https://docs.dhtmlx.com/suite/backend/lazyload", {
+```javascript
     limit: 30,
     prepare: 5,
     delay: 150,
     from: 0
 });
-~~~
+```
 
 ### Parameters
 
@@ -49,8 +48,7 @@ Server side will send the following data to the client side:
 - **from** - (*number*) - starting position in the data set to add the loaded data to
 - **total_count** - (*number*) - the total number of records available on the server
 
-~~~js
-data: [
+```javascript
 	{country: "DR Congo", population: "84004989", yearlyChange: "0.0328"}
 	{country: "Germany", population: "82293457", yearlyChange: "0.0022"}
 	{country: "Iran", population: "82011735", yearlyChange: "0.0105"}
@@ -58,7 +56,7 @@ data: [
 ], 
 total_count: 233,
 from: 15
-~~~
+```
 
 ## Updating URL
 
@@ -67,11 +65,10 @@ You can use the **updateUrl** method to update the URL where the data will be lo
 - **url** - (*string*) the URL which the component will use to load data after its initialization. If not specified, the currently existing URL will be used.
 - **config** - (*object*) a configuration object with parameters for loading data from the server. If not specified, clears parameters set earlier.
 
-~~~js
-lazyDataProxy.updateUrl("https://docs.dhtmlx.com/suite/backend/lazyload", {
+```javascript
     limit: 30,
     prepare: 5,
     delay: 150,
     from: 0
 });
-~~~
+```

@@ -8,8 +8,7 @@ description: You can explore the Properties of the Timepicker control of Form in
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "timepicker",
     name?: string,
 	id?: string,
@@ -41,7 +40,7 @@ description: You can explore the Properties of the Timepicker control of Form in
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

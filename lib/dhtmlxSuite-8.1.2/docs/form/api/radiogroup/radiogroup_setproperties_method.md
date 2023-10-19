@@ -54,12 +54,11 @@ form.getItem("radiogroup").setProperties("first", {
 
 We recommend that you apply the second way of using the method if you want to change the configuration of a separate radio button in the RadioGroup control:
 
-~~~js
-form.getItem("radiogroup").setProperties("first", {
+```javascript
     text: "New Text",
 	padding: 20
 });
-~~~
+```
 
 :::info
 The method invokes the [](form/api/radiogroup/radiogroup_afterchangeproperties_event.md) and [](form/api/radiogroup/radiogroup_beforechangeproperties_event.md) events.
@@ -67,8 +66,7 @@ The method invokes the [](form/api/radiogroup/radiogroup_afterchangeproperties_e
 
 It is possible to change values of the following configuration attributes of the **RadioGroup** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string|number|"content",
@@ -84,19 +82,18 @@ It is possible to change values of the following configuration attributes of the
 	successMessage: string,
 	width: string|number|"content"
 }
-~~~
+```
 
 It is possible to change values of the following configuration attributes of a **radio button** of the RadioGroup control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string|number|"content",
 	padding: string|number,
 	text: string,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/radiogroup/api_radiogroup_properties.md).
 

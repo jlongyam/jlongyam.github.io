@@ -37,20 +37,18 @@ They are:
 
 The default configuration settings are the following: 
 
-~~~js
-dhx.scrollViewConfig.enable = false; 
+```javascript
 dhx.scrollViewConfig.autoHide = true; 
 dhx.scrollViewConfig.timeout = 1000; 
-~~~
+```
 
 You can change the settings for all widgets at once before initializing the widgets:
 
-~~~js
-dhx.scrollViewConfig.autoHide = false; 
+```javascript
 dhx.scrollViewConfig.timeout = 10000; 
 
 // initializing widgets
-~~~
+```
 
 or [specify individual configuration for custom scroll of a separate widget](#settings-for-scroll-per-widget). 
 
@@ -60,8 +58,7 @@ In case you need to specify individual scrollbars for a separate widget, you can
 
 To enable/disable the custom scroll for a separate widget, use the **enable()/disable()** methods of the object:
 
-~~~js
-// initialize the widget
+```javascript
 const list = new dhx.List("list_container", {
     template: listTemplate,
     itemHeight: 52,
@@ -75,29 +72,26 @@ list.scrollView.enable();
 
 // disable custom scroll
 list.scrollView.disable();
-~~~
+```
 
 {{note Try out the functionality [in our Snippet Tool](https://snippet.dhtmlx.com/gjsbvzdk).}}
 
 To force recalculation and redrawing of the custom scroll, apply the **update()** method: 
 
-~~~js
-list.scrollView.update();
-~~~
+```javascript
+```
 
 ## Settings for scroll per widget
 
 You are able to change the [default settings of the custom scrollbars](#default-settings) for the necessary widget via the **scrollView** object. To do that, use the syntax as in:
 
-~~~js
-list.scrollView.config.autoHide = false;
+```javascript
 
 list.scrollView.config.timeout = 5000;
-~~~
+```
 
 The similar syntax is used if you need to configure settings for a Layout cell:
 
-~~~js
-layout.getCell("list").scrollView.config.autoHide = false;
-~~~
+```javascript
+```
 

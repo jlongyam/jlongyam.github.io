@@ -12,15 +12,14 @@ DHTMLX Colorpicker allows you to apply different languages to its interface. You
 
 The default locale for Colorpicker looks like this:
 
-~~~js
-const en = {
+```javascript
 	cancel: "Cancel",
 	select: "Select",
 	rightClickToDelete: "Right click to delete",
 	customColors: "Custom colors",
 	addNewColor: "Add new color"
 };
-~~~
+```
 
 ## Custom locale
 
@@ -28,21 +27,19 @@ To use a different locale, your need to:
 
 - define necessary language settings: provide translations for the labels of colors' elements in all available formats as well as for the buttons:
 
-~~~js
-const de = {
+```javascript
 	cancel: "Abbrechen",
 	select: "Wählen",
 	rightClickToDelete: "Rechtsklick zu entfernen",
 	customColors: "Seine Farben",
 	addNewColor: "Neue Farbe hinzufügen"
 }
-~~~
+```
 
 - apply the language settings by calling the **dhx.i18n.setLocale()** method before Colorpicker initialization:
 
-~~~js
-dhx.i18n.setLocale("colorpicker_container", de);
+```javascript
 const colorpicker = new dhx.Colorpicker("colorpicker_container");
-~~~
+```
 
 **Related sample**: [Colorpicker. Localization](https://snippet.dhtmlx.com/l870h1gh)

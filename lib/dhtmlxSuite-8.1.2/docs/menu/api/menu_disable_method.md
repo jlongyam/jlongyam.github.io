@@ -24,7 +24,6 @@ menu.disable(["cancel_btn","del_btn"]);
 
 Starting from v7.0, it is possible to disable all items at once by using the method without the parameter:
 
-~~~js
-// disables all Menu items
+```javascript
 menu.disable();
-~~~
+```

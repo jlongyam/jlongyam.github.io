@@ -24,8 +24,7 @@ Besides, the **id** property has been added into the configuration object of the
 
 Before v8.0, the [getHeaderFilter()](grid/api/grid_getheaderfilter_method.md) method returned either an HTML element or an object with Combobox configuration. That allowed you to set focus on the filter or remove it:
 
-~~~js
-const countryFilter = grid.getHeaderFilter("country");
+```javascript
 // -> HTMLElement
 // <label className="dhx_grid-filter__label dxi dxi-menu-down">...</label>
 
@@ -40,14 +39,13 @@ const countryFilter = grid.getHeaderFilter("density");
 // data: DataCollection, popup: Popup, …}
 
 countryFilter.focus();
-~~~
+```
 
 In v8.0, we've improved the way of work with the filter. Now the [getHeaderFilter()](grid/api/grid_getheaderfilter_method.md) method returns an object with a set of methods which allow you to get an object of the filter, to set/remove focus from the filter, to set a value by which a column will be filtered or to clear this value.
 
 If you need to get an HTML object or an object with configuration of Combobox, apply the [getFilter()](grid/api/headerfilter/getfilter_method.md) method of the [header filter](grid/api/grid_getheaderfilter_method.md) object:
 
-~~~js
-const filter1 = grid.getHeaderFilter("country").getFilter();
+```javascript
 console.log(filter1);
 // -> returns Combobox
 //  {config: {…}, _uid: 'u1670500020936', events: o, data: d, popup: f, …}
@@ -58,7 +56,7 @@ console.log(filter2);
 // -> returns HTML object
 // {type: 1, attrs: {…}, tag: 'div', _class: 'dhx_grid-filter__label dxi dxi-magnify', 
 // ref: 'netChange_filter', …}
-~~~
+```
 
 ### Message box
 
@@ -66,8 +64,7 @@ Before v8.0, the **dhx.message()** constructor just added a new element to DOM.
 
 Starting from v8.0, the constructor looks like **dhx.message(): {close() => void};**. It will return an object with the method which allows calling a function to remove the element from DOM.  
 
-~~~js {8} title="Before v8.0"
-const message = dhx.message({
+```javascript
     text:"Message text", 
     icon:"dxi-clock", 
     css:"expire", 
@@ -75,10 +72,9 @@ const message = dhx.message({
 });
 
 console.log(message); // -> undefined
-~~~
+```
 
-~~~js {8} title="From v8.0"
-const message = dhx.message({
+```javascript
     text:"Message text", 
     icon:"dxi-clock", 
     css:"expire", 
@@ -86,7 +82,7 @@ const message = dhx.message({
 });
 
 console.log(message); // -> {close: function}
-~~~
+```
 
 7.1 -> 7.2
 ----------------
@@ -95,15 +91,13 @@ console.log(message); // -> {close: function}
 
 The **open** event has been deprecated in v7.2. The new **beforeOpen** and **afterOpen** events have been added.
 
-~~~js title="Before v7.2"
-// the "open" event
+```javascript
 combo.events.on("open", function(){
     // your logic here
 });
-~~~
+```
 
-~~~js title="From v7.2"
-// the "beforeOpen" event
+```javascript
 combo.events.on("beforeOpen", function() {
     // your logic here
     return false;
@@ -113,7 +107,7 @@ combo.events.on("beforeOpen", function() {
 combo.events.on("afterOpen", function() {
     // your logic here
 });
-~~~
+```
 
 Though the **open** event remains backward compatible with previous versions, you'd better use the **afterOpen** event instead.
 
@@ -124,32 +118,28 @@ Though the **open** event remains backward compatible with previous versions, yo
 
 1) Since v7.1, the **dateFormat** configuration option of the column has been deprecated. Though the support of the option continues, we recommend that you use the **format** option together with **type: "date"** instead.
 
-~~~js title="Before v7.1"
-{ 
+```javascript
 	width: 150, id: "start_date", 
     header: [{ text: "Calendar", colspan: 2 }, { text: "Start date" }], 
     type: "date", dateFormat: "%d/%m/%Y"
 }
-~~~
+```
 
-~~~js title="From v7.1"
-{ 
+```javascript
     width: 150, id: "date", header: [{ text: "Date" }], 
     type: "date", format: "%M.%d.%Y" 
 }
-~~~
+```
 
 2) The **sort** event has been deprecated in v7.1. Instead of it, you should use the **afterSort** and **beforeSort** events.
 
-~~~js title="Before v7.1"
-// the "sort" event
+```javascript
 grid.events.on("Sort", function(id){
     console.log("The grid is sorted by the "+id+" column");
 });
-~~~
+```
 
-~~~js title="From v7.1"
-// the "afterSort" event
+```javascript
 grid.events.on("afterSort", (col, dir) => {
     console.log(col, dir);
 });
@@ -159,7 +149,7 @@ grid.events.on("beforeSort", (col, dir) => {
     console.log("beforeSort", col, dir);
     // return false;
 });
-~~~
+```
 
 6.5 -> 7.0
 ----------------
@@ -170,25 +160,23 @@ grid.events.on("beforeSort", (col, dir) => {
 
 Starting from v7.0, use **leftSplit** instead.
 
-~~~js title="Before v7.0"
-const grid = new dhx.Grid("grid_container", {
+```javascript
     columns: [
         // columns config
     ],
     splitAt:2,  
     data: dataset
 });
-~~~
+```
 
-~~~js title="From v7.0"
-const grid = new dhx.Grid("grid_container", {
+```javascript
     columns: [
         // columns config
     ],
     leftSplit:2,  
     data: dataset
 });
-~~~
+```
 
 ### Layout
 
@@ -204,25 +192,23 @@ The type of the property has been changed from *boolean* to *number*, but *boole
 
 Instead of the methods, use new **enable()**, **disable()** methods of the selection object.
 
-~~~js title="Before v7.0"
-// DataView
+```javascript
 dataview.enableSelection();
 dataview.disableSelection();
 
 // List
 list.enableSelection();
 list.disableSelection();
-~~~
+```
 
-~~~js title="From v7.0"
-// DataView
+```javascript
 dataview.selection.enable();
 dataview.selection.disable();
 
 // List
 list.selection.enable();
 list.selection.disable();
-~~~
+```
 
 ### Form and Form controls
 
@@ -232,29 +218,25 @@ list.selection.disable();
 
 Instead of the **buttonClick** event, use the new **click** event. 
 
-~~~js title="Before v7.0"
-form.events.on("buttonClick", function(id, events) {
+```javascript
     console.log(id); 
 });
-~~~
+```
 
 
-~~~js title="From v7.0"
-form.events.on("click", function(name, events) {
+```javascript
     console.log("Click", name, events); 
 });
-~~~
+```
 
 Instead of the **validationFail** event, use the new **afterValidate**, **beforeValidate** events:
 
-~~~js title="Before v7.0"
-form.events.on("validationFail", function(id,component){
+```javascript
     // your code here
 });
-~~~
+```
 
-~~~js title="From v7.0"
-// AfterValidate event
+```javascript
 form.events.on("afterValidate", function(name, value, isValid) {
     console.log("AfterValidate", name, value, isValid); 
 });
@@ -264,15 +246,14 @@ form.events.on("beforeValidate", function(name, value) {
     console.log("BeforeValidate", name, value); 
     return true;
 });
-~~~
+```
 
 6) The **value** property of the Button control of Form has been replaced by the **text** one. 
 
 The **setValue()** method of the Button control of Form has been deprecated.
 
-~~~js 
-form.getItem("button_id").setValue("button_value");
-~~~
+```javascript
+```
 
 7) The following properties of the configuration object of a radio button of RadioGroup have been deprecated: 
 
@@ -299,14 +280,12 @@ Also note, that before v7.0, the confirm buttons were displayed in the following
 
 11) The **apply** event of TimePicker has been deprecated. Instead of it, use the new **beforeApply** and **afterApply** events.
 
-~~~js title="Before v7.1"
-timepicker.events.on("apply", function(){
+```javascript
     console.log("The value of a timepicker "+ timepicker.getValue() + " has been saved");
 });
-~~~
+```
 
-~~~js title="After v7.1"
-timepicker.events.on("beforeApply", function(value){
+```javascript
     console.log("The ", value, " of a timepicker will be saved");
     return false;
 });
@@ -314,17 +293,16 @@ timepicker.events.on("beforeApply", function(value){
 timepicker.events.on("afterApply", function(value){
     console.log("The ", value, " of a timepicker is saved");
 });
-~~~
+```
 
 ### Combobox
 
 12) The **readonly** configuration property have been deprecated. Starting from v7.0, use **readOnly** instead.
 
-~~~js
-const combo = new dhx.Combobox("combo_container", { 
+```javascript
     readOnly:true
 });
-~~~
+```
 
 
 6.3 -> 6.4
@@ -458,8 +436,7 @@ The `toggle` event is deprecated. Use new `beforeCollapse`, `afterCollapse`, `be
 
 The `isFolder` property is deprecated. Instead of it, you can set the `icon` property in the configuration object of a tree item to add custom icons for tree items.
 
-~~~js {11-15}
-const tree = new dhx.Tree("tree_container", {
+```javascript
     data:[
         {
             "value": "Books",
@@ -479,7 +456,7 @@ const tree = new dhx.Tree("tree_container", {
         }
     ]
 });
-~~~
+```
 
 ### TreeGrid
 
@@ -594,26 +571,23 @@ The `labelInline` property is replaced with the `labelPosition` property. The `l
 
 Instead, use the corresponding getFocus() method for getting the id of an item in focus: 
 
-~~~js
-list.getFocus(); // -> "item_id"
+```javascript
  
 dataview.getFocus(); // -> "item_id"
-~~~
+```
 
 and the setFocus() method for setting focus to an item by its id: 
 
-~~~js
-list.setFocus("item_id");
+```javascript
 
 dataview.setFocus("item_id");
-~~~
+```
 
 In case you still need to get the index of an item in focus, make use of the code, as in:
 
-~~~js
-// get the id of an item using the getFocus() method
+```javascript
 const id = list.getFocus();
 // and pass this id as a parameter of the getIndex method of Data Collection
 const index = list.data.getIndex(id);
-~~~
+```
 

@@ -13,7 +13,7 @@ description: You can explore the css config of Colorpicker in the documentation 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.custom-class {
 		background: #f2f2f2;
@@ -38,17 +38,16 @@ description: You can explore the css config of Colorpicker in the documentation 
 		css: "custom-class dhx_widget--bordered",
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Colorpicker. Styling (custom CSS)](https://snippet.dhtmlx.com/mnwi3sp0)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Colorpicker:
 
-~~~js
-const colorpicker = new dhx.Colorpicker("colorpicker_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

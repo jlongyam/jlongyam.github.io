@@ -27,8 +27,7 @@ The method invokes the [](form/api/combo/combo_afterchangeproperties_event.md) a
 
 It is possible to change values of the following configuration attributes of the **Combo** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	filter: function, 
@@ -54,7 +53,7 @@ It is possible to change values of the following configuration attributes of the
 	virtual: boolean,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/combo/api_combo_properties.md).
 

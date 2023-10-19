@@ -23,7 +23,6 @@ It is possible to use methods of DHTMLX TimePicker via the **getWidget()** metho
 
 For example, you can set value for a TimePicker control. To do this, you need to get the widget attached to the TimePicker control and then use the [setValue()](timepicker/api/timepicker_setvalue_method.md) method of this widget.
 
-~~~js
-const timepicker = form.getItem("timepicker").getWidget();  // -> TimePicker
+```javascript
 timepicker.setValue("00:39"); //set the value as a string
-~~~
+```

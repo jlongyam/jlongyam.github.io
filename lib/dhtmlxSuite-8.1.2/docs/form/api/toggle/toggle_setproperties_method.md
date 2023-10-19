@@ -28,8 +28,7 @@ The method invokes the [afterChangeProperties](form/api/toggle/toggle_afterchang
 
 It is possible to change values of the following configuration attributes of the **Toggle** control:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -41,6 +40,6 @@ It is possible to change values of the following configuration attributes of the
     offIcon: string,
     value: string | number
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/toggle/api_toggle_properties.md).

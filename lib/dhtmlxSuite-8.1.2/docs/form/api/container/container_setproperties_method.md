@@ -27,13 +27,12 @@ The method invokes the [afterChangeProperties](form/api/container/container_afte
 
 It is possible to change values of the following properties of the **Container** control:
 
-~~~js
-{
+```javascript
 	height: string | number | "content", 
 	padding: string | number,
 	width: string, number, "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/container/api_container_properties.md).
   

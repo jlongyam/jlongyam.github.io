@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>Editor message</title>
+  <link rel="stylesheet" href="../lib/dhtmlxSuite-8.1.2/suite_gpl/codebase/suite.css">
+  <script src="../lib/dhtmlxSuite-8.1.2/suite_gpl/codebase/suite.js"></script>
+</head>
+<body>
+  <div id="message_container"></div>
+  <script>
+    const message = dhx.message({
+    text:"Message text", 
+    icon:"dxi-clock", 
+    css:"expire", 
+    expire:1000
+})
+    dhx.alert({
+	header:"Alert Header",
+    text:"Alert text",
+    buttonsAlignment:"center"
+})
+  </script>
+</body>
+</html>

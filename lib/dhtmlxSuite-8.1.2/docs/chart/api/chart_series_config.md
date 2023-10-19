@@ -58,8 +58,7 @@ You can apply the options below to configure series for charts with the followin
 
 ### Usage
 
-~~~js
-series: [
+```javascript
 	{
 		id: string,
 		value: string,
@@ -77,7 +76,7 @@ series: [
 		tooltipTemplate?: (points: any[]) => string,
 	}
 ]
-~~~
+```
 
 ### Description
 
@@ -148,15 +147,14 @@ series: [
 
 ### Usage
 
-~~~js
-series: [
+```javascript
 	{
 		..., // config options for series (for charts with scales)
 		fill?: string,
 		alpha?: number,
 	}
 ]
-~~~
+```
 
 ### Description
 
@@ -178,8 +176,7 @@ series: [
 
 ### Usage
 
-~~~js
-series: [
+```javascript
 	{
 		..., // config options for series (for charts with scales)
 		barWidth?: number,
@@ -191,7 +188,7 @@ series: [
 		stacked?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 
@@ -248,8 +245,7 @@ You can apply the options below to configure series for charts with the followin
 
 ### Usage
 
-~~~js
-series: [
+```javascript
 	{
 		id?: string,
 		text?: string,
@@ -266,7 +262,7 @@ series: [
 		useLines?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 
@@ -332,8 +328,7 @@ You can apply the options below to configure series for charts with the ["treeMa
 
 ### Usage
 
-~~~js
-series: [
+```javascript
 	{
 		text: string,
 		value: string,
@@ -346,7 +341,7 @@ series: [
 		tooltipTemplate?: (points: any[]) => string,
 	}
 ]
-~~~
+```
 
 ### Description
 
@@ -403,8 +398,7 @@ You can apply the options below to configure series for charts with the ["calend
 
 ### Usage
 
-~~~js
-series: [
+```javascript
 	{
 		date: string,
 		value: string,
@@ -425,7 +419,7 @@ series: [
 		weekStart?: string, // "sunday" by default
 	}
 ]
-~~~
+```
 
 ### Description
 

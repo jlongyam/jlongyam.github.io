@@ -13,7 +13,7 @@ description: You can explore the css config of a cell of Layout in the documenta
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.layout-header {
 		--dhx-background-primary: #3A434A;
@@ -39,14 +39,13 @@ description: You can explore the css config of a cell of Layout in the documenta
 		]
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Layout. Styling (custom CSS)](https://snippet.dhtmlx.com/pwxmf0lx)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-layout-cell) that you can also apply to change the appearance of a Layout cell.
 
-~~~js
-const layout = new dhx.Layout("layout_container", {
+```javascript
     css: "dhx_layout-cell--bordered",
 	rows: [
         {
@@ -58,6 +57,6 @@ const layout = new dhx.Layout("layout_container", {
 	    }
     ]
 });
-~~~
+```
 
 [comment]: # (@related: layout/initialization.md#initialize-layout layout/customization.md)

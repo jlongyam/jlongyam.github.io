@@ -10,11 +10,10 @@ description: You can explore the event handling of Grid in the documentation of 
 
 You can attach event listeners with the **grid.events.on()** method:
 
-~~~js
-grid.events.on("scroll", function({top,left}){
+```javascript
     console.log("The grid is scrolled to "+top,left);
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ grid.events.on("scroll", function({top,left}){
 
 To detach events, use **grid.events.detach()**:
 
-~~~js
-grid.events.on("scroll", function({top,left}){
+```javascript
     console.log("The grid is scrolled to "+top,left);
 });
 
 grid.events.detach("scroll");
-~~~
+```
 
 ## Calling events
 
 To call events, use **grid.events.fire()**:
 
-~~~js
-grid.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

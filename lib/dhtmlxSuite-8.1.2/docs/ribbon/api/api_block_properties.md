@@ -8,8 +8,7 @@ description: You can explore the Block properties of Ribbon in the documentation
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "block",
 		id?: string | number,
@@ -24,7 +23,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

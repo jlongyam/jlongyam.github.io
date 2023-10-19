@@ -12,15 +12,13 @@ You can manipulate with DataView items via the API of the **selection** object. 
 
 Starting from v7.0, you can activate selection of items via the [enable()](selection/api/selection_enable_method.md) method of the selection object.
 
-~~~js
-dataview.selection.enable();
-~~~
+```javascript
+```
 
 To disable selection of items in DataView, make use of the [disable()](selection/api/selection_disable_method.md) method of the selection object:
 
-~~~js
-dataview.selection.disable();
-~~~
+```javascript
+```
 
 **Related sample**: [Dataview. Disable / enable selection](https://snippet.dhtmlx.com/kn42gb50)
 
@@ -30,38 +28,33 @@ dataview.selection.disable();
 
 To select a particular DataView item, make use of the **add()** method of the **selection** object. As a parameter the method takes the id of an item. 
 
-~~~js
-const id = dataview.selection.getId(); // -> "2"
+```javascript
 dataview.selection.add("2");
-~~~
+```
 
 Starting from v7.0, the method selects all unselected items when calling without parameters:
 
-~~~js
-dataview.selection.add();
-~~~
+```javascript
+```
 
 ## Unselecting an item
 
 To remove selection from a selected item, apply the **remove()** method of the **selection** object. The method may take the id of an item as a parameter:
 
-~~~js
-dataview.selection.remove("2"); 
-~~~
+```javascript
+```
 
 Starting from v7.0, the method unselects all previously selected items when calling without parameters:
 
-~~~js
-dataview.selection.remove();
-~~~
+```javascript
+```
 
 ## Getting id of a selected item
 
 You can get the id of the currently selected item with the **getId()** method of the **selection** object:
 
-~~~js
-const selected = dataview.selection.getId(); // -> "2"
-~~~
+```javascript
+```
 
 Starting from v7.0, the method can also return an array with ids of selected items if the [multiselection](dataview/api/dataview_multiselection_config.md) property of DataView is enabled.
 
@@ -69,8 +62,7 @@ Starting from v7.0, the method can also return an array with ids of selected ite
 
 It is also possible to get the object of a selected item using the **getItem()** method of the **selection** object:
 
-~~~js
-const item = dataview.selection.getItem();
-~~~
+```javascript
+```
 
 Starting from v7.0, the method can also return an array of selected items if the [multiselection](dataview/api/dataview_multiselection_config.md) property of DataView is enabled.

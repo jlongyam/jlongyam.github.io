@@ -13,7 +13,7 @@ description: You can explore the css config of Layout in the documentation of th
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .layout {
 		color: #fff;
@@ -48,14 +48,13 @@ description: You can explore the css config of Layout in the documentation of th
 		]
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Layout. Styling (custom CSS)](https://snippet.dhtmlx.com/pwxmf0lx)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-layout-cell) that you can also apply to change the appearance of a Layout cell.
 
-~~~js
-const layout = new dhx.Layout("layout_container", {
+```javascript
     css: "dhx_layout-cell--bordered",
 	rows: [
         {
@@ -67,7 +66,7 @@ const layout = new dhx.Layout("layout_container", {
 	    }
     ]
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

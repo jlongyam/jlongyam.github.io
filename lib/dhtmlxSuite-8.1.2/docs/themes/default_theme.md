@@ -10,7 +10,7 @@ description: You can explore the default theme of DHTMLX Suite in the documentat
 
 The [default ("light")](themes.md#suite-themes) theme is configured on the base of the CSS variables which are listed below:
 
-~~~css
+```css
 :root, [data-dhx-theme] {
 	/* base colors */
 	--dhx-color-white: #fff;
@@ -177,4 +177,4 @@ The [default ("light")](themes.md#suite-themes) theme is configured on the base 
 	--dhx-s-tick-font-size: calc(var(--dhx-font-size-small) / 1.2);
 	/* end DHTMLX Slider service variables*/
 }
-~~~
+```

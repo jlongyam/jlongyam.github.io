@@ -7,9 +7,8 @@ To present Toolbar on the page we should take 3 simple steps:
 
 1\. To add a toolbar on the page we need to use the constructor, like this:
 
-~~~js
-const toolbar = new dhx.Toolbar(null, {css: "dhx_widget--bordered dhx_widget--bg_gray"});
-~~~
+```javascript
+```
 
 The constructor function takes two parameters: 
 
@@ -19,8 +18,7 @@ The constructor function takes two parameters:
 
 2\. To configure buttons on Toolbar we need to define a related JSON structure and use the <b>.parse()</b> API of the widget:
 
-~~~js
-const toolbar = new dhx.Toolbar();
+```javascript
 toolbar.data.parse([
     {
       "id": "load",
@@ -35,15 +33,14 @@ toolbar.data.parse([
       // more buttons
 
 ]); 
-~~~
+```
 
 You can add other buttons in a similar manner. See the full list of toolbar controls and their possible configuration properties [here](toolbar/controls_list.md).
 
 3\. Now, we can easily attach a toolbar to the "toolbar-cell" of Layout using the <b>attach()</b> method of a cell, as in:
 
-~~~js
-layout.cell("toolbar-cell").attach(toolbar);
-~~~
+```javascript
+```
 
 <img style="margin: 19px;  display: block;" src="tutorial/basic_application/toolbar_003.png"/>
 

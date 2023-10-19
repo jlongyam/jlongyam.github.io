@@ -18,7 +18,7 @@ description: You can explore the addCellCss method of Grid in the documentation 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .myCustomClass{
         background:greenyellow;
@@ -29,6 +29,6 @@ description: You can explore the addCellCss method of Grid in the documentation 
     ...
     grid.addCellCss("1", "b", "myCustomClass");
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Add cell CSS](https://snippet.dhtmlx.com/hskmp8rh)

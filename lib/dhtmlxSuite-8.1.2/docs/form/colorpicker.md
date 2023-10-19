@@ -18,8 +18,7 @@ An input with a color picker attached to it for selecting a color.
 
 You can easily add a ColorPicker control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{
 			type: "colorpicker",
@@ -29,7 +28,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -41,9 +40,8 @@ You can manipulate a ColorPicker control by using methods or events of the objec
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("colorpicker").getValue();
-~~~
+```javascript
+```
 
 **Related sample**: [Form. Get Item](https://snippet.dhtmlx.com/ocfas6go)
 
@@ -61,10 +59,9 @@ There is a possibility to use methods of DHTMLX ColorPicker via the [getWidget()
 
 For example, you can set focus on the specified value in the control. To do this, you need to get the widget attached to the ColorPicker control and then use the [setFocus()](colorpicker/api/colorpicker_setfocus_method.md) method of this widget.
 
-~~~js
-const colorpicker = form.getItem("colorpicker").getWidget();  // -> ColorPicker
+```javascript
 colorpicker.setFocus("#BDF0E9"); // sets focus on the "#BDF0E9" color
-~~~
+```
 
 **Related sample**: [Form. Get widget of control](https://snippet.dhtmlx.com/0aqkdsi7)
 

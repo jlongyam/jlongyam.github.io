@@ -10,7 +10,7 @@ description: You can explore the light high contrast theme of DHTMLX Suite in th
 
 The ["contrast-light"](themes.md#suite-themes) theme is configured both on the base of the [root CSS variables](themes/default_theme.md) and variables which are listed below:
 
-~~~css
+```css
 [data-dhx-theme='contrast-light'] {
 	/* font */
 	--dhx-font-size-normal: 16px;
@@ -47,4 +47,4 @@ The ["contrast-light"](themes.md#suite-themes) theme is configured both on the b
 	--dhx-s-tick-font-size: var(--dhx-font-size-small);
 	/* end DHTMLX Slider service variables*/
 }
-~~~
+```

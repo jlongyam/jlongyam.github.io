@@ -16,14 +16,14 @@ a page and apply icons in any possible part of the window: in the header or the 
 For example, you can use the [Font Awesome](https://fontawesome.com/) icon pack by including [link to its CDN](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css) 
 after the source files of DHTMLX Window as follows:
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/window.js"></script>
 <link rel="stylesheet" href="../../codebase/window.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
   integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"  
   crossorigin="anonymous">
-~~~
+```
 
 Then you can use the name of the icon as the value of the **icon** property in the object with the control parameters for the header or the footer. [See details below](window/customization.md#updatecontrols).
 
@@ -60,12 +60,11 @@ For this, you should apply the [](../data_collection/api/datacollection_add_meth
 </table>
 <br/>
 
-~~~js
-dhxWindow.header.data.add({icon: "mdi mdi-fullscreen", id: "fullscreen"}, 2);
+```javascript
 dhxWindow.footer.data.add({type: "spacer"});
 dhxWindow.footer.data.add({icon: "mdi mdi-thumb-up", id: "like"});
 dhxWindow.footer.data.add({icon: "mdi mdi-thumb-down", id: "dislike"})
-~~~
+```
 
 **Related sample**: [Window. Custom buttons](https://snippet.dhtmlx.com/o7xlvvv3)
 
@@ -76,12 +75,11 @@ You can change the icon of the Window control and its other config options with 
 - the id of an icon button
 - an object with a new configuration of the control
 
-~~~js
-dhxWindow.header.data.update("close", {
+```javascript
 	// using FA icon for the Close button
 	icon: "fas fa-times" 
 });
-~~~
+```
 
 **Related sample**: [Window. Custom icons](https://snippet.dhtmlx.com/ucozvx01)
 
@@ -89,9 +87,8 @@ dhxWindow.header.data.update("close", {
 
 To remove a control from the header/footer, make use of the [](../data_collection/api/datacollection_remove_method.md) method of Data Collection. Pass the id of the control that should be removed to the method:
 
-~~~js
-dhxWindow.footer.data.remove("accept");
-~~~
+```javascript
+```
 
 ## Styling
 
@@ -105,7 +102,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my-first-class {
 		/*some styles*/
@@ -115,21 +112,20 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [](window/api/window_css_config.md) property in the Window configuration:
 
-~~~js
-const dhxWindow = new dhx.Window({
+```javascript
 	title: "Window", 
     css:"my-first-class my-second-class"
 });
 dhxWindow.show();
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
 	.custom {
 		--dhx-background-primary: #efefef;
@@ -147,4 +143,4 @@ For example:
 	
 	dhxWindow.show();
 </script>
-~~~
+```

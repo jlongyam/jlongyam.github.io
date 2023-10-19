@@ -18,8 +18,7 @@ A compact but useful control for swift uploading of an avatar into a form.
 
 You can easily add an Avatar control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	rows: [
     	{
 			type: "avatar",
@@ -35,7 +34,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -47,9 +46,8 @@ You can manipulate an Avatar control by using methods or events of the object re
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("avatar").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

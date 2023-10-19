@@ -80,8 +80,7 @@ form.setProperties({
 
 It is possible to change the following configuration attributes of the **Avatar** control:
 
-~~~js
-{
+```javascript
 	css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -112,7 +111,7 @@ It is possible to change the following configuration attributes of the **Avatar*
     headerParams: { [key: string]: any },
     updateFromResponse: boolean
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/avatar/api_avatar_properties.md).
 
@@ -120,8 +119,7 @@ You will find the description of these properties [here](form/api/avatar/api_ava
 
 It is possible to change the following configuration attributes of the **Button** control:
 
-~~~js
-{
+```javascript
 	circle: boolean,
 	color: string,
 	css: string,
@@ -137,7 +135,7 @@ It is possible to change the following configuration attributes of the **Button*
 	view: string,
 	width: string | number | "content",
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/button/api_button_properties.md).
 
@@ -145,8 +143,7 @@ You will find the description of these properties [here](form/api/button/api_but
 
 It is possible to change the following configuration attributes of the **DatePicker** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	dateFormat: string,
 	disabledDates: function,
@@ -175,7 +172,7 @@ It is possible to change the following configuration attributes of the **DatePic
 	weekStart: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/calendar/api_calendar_properties.md).
 
@@ -183,8 +180,7 @@ You will find the description of these properties [here](form/api/calendar/api_c
 
 It is possible to change the following configuration attributes of the **Checkbox** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -200,7 +196,7 @@ It is possible to change the following configuration attributes of the **Checkbo
 	text: string,
 	width: string | number | "content",
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox/api_checkbox_properties.md).
 
@@ -208,8 +204,7 @@ You will find the description of these properties [here](form/api/checkbox/api_c
 
 It is possible to change the following configuration attributes of the **CheckboxGroup** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number|"content",
@@ -225,7 +220,7 @@ It is possible to change the following configuration attributes of the **Checkbo
 	successMessage: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox_group/api_checkboxgroup_properties.md).
 
@@ -233,15 +228,14 @@ You will find the description of these properties [here](form/api/checkbox_group
 
 It is possible to change the following configuration attributes of a **checkbox** of the **CheckboxGroup** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	padding: string | number,
 	text: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox_group/api_checkboxgroup_properties.md).
 
@@ -249,8 +243,7 @@ You will find the description of these properties [here](form/api/checkbox_group
 
 It is possible to change the following configuration attributes of the **ColorPicker** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	customColors: array,
 	editable: boolean,
@@ -273,7 +266,7 @@ It is possible to change the following configuration attributes of the **ColorPi
 	validation: function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/colorpicker/api_colorpicker_properties.md).
 
@@ -281,8 +274,7 @@ You will find the description of these properties [here](form/api/colorpicker/ap
 
 It is possible to change the following configuration attributes of the **Combo** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	filter: function, 
@@ -308,7 +300,7 @@ It is possible to change the following configuration attributes of the **Combo**
 	virtual: boolean,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/combo/api_combo_properties.md).
 
@@ -316,13 +308,12 @@ You will find the description of these properties [here](form/api/combo/api_comb
 
 It is possible to change the following configuration attributes of the **Container** control:
 
-~~~js
-{
+```javascript
 	height: string | number | "content", 
 	padding: string | number,
 	width: string, number, "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/container/api_container_properties.md).
 
@@ -330,8 +321,7 @@ You will find the description of these properties [here](form/api/container/api_
 
 It is possible to change the following configuration attributes of the **Fieldset** control:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -341,7 +331,7 @@ It is possible to change the following configuration attributes of the **Fieldse
     labelAlignment: "left" | "right" | "center",
     align: "start" | "center" | "end" | "between" | "around" | "evenly"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/fieldset/api_fieldset_properties.md).
 
@@ -349,8 +339,7 @@ You will find the description of these properties [here](form/api/fieldset/api_f
 
 It is possible to change the following configuration attributes of the **Input** control:
 
-~~~js
-{
+```javascript
 	autocomplete: boolean,
 	css: string,
 	errorMessage: string,
@@ -375,7 +364,7 @@ It is possible to change the following configuration attributes of the **Input**
 	validation: object | function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/input/api_input_properties.md).
 
@@ -383,8 +372,7 @@ You will find the description of these properties [here](form/api/input/api_inpu
 
 It is possible to change the following configuration attributes of the **RadioGroup** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -400,7 +388,7 @@ It is possible to change the following configuration attributes of the **RadioGr
 	successMessage: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/radiogroup/api_radiogroup_properties.md).
 
@@ -408,15 +396,14 @@ You will find the description of these properties [here](form/api/radiogroup/api
 
 It is possible to change the following configuration attributes of a **radio button** of the **RadioGroup** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	padding: string | number,
 	text: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/radiogroup/api_radiogroup_properties.md).
 
@@ -424,8 +411,7 @@ You will find the description of these properties [here](form/api/radiogroup/api
 
 It is possible to change the following configuration attributes of the **Select** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -441,7 +427,7 @@ It is possible to change the following configuration attributes of the **Select*
 	validation: function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/select/api_select_properties.md).
 
@@ -449,8 +435,7 @@ You will find the description of these properties [here](form/api/select/api_sel
 
 It is possible to change the following configuration attributes of the **SimpleVault** control:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -474,7 +459,7 @@ It is possible to change the following configuration attributes of the **SimpleV
     accept: string,
     validation: (value: ISimpleVaultValue) => boolean
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/simplevault/api_simplevault_properties.md).
 
@@ -482,8 +467,7 @@ You will find the description of these properties [here](form/api/simplevault/ap
 
 It is possible to change the following configuration attributes of the **Slider** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	helpMessage: string,
@@ -504,7 +488,7 @@ It is possible to change the following configuration attributes of the **Slider*
 	tooltip: boolean, 
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/slider/api_slider_properties.md).
 
@@ -512,14 +496,13 @@ You will find the description of these properties [here](form/api/slider/api_sli
 
 It is possible to change the following configuration attributes of the **Spacer** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content"
 	padding: string | number
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/spacer/api_spacer_properties.md).
 
@@ -527,8 +510,7 @@ You will find the description of these properties [here](form/api/spacer/api_spa
 
 It is possible to change the following configuration attributes of the **Text** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -543,7 +525,7 @@ It is possible to change the following configuration attributes of the **Text** 
 	successMessage: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/text/api_text_properties.md).
 
@@ -551,8 +533,7 @@ You will find the description of these properties [here](form/api/text/api_text_
 
 It is possible to change the following configuration attributes of the **Textarea** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -572,7 +553,7 @@ It is possible to change the following configuration attributes of the **Textare
 	validation: object | function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/textarea/api_textarea_properties.md).
 
@@ -580,8 +561,7 @@ You will find the description of these properties [here](form/api/textarea/api_t
 
 It is possible to change the following configuration attributes of the **TimePicker** control:
 
-~~~js
-{
+```javascript
 	controls: boolean,
 	css: string,
 	editable: boolean,
@@ -603,7 +583,7 @@ It is possible to change the following configuration attributes of the **TimePic
 	valueFormat: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/timepicker/api_timepicker_properties.md).
 
@@ -611,8 +591,7 @@ You will find the description of these properties [here](form/api/timepicker/api
 
 It is possible to change the following configuration attributes of the **Toggle** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	width: string | number | "content",
 	height: string | number | "content",
@@ -624,7 +603,7 @@ It is possible to change the following configuration attributes of the **Toggle*
 	offIcon: string,
 	value: string | number
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/toggle/api_toggle_properties.md).
 
@@ -632,8 +611,7 @@ You will find the description of these properties [here](form/api/toggle/api_tog
 
 It is possible to change the following configuration attributes of the **ToggleGroup** control:
 
-~~~js
-{
+```javascript
     css: string,
     full: boolean,
     gap: number,
@@ -643,7 +621,7 @@ It is possible to change the following configuration attributes of the **ToggleG
     padding: string | number,
     width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/togglegroup/api_togglegroup_properties.md).
 
@@ -651,8 +629,7 @@ You will find the description of these properties [here](form/api/togglegroup/ap
 
 It is possible to change the following configuration attributes of a **toggle** of the **ToggleGroup** control:
 
-~~~js
-{
+```javascript
 	full: boolean,
 	text: string,
 	icon: string,
@@ -660,7 +637,7 @@ It is possible to change the following configuration attributes of a **toggle** 
 	offIcon: string,
 	value: string | number
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/togglegroup/api_togglegroup_properties.md).
 

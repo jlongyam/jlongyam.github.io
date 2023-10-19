@@ -8,8 +8,7 @@ description: You can explore the Title properties of Toolbar in the documentatio
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "title",
 		id?: string | number,
@@ -25,7 +24,7 @@ const data = [
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

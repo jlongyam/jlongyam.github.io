@@ -50,8 +50,7 @@ const tree = new dhx.Tree("tree_container", {
 
 As an alternative way, you may use `stopPropagation()` for this purpose (from v7.3.6):
 
-~~~js
-eventHandlers: {
+```javascript
     onclick: {
         class_name: (event) => {                              
             evt = event || window.event;
@@ -60,6 +59,6 @@ eventHandlers: {
         }
     }
 }
-~~~
+```
 
 @changelog: added in v7.2

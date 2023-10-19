@@ -26,17 +26,15 @@ const state = form.getValue();
 
 1\. In case both the name and id of the control are specified in the config of Control, the returned object will contain the name of Control:
 
-~~~js
-const state = form.getValue();
+```javascript
 // -> {"name":"John Doe"}
-~~~
+```
 
 If the name attribute is not specified in the controls config, an object with ID of Control will be returned:
 
-~~~js
-const state = form.getValue();
+```javascript
 // -> {"id":"John Doe"}
-~~~
+```
 
 2\. Starting with v7.0, the type of the returned value for the **TimePicker** control depends on the applied [valueFormat](form/timepicker.md#addingtimepicker) and [timeFormat](form/timepicker.md#addingtimepicker):
 

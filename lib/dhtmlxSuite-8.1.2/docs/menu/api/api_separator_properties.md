@@ -8,14 +8,13 @@ description: You can explore the Separator properties of Menu in the documentati
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "separator",
 		id?: string | number,
 	}
 ]
-~~~
+```
 
 ### Description
 

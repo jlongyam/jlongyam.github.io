@@ -28,8 +28,7 @@ The method invokes the [](form/api/slider/slider_afterchangeproperties_event.md)
 
 It is possible to change values of the following configuration attributes of the **Slider** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string|number|"content",
 	helpMessage: string,
@@ -50,7 +49,7 @@ It is possible to change values of the following configuration attributes of the
 	tooltip: boolean, 
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/slider/api_slider_properties.md).
 

@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my-first-class {
 		/*some styles*/
@@ -28,19 +28,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](treegrid/api/treegrid_css_config.md) property in the TreeGrid configuration:
 
-~~~js
-const treegrid = new dhx.TreeGrid("treegrid_container", { 
+```javascript
     css:"my-first-class my-second-class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #00c2b8;
@@ -64,7 +63,7 @@ For example:
     	css: "custom"
 	});
 </script>
-~~~
+```
 
 ## Styling selection
 
@@ -74,7 +73,7 @@ For example:
 
 Here is an example of how you can style selection in TreeGrid:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #ff5252;
@@ -96,7 +95,7 @@ Here is an example of how you can style selection in TreeGrid:
     	css: "custom",
 	});
 </script>
-~~~
+```
 
 ## Styling header cells
 
@@ -106,8 +105,7 @@ Here is an example of how you can style selection in TreeGrid:
 
 You can easily set some styling to the text of header cells by applying some inline style or a CSS class to the [text](treegrid/api/api_treegridcolumn_properties.md) property of the header of a column:
 
-~~~js
-const treegrid = new dhx.TreeGrid("treegrid_container", { 
+```javascript
 	columns: [
 		{ width: 280, id: "name", 
 		  	header: [{ text: "<span style='font-size:2em'>Book Name</span>" }] },
@@ -118,7 +116,7 @@ const treegrid = new dhx.TreeGrid("treegrid_container", {
 	],
 	data: dataset
 });
-~~~
+```
 
 ## Styling footer cells
 
@@ -128,7 +126,7 @@ const treegrid = new dhx.TreeGrid("treegrid_container", {
 
 You can easily set some styling to the text of footer cells by applying some inline style or a CSS class to the [text](treegrid/api/api_treegridcolumn_properties.md) property of the footer of a column:
 
-~~~html
+```html
 <style>	    
     .custom_footer{
 		font-size: 18px;
@@ -159,7 +157,7 @@ You can easily set some styling to the text of footer cells by applying some inl
 		data: dataset
 	});
 </script>
-~~~
+```
 
 ## Styling rows
 
@@ -173,7 +171,7 @@ There are two ways to do it:
 
 - via the **rowCss** property in the configuration of TreeGrid. As a value of property set a function that takes the id of a row as a parameter and returns a string with the name of a CSS class.
 
-~~~html {12}
+```html
 <style>
 	.my_custom_row {
 		background: coral;
@@ -189,11 +187,11 @@ There are two ways to do it:
 		data: dataset
 	});
 </script>
-~~~
+```
 
 - with the help of the [addRowCss()](treegrid/api/treegrid_addrowcss_method.md) method:
 
-~~~html {10}
+```html
 <style>
 	.myCustomClass{
 		background:greenyellow;
@@ -205,7 +203,7 @@ There are two ways to do it:
 	const rowId = treegrid.data.getId(1);
 	treegrid.addRowCss(rowId, "myCustomClass");
 </script>
-~~~
+```
 
 **Related sample**: [TreeGrid. Add row CSS](https://snippet.dhtmlx.com/kort67nu)
 
@@ -250,7 +248,7 @@ It is easy to style necessary cells using the [addCellCss()](treegrid/api/treegr
 </table>
 <br/>
 
-~~~html
+```html
 <style>
 	.myCustomClass{
 		background:greenyellow;
@@ -261,7 +259,7 @@ It is easy to style necessary cells using the [addCellCss()](treegrid/api/treegr
 	...
 	treegrid.addCellCss(rowId, "name", "myCustomClass");
 </script>
-~~~
+```
 
 ## Adding custom marks to cells
 
@@ -294,7 +292,7 @@ You can mark particular cells in a treegrid using the **mark** property of a col
 
 The function should return a string with a cusotm CSS class for your mark.
 
-~~~html {22-24,31}
+```html
 <style>
 	.my_custom_mark {
 		background: lightcoral;
@@ -332,7 +330,7 @@ The function should return a string with a cusotm CSS class for your mark.
 		data: dataset
 	});
 </script>
-~~~
+```
 
 It is also possible to highlight cells with minimum and (or) maximum values in a grid using the **mark** property of a column configuration. The property is an object which takes two optional parameters:
 
@@ -350,7 +348,7 @@ It is also possible to highlight cells with minimum and (or) maximum values in a
 </table>
 <br/>
 
-~~~html {23-26}
+```html
 <style>
 	.max_cell {
     	background: #f44336;
@@ -383,7 +381,7 @@ It is also possible to highlight cells with minimum and (or) maximum values in a
 		data: dataset
 	});
 </script>
-~~~
+```
 
 ![](../assets/treegrid/min_max_mark.png)
 
@@ -413,8 +411,7 @@ It is possible to customize the content of cells of TreeGrid via the **template*
 </table>
 <br/>
 
-~~~js {9-11}
-const treeGrid = new dhx.TreeGrid("treegrid_container", {
+```javascript
 	columns: [
 		{ width: 280, id: "name", header: [{ text: "Book Name" }] },
 		{ width: 160, id: "price", type: "string",
@@ -430,7 +427,7 @@ const treeGrid = new dhx.TreeGrid("treegrid_container", {
 	],
 	data: dataset,
 });
-~~~
+```
 
 **Related sample**: [TreeGrid. Template with content for cells](https://snippet.dhtmlx.com/q76qcgn3)
 
@@ -438,8 +435,7 @@ const treeGrid = new dhx.TreeGrid("treegrid_container", {
 
 Starting from v7.0, you can assign event handlers to HTML elements of a custom template of TreeGrid cells via using the [](treegrid/api/treegrid_eventhandlers_config.md) configuration property of TreeGrid, for instance:
 
-~~~js {8-10,15-21}
-const treeGrid = new dhx.TreeGrid("treegrid_container", {
+```javascript
 	columns: [
 		{ width: 280, id: "name", header: [{ text: "Book Name" }] },
 		{
@@ -461,7 +457,7 @@ const treeGrid = new dhx.TreeGrid("treegrid_container", {
 		}
 	}
 });
-~~~
+```
 
 **Related sample**: [TreeGrid. Handling events in template](https://snippet.dhtmlx.com/la7u1xqy)
 
@@ -489,8 +485,7 @@ Starting with v7.1, you can customize the content of the tooltip of a column via
 </table>
 <br>
 
-~~~js {1-9,15,19}
-function rowDataTemplate(value, row, col) {
+```javascript
     if (!value) {
         return;
     }
@@ -514,7 +509,7 @@ const treeGrid = new dhx.TreeGrid("treegrid_container", {
     ],
     data: dataset
 });
-~~~
+```
 
 **Related sample**: [TreeGrid. Tooltip template](https://snippet.dhtmlx.com/520i6vbt)
 

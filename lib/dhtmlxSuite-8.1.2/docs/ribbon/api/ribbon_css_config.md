@@ -13,7 +13,7 @@ description: You can explore the css config of Ribbon in the documentation of th
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-background-secondary: var(--dhx-color-white);
@@ -27,17 +27,16 @@ description: You can explore the css config of Ribbon in the documentation of th
     	css: "custom dhx_widget--bordered"
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Ribbon. Styling (custom CSS)](https://snippet.dhtmlx.com/9ckg47ro)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Ribbon.
 
-~~~js
-const ribbon = new dhx.Ribbon("ribbon_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

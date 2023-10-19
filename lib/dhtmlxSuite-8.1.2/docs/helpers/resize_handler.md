@@ -10,11 +10,10 @@ The DHTMLX library provides a helper that changes the width and height of the pa
 
 To create a responsive web page that will be easily adapted to different dimensions of a browser window, make use of the **dhx.resizeHandler** helper:
 
-~~~js
-dhx.resizeHandler(container, function (width, height) {
+```javascript
     // some logic here
 });
-~~~
+```
 
 **Related sample**: [Helper. resizeHandler](https://snippet.dhtmlx.com/qf2tb3em)
 

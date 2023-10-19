@@ -12,13 +12,12 @@ In order to select options in ComboBox, use the [setValue()](combobox/api/combob
 
 - **value** - (*string|number|array*) the **ID(s)** of Combo options from data collection that should be selected in ComboBox
 
-~~~js
-// select one option
+```javascript
 combo.setValue(combo.data.getId(1));
  
 // selects several options at once
 combo.setValue([combo.data.getId(1), combo.data.getId(3)]);
-~~~
+```
 
 **Related sample**: [Combobox. Set value](https://snippet.dhtmlx.com/xl1p7zcx)
 
@@ -27,8 +26,7 @@ In the latter case you need to pass the following parameter:
 
 - **asArray**  - (*boolean*) true, to return ids as an array of strings
 
-~~~js
-const id = combo.getValue();
+```javascript
 // -> "u1556098582074"
  
 // returns ids of selected options as strings
@@ -38,7 +36,7 @@ const ids = combo.getValue();
 // returns ids of selected options as an array of strings
 const array_ids = combo.getValue(true);
 // -> ["u1556097609214", "u1556097609228", "u1556097609244"]
-~~~
+```
 
 **Related sample**: [Combobox. Get value](https://snippet.dhtmlx.com/ppvjknid)
 
@@ -46,12 +44,11 @@ const array_ids = combo.getValue(true);
 
 To disable/enable ComboBox, make use of the [disable()](combobox/api/combobox_disable_method.md)/[enable()](combobox/api/combobox_enable_method.md) methods:
 
-~~~js
-// disabling a combo box
+```javascript
 combo.disable();
 // enabling a combo box
 combo.enable();
-~~~
+```
 
 **Related sample**: [Combobox. Enable, disable, is disabled](https://snippet.dhtmlx.com/7bujtsuu)
 
@@ -59,9 +56,8 @@ combo.enable();
 
 To check if a combobox is disabled, call the [isDisabled()](combobox/api/combobox_isdisabled_method.md) method:
 
-~~~js
-combo.isDisabled(); // -> true/false
-~~~
+```javascript
+```
 
 **Related sample**: [Combobox. Enable, disable, is disabled](https://snippet.dhtmlx.com/7bujtsuu)
 
@@ -69,20 +65,18 @@ combo.isDisabled(); // -> true/false
 
 You can repaint ComboBox on a page, e.g. after changing its configuration, using the [paint()](combobox/api/combobox_paint_method.md) method:
 
-~~~js
-// disabling ComboBox via the configuration object
+```javascript
 combo.config.disabled = true;
 // repaints ComboBox with a new config
 combo.paint();
-~~~
+```
 
 ## Clearing input
 
 It is possible to clear the ComboBox input from the selected value(s) with the help of the [clear()](combobox/api/combobox_clear_method.md) method:
 
-~~~js
-combo.clear();
-~~~
+```javascript
+```
 
 **Related sample**: [Combobox. Clear](https://snippet.dhtmlx.com/omlrtmj7)
 
@@ -90,15 +84,13 @@ combo.clear();
 
 When needed, you can set focus in the ComboBox input without opening the list of options. Use the [focus()](combobox/api/combobox_focus_method.md) method for this purpose:
 
-~~~js
-combo.focus();
-~~~
+```javascript
+```
 
 To remove focus from Combobox, apply the [blur()](combobox/api/combobox_blur_method.md) method:
 
-~~~js
-combo.blur();
-~~~
+```javascript
+```
 
 **Related sample**: [Combobox. Focus](https://snippet.dhtmlx.com/hp6b5sxe)
 
@@ -126,13 +118,12 @@ To hide/show the popup, use the corresponding methods:
 </table>
 <br/>
 
-~~~js
-// showing a popup
+```javascript
 combo.popup.show(container);
 
 // hiding a popup
 combo.popup.hide();
-~~~
+```
 
 **Related sample**: [Combobox. Show / hide options list](https://snippet.dhtmlx.com/ztc4sko8)
 
@@ -179,8 +170,7 @@ To control the process of showing/hiding the popup, apply the related events:
 </table>
 <br/>
 
-~~~js
-combo.popup.events.on("BeforeShow", function(HTMLElement){
+```javascript
 	console.log("A popup will be shown");
     return true;				
 });
@@ -197,7 +187,7 @@ combo.popup.events.on("BeforeHide", function(fromOuterClick,e){
 combo.popup.events.on("AfterHide", function(e){
 	console.log("A popup is hidden");			
 });
-~~~
+```
 
 **Related sample**: [Combobox. Popup Events](https://snippet.dhtmlx.com/ll0uykpk)
 
@@ -224,9 +214,8 @@ It is possible to add more options into the initialized ComboBox on the fly. Use
 
 For instance:
 
-~~~js
-combobox.data.add({value:"Russia"},1);
-~~~
+```javascript
+```
 
 **Related sample**: [Combobox. Add data and remove item](https://snippet.dhtmlx.com/o7vd331z)
 
@@ -253,11 +242,10 @@ You can change config options of the option via the **update()** method of Data 
 
 For example, you can change the image of an option:
 
-~~~js
-combo.data.update("option_id",{
+```javascript
 	value:"Russia", src: "../common/flags/ru.png"
 });
-~~~
+```
 
 **Related sample**: [Combobox. Update](https://snippet.dhtmlx.com/y7hpq0x8)
 
@@ -265,8 +253,7 @@ combo.data.update("option_id",{
 
 To remove an option, make use of the **remove()** method of Data Collection. Pass the id of the option that should be removed to the method:
 
-~~~js
-combo.data.remove("option_id");
-~~~
+```javascript
+```
 
 {{note Check the full list of [Data collection API](data_collection.md)}}

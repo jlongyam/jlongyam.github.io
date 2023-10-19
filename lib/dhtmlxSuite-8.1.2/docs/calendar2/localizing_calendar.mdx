@@ -46,8 +46,7 @@ To use a different locale, your need to:
 - define necessary language settings: provide full and short names of months, as well as full and short names of days of a week;
 - apply the language settings by calling the **dhx.i18n.setLocale()** method before Calendar initialization.
 
-~~~js
-//define language settings
+```javascript
 const de = {
     // short names of months
     monthsShort: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun",
@@ -67,6 +66,6 @@ dhx.i18n.setLocale("calendar", de);
 const calendar = new dhx.Calendar("calendar", {
     css: "dhx_widget--bordered"
 });
-~~~
+```
 
 `RELATED SAMPLE:` [Calendar. Localization](https://snippet.dhtmlx.com/3u7f1oug) 

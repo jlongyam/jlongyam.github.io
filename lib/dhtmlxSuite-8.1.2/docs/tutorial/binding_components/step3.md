@@ -14,8 +14,7 @@ In addition, we will put the form into the window so that we could apply or canc
 
 Let's define the list of Form controls and put them in two columns:
 
-~~~~js
-var formConfig = {
+~```javascript
 	gravity: false,
     cols: [
     	{
@@ -50,7 +49,7 @@ var formConfig = {
 		}
     ]
 };
-~~~~
+```~
 
 The first column contains the following fields:
 
@@ -68,8 +67,7 @@ The second column consists of:
 
 - a select box to choose a country. The options for the Country select are the following:
 
-~~~js
-var countries = [
+```javascript
 	{value: "", content: ""},
     {value: "Albania", content: "Albania"},
     {value: "Haiti", content: "Haiti"},
@@ -77,7 +75,7 @@ var countries = [
     {value: "Poland", content: "Poland"},
     //more options
 ];
-~~~
+```
 
 {{note You need to define a JSON structure with country options before defining the list of Form controls.}}
 
@@ -87,9 +85,8 @@ The full list of form controls and their attributes is given [here](form/control
 
 Now, we can initialize Form with the dhx.Form object constructor:
 
-~~~js
-var form = new dhx.Form(null, formConfig);
-~~~
+```javascript
+```
 
 <i>The constructor takes two parameters:
 
@@ -100,9 +97,8 @@ var form = new dhx.Form(null, formConfig);
 
 Finally, we use the <b>attach()</b> method of a window to attach a form to the window:
 
-~~~~js
-dhxWindow.attach(form);
-~~~~ 
+~```javascript
+```~ 
 
 <img style="margin: 12px" src="tutorial/binding_components/form.png"/>
 

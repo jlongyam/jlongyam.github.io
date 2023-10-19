@@ -8,8 +8,7 @@ description: You can explore the Sidebar custom HTML properties of Sidebar in th
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "customHTML",
 		id?: string | number,
@@ -20,7 +19,7 @@ const data = [
     },
 	// more Sidebar controls
 ]
-~~~
+```
 
 ### Description
 

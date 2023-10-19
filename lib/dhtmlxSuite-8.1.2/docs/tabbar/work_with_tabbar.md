@@ -35,20 +35,18 @@ The [](tabbar/api/tabbar_addtab_method.md) method takes two parameters:
 </table>
 <br/>
 
-~~~js
-// adding a new tab
+```javascript
 tabbar.addTab({tab: "tab-" + nextTab++, css:"panel flex"}, 0);
-~~~
+```
 
 **Related sample**: [Tabbar. Add / remove tab](https://snippet.dhtmlx.com/z5vjj83y)
 
 The [removeTab()](tabbar/api/tabbar_removetab_method.md) method expects the id of a tab you want to remove as its parameter. You can get the id of a tab via the [getId()](tabbar/api/tabbar_getid_method.md) method:
 
-~~~js
-// removing a tab
+```javascript
 const id = tabbar.getId(0);
 tabbar.removeTab(id);
-~~~
+```
 
 **Related sample**: [Tabbar. Add / remove tab](https://snippet.dhtmlx.com/z5vjj83y)
 
@@ -56,16 +54,14 @@ tabbar.removeTab(id);
 
 In order to get the id of a tab, make use of the [getId()](tabbar/api/tabbar_getid_method.md) method. It takes the index of the tab in question as a parameter:
 
-~~~js
-const id = tabbar.getId(0);
-~~~
+```javascript
+```
 
 ## Setting/getting the active tab
 
 It is possible to set the active tab via Tabbar API, i.e. with the help of the [setActive()](tabbar/api/tabbar_setactive_method.md) method. It takes the id of a tab as a parameter:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
 	mode: "top",			
 	views:[
 		{ id: "1", tab: "tab-1", css:"panel flex"},
@@ -76,14 +72,13 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 });
 
 tabbar.setActive("2");
-~~~
+```
 
 **Related sample**: [Tabbar. Set active](https://snippet.dhtmlx.com/u9ryz38f)
 
 To identify what tab is currently active, apply the [getActive()](tabbar/api/tabbar_getactive_method.md) method. It will return the id of the active tab.
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
 	mode: "top",			
 	views:[
 		{ id: "1", tab: "tab-1", css:"panel flex"},
@@ -94,7 +89,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 });
 
 const active = tabbar.getActive(); // -> "2"
-~~~
+```
 
 **Related sample**: [Tabbar. Get active](https://snippet.dhtmlx.com/xpvkcwiu)
 
@@ -102,16 +97,14 @@ const active = tabbar.getActive(); // -> "2"
 
 To enable a tab, use the [enableTab()](tabbar/api/tabbar_enabletab_method.md) method:
 
-~~~js
-tabbar.enableTab("London");
-~~~
+```javascript
+```
 
 To disable a tab, use the [disableTab()](tabbar/api/tabbar_disabletab_method.md) method:
 
-~~~js
-tabbar.disableTab("London");
+```javascript
 // -> true|false
-~~~
+```
 
 **Related sample**: [Tabbar. Disable tab](https://snippet.dhtmlx.com/9l3egq3z)
 
@@ -119,15 +112,13 @@ tabbar.disableTab("London");
 
 To check if a tab is disabled, pass the id of the tab as an argument to the [isDisabled()](tabbar/api/tabbar_isdisabled_method.md) method:
 
-~~~js
-tabbar.isDisabled("London"); // -> returns true/false
-~~~
+```javascript
+```
 
 To check if a currently active tab is disabled, call the [isDisabled()](tabbar/api/tabbar_isdisabled_method.md) method without parameters:
 
-~~~js
-tabbar.isDisabled(); // -> returns true/false
-~~~
+```javascript
+```
 
 **Related sample**: [Tabbar. Is disabled tab](https://snippet.dhtmlx.com/86er2y7m)
 
@@ -135,8 +126,7 @@ tabbar.isDisabled(); // -> returns true/false
 
 You can easily attach any DHTMLX component (except for Message, Popup, Window) to a cell of Tabbar using the attach method of a cell:
 
-~~~js
-const dataview = new dhx.DataView(null, {
+```javascript
 	template: dataviewTemplate,
 	itemsInRow: 3,
 	gap: "10px"
@@ -145,7 +135,7 @@ const dataview = new dhx.DataView(null, {
 dataview.data.parse(dataset);
 
 tabbar.getCell("dataview").attach(dataview);
-~~~
+```
 
 **Related sample**: [Tabbar. Attach widget](https://snippet.dhtmlx.com/o1jwmw1l)
 
@@ -155,8 +145,7 @@ tabbar.getCell("dataview").attach(dataview);
 
 You can easily attach some HTML content to a cell of Tabbar via the [](tabbar/api/cell/tabbar_cell_attachhtml_method.md) method of a cell. It takes as a parameter a string with HTML.
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     mode: "top",
     css: "dhx_widget--bordered",
     views: [
@@ -165,4 +154,4 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 });
 
 tabbar.getCell("vilnius").attachHTML("<p>Information about Vilnius</p>");
-~~~
+```

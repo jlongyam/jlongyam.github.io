@@ -23,6 +23,5 @@ tabbar.getCell("rome");
 
 A returned object looks like this:
 
-~~~js
-{_uid: "u1581524705962", config: {…}, _parent: Tabbar, events: EventSystem, …}
-~~~
+```javascript
+```

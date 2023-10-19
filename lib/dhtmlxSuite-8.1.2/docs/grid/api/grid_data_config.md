@@ -44,8 +44,7 @@ const grid = new dhx.Grid("grid_container", {
 
 1. Starting with v7.1, you can specify the height for the necessary row of data via setting the number value to the <b>height</b> option when defining the data set: 
 
-~~~js {5}
-const dataset = [
+```javascript
 	{
 		"country": "China",
 		"population": "1415045928",
@@ -58,7 +57,7 @@ const dataset = [
 		"id": "2",
 	}
 ];
-~~~
+```
 
 **Related sample**: [Grid. Row height](https://snippet.dhtmlx.com/2jo5lcuj)
 
@@ -66,8 +65,7 @@ const dataset = [
 
 2. Starting with v7.1, it is possible to use the Date() object when specifying data for the "Date" column:
 
-~~~js {4,8}
-const dataset = [
+```javascript
     {
         "country": "China",
         "date": new Date()
@@ -77,7 +75,7 @@ const dataset = [
         "date": new Date(2010, 02, 10)
 	}
 ];
-~~~
+```
 
 **Related sample**: [Grid. Date column and support of the Date() object](https://snippet.dhtmlx.com/ylbu791i)
 

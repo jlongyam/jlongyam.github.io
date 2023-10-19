@@ -32,13 +32,12 @@ form.getItem("container").getProperties();
 
 The returned object of the Container control looks like:
 
-~~~js
-{
+```javascript
     height: "400px",
     padding: "12px 0px",
     width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/container/api_container_properties.md).
 

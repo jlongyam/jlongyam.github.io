@@ -8,8 +8,7 @@ description: You can explore the Properties of the Textarea control of Form in t
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "textarea",
     name?: string,
 	id?: string,
@@ -40,7 +39,7 @@ description: You can explore the Properties of the Textarea control of Form in t
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

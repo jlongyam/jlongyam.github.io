@@ -16,11 +16,10 @@ This item takes space on the toolbar and is used for aligning controls.
 
 A new Spacer can be created with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-toolbar.data.add({
+```javascript
 	type:"spacer"
 });
-~~~
+```
 
 ### Properties
 
@@ -30,10 +29,9 @@ You can provide [the following properties](toolbar/api/api_spacer_properties.md)
 
 You can hide and show Spacer with the [show()](toolbar/api/toolbar_show_method.md)/[hide()](toolbar/api/toolbar_hide_method.md) methods of Toolbar:
 
-~~~js
-toolbar.show(id);
+```javascript
 toolbar.hide(id);
-~~~
+```
 
 **Related sample**: [Toolbar. Hide / show items](https://snippet.dhtmlx.com/cldp89u4)
 

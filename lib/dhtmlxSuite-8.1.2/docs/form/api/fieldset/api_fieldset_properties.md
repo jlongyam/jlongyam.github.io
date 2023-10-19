@@ -8,8 +8,7 @@ description: You can explore the Properties of the Fieldset control of Form in t
 
 ### Usage
 
-~~~js
-{
+```javascript
     type: "fieldset",
     name?: string,
     id?: string,
@@ -28,7 +27,7 @@ description: You can explore the Properties of the Fieldset control of Form in t
     cols?: IBlock,
     align?: "start" | "center" | "end" | "between" | "around" | "evenly" // "start" by default
 }
-~~~
+```
 
 ### Description
 

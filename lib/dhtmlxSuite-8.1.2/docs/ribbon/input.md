@@ -14,13 +14,12 @@ A text input field with an icon.
 
 The following syntax shows how an Input control can be easily added to a ribbon:
 
-~~~js
-ribbon.data.add({
+```javascript
 	type:"input",
 	value:"",
 	placeholder:"Type to search"
 });
-~~~
+```
 
 **Related sample**: [Ribbon. Input](https://snippet.dhtmlx.com/jjnzc3ng)
 
@@ -32,19 +31,17 @@ You can provide the [following properties](ribbon/api/api_input_properties.md) i
 
 You can show or hide Input with the methods of Ribbon:
 
-~~~js
-ribbon.show(id);
+```javascript
 ribbon.hide(id);
-~~~
+```
 
 ## Enabling/disabling Input
 
 You can also disable and enable inputs:
 
-~~~js
-ribbon.enable(id);
+```javascript
 ribbon.disable(id);
-~~~
+```
 
 ## Setting/getting Input value
 
@@ -52,19 +49,17 @@ You can use the **setState()** and **getState()** methods of Ribbon to change an
 
 To fill in Input with text, call **setState()** with a key-value pair as a parameter, where the key is the ID of the input and the value is the text:
 
-~~~js
-{
+```javascript
 	type: "input",
 	id:"search",
 	value: ""
 }
 ...
 ribbon.setState({search:"Summer"});
-~~~
+```
 
 To get the text that is currently inside the Input control, call **getState()**:
 
-~~~js
-ribbon.getState();
+```javascript
 // {search:"Summer"}
-~~~
+```

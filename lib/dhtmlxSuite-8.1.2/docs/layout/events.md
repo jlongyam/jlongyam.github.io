@@ -23,11 +23,10 @@ The user can add any user-defined handler to any of the available events. To do 
     </tbody>
 </table>
 
-~~~js
-layout.events.on("beforeHide", function(id){
+```javascript
     console.log("The id of a cell", id);
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -41,22 +40,20 @@ The names of the events are case-insensitive.
 
 There is a simple way of removing an event handler via the **layout.events.detach()** method:
 
-~~~js
-layout.events.on("beforeHide", function(id){
+```javascript
     console.log("The id of a cell", id);
 });
 
 layout.events.detach("beforeHide");
-~~~
+```
 
 ## Calling events
 
 To call events, use **layout.events.fire()**:
 
-~~~js
-layout.events.fire("beforeHide",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## List of supported events
 

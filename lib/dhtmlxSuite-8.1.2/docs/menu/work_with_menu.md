@@ -10,10 +10,9 @@ description: You can explore how to work with Menu in the documentation of the D
 
 You can hide and show menu items (one or several at once) with the help of the [hide()](menu/api/menu_hide_method.md) / [show()](menu/api/menu_show_method.md) methods:
 
-~~~js
-menu.hide(id);
+```javascript
 menu.show(id);
-~~~
+```
 
 **Related sample**: [Menu. Show / hide menu item](https://snippet.dhtmlx.com/a9vbhxgd)
 
@@ -21,28 +20,25 @@ Both methods can take one parameter - the ID of a menu item or an array with IDs
 
 Starting from v7.0, it is possible to hide/show all Menu items on the page at once by using the methods without parameters:
 
-~~~js
-// hides all Menu items
+```javascript
 menu.hide();
 // shows all Menu items
 menu.show();
-~~~
+```
 
 ## Disabling/enabling menu options
 
 You can disable one menu option or several options at a time with the [disable()](menu/api/menu_disable_method.md) method:
 
-~~~js
-menu.disable("1");
+```javascript
 menu.disable(["2","3"]);
-~~~
+```
 
 To enable one menu option or several options at a time, use the [enable()](menu/api/menu_enable_method.md) method:
 
-~~~js
-menu.enable("1");
+```javascript
 menu.enable(["1","3"]);
-~~~
+```
 
 **Related sample**: [Menu. Enable / disable menu item](https://snippet.dhtmlx.com/zuoam7r7)
 
@@ -50,12 +46,11 @@ Both methods can take one parameter: the ID of a menu item or an array of IDs.
 
 Starting from v7.0, it is possible to disable/enable all Menu items on the page at once by using the methods without parameters:
 
-~~~js
-// disables all Menu items
+```javascript
 menu.disable();
 // enables all Menu items
 menu.enable();
-~~~
+```
 
 ## Checking if a menu option is disabled
 
@@ -70,9 +65,8 @@ To check if an item of Menu is disabled, call the [isDisabled()](menu/api/menu_i
     </tbody>
 </table>
 
-~~~js
-menu.isDisabled("1"); // -> true/false
-~~~
+```javascript
+```
 
 **Related sample**: [Menu. Enable / disable menu item](https://snippet.dhtmlx.com/zuoam7r7)
 
@@ -96,9 +90,8 @@ To select a particular Menu item, make use of the [select()](menu/api/menu_selec
 </table>
 <br/>
 
-~~~js
-menu.select("align-left");
-~~~
+```javascript
+```
 
 **Related sample**: [Menu. Select / unselect](https://snippet.dhtmlx.com/9qqah8ex)
 
@@ -106,17 +99,15 @@ menu.select("align-left");
 
 To remove selection from a selected item, apply the [unselect()](menu/api/menu_unselect_method.md) method of Menu. The method may take the id of an item as a parameter:
 
-~~~js
-// unselects a specified selected item
+```javascript
 menu.unselect("align-left");
-~~~
+```
 
 It is also possible to remove selection from all previously selected items of Menu via the [unselect()](menu/api/menu_unselect_method.md) method:
 
-~~~js
-// unselects all previously selected items
+```javascript
 menu.unselect();
-~~~
+```
 
 **Related sample**: [Menu. Select / unselect](https://snippet.dhtmlx.com/9qqah8ex)
 
@@ -134,9 +125,8 @@ To check if an item of Menu is selected, call the [isSelected()](menu/api/menu_i
 </table>
 <br/>
 
-~~~js
-menu.isSelected("align-left"); // -> returns true/false
-~~~
+```javascript
+```
 
 **Related sample**: [Menu. Select / unselect](https://snippet.dhtmlx.com/9qqah8ex)
 
@@ -144,9 +134,8 @@ menu.isSelected("align-left"); // -> returns true/false
 
 To get the selected items, call the [getSelected()](menu/api/menu_getselected_method.md) method. The method returns an array of string values with IDs of selected items:
 
-~~~js
-menu.getSelected(); // -> ["selected_1", "selected_1.1"]
-~~~
+```javascript
+```
 
 ## Using Tree collection API
 
@@ -156,8 +145,7 @@ You can manipulate the controls of Menu with the help of the [Tree collection AP
 
 You can add menu items with the **add()** method of tree collection:
 
-~~~js
-menu.data.add({
+```javascript
     type:"separator"
 });
 
@@ -167,7 +155,7 @@ menu.data.add({
         { value:"Folder" }
     ]
 });
-~~~
+```
 
 **Related sample**: [Menu. Add / remove Item](https://snippet.dhtmlx.com/nood4bfx)
 
@@ -175,9 +163,8 @@ menu.data.add({
 
 You can move menu items to different positions with the **move()** method. For example, this is how you can move an item with ID "2" to the left edge of the menu:
 
-~~~js
-menu.data.move("2",0);
-~~~
+```javascript
+```
 
 {{note
 The ID should always be a string, even if in menu item configuration you set it as a number.
@@ -185,9 +172,8 @@ The ID should always be a string, even if in menu item configuration you set it 
 
 To get the current position, use the **getIndex()** method of TreeCollection:
 
-~~~js
-menu.data.getIndex("id");
-~~~
+```javascript
+```
 
 {{note
 Indexes are counted from 0.
@@ -197,47 +183,42 @@ Indexes are counted from 0.
 
 You can work with all (or some) menu items with the help of the **forEach()** method of TreeCollection:
 
-~~~js
-// remove all icons from the menu
+```javascript
 menu.data.forEach(function(item){
     item.icon = "";
 });
 menu.paint();
-~~~
+```
 
 ### Setting item text 
 
 You can set text labels for any menu item. Access the needed item with the **getItem()** method of the TreeCollection:
 
-~~~js
-menu.data.getItem("id").value = "Open";
+```javascript
 menu.paint();
-~~~
+```
 
 ### Setting item hotkey
 
 You can add a shortcut to a menu option by accessing it with the help of the **getItem()** method. After you add a hotkey, a label with the keys will be added to the option.
 
-~~~js
-menu.data.getItem("id").hotkey = "Ctrl+N";
+```javascript
 menu.paint();
-~~~
+```
 
 ### Removing menu items  
 
 You can remove any item from a menu with the **remove()** method. The item will be removed with all its sub-items.
 
-~~~js
-menu.data.remove("id");
-~~~
+```javascript
+```
 
 **Related sample**: [Menu. Add / remove Item](https://snippet.dhtmlx.com/nood4bfx)
 
 To remove all items from Menu, call the **removeAll()** method. Afterwards, you can load other options.
 
-~~~js
-menu.data.removeAll();
+```javascript
 menu.data.parse(new_options);
-~~~
+```
 
 {{note Check the full list of [Tree collection API](tree_collection.md).}}

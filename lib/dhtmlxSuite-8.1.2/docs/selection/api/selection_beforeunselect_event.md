@@ -28,9 +28,8 @@ component.selection.events.on("beforeUnSelect", function(id) {
 
 Starting from v7.0, you can also apply the simplified version of the event:
 
-~~~js
-component.events.on("beforeUnSelect", function(id) {
+```javascript
     console.log(id);
     return false;
 });
-~~~
+```

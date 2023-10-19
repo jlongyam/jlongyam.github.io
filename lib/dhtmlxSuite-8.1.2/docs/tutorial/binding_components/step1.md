@@ -7,8 +7,7 @@ Let’s see how to add a window on the page in two steps:
 
 1\. At first, we need to initialize a Window with the dhx.Window object constructor:
 
-~~~~js
-const dhxWindow = new dhx.Window(
+~```javascript
 	{
     	title: "Window", 
         closable: true, 
@@ -19,7 +18,7 @@ const dhxWindow = new dhx.Window(
 		footer: true
 	}
 );
-~~~~
+```~
 
 The constructor takes one parameter:
 
@@ -27,13 +26,12 @@ The constructor takes one parameter:
 
 2\. Then we need to add the "Apply" and "Cancel" controls into the footer of the window by specifying objects with their attributes and passing them to the <b>add()</b> method of data_collection/api/refs/datacollection.md:
 
-~~~~js
-dhxWindow.footer.data.add([
+~```javascript
     {type: "spacer"},
     {id: "cancel", type: "button", value: "Cancel", view: "flat", color: "danger"},
     {id: "apply", type: "button", value: "Apply", view: "flat", color: "primary"}
 ],0);
-~~~~
+```~
 
 We pass two parameters to the method:
 

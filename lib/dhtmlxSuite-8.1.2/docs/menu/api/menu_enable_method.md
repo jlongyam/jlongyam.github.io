@@ -24,7 +24,6 @@ menu.enable(["cancel_btn","del_btn"]);
 
 Starting from v7.0, it is possible to enable all items at once by using the method without the parameter:
 
-~~~js
-// enables all Menu items
+```javascript
 menu.enable();
-~~~
+```

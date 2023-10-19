@@ -26,8 +26,7 @@ The method invokes the [](form/api/text/text_afterchangeproperties_event.md) and
 
 It is possible to change values of the following configuration attributes of the **Text** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string|number|"content",
@@ -42,7 +41,7 @@ It is possible to change values of the following configuration attributes of the
 	successMessage: string,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/text/api_text_properties.md).
 

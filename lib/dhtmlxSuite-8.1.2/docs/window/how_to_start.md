@@ -16,7 +16,7 @@ To initialize DHTMLX Window on a page, you need to take the following simple ste
 - [Initialize Window](#initialize-window) with the object constructor
 - [Set content](#set-content) into a created window
 
-~~~html title="index.html"
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,7 +36,7 @@ To initialize DHTMLX Window on a page, you need to take the following simple ste
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -47,10 +47,10 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html title="index.html"
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Initialize Window
 
@@ -60,15 +60,14 @@ Initialize Window with the `dhx.Window` object constructor. The constructor take
 
 {{note Don't use **window** as a variable name for dhxWindow object, since it is reserved for the browser window.}}
 
-~~~js title="index.js"
-// creating DHTMLX Window
+```javascript
 const dhxWindow = new dhx.Window({
     modal: false,
 	resizable: true,
 	movable: true
 });
 dhxWindow.show();
-~~~
+```
 
 
 {{note To show a created window on a page, you should call the [show()](window/api/window_show_method.md) method after initialization of the component.}}

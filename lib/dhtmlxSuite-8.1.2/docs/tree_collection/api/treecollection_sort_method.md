@@ -32,8 +32,7 @@ treeGrid.data.sort({
 
 To set a custom function for sorting you need to specify the **rule** attribute in a passed object. For example:
 
-~~~js
-treegrid.data.sort({
+```javascript
     rule: (a,b) => (a.type < b.type) ? -1 : ( (a.type > b.type) ? 1 : 0 )
 });
-~~~
+```

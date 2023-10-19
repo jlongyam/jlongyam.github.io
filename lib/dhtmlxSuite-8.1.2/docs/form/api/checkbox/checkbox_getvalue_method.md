@@ -24,8 +24,7 @@ const state = form.getItem("checkbox").getValue(); // -> true/false
 
 - If the **value** property is not set for a control, the method returns the state of the control:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
         {   
             type: "checkbox",
@@ -38,12 +37,11 @@ const form = new dhx.Form("form_container", {
 });
 
 const state = form.getItem("checkbox").getValue(); // -> true/false
-~~~
+```
 
 - If the **value** property is defined, the method returns a string value. In addition, if the **checked** option is set to *true*, the method returns the value of a control, otherwise - returns an empty string (""):
 
-~~~js {8-9}
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
         {   
             type: "checkbox",
@@ -57,4 +55,4 @@ const form = new dhx.Form("form_container", {
 });
 
 const value = form.getItem("checkbox").getValue(); // -> ""
-~~~
+```

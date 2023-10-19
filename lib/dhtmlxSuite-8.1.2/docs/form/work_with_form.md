@@ -10,20 +10,18 @@ description: description
 
 You can get current values/states of Form controls with the help of the [](form/api/form_getvalue_method.md) method. By default, this method returns an object  with names or IDs of controls (if the name attribute is not defined in the config of the control) and their values/states.
 
-~~~js
-// default functionality
+```javascript
 const state = form.getValue();
 //->{"name":"John Doe","email":"jd@mail.com", "agree":true}
-~~~
+```
 
 It is also possible to get this information in the form of FormData. For this, you need to pass the following parameter:
 
 - **asFormData** - (*boolean*) defines whether values of Form controls should be returned as Form Data
 
-~~~js
-// returning form details as FormData
+```javascript
 const state = form.getValue(true);
-~~~
+```
 
 **Related sample**: [Form. Get value](https://snippet.dhtmlx.com/odod5v12)
 
@@ -32,13 +30,12 @@ const state = form.getValue(true);
 If you want to set new values or states for Form controls on the fly, there is the [](form/api/form_setvalue_method.md) at your disposal. The method takes as a parameter an object with new values/states of controls. This
 object should contain a set of *key:value* pairs where *key* is either the name of the control or the control's id (if the name attribute is not defined in the config of the control) and *value* is a new value/state of the control:
 
-~~~js
-form.setValue({
+```javascript
 	"input_name":"Jack London", 
     "slider_id":10
     // more name:value pairs
 });
-~~~
+```
 
 **Related sample**: [Form. Set value](https://snippet.dhtmlx.com/7nxbtlzs)
 
@@ -46,16 +43,14 @@ form.setValue({
 
 To enable a form, use the [enable()](form/api/form_enable_method.md) method:
 
-~~~js
-form.enable();
-~~~
+```javascript
+```
 
 To disable a form, use the [disable()](form/api/form_disable_method.md) method:
 
-~~~js
-form.disable();
+```javascript
 // -> true|false
-~~~
+```
 
 **Related sample**: [Form. Disable/enable](https://snippet.dhtmlx.com/few71nk2)
 
@@ -63,15 +58,13 @@ form.disable();
 
 To check if a form is disabled, call the [isDisabled()](form/api/form_isdisabled_method.md) method:
 
-~~~js
-form.isDisabled(); // -> true/false
-~~~
+```javascript
+```
 
 To check whether a form control is disabled, pass either the name of the control or its id (if the name attribute is not defined in the config of the control) as a parameter to the  [isDisabled()](form/api/form_isdisabled_method.md) method:
 
-~~~js
-form.isDisabled("input"); // -> returns true/false
-~~~
+```javascript
+```
 
 **Related sample**: [Form. Is disabled](https://snippet.dhtmlx.com/lthu8p6p)
 
@@ -79,15 +72,13 @@ form.isDisabled("input"); // -> returns true/false
 
 To hide a form, use the [hide()](form/api/form_hide_method.md) method:
 
-~~~js
-form.hide();
-~~~
+```javascript
+```
 
 To show a form, use the [show()](form/api/form_show_method.md) method:
 
-~~~js
-form.show();
-~~~
+```javascript
+```
 
 **Related sample**: [Form. Hide/Show control](https://snippet.dhtmlx.com/w6rr8chf)
 
@@ -95,15 +86,13 @@ form.show();
 
 To check if a form is visible, call the [isVisible()](form/api/form_isvisible_method.md) method:
 
-~~~js
-form.isVisible(); // -> true/false
-~~~
+```javascript
+```
 
 To check whether a form control is visible, pass either the name of the control or its id (if the name attribute is not defined in the config of the control) as a parameter to the  [isVisible()](form/api/form_isvisible_method.md) method:
 
-~~~js
-form.isVisible("input"); // -> returns true/false
-~~~
+```javascript
+```
 
 ## Validating form
 
@@ -113,8 +102,7 @@ In order to validate a form, you should deal with several aspects: required fiel
 
 You can easily specify that an input is obligatory to be treated by a user with the help of the **required** attribute. 
 
-~~~js
-{	
+```javascript
 	type: "checkbox",
 	label: "I agree",
 	name: "agree",
@@ -122,7 +110,7 @@ You can easily specify that an input is obligatory to be treated by a user with 
 	id: "agree",
 	value: "checkboxvalue"
 }
-~~~
+```
 
 While you've set **required:true** for a field, it gets an asterisk next to its label:
 
@@ -140,8 +128,7 @@ Starting with v7.0, it is possible to add validation for number values entered i
 
 You just need to specify the minimum and/or maximum values allowed in the input via the **min** and/or **max** attributes.
 
-~~~js
-{
+```javascript
 	type: "input",
 	inputType: "number",
 	label: "Age",
@@ -150,7 +137,7 @@ You just need to specify the minimum and/or maximum values allowed in the input 
 	min: 12,
 	max: 18
 }
-~~~
+```
 
 The attributes are applicable to the input fields with the input type: "number".
 
@@ -162,8 +149,7 @@ Starting from v7.0, you can easily limit the number of characters entered in an 
 
 For that, you need to use the **minlength** and (or) **maxlength** attributes that check the length of the given value. Validation is successful if the length is greater than or equal to the minlength value and (or) less than or equal to the maxlength value.
 
-~~~js
-{
+```javascript
 	type: "input",
 	inputType: "text",
 	label: "Name",
@@ -171,7 +157,7 @@ For that, you need to use the **minlength** and (or) **maxlength** attributes th
 	minlength: 3,
 	maxlength: 10
 }
-~~~
+```
 
 The attributes are applicable to the input/textarea fields with the input types: "text", "password".
 
@@ -187,20 +173,18 @@ To specify the way of validating a particular input/textarea, you can make use o
 
 Set a string with the name of the necessary rule as a value of the **validation** attribute:
 
-~~~js
-{
+```javascript
 	type: "input",
 	inputType: "text",
 	label: "Email",
 	placeholder: "jd@mail.name",
 	validation: "email"
 }
-~~~
+```
 
 There is also a possibility to specify *a custom validation function* by setting it as a value of the **validation** attribute:
 
-~~~js title="Validation for Input control"
-{
+```javascript
 	type: "input",
 	inputType: "text",
 	label: "Name",
@@ -209,7 +193,7 @@ There is also a possibility to specify *a custom validation function* by setting
 		return value && value.length > 4;
 	}	
 }
-~~~
+```
 
 **Related sample**: [Form. Validation](https://snippet.dhtmlx.com/3cz9v7rm)
 
@@ -217,8 +201,7 @@ There is also a possibility to specify *a custom validation function* by setting
 If the <b>inputType</b> attribute is set to "number", the **validation** attribute can be set only as a function
 :::
 
-~~~js title="Validation for Combo control. Multi select is enabled"
-// 
+```javascript
 {
     name: "combo",
     type: "combo",
@@ -235,10 +218,9 @@ If the <b>inputType</b> attribute is set to "number", the **validation** attribu
         return value.includes(4) || text.includes("value:5");
     }
 }
-~~~
+```
 
-~~~js title="Validation for Combo control. Multi select is disabled"
-{
+```javascript
     name: "combo",
     type: "combo",
     multiselection: false,
@@ -254,7 +236,7 @@ If the <b>inputType</b> attribute is set to "number", the **validation** attribu
         return value === 4 || text === "value:5";
     }
 },
-~~~
+```
 
 ### Messages
 
@@ -279,8 +261,7 @@ While specifying validation rules for form fields, you can also provide a set of
 
 For example, a configuration object for an input with email may look as in:
 
-~~~js
-{
+```javascript
 	type: "input",
 	label: "Email",
 	placeholder: "jd@mail.name",
@@ -288,7 +269,7 @@ For example, a configuration object for an input with email may look as in:
 	successMessage: "Valid email",
 	validation: "email"
 }
-~~~
+```
 
 **Related sample**: [Form. Messages](https://snippet.dhtmlx.com/yhiuq2mi)
 
@@ -297,9 +278,8 @@ For example, a configuration object for an input with email may look as in:
 After a user has finished filling out the form according to the specified rules, it's high time to check, whether it is done correctly.
 To validate a form, make use of the [](form/api/form_validate_method.md) method:
 
-~~~js
-const result = form.validate();
-~~~
+```javascript
+```
 
 The method should return *true*, if all the fields are filled as required, or *false* if there are fields that require attention.
 
@@ -328,14 +308,12 @@ To send a form to the server, make use of the [](form/api/form_send_method.md) m
 
 and returns a promise object.
 
-~~~js
-const send = form.send("myserver.com", "POST");
-~~~
+```javascript
+```
 
 To control the process of a from sending, you can make use of the related events: [](form/api/form_beforesend_event.md) and [](form/api/form_aftersend_event.md):
 
-~~~js
-// fires before sending a form to the server
+```javascript
 form.events.on("BeforeSend", function(){
    // your logic here
 });
@@ -344,7 +322,7 @@ form.events.on("BeforeSend", function(){
 form.events.on("AfterSend", function(){
    // your logic here
 });
-~~~
+```
 
 ## Clearing form
 
@@ -354,8 +332,7 @@ The API of DHTMLX Form provides you with flexible ways of clearing a form. There
 - "validation" - clears form validation
 - without parameters - clears both form values and validation
 
-~~~js
-// clears only form validation
+```javascript
 form.clear("validation");
 
 // clears only form values
@@ -363,7 +340,7 @@ form.clear("value");
 
 // clears both form values and validation
 form.clear();
-~~~
+```
 
 **Related sample**: [Form. Clear form](https://snippet.dhtmlx.com/a64ih4ih)
 
@@ -373,9 +350,8 @@ form.clear();
 
 Starting from v7.0, you can set focus to a Form control via the [setFocus()](form/api/form_setfocus_method.md) method. It takes either the name of the control or its id (if the name attribute is not defined in the config of the control) as a parameter:
 
-~~~js
-form.setFocus("input");
-~~~
+```javascript
+```
 
 **Related sample**: [Form. Set focus on control](https://snippet.dhtmlx.com/tye82oqs)
 

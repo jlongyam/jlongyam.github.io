@@ -12,8 +12,7 @@ You can use DHTMLX Layout to build the necessary composition of blocks to arrang
 
 This type of layout contains several [](layout/api/layout_rows_config.md) of cells which are placed horizontally.
 
-~~~js
-const layout = new dhx.Layout("layout_container", {                                  
+```javascript
 	rows: [
        { header: "The header of the row 1" },
        { header: "The header of the row 2" },
@@ -21,14 +20,13 @@ const layout = new dhx.Layout("layout_container", {
        { header: "The header of the row 4" }
     ]                                        
 });
-~~~
+```
 
 - vertical layout
 
 This type of layout includes a set of [columns](layout/api/layout_cols_config.md) of cells that are located vertically. 
 
-~~~js
-const layout = new dhx.Layout("layout_container", {   
+```javascript
 	cols: [
 		{ header: "The header of the column 1" },
 		{ header: "The header of the column 2" },
@@ -36,14 +34,13 @@ const layout = new dhx.Layout("layout_container", {
         { header: "The header of the column 4" }
 	]
 });
-~~~
+```
 
 - mixed layout
 
 In this layout type **both rows and columns** are used, i.e. a row may include several columns and a column may have rows inside.
 
-~~~js
-const layout = new dhx.Layout("layout_container", {   
+```javascript
 	rows: [
         {
             cols: [
@@ -67,4 +64,4 @@ const layout = new dhx.Layout("layout_container", {
         }
     ]
 });
-~~~
+```

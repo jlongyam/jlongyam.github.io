@@ -10,8 +10,7 @@ description: You can explore how to change DHTMLX Suite themes in the documentat
 
 You may notice that CSS variables of the [default](themes/default_theme.md) theme include variables of the color scheme:
 
-~~~js
---dhx-h-primary: 200;
+```javascript
 --dhx-s-primary: 98%;
 --dhx-l-primary: 40%;
 
@@ -31,7 +30,7 @@ You may notice that CSS variables of the [default](themes/default_theme.md) them
 --dhx-s-background: 0%;
 --dhx-l-background: 100%;
 --dhx-a-background: 0.5;
-~~~
+```
 
 :::tip
 Color values are specified in the [HSL](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl) format, where:
@@ -45,26 +44,25 @@ Due to the use of these CSS variables, color scheme is calculated automatically.
 
 For instance, you can override the primary colors for all Suite themes at once in the following way:
 
-~~~html
+```html
 <style>
     :root {
         --dhx-h-primary: 0;
         --dhx-l-primary: 30%;
     }
 </style>
-~~~
+```
 
 In addition, values of variables, which are calculated on the base of the primary color, will be recalculated accordingly. For example, the value of the focused color is calculated as follows:
 
-~~~js
---dhx-color-focused: hsl(calc(var(--dhx-h-primary) + 10), var(--dhx-s-primary), var(--dhx-l-primary));
-~~~
+```javascript
+```
 
 ## Changing a separate theme
 
 If you want to override some color values for a separate [Suite theme](themes.md#suite-themes), you need to do this in the 'data-dhx-theme' attribute:
 
-~~~html {1-27,39}
+```html
 <style>
     [data-dhx-theme='light'] {
         /* border */
@@ -105,4 +103,4 @@ If you want to override some color values for a separate [Suite theme](themes.md
     
     dhx.setTheme("light");
 </script>
-~~~
+```

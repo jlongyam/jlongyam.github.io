@@ -31,18 +31,17 @@ To set the necessary theme, be it a Suite theme or a custom one, use on of the w
 
 - change the 'data' attribute for the chosen container:
 
-~~~html title="index.html"
+```html
 <!-- component container -->
 <div data-dhx-theme="dark" style="height: 100%" id="chart"></div>
-~~~
+```
 
 - change the 'data' attribute for the root element:
 
-~~~js title="index.js"
-// your code here
+```javascript
 
 document.documentElement.setAttribute("data-dhx-theme", "dark");
-~~~
+```
 
 - or apply the [dhx.setTheme()](themes/api/themes_settheme_method.md) method 
 

@@ -16,7 +16,7 @@ To add a message on a page, you should take the following simple steps:
 - [Create a container](#create-a-container)
 - [Create necessary message box](#create-necessary-message-box)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -38,7 +38,7 @@ To add a message on a page, you should take the following simple steps:
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -49,10 +49,10 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
@@ -62,9 +62,9 @@ This is an optional step. By default a message appears in the top right corner o
 
 Add a container for Message and give it an id, for example "message_container":
 
-~~~html title="index.html"
+```html
 <div id="message_container"></div>
-~~~
+```
 
 ## Create necessary message box
 
@@ -72,8 +72,7 @@ Create a desired message box with the corresponding constructors. The listed con
 
 - **dhx.message(): {close() => void};** - to create a message. The constructor returns an object with the **close()** method:
 
-~~~js
-const message = dhx.message({
+```javascript
     text:"Message text", 
     icon:"dxi-clock", 
     css:"expire", 
@@ -81,32 +80,30 @@ const message = dhx.message({
 });
 
 console.log(message); // -> {close: function}
-~~~
+```
 
 **Related sample**: [Message. Show Message](https://snippet.dhtmlx.com/rsxdlicg)
 
 - **dhx.alert()** - to create an alert message box
 
-~~~js
-dhx.alert({
+```javascript
 	header:"Alert Header",
     text:"Alert text",
     buttonsAlignment:"center"
 });
-~~~
+```
 
 **Related sample**: [Message. Show Alert](https://snippet.dhtmlx.com/m4xka888)
 
 - **dhx.confirm()** - to create a confirm message box 
 
-~~~js
-dhx.confirm({
+```javascript
 	header:"Confirm Header",
     text:"Confirm text",
     buttons:["decline", "accept"],
     buttonsAlignment:"center"
 });
-~~~
+```
 
 **Related sample**: [Message. Show Confirm](https://snippet.dhtmlx.com/iss7twe6)
 
@@ -114,9 +111,8 @@ dhx.confirm({
     - **text** - (*string*) a string with the text of tooltip
     - **config** - (*object*) an object with [tooltip configuration properties](message/configuration.md#tooltip)
         
-~~~js
-dhx.tooltip("Current Value 1", {node: "first", position: "center"});
-~~~
+```javascript
+```
 
 **Related sample**: [Message. Show Tooltip](https://snippet.dhtmlx.com/c6jm8if6)
 

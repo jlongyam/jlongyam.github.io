@@ -25,7 +25,7 @@ In this tutorial we'll work with the <a href="https://github.com/DHTMLX/optimus-
 
 The whole project structure will be as follows:
 
-~~~html
+```html
 optimus_demo_guide
 |── build/
 └── src/
@@ -34,7 +34,7 @@ optimus_demo_guide
    |── views/
    |── index.html
    └── index.js	
-~~~
+```
 
 - **root** directory - contains files with configurations of the project and environment
 - **build/** folder - contains scripts for running webpack
@@ -46,15 +46,13 @@ optimus_demo_guide
 
 To begin with, download the <a href="https://github.com/DHTMLX/optimus-starter-app/tree/guide/step-1" target="_blank">initial project from GitHub</a>. After unzipping the project, you should install the dependencies in the *package.json* file with the following command:
 
-~~~js
-npm install
-~~~
+```javascript
+```
 
 To run the project on the local server, use:
 
-~~~js
-npm start
-~~~
+```javascript
+```
 
 This video can help you to install Optimus and start the development of your web app.
 
@@ -73,7 +71,7 @@ Let's consider how we've initialized our starter application:
 
 1\. First, we've created a new *index.html* file in the *src* folder and defined a container to render our app there: 
 
-~~~html title="index.html"
+```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -84,18 +82,17 @@ Let's consider how we've initialized our starter application:
 		<section id="app" class="main__container"></section>
 	</body>
 </html>
-~~~
+```
 
 2\. Next, we've created an *index.js* file - the entry point of the app.  
 
-~~~js title="src/index.js"
-// import css styles
+```javascript
 import "./assets/css/index.css"; 
 // import the App class from the "dhx-optimus" library
 import { App } from "dhx-optimus";
 
 export class MyApp extends App {}
-~~~
+```
 
 Here we've created the MyApp class that will render our application. The MyApp class is inherited from the App class. 
 
@@ -105,8 +102,7 @@ For details about css styles used for the app, see the <a href="https://github.c
 
 {{note We recommend that you use the capital letter at the beginning of the name of the file that have a view => TopLayout.js. This is the common practice.}}
 
-~~~js title="src/views/TopLayout.js"
-// import the View class from the "dhx-optimus" library
+```javascript
 import { View } from "dhx-optimus";
 
 export class TopLayout extends View {
@@ -114,14 +110,13 @@ export class TopLayout extends View {
 		return `<h1>Hello Optimus!</h1>`;
 	}
 }
-~~~
+```
 
 As you can see, we've created the TopLayout class that is inherited from the View class. To define the initial view, we've returned an HTML element in the **init()** method. 
 
 4\. Then, to render the just created view, we've included the view into the *index.js* file and rendered it via the **show()** method:
 
-~~~js title="src/index.js" {4,7-9}
-import "./assets/css/index.css";
+```javascript
 
 import { App } from "dhx-optimus";
 import { TopLayout } from "./views/TopLayout"; 
@@ -131,13 +126,13 @@ export class MyApp extends App {
 		this.show(null, TopLayout); 
 	} 
 }
-~~~
+```
 
 You can find more details on API methods [here](optimus_guides.md#api).
 
 5\. Finally, we've initialized our application via updating the code of the *index.html* file with the following:
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -157,7 +152,7 @@ You can find more details on API methods [here](optimus_guides.md#api).
 		</script>
 	</body>
 </html>
-~~~
+```
 
 Everything is pretty straightforward here:
 
@@ -182,8 +177,7 @@ Let's move on and create several views using widgets of the DHTMLX Suite library
 
 Firstly, we'll create the view on the base of the DHTMLX Toolbar widget because we need the toolbar to switch between the views in our app. For that, create the *ToolbarView.js* file in the *views* folder and fill it with the following code:
 
-~~~js title="src/views/ToolbarView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() {
@@ -217,7 +211,7 @@ export class ToolbarView extends View {
 		return this.toolbar;
 	}
 }
-~~~
+```
 
 The code is quite simple:
 
@@ -228,8 +222,7 @@ The code is quite simple:
 
 Now, you should create a child view. The component will render the current id of the button selected in the toolbar. Navigate to the *views* folder and create the *EmptyView.js* file with the following content:
 
-~~~js title="src/views/EmptyView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class EmptyView extends View {
 	init() {
@@ -239,7 +232,7 @@ export class EmptyView extends View {
 		</div>`;
 	}
 }
-~~~
+```
 
 The child component will get the id via `params`.
 
@@ -247,8 +240,7 @@ The child component will get the id via `params`.
 
 To render the created *EmptyView* and *ToolbarView* views, update the *Toplayout.js* file with the following code:
 
-~~~js title="src/views/Toplayout.js"
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -270,7 +262,7 @@ export class TopLayout extends View {
 		}));
 	}
 }
-~~~
+```
 
 In the above code we've returned Layout as a view and placed the *EmptyView* and *ToolbarView* views into the cells of the layout. 
 
@@ -284,8 +276,7 @@ Adding global events is the best way to implement exchanging of data between the
 
 Open the *ToolbarView.js* file and apply the **ready()** method to add the *click* event handler of the toolbar.
 
-~~~js title="src/views/ToolbarView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() {
@@ -298,14 +289,13 @@ export class ToolbarView extends View {
 		});
 	}
 }
-~~~
+```
 
 We've defined the global *viewChange* event inside the *click* event via the **fire()** method. The logic is the following: whenever the user clicks the button in the toolbar, the *viewChange* event will fire.
 
 Now, we need to update the *TopLayout* view where we'll listen to the *viewChange* event:
 
-~~~js title="src/views/TopLayout.js"
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -322,7 +312,7 @@ export class TopLayout extends View {
 		});
 	}
 }
-~~~
+```
 
 As you can see from the above code, we've initialized the global **viewChange** event handler. 
 
@@ -357,14 +347,12 @@ It's time to find out more about the *dhx-optimus-store* state manager that allo
 
 If you haven't installed *dhx-optimus-store* yet, then navigate to the root directory and run the following command:
 
-~~~js
-npm i dhx-optimus-store
-~~~
+```javascript
+```
 
 After that, we need to initialize the state manager in the application. Open the *index.js* file and update its code, as in:
 
-~~~js title="src/index.js"
-import "./assets/css/index.css";
+```javascript
 
 import { App } from "dhx-optimus";
 // import the state manager from "dhx-optimus-store"
@@ -397,7 +385,7 @@ export class MyApp extends App {
 		});
 	}
 }
-~~~
+```
 
 Let's consider the above described code in detail:
 
@@ -413,8 +401,7 @@ To improve our application and make it possible to asynchronously observe the ch
 
 The updated *ToolbarView.js* file will contain the following code:
 
-~~~js title="src/views/ToolbarView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() { ... }
@@ -432,14 +419,13 @@ export class ToolbarView extends View {
 		});
 	}
 }
-~~~
+```
 
 The **observe()** method is added. Now, after the *active* state of the app changes, the *select* method of the toolbar will set the actual state of the toolbar.
 
 The updated *TopLayout.js* file will look like this:
 
-~~~js title="src/views/TopLayout.js"
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { EmptyView } from "./EmptyView";
@@ -469,7 +455,7 @@ export class TopLayout extends View {
 		);
 	}
 }
-~~~
+```
 
 The above code sample shows that we won't render the default view in the "content" cell on initialization of the layout anymore. Instead, the **observe()** method will show the initial state of the *active* property. In our case, we've specified the *active* property to "first". 
 
@@ -496,8 +482,7 @@ On this step we are going to make our app more complicated by adding the DHTMLX 
 
 2\. Then, navigate to the *src/assets* folder and create a new *data.js* file to save the initial data of the app. For instance:
 
-~~~js title="src/assets/data.js"
-export const data = [
+```javascript
 	{
 		name: "Theo Fisher",
 		post: "Head of department",
@@ -524,14 +509,13 @@ export const data = [
 	},
 // more options
 ];
-~~~
+```
 
 In practice, you can get the data by sending AJAX request to the server.
 
 3\. After that, we'll initialize DHTMLX DataCollection in the MyApp class to simplify exchanging of data between the DHTMLX widgets.
 
-~~~js title="src/index.js"
-...
+```javascript
 import { data } from "./assets/data/data";
 ...
 
@@ -549,7 +533,7 @@ export class MyApp extends App {
 		...
 	}
 }
-~~~
+```
 
 - We've initialized DataCollection in the public *persons* property.
 - To parse data in the data collection we've used the **parse()** method. But you can use other methods of loading data when working with the server. For instance, you can apply the [load()](data_collection/api/datacollection_load_method.md) method. 
@@ -559,8 +543,7 @@ export class MyApp extends App {
 
 - create the *DataView.js* file and add the DataView view there by using the [DataView widget](dataview.md) of Suite:
 
-~~~js title="src/views/content/DataView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class DataView extends View {
 	init() {
@@ -579,12 +562,11 @@ export class DataView extends View {
 		});
 	}
 }
-~~~
+```
 
 - create the *ChartView.js* file and add the Chart view there by using the [Chart widget](chart.md) of Suite:
 
-~~~js title="src/views/content/ChartView.js"
-import { View } from "dhx-optimus";
+```javascript
 import { getChartStatistic } from "../../utils/helpers";
 
 export class ChartView extends View {
@@ -612,14 +594,13 @@ export class ChartView extends View {
 		});
 	}
 }
-~~~
+```
 
 The *getChartStatistic* function is used to prepare the data for Chart. For details on the function, see the <a href="https://github.com/DHTMLX/optimus-starter-app/blob/guide/step-4/src/utils/helpers.js" target="_blank">utils/helpers.js</a> file.
 
 - create the *GridView.js* file and add the Grid view there by using the [Grid widget](grid.md) of Suite:
 
-~~~js title="src/views/content/GridView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class GridView extends View {
 	init() {
@@ -637,14 +618,13 @@ export class GridView extends View {
 		});
 	}
 }
-~~~
+```
 
 As you can see from the above code snippets, we've initialized the data for these three widgets via passing them a parameter from the parent component via the *params* property.
 
 - finally, we need to render the widgets. Each widget will be rendered on the page depending on the button selected in the toolbar. Open the *TopLayout.js* file and update its code with the following:
 
-~~~js title="src/views/TopLayout.js"
-import { View } from "dhx-optimus";
+```javascript
 
 import { ToolbarView } from "./ToolbarView";
 import { DataView } from "./content/DataView";
@@ -692,7 +672,7 @@ export class TopLayout extends View {
 		);
 	}
 }
-~~~
+```
 
 As a result, when the active state is changed, the related component will be rendered on the page.
 
@@ -723,8 +703,7 @@ Let's add dynamics into the app and make it possible to add and remove data:
 
 1\. Firstly, we need to expand the ToolbarView class by adding the "Remove" and "Add" buttons, as in:
 
-~~~js title="src/views/ToolbarView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() {
@@ -770,12 +749,11 @@ export class ToolbarView extends View {
 		}));
 	}
 }
-~~~
+```
 
 We also need to add the "removeItem" and "addItem" global events to the **ready()** method. We should also expand the **observe()** method in order the new buttons to be active only for the desired views:
 
-~~~js title="src/views/ToolbarView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class ToolbarView extends View {
 	init() {
@@ -828,12 +806,11 @@ export class ToolbarView extends View {
 		this.toolbar.enable(this.actionButtons);
 	}
 }
-~~~
+```
 
 2\. Next, we'll expand the DataView class by adding a handler to the "removeItem" event, as in:
 
-~~~js title="src/views/content/DataView.js"
-import { View } from "dhx-optimus";
+```javascript
 
 export class DataView extends View {
 	init() {
@@ -862,14 +839,13 @@ export class DataView extends View {
 		});
 	}
 }
-~~~
+```
 
 When the "removeItem" event triggers, the card will be removed if it exists.
 
 3\. After that, we'll expand the GridView class by adding the ability to edit the grid via setting the [editable: true](grid/api/grid_editable_config.md) configuration property of Grid. We'll also enable selection in Grid via the [selection: "row"](grid/api/grid_selection_config.md) configuration option. The code will look like this:
 
-~~~js title="src/views/content/GridView.js"
-import { View } from "dhx-optimus";
+```javascript
 import { emptyItem } from "../../assets/data/data";
 
 export class GridView extends View {
@@ -903,12 +879,11 @@ export class GridView extends View {
 		return this.grid;
 	}
 }
-~~~
+```
 
 And we will add handlers to the "removeItem" and "addItem" global events. 
 
-~~~js title="src/views/content/GridView.js"
-...
+```javascript
 export class GridView extends View {
   init() {
 	...
@@ -930,12 +905,11 @@ export class GridView extends View {
 	...
   }
 }
-~~~
+```
 
 4\. You should also update the *src/assets/data/data.js* file by adding the following code there:
 
-~~~js
-...
+```javascript
 export const emptyItem = {
 	name: "",
 	post: "",
@@ -944,7 +918,7 @@ export const emptyItem = {
 	birthday: "",
 	start: "",
 };
-~~~
+```
 
 That's all. Open *http://localhost:8080/* and you'll see the dataview like the one shown here: 
 

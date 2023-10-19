@@ -18,8 +18,7 @@ An input field for typing some text inside.
 
 You can easily add an Input control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	rows: [
     	{
 			type: "input",
@@ -30,7 +29,7 @@ const form = new dhx.Form("form_container", {
 	 	} 
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -42,9 +41,8 @@ You can manipulate an Input control by using methods or events of the object ret
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("input").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

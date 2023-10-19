@@ -8,8 +8,7 @@ description: You can explore the NavItem properties of Toolbar in the documentat
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type?: "navItem",
 		id?: string | number,
@@ -34,7 +33,7 @@ const data = [
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

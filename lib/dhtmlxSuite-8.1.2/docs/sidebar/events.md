@@ -24,11 +24,10 @@ You can add any handler to the events of Sidebar. To do this, use the **sidebar.
 </table>
 <br/>
 
-~~~js
-sidebar.events.on("click", function(id,e){
+```javascript
     console.log(id);
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -40,21 +39,19 @@ Several handlers can be attached to one and the same event, and all of them will
 
 There is a simple way of removing an event handler with the **sidebar.events.detach()** method:
 
-~~~js
-sidebar.events.on("click", function(id,e){
+```javascript
     console.log(id);
 });
 
 sidebar.events.detach("click"); 
-~~~
+```
 
 ## Calling events
 
 A custom event can be called with the **fire()** method of the **events** module:
 
-~~~js
-sidebar.events.fire(evName,[args]);
-~~~
+```javascript
+```
 
 ## List of supported events
 

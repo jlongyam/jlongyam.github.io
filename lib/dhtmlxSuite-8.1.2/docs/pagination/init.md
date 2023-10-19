@@ -17,7 +17,7 @@ To add DHTMLX Pagination into an application, you need to take the following sim
 - [Add a related widget](#initialize-a-related-widget) (for example, DataView, List, Grid, Tree)
 - [Initialize Pagination](#initialize-pagination) with the object constructor
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +45,7 @@ To add DHTMLX Pagination into an application, you need to take the following sim
         </script>
     </body>
 </html>
-~~~
+```
 
 **Related sample**: [Pagination. Pagination with List](https://snippet.dhtmlx.com/6sju9jl5)
 
@@ -66,10 +66,10 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create containers
 
@@ -78,10 +78,10 @@ Add two containers:
 - for a related component and give it an id, e.g. "widget_container"
 - for Pagination and give it an id, e.g. "pagination_container":
 
-~~~html title="index.html"
+```html
 <div id="widget_container"></div>
 <div id="pagination_container"></div>
-~~~
+```
 
 ## Initialize a related widget
 
@@ -91,13 +91,12 @@ Choose the widget you want to link to the Pagination component, for example, DHT
 
 1\. Initialize the widget with the object constructor, like this: 
 
-~~~js title="index.js"
-// creating a related DHTMLX List widget
+```javascript
 const widget = new dhx.List("widget_container", {
     css: "dhx_widget--bordered",
     keyNavigation: true
 });
-~~~
+```
 
 The constructor has two parameters:
 
@@ -106,10 +105,9 @@ The constructor has two parameters:
 
 2\. Load data into the widget:
 
-~~~js title="index.js"
-// loading data into the created DHTMLX List 
+```javascript
 widget.data.parse(widget_data);
-~~~
+```
 
 ## Initialize Pagination
 
@@ -118,13 +116,12 @@ Initialize pagination with the *dhx.Pagination* object constructor. The construc
 - the HTML container for Pagination, 
 - optional, an object with configuration properties. If this argument is not passed to the constructor, the settings will be default.
 
-~~~js title="index.js"
-// creating DHTMLX Pagination
+```javascript
 const pagination = new dhx.Pagination("pagination_container", {
 	css: "dhx_widget--bordered",
 	data: widget.data
 });
-~~~
+```
 
 ### Configuration properties
 

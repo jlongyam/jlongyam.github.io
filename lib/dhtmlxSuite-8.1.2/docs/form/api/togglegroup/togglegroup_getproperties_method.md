@@ -56,8 +56,7 @@ form.getItem("ToggleGroup").getProperties("second");
 
 The returned object of the **ToggleGroup** control looks like:
 
-~~~js
-{
+```javascript
 	css: "",
 	full: false,
 	gap: 0,
@@ -72,14 +71,13 @@ The returned object of the **ToggleGroup** control looks like:
 	padding: "",
 	width: "content"
 }
-~~~
+```
 
 You will find the description of all these properties [here](form/api/togglegroup/api_togglegroup_properties.md).
 
 The returned object of a **toggle** of the **ToggleGroup** control looks like:
 
-~~~js
-{
+```javascript
 	full: false,
 	icon: "",
 	offIcon: "",
@@ -87,7 +85,7 @@ The returned object of a **toggle** of the **ToggleGroup** control looks like:
 	text: "Toggle 1",
 	value: undefined
 }
-~~~
+```
 
 You will find the description of all these properties [here](form/api/togglegroup/api_togglegroup_properties.md#properties-of-a-toggle-of-togglegroup).
 

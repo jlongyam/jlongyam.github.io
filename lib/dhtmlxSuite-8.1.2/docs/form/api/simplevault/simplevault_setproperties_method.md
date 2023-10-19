@@ -27,8 +27,7 @@ The method invokes the [](form/api/simplevault/simplevault_afterchangeproperties
 
 It is possible to change values of the following configuration attributes of the **SimpleVault** control:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -52,7 +51,7 @@ It is possible to change values of the following configuration attributes of the
     accept: string,
     validation: (value: ISimpleVaultValue) => boolean
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/simplevault/api_simplevault_properties.md).
 

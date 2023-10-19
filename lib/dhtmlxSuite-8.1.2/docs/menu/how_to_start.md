@@ -17,7 +17,7 @@ To add DHTMLX Menu into an application, you need to take the following simple st
 - [Initialize Menu](#initialize-menu) with the object constructor
 - [Load data into Menu](#load-data-into-menu)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@ To add DHTMLX Menu into an application, you need to take the following simple st
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -44,18 +44,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Menu and give it an id, e.g. "menu_container":
 
-~~~html
+```html
 <div id="menu_container"></div>
-~~~
+```
 
 ## Initialize Menu
 
@@ -64,9 +64,8 @@ Initialize Menu with the `dhx.Menu` object constructor. The constructor takes tw
 - the HTML object on the page that serves as the Menu container
 - an object with configuration properties. If this argument is not passed to the constructor, the settings will be default
 
-~~~js
-const menu = new dhx.Menu("menu_container");
-~~~
+```javascript
+```
 
 ### Configuration properties
 

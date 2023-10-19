@@ -8,10 +8,9 @@ description: You can explore the drag-n-drop of Tree in the documentation of the
 
 DHTMLX Tree possesses an advanced drag-n-drop functionality. With this feature, it is possible to reorder items in a tree and drag items between trees. To enable drag-n-drop, you should define the drag mode.
 
-~~~js
-const source = new dhx.Tree("tree-source",{dragMode:"source", dropBehaviour:"complex"});
+```javascript
 const target = new dhx.Tree("tree-target",{dragMode:"target", dropBehaviour:"complex"});
-~~~
+```
 
 ## Drag mode
 
@@ -23,11 +22,10 @@ There are three modes of drag-n-drop available in a tree:
 
 By setting the drag mode, you automatically enable the drag-n-drop functionality.
 
-~~~js
-const tree = new dhx.Tree("tree_container", { 
+```javascript
     dragMode:"source"
 });
-~~~
+```
 
 **Related sample**: [Tree. Drag modes](https://snippet.dhtmlx.com/7idtw7i4)
 
@@ -53,9 +51,8 @@ There are three modes of behaviour of a dragged tree item:
 
 Instead of moving a dragged item to a new position in the same or a different tree, you can copy it. Use the [](tree/api/tree_dragcopy_config.md) option in the configuration object of a tree.
 
-~~~js
-const treeSource = new dhx.Tree("tree-source", {dragMode: "source", dragCopy: true});
+```javascript
 const treeTarget = new dhx.Tree("tree-target", {dragMode: "target", dragCopy: true});
-~~~
+```
 
 **Related sample**: [Tree. Copy dragged item](https://snippet.dhtmlx.com/xm0lxbpj)

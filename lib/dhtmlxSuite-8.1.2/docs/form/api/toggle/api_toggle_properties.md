@@ -8,8 +8,7 @@ description: You can explore the Properties of the Toggle control of Form in the
 
 ### Usage
 
-~~~js
-{
+```javascript
     type: "toggle",
     name?: string,
     id?: string,
@@ -30,7 +29,7 @@ description: You can explore the Properties of the Toggle control of Form in the
     height?: string | number | "content", // "content" by default
     padding?: string | number // "8px" by default
 }
-~~~
+```
 
 ### Description
 

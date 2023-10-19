@@ -38,12 +38,11 @@ If you block the auto-load for a Tree folder, the folder will be defined as a fi
 
 To prevent this behavior, change the logic of the folders' definition via the `isFolder` property:
 
-~~~js {2}
-const tree = new dhx.Tree("tree_container", {
+```javascript
     isFolder: obj => obj.items,
 	autoload:"https://docs.dhtmlx.com/suite/backend/autoload"
 });
-~~~
+```
 :::
 
 @changelog: added in v8.0

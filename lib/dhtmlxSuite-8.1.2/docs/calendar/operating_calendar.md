@@ -17,42 +17,38 @@ There are the following calendar modes available:
 
 - **"calendar"** - allows selecting among days of a month (default)
 
-~~~js
-calendar.showDate(new Date(2020,11,12),"calendar");
-~~~
+```javascript
+```
 
 - **"month"** - allows selecting a month
 
-~~~js
-calendar.showDate(new Date(2020,11,12),"month");
+```javascript
 
 // shows the current month
 calendar.showDate(null,"month");
-~~~
+```
 
 **Related sample**: [Calendar. Showing particular calendar date and mode](https://snippet.dhtmlx.com/nyfzc8cl)
 
 - **"year"** - allows selecting a year
 
-~~~js
-calendar.showDate(new Date(2020,11,12),"year");
+```javascript
 
 // shows the current year
 calendar.showDate(null,"year");
-~~~
+```
 
 For example, Calendar can be attached to an input, a click on which will show Calendar in one of the modes:
 
-~~~html
+```html
 <input type="text" onclick="showCalendar()" />
-~~~
+```
 
-~~~js
-const calendar = new dhx.Calendar("calendar_container");
+```javascript
 function showCalendar(){
 	calendar.showDate(new Date(11,11,11),"month");
 };
-~~~
+```
 
 ## Getting current mode
 
@@ -63,9 +59,8 @@ There is a possibility to get the current mode of displaying Calendar via the [g
 - calendar
 - timepicker
 
-~~~js
-const mode = calendar.getCurrentMode(); // -> "calendar"
-~~~
+```javascript
+```
 
 **Related sample**: [Calendar. Get current mode](https://snippet.dhtmlx.com/fadykqoc)
 
@@ -73,24 +68,22 @@ const mode = calendar.getCurrentMode(); // -> "calendar"
 
 To get the selected date, call the [](calendar/api/calendar_getvalue_method.md) method. The method returns selected date either as a string (default) or as a Date object. To get a date as an object, pass the *true* parameter to the method.
 
-~~~js
-const date1 = calendar.getValue(); // -> "20/08/19"
+```javascript
 
 const date2 = calendar.getValue(true); // -> Tue Aug 20 2019 00:00:00 GMT+0300 
-~~~
+```
 
 **Related sample**: [Calendar. Getting selected date](https://snippet.dhtmlx.com/k2vrfqj0)
 
 If you work with a calendar in the [range mode](calendar/configuring.md#range-mode) the **getValue()** method returns either an array of Date values or an array of string values with the start and end dates of the range.
 
-~~~js
-// for a range calendar as an array of Date values 
+```javascript
 const date = calendar.getValue(true); 
 // -> [Mon Jun 03 2019 00:00:00 GMT+0300, Wed Jun 19 2019 00:00:00 GMT+0300]
 
 // for a range calendar as an array of string values 
 const date = calendar.getValue(); // ->  ["03/06/19", "19/06/19"]
-~~~
+```
 
 ## Linking two calendars
 
@@ -101,8 +94,7 @@ second calendar.
 
 Use the [](calendar/api/calendar_link_method.md) method and pass as a parameter the object of the second calendar to link the first calendar to. In the example below the [Change](calendar/api/calendar_change_event.md) event is intended to output the start and end dates of the selected range:
 
-~~~js
-const calendar = new dhx.Calendar("calendar1", { css: "dhx_calendar--bordered" });
+```javascript
 const calendar2 = new dhx.Calendar("calendar2", { css: "dhx_calendar--bordered" });
 
 calendar.link(calendar2);
@@ -116,7 +108,7 @@ calendar2.events.on("change", function (date) {
 	document.querySelector("#resultTo").innerHTML = 
     	"Date to: " + calendar2.getValue() + "</br>";
 });
-~~~
+```
 
 **Related sample**: [Calendar. Date range](https://snippet.dhtmlx.com/dxo54017)
 
@@ -129,8 +121,7 @@ To select a date in a calendar, call the [](calendar/api/calendar_setvalue_metho
 - as an array of Date values for the range mode
 - as an array of string values for the range mode
 
-~~~js
-// selects the current date
+```javascript
 calendar.setValue(new Date());
 
 // sets the current date as an array of Date value
@@ -147,7 +138,7 @@ calendar.setValue([new Date(2019,05,03), new Date(2019,05,19)]);
 
 //sets dates as an array of string values(for the range mode)
 calendar.setValue(["03/06/19", "15/06/19"]);
-~~~
+```
 
 In case a date has been successfully added into the calendar, the method will return *true*.
 
@@ -162,8 +153,7 @@ You can add tooltips for dates and show them on the [](calendar/api/calendar_dat
 
 ![](../assets/calendar/tooltips.png)
 
-~~~js
-const special_days = {
+```javascript
 	"20__8": "Mum's birthday",
 	"28__8": "Trip to Canada"
 }
@@ -174,4 +164,4 @@ calendar.events.on("DateMouseOver", function(date, e) {
 		dhx.tooltip(special_days[key], {node: e.target, position: "bottom"});
 	}
 });
-~~~
+```

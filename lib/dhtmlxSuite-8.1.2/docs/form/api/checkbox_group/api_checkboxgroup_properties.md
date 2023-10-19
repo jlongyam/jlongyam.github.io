@@ -8,8 +8,7 @@ description: You can explore the Properties of the Checkbox Group control of For
 
 ## Usage
 
-~~~js
-{
+```javascript
 	type: "checkboxGroup",
     name?: string,
     id?: string,
@@ -72,7 +71,7 @@ description: You can explore the Properties of the Checkbox Group control of For
     successMessage?: string,
     errorMessage?: string,
 }
-~~~
+```
 
 ## Description
 

@@ -18,8 +18,7 @@ A control intended for creating groups of toggle buttons.
 
 You can easily add a ToggleGroup control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", { 
+```javascript
     rows: [
        	{
 	        type: "toggleGroup",
@@ -42,7 +41,7 @@ const form = new dhx.Form("form_container", {
 	    }
 	]
 });
-~~~
+```
 
 ### Properties
 
@@ -54,9 +53,8 @@ You can manipulate a ToggleGroup control by using methods or events of the objec
 
 For example, you can hide a control on a page:
 
-~~~js
-const value = form.getItem("ToggleGroup").hide();
-~~~
+```javascript
+```
 
 ### Methods
 

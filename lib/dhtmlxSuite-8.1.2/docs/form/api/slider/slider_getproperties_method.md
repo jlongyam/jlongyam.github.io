@@ -33,8 +33,7 @@ form.getItem("slider").getProperties();
 
 The returned object of the **Slider** control looks like:
 
-~~~js
-{
+```javascript
 	height: "content",
 	helpMessage: "",
 	hiddenLabel: false,
@@ -54,7 +53,7 @@ The returned object of the **Slider** control looks like:
 	tooltip: true,
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/slider/api_slider_properties.md).
 

@@ -8,8 +8,7 @@ description: You can explore the MenuItem properties of Menu in the documentatio
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type?: "menuItem",
 		id?: string | number,
@@ -28,7 +27,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

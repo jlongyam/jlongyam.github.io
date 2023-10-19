@@ -12,15 +12,13 @@ You can manipulate with List items via the API of the **selection** object. It i
 
 Starting from v7.0, you can activate selection of items via the [](../selection/api/selection_enable_method.md) method of the selection object.
 
-~~~js
-list.selection.enable();
-~~~
+```javascript
+```
 
 To disable selection of items in List, make use of the [](../selection/api/selection_disable_method.md) method of the selection object:
 
-~~~js
-list.selection.disable();
-~~~
+```javascript
+```
 
 **Related sample**: [List. Disable / enable selection](https://snippet.dhtmlx.com/i4zj985o)
 
@@ -30,40 +28,35 @@ list.selection.disable();
 
 To select a particular List item, make use of the **add()** method of the **selection** object. As a parameter the method takes the id of an item. 
 
-~~~js
-const id = list.selection.getId(); // -> "2"
+```javascript
 list.selection.add("2");
-~~~
+```
 
 **Related sample**: [List. Set selection](https://snippet.dhtmlx.com/io8oxxg2)
 
 Starting from v7.0, the method selects all unselected items when calling without parameters:
 
-~~~js
-list.selection.add();
-~~~
+```javascript
+```
 
 ## Unselecting an item
 
 To remove selection from a selected item, apply the **remove()** method of the **selection** object. The method may take the id of an item as a parameter:
 
-~~~js
-list.selection.remove("2"); 
-~~~
+```javascript
+```
 
 Starting from v7.0, the method unselects all previously selected items when calling without parameters:
 
-~~~js
-list.selection.remove();
-~~~
+```javascript
+```
 
 ## Getting id of a selected item
 
 You can get the id of the currently selected item with the **getId()** method of the **selection** object:
 
-~~~js
-const selected = list.selection.getId(); // -> "2"
-~~~
+```javascript
+```
 
 **Related sample**: [List. Get selection](https://snippet.dhtmlx.com/elonnovx)
 
@@ -73,8 +66,7 @@ Starting from v7.0, the method can also return an array with ids of selected ite
 
 It is also possible to get the object of a selected item using the **getItem()** method of the **selection** object:
 
-~~~js
-const item = list.selection.getItem();
-~~~
+```javascript
+```
 
 Starting from v7.0, the method can also return an array of selected items if the [multiselection](list/api/list_multiselection_config.md) property of List is enabled.

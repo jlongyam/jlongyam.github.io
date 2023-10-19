@@ -8,8 +8,7 @@ description: You can explore the Properties of the Datepicker control of Form in
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "datepicker",
     name?: string,
     id?: string,
@@ -49,7 +48,7 @@ description: You can explore the Properties of the Datepicker control of Form in
     successMessage?: string,
     errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

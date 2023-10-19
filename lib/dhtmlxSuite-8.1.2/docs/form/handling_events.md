@@ -23,11 +23,10 @@ You can add any handler to the events of Form. To do this, use the **form.events
     </tbody>
 </table>
 
-~~~js
-form.events.on("click", function(name,e){
+```javascript
     console.log(id);
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -39,21 +38,19 @@ Several handlers can be attached to one and the same event, and all of them will
 
 There is a simple way of removing an event handler with the **form.events.detach()** method:
 
-~~~js
-form.events.on("click", function(name,e){
+```javascript
     console.log(id);
 });
 
 form.events.detach("click"); 
-~~~
+```
 
 ## Calling events
 
 A custom event can be called with the **fire()** method of the **events** module:
 
-~~~js
-form.events.fire(evName,[args]);
-~~~
+```javascript
+```
 
 ## List of supported events
 

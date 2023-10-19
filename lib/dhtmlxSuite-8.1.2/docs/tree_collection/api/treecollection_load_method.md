@@ -26,19 +26,17 @@ The component will make an AJAX call and expect the remote URL to provide valid 
 
 Data loading is asynchronous, so you need to wrap any after-loading code into a promise:
 
-~~~js
-toolbar.data.load(url).then(function(){
+```javascript
 	//do something after load;
 });
-~~~
+```
 
 or
 
-~~~js
-toolbar.data.load(url);
+```javascript
 toolbar.data.loadData.then(function(){
 	//do something after load;
 });
 // loadData executes a callback function after an asynchronous
 // data loading has completed
-~~~
+```

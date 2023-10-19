@@ -15,8 +15,7 @@ A control that allows selecting a numeric value by moving a thumb along a line w
 ##  Adding Slider
 You can easily add a Slider control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{
 			type: "slider",
@@ -28,7 +27,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -40,9 +39,8 @@ You can manipulate a Slider control by using methods or events of the object ret
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("slider_id").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 
@@ -58,9 +56,8 @@ There is a possibility to use methods of DHTMLX Slider via the [getWidget()](for
 
 For example, you can disable a Slider control. To do this, you need to get the widget attached to the Slider control and then use the [disable()](slider/api/slider_disable_method.md) method of this widget.
 
-~~~js
-const slider = form.getItem("slider_id").getWidget();  // -> DHTMLX Slider
+```javascript
 slider.disable(); // disables slider
-~~~
+```
 
 Check [the full list of methods of the DHTMLX Slider component](../../slider/api/api_overview/#methods) which you can apply via the [getWidget()](../../form/api/slider/slider_getwidget_method/) method.

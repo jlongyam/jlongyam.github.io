@@ -11,8 +11,7 @@ Now let’s consider  how start to work with such DHTMLX component as Grid.
 
 1\. At first, we need to initialize a Grid with the dhx.Grid object constructor:  
 
-~~~js
-var grid = new dhx.Grid(null, {
+```javascript
 	// the grid columns
     columns: 
     	[
@@ -32,7 +31,7 @@ var grid = new dhx.Grid(null, {
    	fitToContainer: true, //makes a grid to fit the size of a container
     selection: "row", //enables row selection  in a grid
 });
-~~~
+```
 
 <i>The constructor takes two parameters:
 
@@ -43,16 +42,14 @@ You can read more about Grid properties in the [API](grid/api/refs/grid.md) and 
 
 2\. Next, we can easily attach the grid to the "grid-cell" of Layout, as well as we did with the toolbar:
 
-~~~js
-layout.cell("grid-cell").attach(grid);
-~~~
+```javascript
+```
 
 <img style="margin: 19px" src="tutorial/basic_application/grid_003.png"/>
 
 3\. Also we need to prepare a data set that will be loaded into the Grid later. An example of a Grid data set is given below:
 
-~~~js
-var grid_dataset = [
+```javascript
 	{
 		"id": 1, "first_name": "Gary", "last_name": "Ortiz",
   		"email": "gortiz0@mapy.cz", "country": "Indonesia", "vip": false 
@@ -67,7 +64,7 @@ var grid_dataset = [
  	}
     //more options 
 ]; 
-~~~
+```
 
 
 

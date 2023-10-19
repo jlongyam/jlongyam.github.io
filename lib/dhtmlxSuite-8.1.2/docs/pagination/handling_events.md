@@ -10,11 +10,10 @@ description: You can explore the event handling of Pagination in the documentati
 
 You can attach event listeners with the **pagination.events.on()** method:
 
-~~~js
-pagination.events.on("change", function(index, previousIndex){
+```javascript
     console.log("The currently active page", index);
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ pagination.events.on("change", function(index, previousIndex){
 
 To detach events, use **pagination.events.detach()**:
 
-~~~js
-pagination.events.on("change", function(index, previousIndex){
+```javascript
     console.log("The currently active page", index);
 });
 
 pagination.events.detach("change");
-~~~
+```
 
 ## Calling events
 
 To call events, use **pagination.events.fire()**:
 
-~~~js
-pagination.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

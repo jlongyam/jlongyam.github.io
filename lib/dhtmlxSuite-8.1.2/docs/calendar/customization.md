@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my_first_class {
 		/*some styles*/
@@ -28,19 +28,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [](calendar/api/calendar_css_config.md) property in the Calendar configuration:
 
-~~~js
-const calendar = new dhx.Calendar("calendar_container", {
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
 	.custom {
         --dhx-color-primary: #118d8d;
@@ -52,7 +51,7 @@ For example:
 		css: "custom dhx_widget--bordered"
 	});
 </script>
-~~~
+```
 
 ## Styling selected dates
 
@@ -62,7 +61,7 @@ For example:
 
 You can apply custom styling to dates selected in a calender as well as to [date ranges](calendar/operating_calendar.md#linking-two-calendars). There are system styles you need to change for this purpose:
 
-~~~html
+```html
 <style>
 	/* system style for selected dates */
 	.dhx_calendar-day--selected::before {
@@ -79,4 +78,4 @@ You can apply custom styling to dates selected in a calender as well as to [date
 	const calendar1 = new dhx.Calendar("calendar1", {css: "dhx_widget--bordered"});
 	const calendar2 = new dhx.Calendar("calendar2", {css: "dhx_widget--bordered"});
 </script>
-~~~
+```

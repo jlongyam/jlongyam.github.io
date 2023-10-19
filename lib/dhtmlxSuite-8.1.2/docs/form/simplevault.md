@@ -18,8 +18,7 @@ A handy control for quick and easy uploading of a file or a set of files.
 
 You can easily add a SimpleVault control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	rows: [
     	{
 			type: "simpleVault",
@@ -32,7 +31,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -44,9 +43,8 @@ You can manipulate a SimpleVault control by using methods or events of the objec
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("simpleVault").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 
@@ -62,11 +60,10 @@ You can manipulate a SimpleVault control with the help of the [DataCollection AP
 
 For example, you can remove one or all files from the list. To do that, you need to apply the [remove](https://docs.dhtmlx.com/vault/api__data__remove.html), or [removeAll](https://docs.dhtmlx.com/vault/api__data__removeall.html) method of DataCollection to the object returned by the [getItem()](form/api/form_getitem_method.md) method as follows:
 
-~~~js
-form.getItem("simpleVault").data.remove("file_id");
+```javascript
 
 form.getItem("simpleVault").data.removeAll();
-~~~
+```
 
 ## Uploading files
 

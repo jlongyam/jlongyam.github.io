@@ -14,11 +14,10 @@ This is a line separating items/groups of items from each other.
 
 A new Separator can be created with the help of the **add()** method of Tree Collection:
 
-~~~js
-sidebar.data.add({
+```javascript
 	type:"separator"
 });
-~~~
+```
 
 **Related sample**: [Sidebar. Separator](https://snippet.dhtmlx.com/aq2l1z5n)
 
@@ -30,9 +29,8 @@ You can provide the [following properties](sidebar/api/api_separator_properties.
 
 You can hide and show Separator with the methods of Sidebar by passing the control's id to them:
 
-~~~js
-sidebar.show(id);
+```javascript
 sidebar.hide(id);
-~~~
+```
 
 Check the full list of available operations in the [Sidebar API](sidebar/api/api_overview.md) and [Tree Collection API](tree_collection.md).

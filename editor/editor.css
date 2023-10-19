@@ -1,8 +1,8 @@
 html,
 body,
-#root,
-#dhtmlx_tab,
-#cm_editor {
+#container_layout,
+#container_tabbar,
+#container_editor {
   height: 100%;
 }
 .CodeMirror {

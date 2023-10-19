@@ -10,11 +10,10 @@ description: You can explore the event handling of Slider in the documentation o
 
 You can attach event listeners with the **slider.events.on()** method:
 
-~~~js
-slider.events.on("change", function(newValue, oldValue, isRange){
+```javascript
     console.log("The value of a slider has changed to "+slider.getValue());
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ slider.events.on("change", function(newValue, oldValue, isRange){
 
 To detach events, use **slider.events.detach()**:
 
-~~~js
-slider.events.on("change", function(newValue, oldValue, isRange) {
+```javascript
     console.log("The value of a slider has changed to "+slider.getValue());
 });
 
 slider.events.detach("change");
-~~~
+```
 
 ## Calling events
 
 To call events, use **slider.events.fire()**:
 
-~~~js
-slider.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

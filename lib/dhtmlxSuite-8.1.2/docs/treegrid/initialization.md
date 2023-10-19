@@ -20,7 +20,7 @@ To initialize DHTMLX TreeGrid on a page, you need to take the following simple s
 - [Initialize TreeGrid](#initialize-grid) with the object constructor
 - [Load data into TreeGrid](#load-data-into-treegrid)
 
-~~~html title="index.html"
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +45,7 @@ To initialize DHTMLX TreeGrid on a page, you need to take the following simple s
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -58,28 +58,28 @@ After that, create an HTML file and place full paths to JS and CSS files of DHTM
 - *treegrid.js*
 - *treegrid.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/treegrid.js"></script>
 <link rel="stylesheet" href="../../codebase/treegrid.css">
-~~~
+```
 
 **If you use DHTMLX TreeGrid as a part of the Suite package**, you need to include JS/CSS files of the dhtmlxSuite library:
 
 - suite.js
 - suite.css
 
-~~~html
+```html
 <link type="text/css" href="../codebase/suite.css">
 <script src="../codebase/suite.js" type="text/javascript"></script>
-~~~
+```
 
 ## Create a container
 
 Add a container for TreeGrid and give it an id, for example "treegrid_container". To display TreeGrid on the page correctly, define width and height of the container.
 
-~~~html title="index.html"
+```html
 <div id="treegrid_container" style="width:800px; height:600px"></div>
-~~~
+```
 
 ## Initialize TreeGrid
 
@@ -88,8 +88,7 @@ Initialize TreeGrid with the `dhx.TreeGrid` object constructor. The constructor 
 - the HTML container for TreeGrid,
 - optional, an object with [configuration properties](#configuration-properties). If this argument is not passed to the constructor, the settings will be default.
 
-~~~js title="index.js"
-// creating DHTMLX TreeGrid
+```javascript
 const treegrid = new dhx.TreeGrid("treegrid_container", {
     columns: [
         { width: 100, id: "a", header: [{ text: "#" }] },
@@ -100,7 +99,7 @@ const treegrid = new dhx.TreeGrid("treegrid_container", {
     headerRowHeight: 50,
     data: dataset
 });
-~~~
+```
 
 ### Configuration properties
 

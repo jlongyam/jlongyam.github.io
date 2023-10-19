@@ -19,8 +19,7 @@ description: You can explore the setValue method of the Combo Box control of For
 
 When the `multiselection` property of Combo control isn't specified or is set to *false*, you can set the value of ID as a string, number or array:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
         {
             name: "combo",
@@ -41,12 +40,11 @@ const form = new dhx.Form("form_container", {
 form.getItem("combo").setValue(4);
 // form.getItem("combo").setValue("id_1");
 // form.getItem("combo").setValue(["id_1"]);
-~~~
+```
 
 If `multiselection` is enabled, you need to pass to the `setValue` method an array with string/number values of IDs:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
         {
             name: "combo",
@@ -65,4 +63,4 @@ const form = new dhx.Form("form_container", {
 
 // selects several options
 form.getItem("combo").setValue(["id:1", 4]);
-~~~
+```

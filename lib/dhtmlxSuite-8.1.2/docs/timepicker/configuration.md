@@ -15,11 +15,10 @@ These controls are helpful if you attach TimePicker to an input or a calendar, f
 
 There's the [](timepicker/api/timepicker_controls_config.md) property in the timepicker configuration that while set to *true* enables rendering of the Save button and the Close icon button in the top right corner of the component.
 
-~~~js {2}
-const timepicker = new dhx.Timepicker("timepicker_container", {
+```javascript
 	controls:true
 });
-~~~
+```
 
 **Related sample**: [Timepicker. Initialization with button
 ](https://snippet.dhtmlx.com/3d5u4cxx)
@@ -33,19 +32,17 @@ In this mode the clock inside the timepicker will be shown together with the AM/
 
 ![24-hour clock](../assets/timepicker/amdm_false.png)
 
-~~~js
-const timepicker = new dhx.Timepicker("timepicker_container");
-~~~
+```javascript
+```
 
 - 12-hour clock:
 
 ![12-hour clock](../assets/timepicker/amdm_true.png)
 
-~~~js {2}
-const timepicker = new dhx.Timepicker("timepicker_container",{
+```javascript
 	timeFormat:12
 });
-~~~
+```
 
 **Related sample**: [Timepicker. 12 hour format in Timepicker](https://snippet.dhtmlx.com/u9ge1a4z)
 
@@ -53,8 +50,7 @@ const timepicker = new dhx.Timepicker("timepicker_container",{
 
 Starting with v7.0, you can set the time value that will appear on initialization of the timepicker. To do that, specify the [value](timepicker/api/timepicker_value_config.md) property in the configuration object of the timepicker. The property can accept a value in the following formats: Date, string, number, array, object. For instance:
 
-~~~js
-// the value as a Date 
+```javascript
 const timepicker = new dhx.Timepicker("timepicker_container", {
     value: new Date()
 });
@@ -78,6 +74,6 @@ const timepicker = new dhx.Timepicker("timepicker_container", {
 const timepicker = new dhx.Timepicker("timepicker_container", {
     value: {hour: 10, minute: 50, AM: true}
 });
-~~~
+```
 
 **Related sample**: [Timepicker. Initialization with button](https://snippet.dhtmlx.com/3d5u4cxx)

@@ -19,14 +19,13 @@ However, for further work, you may need to get the same data in different format
 
 To create dataDrivers object, use the *dhx.dataDrivers.csv* constructor:
 
-~~~js
-const csvDataDriver = new dhx.dataDrivers.csv(
+```javascript
     {
         columnDelimiter: " | ",
         rowDelimiter: "\n\n"
     }
 );
-~~~
+```
 
 The constructor has one parameter:
 
@@ -37,9 +36,8 @@ The constructor has one parameter:
 
 To convert data of a component (for instance, data of a chart) into a CSV string, use the **serialize** method, as in:
 
-~~~js
-csvDataDriver.serialize(chart.data.serialize(), false);
-~~~
+```javascript
+```
 
 The method takes two parameters:
 
@@ -48,8 +46,7 @@ The method takes two parameters:
 
 As a result, the converted into **CSV format** data of the chart look like this: 
 
-~~~js title="CSV format"
-"month | company A | company B | company C | company D | id
+```javascript
 
 `02 | 20 | 52 | 72 | 34 | 1 |
 
@@ -58,7 +55,7 @@ As a result, the converted into **CSV format** data of the chart look like this:
 `04 | 55 | 30 | 81 | 66 | 3 | 
 
 `05 | 30 | 11 | 62 | 22 | 4 | "
-~~~
+```
 
 ## XML format
 
@@ -66,14 +63,12 @@ As a result, the converted into **CSV format** data of the chart look like this:
 
 To create dataDrivers object, use the *dhx.dataDrivers.xml* constructor:
 
-~~~js
-const xmlDataDriver = new dhx.dataDrivers.xml();
-~~~
+```javascript
+```
 
 To convert data of a component (for example, data of a grid) into an XML string, use the **serialize** method, as in:
 
-~~~js
-xmlDataDriver.serialize(
+```javascript
     [
         {
             country: "China", population: "1415045928", yearlyChange: "0.0039"
@@ -86,7 +81,7 @@ xmlDataDriver.serialize(
         }
     ]
 );
-~~~
+```
 
 The method takes one parameter:
 
@@ -94,8 +89,7 @@ The method takes one parameter:
 
 As a result, the converted into **XML format** data of the grid look like this: 
 
-~~~js title="XML format"
-"<?xml version="1.0" encoding="iso-8859-1"?>
+```javascript
 <root>
     <item>
         <country>China</country>
@@ -113,4 +107,4 @@ As a result, the converted into **XML format** data of the grid look like this:
         <yearlyChange>0.0071</yearlyChange>
     </item>
 </root>"
-~~~
+```

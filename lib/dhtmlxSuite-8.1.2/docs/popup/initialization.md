@@ -16,7 +16,7 @@ To add DHTMLX Popup into an application, you need to take the following simple s
 - [Initialize Popup](#initialize-popup) with the object constructor
 - [Set content into Popup](#set-content)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +31,7 @@ To add DHTMLX Popup into an application, you need to take the following simple s
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -42,25 +42,23 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Initialize Popup
 
 Initialize Popup with the `dhx.Popup` object constructor. 
 
-~~~js
-<div id="popup_container"></div>
-~~~
+```javascript
+```
 
-~~~js
-// creating DHTMLX Popup
+```javascript
 const popup = new dhx.Popup();
 
 popup.show("popup_container");
-~~~
+```
 
 To show a created popup on a page, you should call the [](popup/api/popup_show_method.md) method after initialization of the component.
 

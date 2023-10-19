@@ -17,8 +17,7 @@ First, you need to prepare a data set that will be loaded into Menu.
 
 DHTMLX Menu expects loaded data in the JSON format. Here is an example of an appropriate data set:
 
-~~~js
-const data = [
+```javascript
 	{ 
 		value: "File", 
 		items: [
@@ -52,7 +51,7 @@ const data = [
     	type: "spacer"
     }
 ];
-~~~
+```
 
 A data set consists of objects with configurations of menu controls. Templates for Menu controls in JSON format are given [below](#json-format-templates).
 
@@ -60,11 +59,10 @@ A data set consists of objects with configurations of menu controls. Templates f
 
 You can load a [predefined data set](#preparing-data-set) into Menu on the initialization stage. Use the [data](menu/api/menu_data_config.md) configuration property, as in:
 
-~~~js
-const menu = new dhx.Menu("menu_container", {
+```javascript
     data: data
 });
-~~~
+```
 
 **Related sample**: [Menu. Initialization with config.data](https://snippet.dhtmlx.com/cg62qa9v)
 
@@ -79,9 +77,8 @@ There are two ways to load data into Menu after its initialization:
 
 The **load** method of Tree Collection loads menu data from an external JSON file. All the data are loaded at once. The parameter of the method is the path to the JSON file.
 
-~~~js
-menu.data.load("[path to this file]/file.json");
-~~~	
+```javascript
+```	
 
 **Related sample**: [Menu. Initialization with data.load()](https://snippet.dhtmlx.com/wjqno7xq)
 
@@ -89,37 +86,33 @@ The component will make an AJAX call and expect the remote URL to provide valid 
 
 Data loading is asynchronous, so you need to wrap any after-loading code into a promise:
 
-~~~js
-menu.data.load("/some/data").then(function(){
+```javascript
    // some logic here
 });
-~~~
+```
 
 ### Loading from a local source
 
 You can load data to a menu from a local data source via the **parse()** method of TreeCollection. Pass [a predefined data set](#preparing-data-set) as a parameter of this method:
 
-~~~js
-menu.data.parse(data);
-~~~
+```javascript
+```
 
 **Related sample**: [Menu. Initialization with data.parse()](https://snippet.dhtmlx.com/8y2b1zqm)
 ## Saving and restoring state
 
 To save the current state of a toolbar, use the **serialize()** method of Tree Collection. It converts the data of a menu into an array of JSON objects. Each JSON object contains the configuration of a separate Menu item.
 
-~~~js
-const state = menu1.data.serialize();
-~~~
+```javascript
+```
 
 Then you can parse the data stored in the saved state array to a different menu. For example:
 
-~~~js
-// creating a new menu
+```javascript
 const menu2 = new dhx.Menu(document.body);
 // parsing the state of menu1 into menu2
 menu2.data.parse(state);
-~~~
+```
 
 ## JSON format templates
 
@@ -127,8 +120,7 @@ This section will give you the idea of JSON format templates for separate Menu c
 
 ### MenuItem template
 
-~~~js
-// menuItem
+```javascript
 {
 	id:		 	"print",			 
 	type:	   	"menuItem",			 
@@ -147,7 +139,7 @@ This section will give you the idea of JSON format templates for separate Menu c
 		}
 	]
 }
-~~~
+```
 
 :::tip
 You can find the full list of properties of the **menuItem** object [here](menu/api/api_menuitem_properties.md).
@@ -155,8 +147,7 @@ You can find the full list of properties of the **menuItem** object [here](menu/
 
 ### Custom HTML template
 
-~~~js
-// customHTML
+```javascript
 {
     id: "custom",
 	parent: "edit",
@@ -164,7 +155,7 @@ You can find the full list of properties of the **menuItem** object [here](menu/
 	html: "<img src='../logo.svg' alt=''/>",
 	css: "custom-image"
 }
-~~~
+```
 
 :::tip
 You will find the full list of properties of the **customHTML** object [here](menu/api/api_customhtml_properties.md).
@@ -174,13 +165,12 @@ You will find the full list of properties of the **customHTML** object [here](me
 
 You can add separators that will draw horizontal lines between menu options or vertical lines between menu items. 
 
-~~~js 
-// separator
+```javascript
 {
     id:   "s_id",        
     type: "separator"   
 }
-~~~
+```
 
 :::tip
 You will find the full list of properties of the **separator** object [here](menu/api/api_separator_properties.md).
@@ -188,13 +178,12 @@ You will find the full list of properties of the **separator** object [here](men
 
 ### Spacer template
 
-~~~js
-// spacer
+```javascript
 {
 	id:	 	"spacerId",	  	
 	type:   "spacer"		
 }
-~~~
+```
 
 :::tip
 You will find the full list of properties of the **spacer** object [here](menu/api/api_spacer_properties.md).

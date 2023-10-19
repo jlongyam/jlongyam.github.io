@@ -26,8 +26,7 @@ By default, the **exportStyles** property is disabled. Thus, when you export Gri
 
 If you want some styles to be exported, set string values with the absolute paths to the desired styles to the **exportStyles** array:
 
-~~~js
-const grid = new dhx.Grid("grid_container", {
+```javascript
 	columns: [
 		// columns config
 	],
@@ -37,7 +36,7 @@ const grid = new dhx.Grid("grid_container", {
     ],
 	data: dataset
 });
-~~~
+```
 
 :::tip
 You must use only absolute paths not relative ones.

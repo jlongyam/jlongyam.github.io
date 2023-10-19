@@ -12,15 +12,13 @@ You can manipulate with Grid cells via the API of the selection object. It is po
 
 Starting from v7.0, you can activate selection of cells via the [](treegrid/api/selection/selection_enable_method.md) method of the selection object.
 
-~~~js
-treegrid.selection.enable();
-~~~
+```javascript
+```
 
 To disable the Selection object, make use of the [](treegrid/api/selection/selection_disable_method.md) method of the selection object:
 
-~~~js
-treegrid.selection.disable();
-~~~
+```javascript
+```
 
 ## Setting selection to a cell
 
@@ -40,11 +38,10 @@ To set selection to a particular cell, make use of the [setCell()](treegrid/api/
 </table>
 <br/>
 
-~~~js
-const row = treegrid.data.getItem(treegrid.data.getId(0));
+```javascript
 const column = treegrid.getColumn("population");
 treegrid.selection.setCell(row, column);
-~~~
+```
 
 To make the process of selecting a cell more flexible, you can apply the related events of the selection object:
 
@@ -69,8 +66,7 @@ Starting from v7.0, you can remove selection from a selected cell/row or from hi
 </table>
 <br/>
 
-~~~js
-// unselects all previously selected cells
+```javascript
 treegrid.selection.removeCell();
  
 // unselects all previously selected cells of the specified row
@@ -78,7 +74,7 @@ treegrid.selection.removeCell(rowId);
  
 // removes selection from the specified cell
 treegrid.selection.removeCell(rowId, colId);
-~~~
+```
 
 To make the process of unselecting cells more flexible, you can apply the related events of the selection object:
 
@@ -89,7 +85,6 @@ To make the process of unselecting cells more flexible, you can apply the relate
 
 To get the object of a selected TreeGrid cell, use the [getCell()](treegrid/api/selection/selection_getcell_method.md) method of the selection object:
 
-~~~js
-const selectedCell = treegrid.selection.getCell();
+```javascript
 // -> {row: {…}, column: {…}}
-~~~
+```

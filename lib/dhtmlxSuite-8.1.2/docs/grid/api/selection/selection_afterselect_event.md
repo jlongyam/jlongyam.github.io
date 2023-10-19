@@ -23,11 +23,10 @@ grid.selection.events.on("AfterSelect", function(row, col){
 @descr:
 It is also possible to use the simplified version of the event:
 
-~~~js
-grid.events.on("AfterSelect", function(row, col){
+```javascript
     console.log("afterSelect", row, col); 
 });
-~~~
+```
 
 @changelog:
 added in v7.0

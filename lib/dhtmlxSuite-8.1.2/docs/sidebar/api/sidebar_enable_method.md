@@ -24,9 +24,8 @@ sidebar.enable(["search", "currentButton", "edit"]);
 
 Starting from v7.0, it is possible to enable all items at once by using the method without the parameter:
 
-~~~js
-// enables all Sidebar items
+```javascript
 sidebar.enable();
-~~~
+```
 
 [comment]: # (@related: sidebar/work_with_sidebar.md#disabling-and-enabling-controls)

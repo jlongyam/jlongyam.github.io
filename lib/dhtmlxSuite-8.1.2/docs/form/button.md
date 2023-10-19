@@ -16,8 +16,7 @@ A simple button that can have an icon. Button can be *twoState* and can have a b
 
 You can easily add a Button control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	rows: [
     	{
 			type: "button",
@@ -29,7 +28,7 @@ const form = new dhx.Form("form_container", {
 		}   
   	]
 });
-~~~
+```
 
 ### Properties
 
@@ -41,9 +40,8 @@ You can manipulate a Button control by using methods or events of the object ret
 
 For example, you can disable a control on a page:
 
-~~~js
-form.getItem("button").disable();
-~~~
+```javascript
+```
 
 ### Methods
 

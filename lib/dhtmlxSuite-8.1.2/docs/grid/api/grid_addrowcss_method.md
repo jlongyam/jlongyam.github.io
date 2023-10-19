@@ -17,7 +17,7 @@ description: You can explore the addRowCss method of Grid in the documentation o
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .myCustomClass{
         background:greenyellow;
@@ -28,7 +28,7 @@ description: You can explore the addRowCss method of Grid in the documentation o
     ...
     grid.addRowCss("2", "myCustomClass");
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Add row CSS](https://snippet.dhtmlx.com/idvmge2d)
 

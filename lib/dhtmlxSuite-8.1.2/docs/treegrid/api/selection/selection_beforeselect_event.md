@@ -28,12 +28,11 @@ treegrid.selection.events.on("beforeSelect", function(row, col){
 
 It is also possible to use the simplified version of the event:
 
-~~~js
-treegrid.events.on("beforeSelect", function(row, col){
+```javascript
     console.log("beforeSelect", row, col); 
     return false;
 });
-~~~
+```
 
 @changelog:
 added in v7.0

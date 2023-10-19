@@ -13,7 +13,7 @@ description: You can explore the css config of Window in the documentation of th
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.custom {
 		--dhx-background-primary: #efefef;
@@ -31,20 +31,19 @@ description: You can explore the css config of Window in the documentation of th
 	
 	dhxWindow.show();
 </script>
-~~~
+```
 
 **Related sample**: [Window. Styling (custom CSS)](https://snippet.dhtmlx.com/t5mvhwx8)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Window:
 
-~~~js
-const dhxWindow = new dhx.Window({
+```javascript
     title: "Window", 
     css:"dhx_window--bordered"
 }); 
 
 dhxWindow.show();
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

@@ -13,7 +13,7 @@ description: You can explore the css config of Sidebar in the documentation of t
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.custom,.custom--popup-menu {
 		--dhx-background-primary: #3A434A;
@@ -36,17 +36,16 @@ description: You can explore the css config of Sidebar in the documentation of t
         css: "custom",
     });
 </script>
-~~~
+```
 
 **Related sample**: [Sidebar. Styling (custom CSS)](https://snippet.dhtmlx.com/3mhhvvcr)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Sidebar:
 
-~~~js
-const sidebar = new dhx.Sidebar("sidebar_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

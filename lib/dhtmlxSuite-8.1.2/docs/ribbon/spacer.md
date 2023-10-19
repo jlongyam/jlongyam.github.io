@@ -14,11 +14,10 @@ This item takes space on the ribbon and is used for aligning controls.
 
 A new Spacer can be created with the help of the **add()** method of Tree Collection:
 
-~~~js
-ribbon.data.add({
+```javascript
 	type:"spacer"
 });
-~~~
+```
 
 **Related sample**: [Ribbon. Spacer](https://snippet.dhtmlx.com/a8c6y3ob)
 
@@ -30,7 +29,6 @@ You can provide the [following properties](ribbon/api/api_spacer_properties.md) 
 
 You can hide and show Spacer with the methods of ribbon:
 
-~~~js
-ribbon.show(id);
+```javascript
 ribbon.hide(id);
-~~~
+```

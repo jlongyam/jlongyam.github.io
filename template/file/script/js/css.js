@@ -1,7 +1,7 @@
 {
-  var style = `
+  let style = `
     /* TODO */
-  `
-  document.head.appendChild( Object.assign( document.createElement( 'style' ), { textContent: style } ) )
-  document.head.removeChild( document.currentScript )
+  `, d = document;
+  d.head.appendChild( Object.assign( d.createElement( 'style' ), { textContent: style } ) )
+  d.head.removeChild( d.currentScript )
 }

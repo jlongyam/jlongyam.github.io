@@ -28,12 +28,11 @@ treegrid.selection.events.on("beforeUnSelect", function(row, col){
 
 It is also possible to use the simplified version of the event:
 
-~~~js
-treegrid.events.on("BeforeUnSelect", function(row, col){
+```javascript
     console.log("beforeUnSelect", row, col); 
     return false;
 });
-~~~
+```
 
 @changelog:
 added in v7.0

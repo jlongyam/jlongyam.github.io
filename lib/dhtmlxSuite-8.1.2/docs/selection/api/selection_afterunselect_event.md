@@ -24,8 +24,7 @@ component.selection.events.on("afterUnSelect", function(id){
 
 Starting from v7.0, you can also apply the simplified version of the event:
 
-~~~js
-component.events.on("afterUnSelect", function(id) {
+```javascript
     console.log(id);
 });
-~~~
+```

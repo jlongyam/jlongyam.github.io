@@ -16,8 +16,7 @@ This is a button that contains a drop-down list of options.
 
 A new SelectButton can be created with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-toolbar.data.add(
+```javascript
 	{
 		id: "title",
     	value: "Select count or use alt+num"
@@ -46,7 +45,7 @@ toolbar.data.add(
     	]
 	}
 );
-~~~
+```
 
 ### Properties
 

@@ -22,18 +22,16 @@ The component will make an AJAX call and expect the remote URL to save data chan
 
 Data saving is asynchronous, so you need to return a promise - the result of the saving operation. To do this, use the **saveData** property that returns a "promise" object:
 
-~~~js
-const data = new TreeCollection();
+```javascript
 data.save(loader);
 return data.saveData.then(function () {
     // now your data is saved
 });
-~~~
+```
 
 Use the [](tree_collection/api/treecollection_issaved_method.md) method to know whether the changes are saved:
 
-~~~js
-toolbar.data.saveData.then(function () {
+```javascript
 	console.log(toolbar.data.isSaved());
 });
-~~~
+```

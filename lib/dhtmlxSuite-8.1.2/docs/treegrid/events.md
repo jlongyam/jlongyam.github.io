@@ -10,11 +10,10 @@ description: You can explore the event handling of TreeGrid in the documentation
 
 You can attach event listeners with the **treegrid.events.on()** method:
 
-~~~js
-treegrid.events.on("scroll", function({top,left}){
+```javascript
     console.log("The treegrid is scrolled to "+top,left);
 });
-~~~
+```
 
 {{note The names of events are case-insensitive.}}
 
@@ -24,22 +23,20 @@ treegrid.events.on("scroll", function({top,left}){
 
 To detach events, use **treegrid.events.detach()**:
 
-~~~js
-treegrid.events.on("scroll", function({top,left}){
+```javascript
     console.log("The treegrid is scrolled to "+top,left);
 });
 
 treegrid.events.detach("Scroll");
-~~~
+```
 
 ## Calling events
 
 To call events, use **treegrid.events.fire()**:
 
-~~~js
-treegrid.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## The list of events
 

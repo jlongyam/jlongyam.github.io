@@ -8,8 +8,7 @@ description: You can explore the Properties of the Spacer control of Form in the
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "spacer",
 	name?: string,
 	id?: string,
@@ -20,7 +19,7 @@ description: You can explore the Properties of the Spacer control of Form in the
 	padding?: string | number, // "8px" by default
     width?: string | number | "content", // "content" by default
 }
-~~~
+```
 
 ### Description
 

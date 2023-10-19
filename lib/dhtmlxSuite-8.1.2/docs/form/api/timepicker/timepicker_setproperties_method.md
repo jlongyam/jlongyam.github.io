@@ -28,8 +28,7 @@ The method invokes the [](form/api/timepicker/timepicker_afterchangeproperties_e
 
 It is possible to change values of the following configuration attributes of the **TimePicker** control:
 
-~~~js
-{
+```javascript
 	controls: boolean,
 	css: string,
 	editable: boolean,
@@ -51,7 +50,7 @@ It is possible to change values of the following configuration attributes of the
 	valueFormat: string,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/timepicker/api_timepicker_properties.md).
 

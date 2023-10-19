@@ -51,8 +51,7 @@ The method invokes the [](form/api/togglegroup/togglegroup_afterchangeproperties
 
 It is possible to change the values of the following configuration attributes of the **ToggleGroup** control:
 
-~~~js
-{
+```javascript
     css: string,
     full: boolean,
     gap: number,
@@ -62,12 +61,11 @@ It is possible to change the values of the following configuration attributes of
     padding: string | number,
     width: string|number|"content"
 }
-~~~
+```
 
 It is possible to change the values of the following configuration attributes of a **toggle** of the ToggleGroup control:
 
-~~~js
-{
+```javascript
     full: boolean,
     icon: string,
     offIcon: string,
@@ -75,6 +73,6 @@ It is possible to change the values of the following configuration attributes of
     text: string,
     value: string | number
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/togglegroup/api_togglegroup_properties.md).

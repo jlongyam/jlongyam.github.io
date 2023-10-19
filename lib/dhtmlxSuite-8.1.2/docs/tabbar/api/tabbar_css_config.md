@@ -13,7 +13,7 @@ description: You can explore the css config of Tabbar in the documentation of th
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.custom .dhx_tabbar-tab-button--active {
 		background-color: rgb(2, 136, 209);
@@ -34,17 +34,16 @@ description: You can explore the css config of Tabbar in the documentation of th
     	]
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Tabbar. Styling (custom CSS)](https://snippet.dhtmlx.com/47en9f0a)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Tabbar:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

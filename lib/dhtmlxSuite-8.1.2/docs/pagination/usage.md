@@ -10,16 +10,14 @@ description: You can explore how to work with Pagination in the documentation of
 
 It is possible to set the active page in a widget via Pagination API, i.e. with the help of the [](pagination/api/pagination_setpage_method.md) method. It takes the index of a page as a parameter:
 
-~~~js
-pagination.setPage(0);
-~~~
+```javascript
+```
 
 You can also identify what page is currently active by using the [](pagination/api/pagination_getpage_method.md) method. It will return the index of the active page:
 
-~~~js
-const pageIndex = pagination.getPage();
+```javascript
 // -> 3
-~~~
+```
 
 **Related sample**: [Pagination. Get / set page index](https://snippet.dhtmlx.com/qepjgf7h)
 
@@ -27,16 +25,14 @@ const pageIndex = pagination.getPage();
 
 You can define the size of the widget page, i.e specify the number of items to be displayed on each page of the widget via the [](pagination/api/pagination_setpagesize_method.md) method. Pass the necessary number of items as a parameter to the method:
 
-~~~js
-pagination.setPageSize(24);
-~~~
+```javascript
+```
 
 Use the [getPageSize()](pagination/api/pagination_getpagesize_method.md) method to get the count of items displayed per page:
 
-~~~js
-pagination.getPageSize();
+```javascript
 // -> 22
-~~~
+```
 
 **Related sample**: [Pagination. Get / set page size](https://snippet.dhtmlx.com/9u3gsyd4)
 
@@ -44,9 +40,8 @@ pagination.getPageSize();
 
 You can get the total number of pages by applying the [](pagination/api/pagination_getpagescount_method.md) method:
 
-~~~js
-const totalPages = pagination.getPagesCount();
+```javascript
 // -> 10
-~~~
+```
 
 **Related sample**: [Pagination. Get page count](https://snippet.dhtmlx.com/k5j6acc5)

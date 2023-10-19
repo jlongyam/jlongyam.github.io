@@ -18,7 +18,10 @@ Note: Git submodule not compatible with __github page__
 
 - `git submodule update --remote`
 - or
+- `git submodule update --init`
+- for recursive
 - `git submodule update --init --recursive`
+- then
 - `git submodule update --remote`
 
 ## Pull
@@ -44,8 +47,6 @@ Note: Git submodule not compatible with __github page__
 - `git add submodule_directory`
 - `git commit -m "moved submodule to v1.0"`
 - `git push`
-
-Then, another developer who wants to have submodule_directory changed to that tag, does this
-
+- to update
 - `git pull`
 - `git submodule update --init`

@@ -13,7 +13,7 @@ description: You can explore the css config of Chart in the documentation of the
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-background-primary: #444;
@@ -50,17 +50,16 @@ description: You can explore the css config of Chart in the documentation of the
         ]
     });
 </script>
-~~~
+```
 
 **Related sample**: [Chart. Styling (custom CSS)](https://snippet.dhtmlx.com/p82iew5s)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Chart:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     css: "dhx_widget--bg_white dhx_widget--bordered"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

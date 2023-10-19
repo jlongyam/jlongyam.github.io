@@ -14,11 +14,10 @@ The **dhx.awaitRedraw** helper returns a promise:
 
 - **promise** - (*function*) a function to be executed
 
-~~~js
-dhx.awaitRedraw().then(function() {
+```javascript
     // your code here
 })
-~~~
+```
 
 **Related sample**: [Helpers. Await Redraw. Initialization](https://snippet.dhtmlx.com/r4ck0smz)
 
@@ -26,18 +25,16 @@ Here are real-life examples of how you can use the awaitRedraw helper:
 
 - in Grid:
 
-~~~js
-grid.events.on("AfterSelect", function (row, col) {
+```javascript
     dhx.awaitRedraw().then(function () {
         console.log(grid.selection.getCells().length);
     })
 });
-~~~
+```
 
 - in Window:
 
-~~~js
-dhxWindowObj.attachHTML("<input id='"myInput"'></input>");
+```javascript
 
 dhxWindowObj.events.on("afterShow", function(id){ 
     dhx.awaitRedraw().then(() => {
@@ -45,4 +42,4 @@ dhxWindowObj.events.on("afterShow", function(id){
         el.focus();
     })                      
 });
-~~~
+```

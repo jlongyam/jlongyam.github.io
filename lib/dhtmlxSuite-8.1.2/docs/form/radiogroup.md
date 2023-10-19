@@ -20,8 +20,7 @@ A control intended for creating groups of Radio buttons.
 
 You can easily add a RadioGroup control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {	
+```javascript
 	rows: [
     	{
 			id: "radiogroup",
@@ -50,7 +49,7 @@ const form = new dhx.Form("form_container", {
 		}
      ]
 });
-~~~
+```
 
 ### Properties of RadioGroup
 
@@ -66,9 +65,8 @@ You can manipulate a RadioGroup control by using methods or events of the object
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("radiogroup").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

@@ -8,14 +8,13 @@ description: You can explore the Separator properties of Ribbon in the documenta
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "separator",
 		id?: string | number,
 	}
 ]
-~~~
+```
 
 ### Description
 

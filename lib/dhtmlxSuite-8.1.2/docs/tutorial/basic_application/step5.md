@@ -5,8 +5,7 @@ title: Step 5. Bind Toolbar to Grid
 
 At this step we will discuss how to fill and clear the Grid with the help of Toolbar buttons. For this purpose we will use the <b>Click</b> event of the Toolbar:
 
-~~~js
-toolbar.events.on("Click", function(id,e){ 
+```javascript
 //id - toolbar button id, e - default mouse event of browser
 	switch(id) {
         case 'load': {
@@ -19,7 +18,7 @@ toolbar.events.on("Click", function(id,e){
         }
     }
 });
-~~~
+```
 
 <i>If you click on the "Load" icon the data will be parsed into the Grid with the help of the <b>parse()</b> method. We've already [prepared the data set in the previous step](tutorial/basic_application/step4.md).</i>
 

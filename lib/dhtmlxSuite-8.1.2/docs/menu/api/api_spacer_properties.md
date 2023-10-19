@@ -8,14 +8,13 @@ description: You can explore the Spacer properties of Menu in the documentation 
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "spacer",
 		id?: string | number,
 	}
 ]
-~~~
+```
 
 ### Description
 

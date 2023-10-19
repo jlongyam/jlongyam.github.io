@@ -46,8 +46,7 @@ form.getItem("fieldset").getProperties();
 
 The returned object of the **Fieldset** control looks like:
 
-~~~js
-{
+```javascript
     "align": undefined 
     "css": "",
     "height": "content",
@@ -56,6 +55,6 @@ The returned object of the **Fieldset** control looks like:
     "padding": undefined,
     "width": "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/fieldset/api_fieldset_properties.md).

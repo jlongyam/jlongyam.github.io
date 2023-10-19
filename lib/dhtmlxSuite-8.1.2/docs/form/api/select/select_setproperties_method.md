@@ -28,8 +28,7 @@ The method invokes the [](form/api/select/select_afterchangeproperties_event.md)
 
 It is possible to change values of the following configuration attributes of the **Select** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -45,7 +44,7 @@ It is possible to change values of the following configuration attributes of the
 	validation: function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/select/api_select_properties.md).
 

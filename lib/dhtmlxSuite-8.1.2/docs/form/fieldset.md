@@ -20,8 +20,7 @@ A control that allows arranging the elements of the form controls into groups.
 
 You can easily add a Fieldset control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	rows: [
 	    {
 	        type: "fieldset",
@@ -50,7 +49,7 @@ const form = new dhx.Form("form_container", {
 	    }
 	]
 });
-~~~
+```
 
 ### Properties
 
@@ -62,9 +61,8 @@ You can manipulate a Fieldset control by using methods or events of the object r
 
 For example, you can disable a control on a page:
 
-~~~js
-form.getItem("fieldset").disable();
-~~~
+```javascript
+```
 
 ### Methods
 

@@ -8,8 +8,7 @@ description: You can explore the Datepicker properties of Toolbar in the documen
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "datePicker",
         id?: string | number,
@@ -38,7 +37,7 @@ const data = [
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

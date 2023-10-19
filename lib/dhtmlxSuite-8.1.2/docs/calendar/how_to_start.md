@@ -21,7 +21,7 @@ To use DHTMLX Calendar in your application, you need to take the following simpl
 - [Initialize Calendar](#initialize-calendar) with the object constructor
 - [Select initial date (optional)](#select-initial-date-optional)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,7 +37,7 @@ To use DHTMLX Calendar in your application, you need to take the following simpl
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -51,20 +51,20 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *calendar.js*
 - *calendar.css*
 
-~~~html title="index.html"
+```html
 <link type="text/css" href="../codebase/calendar.css">
 <script src="../codebase/calendar.js" type="text/javascript"></script>
-~~~
+```
 
 **If you use DHTMLX Calendar as a part of the Suite package**, you need to include JS/CSS files of the DHTMLX Suite library:
 
 - *suite.js*
 - *suite.css*
 
-~~~html title="index.html"
+```html
 <link type="text/css" href="../codebase/suite.css">
 <script src="../codebase/suite.js" type="text/javascript"></script>
-~~~
+```
 
 ## Initialize Calendar
 
@@ -74,19 +74,18 @@ You can initialize Calendar in a container or in a popup.
 
 In this case you need to add a container for Calendar and give it an id, for example "calendar_container":
 
-~~~html title="index.html"
+```html
 <div id="calendar_container"></div>
-~~~
+```
 
 and initialize Calendar with the `dhx.Calendar` object constructor like this:
 
-~~~js title="index.js"
-// creating Calendar
+```javascript
 const calendar = new dhx.Calendar("calendar_container", {
     css: "dhx_widget--bordered",
    // more config options
 });
-~~~
+```
 
 **Related sample**: [Calendar. Initialization](https://snippet.dhtmlx.com/xcw19e52)
 
@@ -111,21 +110,19 @@ Check the full list of Calendar configuration properties in the [Calendar API ov
 
 You can specify what date should be selected in the calendar before initialization of the component via the [](calendar/api/calendar_value_config.md) configuration option:
 
-~~~js
-const calendar = new dhx.Calendar("calendar_container", {
+```javascript
     value: new Date(2019,1,10)
 });
-~~~
+```
 
 **Related sample**: [Calendar. Date initialization](https://snippet.dhtmlx.com/fyg6l65t)
 
 If you need to select a specific date after initialization of Calendar, use the [](calendar/api/calendar_setvalue_method.md) method:
 
-~~~js
-const calendar = new dhx.Calendar("calendar_container", {
+```javascript
     // configuration options
 });
 calendar.setValue(new Date(2022,1,10));
-~~~
+```
 
 **Related sample**: [Calendar. Preset selected date](https://snippet.dhtmlx.com/vmg11002)

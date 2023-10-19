@@ -17,7 +17,7 @@ To add DHTMLX Tabbar into an application, you need to take the following simple 
 - [Define Tabbar structure](#define-tabbar-structure)
 - [Initialize Tabbar](#initialize-tabbar) with the object constructor
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,7 +40,7 @@ To add DHTMLX Tabbar into an application, you need to take the following simple 
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -51,32 +51,31 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Tabbar and give it an id, e.g. "tabbar_container":
 
-~~~html
+```html
 <div id="tabbar_container"></div>
-~~~
+```
 
 ## Define Tabbar structure
 
 At this step you should specify the structure of your future Tabbar. Each tab represents an object with attributes, such as the name of a tab and a CSS class applied to a tab. 
 For example, Tabbar can have 4 tabs. You need to define their configuration objects and place them into the **views** array, like this:
 
-~~~js
-const views = [
+```javascript
     { tab: "north" },
     { tab: "south" },
     { tab: "east" },
     { tab: "west" },
 ];
-~~~
+```
 
 ## Initialize Tabbar
 
@@ -85,13 +84,12 @@ Initialize Tabbar with the `dhx.Tabbar` object constructor. The constructor take
 - the HTML object on the page that serves as the Tabbar container
 - an object with [configuration properties](#configuration-properties). If this argument is not passed to the constructor, the settings will be default
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container",{
+```javascript
     mode: "bottom",
     views: views,
     // more config options
 });
-~~~
+```
 
 ### Configuration properties
 

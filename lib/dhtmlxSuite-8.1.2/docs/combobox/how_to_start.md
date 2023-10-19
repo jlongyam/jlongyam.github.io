@@ -18,7 +18,7 @@ To add DHTMLX Combo in your application, you need to follow the steps below:
 - [Initialize ComboBox](#initialize-combobox) with the object constructor
 - [Load data into ComboBox](#load-data-into-combobox)
 
-~~~html title="index.html"
+```html
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,7 +35,7 @@ To add DHTMLX Combo in your application, you need to follow the steps below:
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -46,18 +46,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html title="index.html"
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for ComboBox and give it an id, for example "combo_container":
 
-~~~html title="index.html"
+```html
 <div id="combo_container"></div>
-~~~
+```
 
 ## Initialize ComboBox
 
@@ -66,13 +66,12 @@ To initialize DHTMLX ComboBox, you should use the `dhx.Combobox` constructor. Th
 - a container to place a Combo Box into. The one we have created at the previous step.
 - an object with configuration properties. See the full list below.
 
-~~~js title="index.js"
-const combo = new dhx.Combobox("combo_container", {
+```javascript
     label: "Countries:", 
     placeholder: "Сlick to select",
     // more config options
 });
-~~~
+```
 
 ### Configuration properties
 

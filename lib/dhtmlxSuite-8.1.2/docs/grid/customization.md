@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my-first-class {
 		/*some styles*/
@@ -28,19 +28,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](grid/api/grid_css_config.md) property in the Grid configuration:
 
-~~~js
-const grid = new dhx.Grid("grid_container", { 
+```javascript
     css:"my-first-class my-second-class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-font-color-primary: #fff;
@@ -65,7 +64,7 @@ For example:
     	css: "custom",
 	});
 </script>
-~~~
+```
 
 ## Styling selection
 
@@ -75,7 +74,7 @@ For example:
 
 Here is an example of how you can style selection in Grid:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #ff5252;
@@ -97,7 +96,7 @@ Here is an example of how you can style selection in Grid:
     	css: "custom"
 	});
 </script>
-~~~
+```
 
 ## Styling header cells
 
@@ -105,7 +104,7 @@ Here is an example of how you can style selection in Grid:
 
 You can easily set some styling to the text of header cells by applying some inline style or a CSS class to the **text** property of the header of a column:
 
-~~~html
+```html
 <style>
 	.title {
 		font-size: 1.2em;
@@ -127,7 +126,7 @@ You can easily set some styling to the text of header cells by applying some inl
 		data: dataset
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Styling header cells (custom CSS)](https://snippet.dhtmlx.com/7o4elf48)
 
@@ -135,7 +134,7 @@ You can easily set some styling to the text of header cells by applying some inl
 
 You can easily set some styling to the text of footer cells by applying some inline style or a CSS class to the **text** property of the footer of a column:
 
-~~~html
+```html
 <style>	    
     .custom_footer{
 		font-size: 18px;
@@ -162,7 +161,7 @@ You can easily set some styling to the text of footer cells by applying some inl
 		data: dataset
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Styling footer cells (custom CSS)](https://snippet.dhtmlx.com/d254hcvp)
 
@@ -174,7 +173,7 @@ It is possible to change the appearance of grid rows by applying custom CSS styl
 
 - via the **rowCss** property in the configuration of Grid. As a value of property set a function that takes the id of a row as a parameter and returns a string with the name of a CSS class.
 
-~~~html {12}
+```html
 <style>
 	.my_custom_row {
 		background: coral;
@@ -190,13 +189,13 @@ It is possible to change the appearance of grid rows by applying custom CSS styl
 		data: dataset
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Custom row style](https://snippet.dhtmlx.com/2dxtwf9n)
 
 - with the help of the **addRowCss()** method:
 
-~~~html {9}
+```html
 <style>
 	.myCustomClass{
 		background:greenyellow;
@@ -207,7 +206,7 @@ It is possible to change the appearance of grid rows by applying custom CSS styl
 	const rowId = grid.data.getId(1);
 	grid.addRowCss(rowId, "myCustomClass");
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Add row CSS](https://snippet.dhtmlx.com/idvmge2d)
 
@@ -249,7 +248,7 @@ It is easy to style necessary cells using the **addCellCss()** method. It takes 
     </tbody>
 </table>
 
-~~~html {18}
+```html
 <style>
 .myCustomClass{
 	background:greenyellow;
@@ -269,7 +268,7 @@ It is easy to style necessary cells using the **addCellCss()** method. It takes 
 
 	grid.addCellCss(rowId, "country", "my_сustom_сlass");
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Add cell CSS](https://snippet.dhtmlx.com/hskmp8rh)
 
@@ -302,7 +301,7 @@ You can mark particular cells in a grid using the **mark** property of a column 
 
 The function should return a string with a custom CSS class for your mark.
 
-~~~html {17-19,24}
+```html
 <style>
 	.my_custom_mark {
 		background: lightcoral;
@@ -332,7 +331,7 @@ The function should return a string with a custom CSS class for your mark.
 		data: dataset
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Grid. Conditional formatting. Marking cells with colors](https://snippet.dhtmlx.com/9whjve0v)
 
@@ -352,7 +351,7 @@ It is also possible to highlight cells with minimum and (or) maximum values in a
 </table>
 <br/>
 
-~~~html {19-22}
+```html
 <style>
 	.max_cell {
     	background: #f44336;
@@ -381,7 +380,7 @@ It is also possible to highlight cells with minimum and (or) maximum values in a
 		data: dataset
 	});
 </script>
-~~~
+```
 
 ![](../assets/grid/mark_cell.png)
 
@@ -411,8 +410,7 @@ It is possible to customize the content of cells of Grid via the **template** pr
 </table>
 <br/>
 
-~~~js {7-9}
-const grid = new dhx.Grid("grid_container", {
+```javascript
 	columns: [
 		{ width: 200, id: "country", header: [{text: "Country"}] },
 		{ width: 150, id: "population", header: [{text: "Population"}] },
@@ -425,7 +423,7 @@ const grid = new dhx.Grid("grid_container", {
 	],
 	data: dataset
 });
-~~~
+```
 
 **Related sample**: [Grid. Cell templates](https://snippet.dhtmlx.com/9txizaow)
 
@@ -433,8 +431,7 @@ const grid = new dhx.Grid("grid_container", {
 
 Starting from v7.0, you can assign event handlers to HTML elements of a custom template of Grid cells via using the [](grid/api/grid_eventhandlers_config.md) configuration property of Grid, for instance:
 
-~~~js {7-10,15-21}
-const grid = new dhx.Grid("grid_container", {
+```javascript
 	columns: [
 		{ width: 200, id: "country", header: [{ text: "Country" }], htmlEnable: true },
 		{ width: 150, id: "netChange", header: [{text: "Net Change"}],
@@ -456,7 +453,7 @@ const grid = new dhx.Grid("grid_container", {
 	    } 
     } 
 });
-~~~
+```
 
 **Related sample**: [Grid. Handling events in template](https://snippet.dhtmlx.com/zcv5drxc)
 
@@ -484,8 +481,7 @@ Starting with v7.1, you can customize the content of the tooltip of a column via
 </table>
 <br>
 
-~~~js {6-14}
-const grid = new dhx.Grid("grid_container", {
+```javascript
     columns: [
         {
 			width: 200, id: "country", header: [{ text: "Country" }], align: "left",
@@ -506,7 +502,7 @@ const grid = new dhx.Grid("grid_container", {
     ],
     data: dataset
 });
-~~~
+```
 
 :::info
 To prevent a tooltip from being shown, return `false` from the function (from v7.1.12).

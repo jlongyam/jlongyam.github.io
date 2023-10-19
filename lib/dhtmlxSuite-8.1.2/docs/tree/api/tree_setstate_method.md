@@ -31,8 +31,7 @@ tree.setState(treeState);
 
 Here is an example of a treeState object:
 
-~~~js
-{
+```javascript
 	"books": {
 		"open": true,
 		"selected": 2
@@ -67,7 +66,7 @@ Here is an example of a treeState object:
 		"selected": 0
 	}
 }
-~~~
+```
 
 [comment]: # (@relatedapi: tree/api/tree_getstate_method.md)
 

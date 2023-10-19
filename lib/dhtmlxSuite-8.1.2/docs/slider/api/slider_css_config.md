@@ -13,7 +13,7 @@ description: You can explore the css config of Slider in the documentation of th
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #118d8d;
@@ -25,17 +25,16 @@ description: You can explore the css config of Slider in the documentation of th
     	css: "custom"
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Slider. Styling (custom CSS)](https://snippet.dhtmlx.com/ewizud5e)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Slider:
 
-~~~js
-const slider = new dhx.Slider("slider_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

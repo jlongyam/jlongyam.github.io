@@ -28,8 +28,7 @@ The method invokes the [](form/api/textarea/textarea_afterchangeproperties_event
 
 It is possible to change values of the following configuration attributes of the **Textarea** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string|number|"content",
@@ -49,7 +48,7 @@ It is possible to change values of the following configuration attributes of the
 	validation: object|function,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/textarea/api_textarea_properties.md).
 

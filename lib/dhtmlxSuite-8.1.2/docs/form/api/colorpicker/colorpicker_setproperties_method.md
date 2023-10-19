@@ -28,8 +28,7 @@ The method invokes the [](form/api/colorpicker/colorpicker_afterchangeproperties
 
 It is possible to change values of the following configuration attributes of the **ColorPicker** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	customColors: array,
 	editable: boolean,
@@ -52,7 +51,7 @@ It is possible to change values of the following configuration attributes of the
 	validation: function,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/colorpicker/api_colorpicker_properties.md).
 

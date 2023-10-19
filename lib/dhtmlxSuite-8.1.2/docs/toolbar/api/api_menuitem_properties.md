@@ -8,8 +8,7 @@ description: You can explore the MenuItem properties of Toolbar in the documenta
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "menuItem",
 		id?: string | number,
@@ -31,7 +30,7 @@ const data = [
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 
@@ -103,8 +102,7 @@ const data = [
 
 ### Example
 
-~~~js
-toolbar.data.add(
+```javascript
 	{
     	type:"menuItem", 
 		value:"Toolbar menuItem", 
@@ -117,6 +115,6 @@ toolbar.data.add(
     	]
 	}
 );
-~~~
+```
 
 **Related article:** [MenuItem](toolbar/menuitem.md)

@@ -38,8 +38,7 @@ The **modes** are:
     </tbody>
 </table>
 
-~~~js
-// shows the month of the specified date
+```javascript
 calendar.showDate(new Date(2020,11,12),"month");
 
 // shows the current month
@@ -50,7 +49,7 @@ calendar.showDate(new Date(2020,11,12),"year");
 
 // shows the current year
 calendar.showDate(null,"year");
-~~~
+```
 
 **Related sample**:
 - [Calendar. Showing particular calendar date and mode](https://snippet.dhtmlx.com/nyfzc8cl)

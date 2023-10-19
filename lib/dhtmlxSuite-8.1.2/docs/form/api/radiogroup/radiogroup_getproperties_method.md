@@ -58,8 +58,7 @@ form.getItem("radiogroup").getProperties("1");
 
 The returned object of the **RadioGroup** control looks like:
 
-~~~js
-{
+```javascript
 	errorMessage: "",
 	height: "content",
 	helpMessage: " Help information",
@@ -74,18 +73,17 @@ The returned object of the **RadioGroup** control looks like:
 	successMessage: "",
 	width: "content"
 }
-~~~
+```
 
 The returned object of a **radio button** of the RadioGroup control looks like:
 
-~~~js
-{
+```javascript
 	height: "content"
 	padding: 0
 	text: "Select 1"
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/radiogroup/api_radiogroup_properties.md).
 

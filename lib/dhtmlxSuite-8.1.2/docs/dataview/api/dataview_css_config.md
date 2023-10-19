@@ -13,7 +13,7 @@ description: You can explore the css config of DataView in the documentation of 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-font-color-primary: #fff;
@@ -33,7 +33,7 @@ description: You can explore the css config of DataView in the documentation of 
     	template
 	});
 </script>
-~~~
+```
 
 **Related samples**:
 - [Dataview. Styling (custom CSS)](https://snippet.dhtmlx.com/j1yv94o8)
@@ -42,7 +42,7 @@ description: You can explore the css config of DataView in the documentation of 
 If you want to apply your own styles for selection of items or focus, you can do it via the corresponding CSS classes: **.dhx_dataview-item--selected** and **.dhx_dataview-item--focus**.
 There is no need to use any additional custom classes.
 
-~~~html
+```html
 <style>
     .dhx_dataview-item--selected {
         border-color: transparent;
@@ -54,15 +54,14 @@ There is no need to use any additional custom classes.
 <script>
     const dataview = new dhx.DataView("dataview_container", {itemsInRow: 3});
 </script>
-~~~
+```
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of DataView:
 
-~~~js
-const dataview = new dhx.DataView("dataview_container", {
+```javascript
     css: "dhx_widget--bg_gray"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

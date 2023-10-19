@@ -34,8 +34,7 @@ form.getItem("timepicker").getProperties();
 
 The returned object of the **TimePicker** control looks like:
 
-~~~js
-{
+```javascript
 	controls: false,
 	editable: false,
 	errorMessage: "",
@@ -56,7 +55,7 @@ The returned object of the **TimePicker** control looks like:
 	valueFormat: "timeObject",
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/timepicker/api_timepicker_properties.md).
 

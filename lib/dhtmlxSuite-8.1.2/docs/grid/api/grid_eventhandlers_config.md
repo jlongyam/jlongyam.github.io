@@ -64,8 +64,7 @@ const grid = new dhx.Grid("grid_container", {
 
 An example of adding event handlers to the HTML elements defined in the data set of Grid is given below:
 
-~~~js {3,13,17-28}
-const data = [
+```javascript
 	{
 		"country": "<div class='cell__html'><span>China</span><img src='../flags/cn.svg'></div>",
 		"population": "1415045928", "yearlyChange": "0.0039",
@@ -94,7 +93,7 @@ const grid = new dhx.Grid("grid_container", {
 		}
 	}
 });
-~~~
+```
 
 @changelog: added in v7.0
 

@@ -29,13 +29,12 @@ form.getItem("spacer").getProperties();
 
 The returned object of the **Spacer** control looks like:
 
-~~~js
-{
+```javascript
 	height: "content",
 	padding: 0,
 	width: "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/spacer/api_spacer_properties.md).
 

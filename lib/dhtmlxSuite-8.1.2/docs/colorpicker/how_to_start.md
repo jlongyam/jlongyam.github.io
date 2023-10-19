@@ -18,7 +18,7 @@ In general, to create DHTMLX Colorpicker on a page, you need to take the followi
 - [Initialize Colorpicker](#initialize-colorpicker) with the object constructor
 - [Set initially selected color (optional)](#select-initial-color-optional)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,7 +36,7 @@ In general, to create DHTMLX Colorpicker on a page, you need to take the followi
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -47,10 +47,10 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html title="index.html"
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Initialize Colorpicker
 
@@ -60,19 +60,18 @@ You can initialize Colorpicker in a container or in a popup.
 
 In this case you need to add a container for Colorpicker and give it an id, for example "colorpicker_container":
 
-~~~html title="index.html"
+```html
 <div id="colorpicker_container"></div>
-~~~
+```
 
 and initialize Colorpicker with the `dhx.Colorpicker` object constructor like this:
 
-~~~js title="index.js"
-// creating ColorPicker
+```javascript
 const colorpicker = new dhx.Colorpicker("colorpicker_container", {
     css: "dhx_widget--bordered",
    // more config options
 });
-~~~
+```
 
 **Related sample**: [Colorpicker. Initialization](https://snippet.dhtmlx.com/ezk8rk4m)
 
@@ -88,28 +87,25 @@ This variant presupposes that you create a popup first and then attach a colorpi
 
 - use corresponding object constructors to create a colorpicker and a popup objects. Note that in this case *null* is used instead of container for Colorpicker:
 
-~~~js
-const colorpicker = new dhx.Colorpicker(null, { customColors: ["#f2f2f2"] });
+```javascript
 const popup = new dhx.Popup();
-~~~
+```
 
 - attach the colorpicker to the popup using the [](../popup/api/popup_attach_method.md) method of Popup:
 
-~~~js
-popup.attach(colorpicker);
-~~~
+```javascript
+```
 
 - use the [show()](../../popup/api/popup_show_method/) and [hide()](../../popup/api/popup_hide_method/) methods of Popup to control when a popup with color picker should be shown/hidden. For example:
 
-~~~js
-popup.show("showButton");
+```javascript
 
 const colorExample = document.querySelector(".dhx_color-sample");
 colorpicker.events.on("colorChange", function (color) {
 	colorExample.style.backgroundColor = color;
 	popup.hide();
 });
-~~~
+```
 
 **Related sample**: [Colorpicker. Colorpicker inside Popup](https://snippet.dhtmlx.com/kw3e0h4j)
 
@@ -121,11 +117,10 @@ The detailed information on Colorpicker configuration options can be found in th
 
 You can specify the color that should be selected in the palette after Colorpicker initialization with the help of the [](colorpicker/api/colorpicker_setvalue_method.md) method:
 
-~~~js
-const colorpicker = new dhx.Colorpicker("colorpicker_container", {
+```javascript
    // config options
 });
 colorpicker.setValue("#BDF0E9");
-~~~
+```
 
 **Related sample**: [Colorpicker. Set value](https://snippet.dhtmlx.com/h6oc5qsq)

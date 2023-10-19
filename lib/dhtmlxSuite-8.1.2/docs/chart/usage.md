@@ -10,8 +10,7 @@ description: You can explore how to work with Chart in the documentation of the 
 
 You can change configuration of Chart on the fly with the help of the [](chart/api/chart_setconfig_method.md) method. It takes as a parameter an object with updated [chart configuration](chart/configuration_properties.md).
 
-~~~js
-const config = {
+```javascript
     type: "radar",
     scales: {
         radial:{
@@ -38,7 +37,7 @@ const config = {
 }
 
 chart.setConfig(config);
-~~~
+```
 
 **Related sample**: [Chart. Change configuration on the fly](https://snippet.dhtmlx.com/7umj531n)
 
@@ -46,8 +45,7 @@ chart.setConfig(config);
 
 The Chart API gives you the possibility to get an object with the configuration of a certain series. Use the [](chart/api/chart_getseries_method.md) method for this purpose. It takes the id of a series as a parameter:
 
-~~~js
-const config = chart.getSeries("A");
+```javascript
 /* => 
 {
     "strokeWidth": 2, "active": true,
@@ -61,7 +59,7 @@ const config = chart.getSeries("A");
     ]
 }
 */
-~~~
+```
 
 **Related sample**: [Chart. Get series](https://snippet.dhtmlx.com/9jtscd9q)
 
@@ -70,8 +68,7 @@ const config = chart.getSeries("A");
 It is possible to iterate over chart series using the [](chart/api/chart_eachseries_method.md). As a parameter it takes a handler function that will perform iteration. 
 Pass an array with series objects as a parameter of the handler function:
 
-~~~js
-const chart = new dhx.Chart("chart_container", {
+```javascript
     type: "radar",
     scales: {
         radial:{
@@ -101,7 +98,7 @@ chart.eachSeries(function(seria){
     seria.config.fill
 });
 // -> ["#394E79", "#5E83BA", "#C2D2E9"]
-~~~
+```
 
 **Related sample**: [Chart. Each series](https://snippet.dhtmlx.com/4kbj4lmw)
 
@@ -110,8 +107,7 @@ chart.eachSeries(function(seria){
 The API of [Data Collection](data_collection.md) allows you to perform operations with Chart data items. 
 For example, you can add more items (points) into your Chart using the [](data_collection/api/datacollection_add_method.md) method, like this:
 
-~~~js
-const config = {
+```javascript
 	type:"line",
 	scales: {
 		"bottom" : {
@@ -154,7 +150,7 @@ function add() {
 		text: "u" + Date.now()
 	});
 };
-~~~
+```
 
 The method takes as a parameter an object with two properties:
 

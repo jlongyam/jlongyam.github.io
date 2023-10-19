@@ -116,8 +116,7 @@ form.getProperties("name");
 
 The returned object of the **Avatar** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -148,7 +147,7 @@ The returned object of the **Avatar** control can contain the following properti
     headerParams: { [key: string]: any },
     updateFromResponse: boolean
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/avatar/api_avatar_properties.md).
 
@@ -156,8 +155,7 @@ You will find the description of these properties [here](form/api/avatar/api_ava
 
 The returned object of the **Button** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	circle: boolean,
 	color: string,
 	css: string,
@@ -173,7 +171,7 @@ The returned object of the **Button** control can contain the following properti
 	view: string,
 	width: string | number | "content",
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/button/api_button_properties.md).
 
@@ -181,8 +179,7 @@ You will find the description of these properties [here](form/api/button/api_but
 
 The returned object of the **DatePicker** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	dateFormat: string,
 	disabledDates: function,
@@ -211,7 +208,7 @@ The returned object of the **DatePicker** control can contain the following prop
 	weekStart: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/calendar/api_calendar_properties.md).
 
@@ -219,8 +216,7 @@ You will find the description of these properties [here](form/api/calendar/api_c
 
 The returned object of the **Checkbox** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -236,7 +232,7 @@ The returned object of the **Checkbox** control can contain the following proper
 	text: string,
 	width: string | number | "content",
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox/api_checkbox_properties.md).
 
@@ -244,8 +240,7 @@ You will find the description of these properties [here](form/api/checkbox/api_c
 
 The returned object of the **CheckboxGroup** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number|"content",
@@ -261,7 +256,7 @@ The returned object of the **CheckboxGroup** control can contain the following p
 	successMessage: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox_group/api_checkboxgroup_properties.md).
 
@@ -269,15 +264,14 @@ You will find the description of these properties [here](form/api/checkbox_group
 
 The returned object of a **checkbox** of the **CheckboxGroup** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	padding: string | number,
 	text: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/checkbox_group/api_checkboxgroup_properties.md).
 
@@ -285,8 +279,7 @@ You will find the description of these properties [here](form/api/checkbox_group
 
 The returned object of the **ColorPicker** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	customColors: array,
 	editable: boolean,
@@ -309,7 +302,7 @@ The returned object of the **ColorPicker** control can contain the following pro
 	validation: function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/colorpicker/api_colorpicker_properties.md).
 
@@ -317,8 +310,7 @@ You will find the description of these properties [here](form/api/colorpicker/ap
 
 The returned object of the **Combo** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	filter: function, 
@@ -344,7 +336,7 @@ The returned object of the **Combo** control can contain the following propertie
 	virtual: boolean,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/combo/api_combo_properties.md).
 
@@ -352,14 +344,13 @@ You will find the description of these properties [here](form/api/combo/api_comb
 
 The returned object of the **Container** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content", 
 	padding: string | number,
 	width: string, number, "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/container/api_container_properties.md).
 
@@ -367,8 +358,7 @@ You will find the description of these properties [here](form/api/container/api_
 
 The returned object of the **Fieldset** control can contain the following properties:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -378,7 +368,7 @@ The returned object of the **Fieldset** control can contain the following proper
     labelAlignment: "left" | "right" | "center",
     align: "start" | "center" | "end" | "between" | "around" | "evenly"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/fieldset/api_fieldset_properties.md).
 
@@ -386,8 +376,7 @@ You will find the description of these properties [here](form/api/fieldset/api_f
 
 The returned object of the **Input** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	autocomplete: boolean,
 	css: string,
 	errorMessage: string,
@@ -412,7 +401,7 @@ The returned object of the **Input** control can contain the following propertie
 	validation: object | function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/input/api_input_properties.md).
 
@@ -420,8 +409,7 @@ You will find the description of these properties [here](form/api/input/api_inpu
 
 The returned object of the **RadioGroup** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -437,7 +425,7 @@ The returned object of the **RadioGroup** control can contain the following prop
 	successMessage: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/radiogroup/api_radiogroup_properties.md).
 
@@ -445,15 +433,14 @@ You will find the description of these properties [here](form/api/radiogroup/api
 
 The returned object of a **radio button** of the **RadioGroup** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	padding: string | number,
 	text: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/radiogroup/api_radiogroup_properties.md).
 
@@ -461,8 +448,7 @@ You will find the description of these properties [here](form/api/radiogroup/api
 
 The returned object of the **Select** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -478,7 +464,7 @@ The returned object of the **Select** control can contain the following properti
 	validation: function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/select/api_select_properties.md).
 
@@ -486,8 +472,7 @@ You will find the description of these properties [here](form/api/select/api_sel
 
 The returned object of the **SimpleVault** control can contain the following properties:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -511,7 +496,7 @@ The returned object of the **SimpleVault** control can contain the following pro
     accept: string,
     validation: (value: ISimpleVaultValue) => boolean
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/simplevault/api_simplevault_properties.md).
 
@@ -519,8 +504,7 @@ You will find the description of these properties [here](form/api/simplevault/ap
 
 The returned object of the **Slider** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	helpMessage: string,
@@ -541,7 +525,7 @@ The returned object of the **Slider** control can contain the following properti
 	tooltip: boolean, 
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/slider/api_slider_properties.md).
 
@@ -549,14 +533,13 @@ You will find the description of these properties [here](form/api/slider/api_sli
 
 The returned object of the **Spacer** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content"
 	padding: string | number
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/spacer/api_spacer_properties.md).
 
@@ -564,8 +547,7 @@ You will find the description of these properties [here](form/api/spacer/api_spa
 
 The returned object of the **Text** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string | number | "content",
 	helpMessage: string,
@@ -577,7 +559,7 @@ The returned object of the **Text** control can contain the following properties
 	padding: string | number,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/text/api_text_properties.md).
 
@@ -585,8 +567,7 @@ You will find the description of these properties [here](form/api/text/api_text_
 
 The returned object of the **Textarea** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	errorMessage: string,
 	height: string | number | "content",
@@ -606,7 +587,7 @@ The returned object of the **Textarea** control can contain the following proper
 	validation: object | function,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/textarea/api_textarea_properties.md).
 
@@ -614,8 +595,7 @@ You will find the description of these properties [here](form/api/textarea/api_t
 
 The returned object of the **TimePicker** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	controls: boolean,
 	css: string,
 	editable: boolean,
@@ -637,7 +617,7 @@ The returned object of the **TimePicker** control can contain the following prop
 	valueFormat: string,
 	width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/timepicker/api_timepicker_properties.md).
 
@@ -645,8 +625,7 @@ You will find the description of these properties [here](form/api/timepicker/api
 
 The returned object of the **Toggle** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	css: string,
 	width: string | number | "content",
 	height: string | number | "content",
@@ -658,7 +637,7 @@ The returned object of the **Toggle** control can contain the following properti
 	offIcon: string,
 	value: string | number
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/toggle/api_toggle_properties.md).
 
@@ -666,8 +645,7 @@ You will find the description of these properties [here](form/api/toggle/api_tog
 
 The returned object of the **ToggleGroup** control can contain the following properties:
 
-~~~js
-{
+```javascript
     css: string,
     full: boolean,
     gap: number,
@@ -677,7 +655,7 @@ The returned object of the **ToggleGroup** control can contain the following pro
     padding: string | number,
     width: string | number | "content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/togglegroup/api_togglegroup_properties.md).
 
@@ -685,8 +663,7 @@ You will find the description of these properties [here](form/api/togglegroup/ap
 
 The returned object of a **toggle** of the **ToggleGroup** control can contain the following properties:
 
-~~~js
-{
+```javascript
 	full: boolean,
 	text: string,
 	icon: string,
@@ -694,7 +671,7 @@ The returned object of a **toggle** of the **ToggleGroup** control can contain t
 	offIcon: string,
 	value: string | number
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/togglegroup/api_togglegroup_properties.md).
 

@@ -23,11 +23,10 @@ grid.selection.events.on("AfterUnSelect", function(row, col){
 @descr:
 It is also possible to use the simplified version of the event:
 
-~~~js
-grid.events.on("AfterUnSelect", function(row, col){
+```javascript
     console.log("afterUnSelect", row, col); 
 });
-~~~
+```
 
 @changelog:
 added in v7.0

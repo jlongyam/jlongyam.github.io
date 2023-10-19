@@ -8,8 +8,7 @@ description: You can explore the Properties of the Simple Vault control  of Form
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "simplevault",
     name?: string,
     id?: string,
@@ -60,7 +59,7 @@ description: You can explore the Properties of the Simple Vault control  of Form
     successMessage?: string,
     errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

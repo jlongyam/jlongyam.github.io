@@ -23,10 +23,9 @@ form.getItem("checkbox").validate(true); // -> true/false
 
 When calling without the  **silent** parameter or setting it to *false*, the method invokes the [BeforeValidate](form/api/checkbox/checkbox_beforevalidate_event.md) and [AfterValidate](form/api/checkbox/checkbox_aftervalidate_event.md) events and visually modifies the control.
 
-~~~js
-form.getItem("checkbox").validate(); // -> true/false
+```javascript
 form.getItem("checkbox").validate(false); // -> true/false
-~~~
+```
 
 @changelog:
 The **silent** parameter is added in v7.0

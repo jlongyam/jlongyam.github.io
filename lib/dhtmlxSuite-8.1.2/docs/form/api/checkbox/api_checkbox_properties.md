@@ -8,8 +8,7 @@ description: You can explore the Properties of the Checkbox control of Form in t
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "checkbox",
     name?: string,
     id?: string,
@@ -35,7 +34,7 @@ description: You can explore the Properties of the Checkbox control of Form in t
     successMessage?: string,
     errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my_first_class {
 		/*some styles*/
@@ -28,19 +28,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](slider/api/slider_css_config.md) property in the Slider configuration:
 
-~~~js
-const slider = new dhx.Slider("slider_container", {
+```javascript
     css:"my_first_class my_second-class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #118d8d;
@@ -52,4 +51,4 @@ For example:
     	css: "custom"
 	});
 </script>
-~~~
+```

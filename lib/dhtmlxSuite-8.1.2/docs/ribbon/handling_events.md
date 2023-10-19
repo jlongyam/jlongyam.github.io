@@ -26,11 +26,10 @@ You can add any handler to the events of Ribbon and its TreeCollection. To do th
 </table>
 <br/>
 
-~~~js
-ribbon.events.on("click", function(id,e){
+```javascript
 	console.log(id,e);
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -44,21 +43,19 @@ The names of the events are case-insensitive.
 
 There is a simple way of removing an event-handler. Call the **ribbon.events.detach()** method:
 
-~~~js
-ribbon.events.on("click", function(id,e){
+```javascript
 	console.log(id,e);
 });
 
 ribbon.events.detach("click"); 
-~~~
+```
 
 ## Calling events
 
 You do not need to call events of Ribbon and its TreeCollection. Yet, you can call any custom event with the **fire()** method of the **events** module:
 
-~~~js
-ribbon.events.fire(evName,[parameters]);
-~~~
+```javascript
+```
 
 ## List of supported events
 

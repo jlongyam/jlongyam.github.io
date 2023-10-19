@@ -62,8 +62,7 @@ form.getItem("checkboxGroup").getProperties("second");
 
 The returned object of the **CheckboxGroup** control looks like:
 
-~~~js
-{
+```javascript
     css: "",
 	errorMessage: "",
 	height: "content",
@@ -79,18 +78,17 @@ The returned object of the **CheckboxGroup** control looks like:
 	successMessage: "",
 	width: "content"
 }
-~~~
+```
 
 The returned object of a **checkbox** of the **CheckboxGroup** control looks like:
 
-~~~js
-{
+```javascript
 	height: "content",
 	padding: 0,
 	text: "Select 2",
 	width: "content"
 }
-~~~
+```
 
 You will find the description of all these properties [here](form/api/checkbox_group/api_checkboxgroup_properties.md).
 

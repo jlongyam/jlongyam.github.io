@@ -23,11 +23,10 @@ The user can add any user-defined handler to any of the available events. To do 
     </tbody>
 </table>
 
-~~~js
-combo.events.on("open", function() {
+```javascript
 	// your logic here
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -41,22 +40,20 @@ The names of the events are case-insensitive.
 
 There is a simple way of removing an event handler via the **combo.events.detach()** method:
 
-~~~js
-combo.events.on("open", function() {
+```javascript
     // your logic here
 });
 
 combo.events.detach("open");
-~~~
+```
 
 ## Calling events
 
 To call events, use **combo.events.fire()**:
 
-~~~js
-combo.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## List of supported events
 

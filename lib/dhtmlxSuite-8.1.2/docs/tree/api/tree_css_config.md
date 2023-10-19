@@ -13,7 +13,7 @@ description: You can explore the css config of Tree in the documentation of the 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-font-weight-regular: 500;
@@ -29,7 +29,7 @@ description: You can explore the css config of Tree in the documentation of the 
         css: "custom"
     });
 </script>
-~~~
+```
 
 **Related samples**:
 - [Tree. Styling (custom CSS)](https://snippet.dhtmlx.com/ocv4p7zg)
@@ -37,11 +37,10 @@ description: You can explore the css config of Tree in the documentation of the 
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Tree:
 
-~~~js
-const tree = new dhx.Tree("tree_container", {
+```javascript
 	css: "dhx_widget--bg-gray"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

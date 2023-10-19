@@ -8,8 +8,7 @@ description: You can explore the Sidebar MenuItem properties of Sidebar in the d
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "menuItem",
 		id?: string | number,
@@ -30,7 +29,7 @@ const data = [
     },
 	// more Sidebar controls
 ]
-~~~
+```
 
 ### Description
 

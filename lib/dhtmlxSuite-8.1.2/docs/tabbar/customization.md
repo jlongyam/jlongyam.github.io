@@ -18,8 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~js
-<style>
+```javascript
 	.my_first_class {
 		/*some styles*/
 	}
@@ -28,19 +27,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](tabbar/api/tabbar_css_config.md) property in the Tabbar configuration:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container", {
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
 	.custom .dhx_tabbar-tab-button--active {
 		background-color: rgb(2, 136, 209);
@@ -61,4 +59,4 @@ For example:
     	]
 	});
 </script>
-~~~
+```

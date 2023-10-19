@@ -23,11 +23,10 @@ The user can add any user-defined handler to any of the available events. To do 
     </tbody>
 </table>
 
-~~~js
-dataview.events.on("click", function(id, e){
+```javascript
    console.log("The item with the id "+ dataview.selection.getId(id) +" was clicked.");
 });
-~~~
+```
 
 Several handlers can be attached to one and the same event, and all of them will be executed.
 
@@ -41,22 +40,20 @@ The names of the events are case-insensitive.
 
 There is a simple way of removing an event handler via the **dataview.events.detach()** method:
 
-~~~js
-dataview.events.on("click", function(id, e){
+```javascript
    console.log("The item with the id "+ dataview.selection.getId(id) +" was clicked.");
 });
 
 dataview.events.detach("click");
-~~~
+```
 
 ## Calling events
 
 To call events, use **dataview.events.fire()**:
 
-~~~js
-dataview.events.fire("name",args);
+```javascript
 // where args is an array of arguments
-~~~
+```
 
 ## List of supported events
 

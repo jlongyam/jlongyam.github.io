@@ -48,8 +48,7 @@ You can apply the options below to configure scales for charts with the followin
 
 ### Usage
 
-~~~js
-scales: {
+```javascript
 	// type - "left" | "right" | "top" | "bottom"
 	type: {
 		title?: string,
@@ -73,7 +72,7 @@ scales: {
 		locator?: string,
 	}
 }
-~~~
+```
 
 ### Description
 
@@ -181,15 +180,14 @@ The **radial** scale is used for [Radar chart (type: "radar")](chart/charts_over
 
 ### Usage
 
-~~~js
-scales: {
+```javascript
     radial: {
         value?: string,
 		zebra?: boolean,
 		showAxis?: boolean
     }
 }
-~~~
+```
 
 ### Description
 

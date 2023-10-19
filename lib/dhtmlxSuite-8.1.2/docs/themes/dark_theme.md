@@ -10,7 +10,7 @@ description: You can explore the dark theme of DHTMLX Suite in the documentation
 
 The ["dark"](themes.md#suite-themes) theme is configured both on the base of the [root CSS variables](themes/default_theme.md) and variables which are listed below:
 
-~~~css
+```css
 [data-dhx-theme='dark'] {
 	/* font */
 	--dhx-font-color-primary: var(--dhx-color-white);
@@ -59,4 +59,4 @@ The ["dark"](themes.md#suite-themes) theme is configured both on the base of the
 	--dhx-s-tick-font-size: calc(var(--dhx-font-size-small) / 1.2);
 	/* end DHTMLX Slider service variables*/
 }
-~~~
+```

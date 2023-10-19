@@ -29,8 +29,7 @@ The method invokes the [](form/api/input/input_afterchangeproperties_event.md) a
 
 It is possible to change values of the following configuration attributes of the **Input** control:
 
-~~~js
-{
+```javascript
 	autocomplete: boolean,
 	css: string,
 	errorMessage: string,
@@ -55,7 +54,7 @@ It is possible to change values of the following configuration attributes of the
 	validation: object|function,
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/input/api_input_properties.md).
 

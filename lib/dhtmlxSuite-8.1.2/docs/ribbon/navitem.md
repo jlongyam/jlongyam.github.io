@@ -14,11 +14,10 @@ This is a default control for navigation-related components, can contain any oth
 
 A navItem can be easily added to a ribbon with the help of the **add()** method of Tree Collection:
 
-~~~js
-ribbon.data.add({
+```javascript
     type:"navItem", value:"My NavItem"
 });
-~~~
+```
 
 **Related sample**: [Ribbon. Nav items](https://snippet.dhtmlx.com/zijc2nta)
 
@@ -30,35 +29,32 @@ You can provide the [following properties](ribbon/api/api_navitem_properties.md)
 
 A navItem can have an icon which is set through the corresponding option **icon**:
 
-~~~js
-{
+```javascript
     type:"navItem", value:"Some",
     icon:"dxi dxi-check"
 }
-~~~
+```
 
 ## Adding a badge with a number
 
 You can add a number badge to the navItem to display information like the number of new messages. The badge is set via the **count** property:
 
-~~~js
-{
+```javascript
     type:"navItem", value:"Some",
     icon:"dxi dxi-check",
     count:10
 }
-~~~
+```
 
 ## Adding HTML content
 
 You can add a custom HTML content to a navItem with the help of the **html** property:
 
-~~~js
-{
+```javascript
     type: "navItem",
     html: "<div id='preloader'><div id='loader'></div></div >",
 }
-~~~
+```
 
 **Related sample**: [Ribbon. Item HTML content](https://snippet.dhtmlx.com/3djaib6o)
 
@@ -66,28 +62,25 @@ You can add a custom HTML content to a navItem with the help of the **html** pro
 
 To hide/show a navItem, you should pass the ID of the navItem to the **hide() / show()** Ribbon methods:
 
-~~~js
-ribbon.show(id);
+```javascript
 ribbon.hide(id);
-~~~
+```
 
 ## Enabling/disabling a navItem
 
 Any navItem in the ribbon can be enabled/disabled:
 
-~~~js
-ribbon.enable(id);
+```javascript
 ribbon.disable(id);
-~~~
+```
 
 ## Setting tooltip
 
 You can add a tooltip to a navItem:
 
-~~~js {4}
-{
+```javascript
     type:"navItem", 
     value:"Click", 
     tooltip:"Click me and find out why"
 }
-~~~
+```

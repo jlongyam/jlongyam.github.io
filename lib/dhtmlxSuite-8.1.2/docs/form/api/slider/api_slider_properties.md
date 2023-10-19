@@ -8,8 +8,7 @@ description: You can explore the Properties of the Slider control of Form in the
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "slider",
     name?: string,
     id?: string,
@@ -40,7 +39,7 @@ description: You can explore the Properties of the Slider control of Form in the
 
     helpMessage?: string,
 }
-~~~
+```
 
 ### Description
 

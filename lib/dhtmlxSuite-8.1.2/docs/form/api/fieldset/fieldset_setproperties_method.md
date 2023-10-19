@@ -26,8 +26,7 @@ The method invokes the [](form/api/fieldset/fieldset_afterchangeproperties_event
 
 It is possible to change values of the following configuration attributes of the **Fieldset** control:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -37,6 +36,6 @@ It is possible to change values of the following configuration attributes of the
     labelAlignment: "left" | "right" | "center",
     align: "start" | "center" | "end" | "between" | "around" | "evenly"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/fieldset/api_fieldset_properties.md).

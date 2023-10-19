@@ -17,7 +17,7 @@ To add DHTMLX Ribbon into an application, you need to take the following simple 
 - [Initialize Ribbon](#initialize-ribbon) with the object constructor
 - [Load data into Ribbon](#load-data-into-ribbon)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@ To add DHTMLX Ribbon into an application, you need to take the following simple 
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -44,18 +44,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Ribbon and give it an id, e.g. "ribbon_container":
 
-~~~html
+```html
 <div id="ribbon_container"></div>
-~~~
+```
 
 ## Initialize Ribbon
 
@@ -64,11 +64,10 @@ Initialize Ribbon with the `dhx.Ribbon` object constructor. The constructor take
 - the HTML object on the page that serves as the toolbar container
 - an object with configuration properties
 
-~~~js
-const ribbon = new dhx.Ribbon("ribbon_container", {
+```javascript
     // config options
 });
-~~~
+```
 
 ### Configuration properties
 

@@ -8,8 +8,7 @@ description: You can explore the Button properties of Ribbon in the documentatio
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "button",
 		id?: string | number,
@@ -39,7 +38,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

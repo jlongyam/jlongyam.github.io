@@ -27,8 +27,7 @@ The method invokes the [](form/api/avatar/avatar_afterchangeproperties_event.md)
 
 It is possible to change values of the following configuration attributes of the **Avatar** control:
 
-~~~js
-{
+```javascript
     css: string,
     width: string | number | "content",
     height: string | number | "content",
@@ -59,7 +58,7 @@ It is possible to change values of the following configuration attributes of the
     headerParams: { [key: string]: any },
     updateFromResponse: boolean
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/avatar/api_avatar_properties.md).
 

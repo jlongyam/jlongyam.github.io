@@ -22,9 +22,8 @@ layout.getCell("toolbar");
 @descr:
 
 A returned object looks like this:
-~~~js
-{gravity: false, id: "toolbar", header: "Header"}
-~~~
+```javascript
+```
 
 @changelog:
 added in v6.3

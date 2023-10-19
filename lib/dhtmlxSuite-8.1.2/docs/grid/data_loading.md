@@ -17,8 +17,7 @@ First, you need to prepare a data set that will be loaded into Grid.
 
 DHTMLX Grid expects loaded data in the JSON format. Here is an example of an appropriate data set:
 
-~~~js
-const dataset = [
+```javascript
     {
         "id": 0,
         "a": 1,
@@ -35,7 +34,7 @@ const dataset = [
     },
     // more columns
 ];
-~~~
+```
 
 **Related sample**: [Grid. Large dataset](https://snippet.dhtmlx.com/w3p07d6s)
 
@@ -58,14 +57,13 @@ Each object in the data set contains configuration of a grid row. The structure 
 
 You can load a [predefined data set](#preparing-data-set) into Grid on the initialization stage. Use the [data](grid/api/grid_data_config.md) configuration property, as in:
 
-~~~js
-const grid = new dhx.Grid("grid_container", {
+```javascript
     columns: [
         // columns config
     ],
     data: dataset
 });
-~~~
+```
 
 **Related sample**: [Grid. Initialization with config.data](https://snippet.dhtmlx.com/luh8d0vv)
 
@@ -80,10 +78,9 @@ There are two ways to load data into Grid after its initialization:
 
 To load data from an external file, make use of the **load()** method of [Data Collection](data_collection.md). It takes the URL of the file with data as a parameter:
 
-~~~js
-const grid = new dhx.Grid("grid_container");
+```javascript
 grid.data.load("../common/dataset.json");
-~~~
+```
 
 **Related sample**: [Grid. Initialization with data.load()](https://snippet.dhtmlx.com/svkb27d5)
 
@@ -91,20 +88,18 @@ The component will make an AJAX call and expect the remote URL to provide valid 
 
 Data loading is asynchronous, so you need to wrap any after-loading code into a promise:
 
-~~~js
-grid.data.load("/some/data").then(function(){
+```javascript
    // some logic here
 });
-~~~
+```
 
 ### Loading from local source
 
 To load data from a local data source, use the **parse()** method of [Data Collection](data_collection.md). Pass [a predefined data set](#preparing-data-set) as a parameter of this method:
 
-~~~js
-const grid = new dhx.Grid("grid_container");
+```javascript
 grid.data.parse(dataset);
-~~~
+```
 
 **Related sample**: [Grid. Initialization with data.parse()](https://snippet.dhtmlx.com/pwzie5wz)
 
@@ -113,18 +108,16 @@ grid.data.parse(dataset);
 To save the current state of a grid, use the **serialize()** method of [Data Collection](data_collection.md). It converts the data of a grid into an array of JSON objects.
 Each JSON object contains the configuration of a separate row.
 
-~~~js
-const state = grid1.data.serialize();
-~~~
+```javascript
+```
 
 Then you can parse the data stored in the saved state array to a different grid. For example:
 
-~~~js
-// creating a new grid
+```javascript
 const grid2 = new dhx.Grid(document.body);
 // parsing the state of grid1 into grid2
 grid2.data.parse(state);
-~~~
+```
 
 ## Dynamic loading
 
@@ -133,21 +126,19 @@ To enable dynamic data loading in Grid you need to:
 
 - initialize **lazyDataProxy** as described in the [Dynamic Loading](helpers/lazydataproxy.md) article
 
-~~~js
-new dhx.LazyDataProxy("https://docs.dhtmlx.com/suite/backend/lazyload", {
+```javascript
     limit: 30,
     prepare: 5,
     delay: 150,
     from: 0
 });
-~~~
+```
 
 - load data into Grid via the **load()** method of Data Collection and pass `lazyDataProxy` as a parameter of this method:
 
-~~~js
-const grid = new dhx.Grid("grid_container");
+```javascript
 grid.data.load(lazyDataProxy);
-~~~
+```
 
 **Related sample**: [External data lazy load](https://snippet.dhtmlx.com/grid_lazy_loading)
 

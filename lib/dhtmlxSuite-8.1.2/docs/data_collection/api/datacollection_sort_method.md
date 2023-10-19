@@ -44,11 +44,10 @@ grid.data.sort();
 
 To set a custom function for sorting you need to specify the **rule** attribute in a passed object. For example:
 
-~~~js
-grid.data.sort({
+```javascript
     rule: (a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1 : 0) 
 });
-~~~
+```
 
 @changelog:
 

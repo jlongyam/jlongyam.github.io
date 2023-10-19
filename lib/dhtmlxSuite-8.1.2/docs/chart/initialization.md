@@ -20,7 +20,7 @@ To initialize DHTMLX Chart in an application, you need to take the following ste
 - [Initialize Chart](#initialize-chart) with the object constructor
 - [Load data into Chart](#load-data-into-chart)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,7 +56,7 @@ To initialize DHTMLX Chart in an application, you need to take the following ste
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -69,28 +69,28 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *chart.js*
 - *chart.css*
 
-~~~html title="index.html"
+```html
 <script type="text/javascript" src="../../codebase/chart.js"></script>
 <link rel="stylesheet" href="../../codebase/chart.css">
-~~~
+```
 
 **If you use DHTMLX Chart as a part of the Suite package**, you need to include JS/CSS files of the DHTMLX Suite library:
 
 - *suite.js*
 - *suite.css*
 
-~~~html title="index.html"
+```html
 <link type="text/css" href="../codebase/suite.css">
 <script src="../codebase/suite.js" type="text/javascript"></script>
-~~~
+```
 
 ## Create a container 
 
 Add a container for Chart and give it an id, "chart_container", for example: 
 
-~~~html title="index.html"
+```html
 <div id="chart_container"></div>
-~~~
+```
 
 ## Initialize Chart
 
@@ -99,8 +99,7 @@ Initialize Chart with the `dhx.Chart` object constructor. The constructor has tw
 - a container to place a Chart into. You've defined it at the previous step.
 - an object with configuration properties. [See the full list of properties here](chart/api/api_overview.md#properties)
 
-~~~js title="index.js"
-const config = {
+```javascript
 	type: "bar",
     scales: {
     	"bottom" : {
@@ -123,7 +122,7 @@ const config = {
 };
 
 const chart = new dhx.Chart("chart_container", config);
-~~~
+```
 
 ### Configuration properties
 

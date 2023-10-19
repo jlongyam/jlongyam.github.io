@@ -39,8 +39,7 @@ const tabbar = new dhx.Tabbar("tabbar_container", {
 
 1\. In case you specify both the sizes for a separate tab and the sizes for all tabs, the sizes set for a separate tab are a priority. For example:
 
-~~~js
-const tabbar = new dhx.Tabbar("tabbar_container",{
+```javascript
     tabHeight: 50,
     tabWidth: 80,
     views:[
@@ -48,7 +47,7 @@ const tabbar = new dhx.Tabbar("tabbar_container",{
         // other tabs
     ]
 });
-~~~
+```
 
 As a result, the height of a tab is 45 and the width is 100.
 

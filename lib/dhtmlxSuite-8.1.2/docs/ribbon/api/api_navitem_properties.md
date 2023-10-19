@@ -8,8 +8,7 @@ description: You can explore the NavItem properties of Ribbon in the documentati
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type?: "navItem",
 		id?: string | number,
@@ -33,7 +32,7 @@ const data = [
 		hidden?: boolean,
 	}
 ]
-~~~
+```
 
 ### Description
 

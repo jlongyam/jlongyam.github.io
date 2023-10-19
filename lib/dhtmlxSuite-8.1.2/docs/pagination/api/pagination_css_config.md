@@ -13,7 +13,7 @@ description: You can explore the css config of Pagination in the documentation o
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
 	.custom {
 		--dhx-background-primary: #3A434A;
@@ -29,17 +29,16 @@ description: You can explore the css config of Pagination in the documentation o
 	    data: list.data
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Pagination. Styling (custom CSS)](https://snippet.dhtmlx.com/e7bujtsu)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Pagination:
 
-~~~js
-const pagination = new dhx.Pagination("pagination_container", {
+```javascript
     css: "dhx_widget--bg_white dhx_widget--bordered"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

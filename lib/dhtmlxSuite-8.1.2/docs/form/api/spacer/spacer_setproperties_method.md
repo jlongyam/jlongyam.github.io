@@ -26,14 +26,13 @@ The method invokes the [](form/api/spacer/spacer_afterchangeproperties_event.md)
 
 It is possible to change values of the following configuration attributes of the **Spacer** control:
 
-~~~js
-{
+```javascript
 	css: string,
 	height: string|number|"content"
 	padding: string|number
 	width: string|number|"content"
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/spacer/api_spacer_properties.md).
 

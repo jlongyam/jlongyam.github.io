@@ -16,7 +16,7 @@ There is a possibility to make changes in the look and feel of a list. For this 
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case):
 
-~~~html
+```html
 <style>
 	.my-first-class {
 		/*some styles*/
@@ -26,19 +26,18 @@ There is a possibility to make changes in the look and feel of a list. For this 
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](list/api/list_css_config.md) property in the List configuration:
 
-~~~js
-const list = new dhx.List("list_container", { 
+```javascript
     css:"my-first-class my-second-class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #118d8d;
@@ -55,7 +54,7 @@ For example:
         data,
     });
 </script>
-~~~
+```
 
 ## Styling items
 
@@ -67,7 +66,7 @@ You can style particular cells in the list.
 
 For example, apply some color to each even item, as in:
 
-~~~html
+```html
 <style>
 	.bg-gray {
 		background: #faf9f9;
@@ -84,7 +83,7 @@ For example, apply some color to each even item, as in:
     	}
     });
 </script>
-~~~
+```
 
 ## Adding custom selection
 
@@ -94,7 +93,7 @@ It is also possible to customize selection of an item.
 
 **Related sample**: [List. Styling selection with CSS](https://snippet.dhtmlx.com/6hss19d3)
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-color-primary: #118d8d;
@@ -111,4 +110,4 @@ It is also possible to customize selection of an item.
     });
     list.data.parse(data);
 </script>
-~~~
+```

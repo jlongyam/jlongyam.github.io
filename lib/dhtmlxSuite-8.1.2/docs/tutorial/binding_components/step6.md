@@ -21,13 +21,12 @@ The first function we will describe is used for adding a new item. The function 
 - clear the form
 - show a window on a page
 
-~~~js
-function openAddWindow(){
+```javascript
 	dhxWindow.header.data.update("title", {value: "Adding item"});
 	form.clear();
 	dhxWindow.show();
 };
-~~~
+```
 
 <img style="margin: 12px" src="tutorial/binding_components/adding_item.png"/>
 
@@ -45,8 +44,7 @@ In all these cases we'll call the **openEditWindow** function to display the edi
 
 All fields of the form inside the window will be filled with data from a selected grid row. If no row is selected in the grid, all data for the window will be selected from the 1st row of the grid.
 
-~~~js
-function openEditWindow(row){
+```javascript
 	// assigns the "Editing item" title to the window
 	dhxWindow.header.data.update("title", {value: "Editing item"});   
     form.clear(); //clears both form values and validation
@@ -60,14 +58,13 @@ function openEditWindow(row){
             
 	dhxWindow.show(); // shows a window on a page
 };
-~~~
+```
 
 ### deleteItem() function
 
 Now, let's add a function to remove rows from the grid. The logic of the function is shown below:
 
-~~~js
-function deleteItem() {
+```javascript
 	// returns a cell of the selected row
 	var item = grid.selection.getCell();
   	// returns the index of the selected item by its Id
@@ -79,7 +76,7 @@ function deleteItem() {
 	// gets the id of an item by its index and sets selection on this item
 	grid.selection.setCell(grid.data.getId(index)); 	
 };
-~~~
+```
 
 {{note
 To make sure that after deleting the item, selection is automatically set to the next item, we need to check whether the deleted item was the last one in the array. 
@@ -95,8 +92,7 @@ If it was the last item, selection is set to the new item, which is currently th
 We've [already discussed](tutorial/basic_application/step5.md) how to bind Toolbar to Grid via the **Click** event of the Toolbar. 
 So we suggest to bind the buttons added in the [previous step](tutorial/binding_components/step5.md) to Grid in the same way.
 
-~~~js
-// id - the Id of the toolbar button, 
+```javascript
 // e - the default mouse event of a browser 
 toolbar.events.on("Click", function(id,e){
 	switch(id) {
@@ -116,7 +112,7 @@ toolbar.events.on("Click", function(id,e){
 		}  
 	}
 });
-~~~
+```
 
 For details about Toolbar events, see the [Event Handling](toolbar/handling_events.md) article.  
 
@@ -124,18 +120,16 @@ For details about Toolbar events, see the [Event Handling](toolbar/handling_even
 
 After double-click on a cell in the grid the editing window will appear. To call it, we will use the <b>CellDblClick()</b> event of the Grid:
 
-~~~js
-grid.events.on("CellDblClick", function(row,column,e){
+```javascript
 	openEditWindow(row);
 });
-~~~
+```
 
 ## Linking Context Menu and Grid
 
 When you press the "Edit" item in the ContextMenu the editing window will appear as well. To implement this, we need to bind the context menu and the grid by using the <b>Click()</b> event of ContextMenu:
 
-~~~js
-contextMenu.events.on("Click", function(id,e){
+```javascript
 	switch(id) {
     	case 'edit': {
         	openEditWindow(grid.selection.getCell().row); 
@@ -149,7 +143,7 @@ contextMenu.events.on("Click", function(id,e){
         }
 	}
 });
-~~~
+```
 
 Getting the result
 --------------------

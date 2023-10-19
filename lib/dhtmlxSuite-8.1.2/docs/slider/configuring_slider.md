@@ -10,11 +10,10 @@ description: You can explore the configuration of Slider in the documentation of
 
 It is possible to define the value the thumb of the slider will be set at on the initialization of the component:
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
     value:20
 });
-~~~
+```
 
 ## Inverse mode
 
@@ -24,14 +23,13 @@ You can adjust the configuration of Slider so that its scale would render values
 
 To launch this mode, make use of the [](slider/api/slider_inverse_config.md) property set to *true*:
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
    inverse:true,
    min: 100,
    max: 0,
    step:1
 });
-~~~
+```
 
 **Related sample**: [Slider. Inverse mode of the Slider](https://snippet.dhtmlx.com/xm8e84s2)
 
@@ -39,20 +37,18 @@ const slider = new dhx.Slider("slider_container", {
 
 The minimal and maximal values define the start and end points of the slider. You can specify them via the corresponding configuration properties - [](slider/api/slider_min_config.md) and [](slider/api/slider_max_config.md). The default values are 0 and 100, correspondingly.
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
     min:1,
     max:150
 });
-~~~
+```
 
 ## Range mode
 
 Besides the standard slider with one thumb, you can create a slider with two thumbs, that is a range slider. For this, you need to use the [range:true](slider/api/slider_range_config.md) option in the slider configuration object and
 define an array with the min and max values for the range:
 
-~~~js {6,7}
-const slider = new dhx.Slider("slider_container", {
+```javascript
     min: 0,
     max: 100,
     value: 0,
@@ -60,7 +56,7 @@ const slider = new dhx.Slider("slider_container", {
     range: true,
     value: [25, 75]
 });
-~~~
+```
 
 **Related sample**: [Slider. Range mode of the Slider](https://snippet.dhtmlx.com/nfdr84oy)
 
@@ -76,15 +72,14 @@ You can configure the look and feel of the Slider scale via the corresponding pr
 
 ![](../assets/slider/scale.png)
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
    tick: 5,
    majorTick:10,
    tickTemplate: function(major_tick){
         return major_tick + "°";
    } 
 });
-~~~
+```
 
 **Related sample**: [Slider. Custom scale](https://snippet.dhtmlx.com/jsfxnplp)
 
@@ -99,11 +94,10 @@ In case you want to mark just the minimal and maximal values with ticks, you nee
 
 ![](../assets/slider/min_max_ticks_only.png)
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
     max:100, min:0, tick:100, majorTick:1
 });
-~~~
+```
 
 ## Slider label
 
@@ -116,13 +110,12 @@ There are two properties that allow manipulating the label of the slider:
 - [](slider/api/slider_label_config.md) - specifies the label of a slider
 - [](slider/api/slider_labelposition_config.md) - defines the position of a label of a slider: "left"|"top"
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
    label:"Volume",
    // label is rendered on the same level with the trackbar
    labelPosition:"left"
 });
-~~~
+```
 
 **Related sample**: [Slider. Label](https://snippet.dhtmlx.com/4o7yttam)
 
@@ -130,11 +123,10 @@ const slider = new dhx.Slider("slider_container", {
 
 The [](slider/api/slider_step_config.md) option defines the size of each jump between values of the slider. By default, the value of the step is set to 1. You can change this property via the Slider configuration object:
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
     step:2
 });
-~~~
+```
 
 ## Tooltip
 
@@ -144,11 +136,10 @@ You can specify a tooltip that will display changeable values of the slider when
 
 There is the [](slider/api/slider_tooltip_config.md) property that enables rendering the slider value over the thumb:
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
     tooltip:true
 });
-~~~
+```
 
 **Related sample**: [Slider. Tooltip for the Slider](https://snippet.dhtmlx.com/sxh66mnu)
 
@@ -156,10 +147,9 @@ const slider = new dhx.Slider("slider_container", {
 
 By default, a slider scale is placed horizontally, but you can arrange it vertically via the [](slider/api/slider_mode_config.md) property of the Slider configuration object:
 
-~~~js
-const slider = new dhx.Slider("slider_container", { 
+```javascript
    mode:"vertical"
 });
-~~~
+```
 
 **Related sample**: [Slider. Vertical mode](https://snippet.dhtmlx.com/rjborkca)

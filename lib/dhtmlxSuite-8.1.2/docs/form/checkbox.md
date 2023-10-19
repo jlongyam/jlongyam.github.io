@@ -18,8 +18,7 @@ A control that allows a user to make a choice between one or several opposite op
 
 You can easily add a Checkbox control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     rows: [
 		{	
 			type: "checkbox",
@@ -30,7 +29,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -42,9 +41,8 @@ You can manipulate a Checkbox control by using methods or events of the object r
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("checkbox").getValue();
-~~~
+```javascript
+```
 
 ### Methods
 

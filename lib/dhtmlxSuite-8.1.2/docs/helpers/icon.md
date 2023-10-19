@@ -32,35 +32,33 @@ const list = new dhx.List("list_container", {
 
 Pass an HTML element with an icon class as a parameter.
 
-~~~js {5}
-const popup = new dhx.Popup({
+```javascript
 	css: "dhx_widget--border-shadow"
 });
  
 popup.attachHTML("<i class = ’dxi dxi-icon-name’></i>");
-~~~
+```
 
 - by adding an HTML element with an icon class in any place of your app
 
 You can use any inline HTML elements like &lt;i&gt; or &lt;span&gt;.
 
-~~~html
+```html
 <i class="dxi dxi-icon-name"></i>
 
 <span class="dxi dxi-icon-name"></span>
-~~~
+```
 
 - via the **HTML** configuration property of the component
 
-~~~js {3}
-{
+```javascript
   	id: "sidebar",
   	html: "<i class = ’dxi dxi-icon-name’></i>",
   	gravity: false,
   	css: "dhx_layout-cell--border_right",
   	width: "200px"
 }
-~~~ 
+``` 
 
 {{note You can use the name of an icon from the used icon font in the same way, if necessary. For example, you can use the [Font Awesome](https://fontawesome.com/) or [Material Design](https://materialdesignicons.com/) icon packs.
 }} 

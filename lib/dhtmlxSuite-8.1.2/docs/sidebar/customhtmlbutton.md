@@ -16,8 +16,7 @@ This is an item that contains any custom HTML content (for example, an image, ic
 
 Any custom HTML content can be easily added to a sidebar with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-sidebar.data.add({
+```javascript
 	type: "customHTML",
 	id: "userInfo",
 	css: "user-info_item",
@@ -31,7 +30,7 @@ sidebar.data.add({
 			"</div>" +
 			"</div>"
 });
-~~~
+```
 
 ### Properties
 

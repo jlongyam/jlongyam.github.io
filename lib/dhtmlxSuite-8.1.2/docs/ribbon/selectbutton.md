@@ -14,8 +14,7 @@ This is a button that contains a drop-down list of options.
 
 A new SelectButton can be created with the help of the **add()** method of Tree Collection:
 
-~~~js
-ribbon.data.add({
+```javascript
 	id:"select",
 	type: "selectButton",
     value: "jpeg",
@@ -36,7 +35,7 @@ ribbon.data.add({
         }
 	]
 });
-~~~
+```
 
 **Related sample**: [Ribbon. SelectButton](https://snippet.dhtmlx.com/5acqc24m)
 

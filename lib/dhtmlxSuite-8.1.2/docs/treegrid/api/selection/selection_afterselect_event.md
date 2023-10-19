@@ -23,11 +23,10 @@ treegrid.selection.events.on("afterSelect", function(row, col){
 
 It is also possible to use the simplified version of the event:
 
-~~~js
-treegrid.events.on("afterSelect", function(row, col){
+```javascript
     console.log("afterSelect", row, col); 
 });
-~~~
+```
 
 @changelog:
 added in v7.0

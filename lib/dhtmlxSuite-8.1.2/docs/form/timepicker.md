@@ -18,8 +18,7 @@ A control that allows a user to select time value either by moving handles along
 
 You can easily add a TimePicker control during initialization of a form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
 	rows: [
     	{
 			type: "timepicker",
@@ -32,7 +31,7 @@ const form = new dhx.Form("form_container", {
 		}
     ]
 });
-~~~
+```
 
 ### Properties
 
@@ -44,9 +43,8 @@ You can manipulate a TimePicker control by using methods or events of the object
 
 For example, you can get the value of the control:
 
-~~~js
-const value = form.getItem("timepicker").getValue();
-~~~
+```javascript
+```
 
 ### Methods:
 
@@ -62,10 +60,9 @@ There is a possibility to use methods of DHTMLX TimePicker via the [getWidget()]
 
 For example, you can set value for a TimePicker control. To do this, you need to get the widget attached to the TimePicker control and then use the [setValue()](timepicker/api/timepicker_setvalue_method.md) method of this widget.
 
-~~~js
-const timepicker = form.getItem("timepicker").getWidget();  // -> TimePicker
+```javascript
 timepicker.setValue("00:39"); //set the value as a string
-~~~
+```
 
 **Related sample**: [Form. Get widget of control](https://snippet.dhtmlx.com/0aqkdsi7)
 

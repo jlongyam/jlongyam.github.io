@@ -16,7 +16,7 @@ There is a possibility to make changes in the look and feel of a combo box. For 
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my_first_class {
 		/*some styles*/
@@ -26,19 +26,18 @@ There is a possibility to make changes in the look and feel of a combo box. For 
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](combobox/api/combobox_css_config.md) property in the ComboBox configuration:
 
-~~~js
-const combo = new dhx.Combobox("combo_container", {
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
   	body {
         margin: 0;
@@ -54,7 +53,7 @@ For example:
     	css: "custom-class"
 	});
 </script>
-~~~
+```
 
 ## Custom filter for options
 
@@ -77,8 +76,7 @@ It is possible to set a custom filtering function for the options of ComboBox vi
 
 and should return *true/false* to specify whether an item should be displayed in the filtered list of options.
 
-~~~js
-function fuzzySearch(item, target) {
+```javascript
 	const source = item.value.toLowerCase();
     target = target.toLowerCase();
     const sourceLen = source.length;
@@ -100,7 +98,7 @@ function fuzzySearch(item, target) {
 const combo = new dhx.Combobox("combo_container", {
 	filter: fuzzySearch
 });
-~~~
+```
 
 **Related sample**: [Combobox. Custom filter](https://snippet.dhtmlx.com/791incm9)
 

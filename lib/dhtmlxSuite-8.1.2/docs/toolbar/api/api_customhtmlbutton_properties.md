@@ -8,8 +8,7 @@ description: You can explore the Custom HTML properties of Toolbar in the docume
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "customHTML",
 		id?: string | number,
@@ -20,7 +19,7 @@ const data = [
 	},
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

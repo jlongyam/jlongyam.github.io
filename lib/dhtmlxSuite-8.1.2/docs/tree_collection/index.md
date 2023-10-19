@@ -66,17 +66,15 @@ To call the event of TreeCollection, you may use either of the two syntaxes:
 
 - common syntax (via the **data** object of the component)
 
-~~~js
-menu.data.events.on("afterAdd", function(newItem){
+```javascript
     console.log("A new item is added");
 });
-~~~
+```
 
 - or short syntax (right through the component)
 
-~~~js
-menu.events.on("afterAdd", function(newItem){
+```javascript
     console.log("A new item is added");
 });
-~~~
+```
 :::

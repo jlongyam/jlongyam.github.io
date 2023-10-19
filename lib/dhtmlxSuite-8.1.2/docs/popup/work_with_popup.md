@@ -31,15 +31,13 @@ You can hide and show a popup using the [hide()](popup/api/popup_hide_method.md)
 
 This method should be called each time you need to render a popup on a page.
 
-~~~js
-popup.show("popup_container");
-~~~
+```javascript
+```
 
 This is how you can hide a popup:
 
-~~~js
-popup.hide();
-~~~
+```javascript
+```
 
 **Related sample**: [Popup. Show/Hide](https://snippet.dhtmlx.com/aqzy536h)
 
@@ -47,9 +45,8 @@ popup.hide();
 
 You can easily check whether a popup is visible with the help of the [isVisible()](popup/api/popup_isvisible_method.md) method. It returns *true*, if a popup is visible.
 
-~~~js
-popup.isVisible(); // -> true/false
-~~~
+```javascript
+```
 
 **Related sample**: [Popup. Is visible](https://snippet.dhtmlx.com/f614sdm3)
 
@@ -57,11 +54,10 @@ popup.isVisible(); // -> true/false
 
 You can easily attach some HTML content to a popup via the [attachHTML()](popup/api/popup_attachhtml_method.md) method. It takes as a parameter a string with HTML.
 
-~~~js
-const popup = new dhx.Popup();
+```javascript
 popup.attachHTML("<h1>Hello, I'm popup</h1>");
 popup.show("popup");
-~~~
+```
 
 **Related sample**: [Popup. HTML content](https://snippet.dhtmlx.com/ajv5qqxq)
 
@@ -83,10 +79,9 @@ DHTMLX Popup allows attaching other components of the library using the [attach(
 </table>
 <br/>
 
-~~~js
-popup.attach("Timepicker"); 
+```javascript
 
 popup.show();
-~~~
+```
 
 **Related sample**: [Popup. Attach Timepicker](https://snippet.dhtmlx.com/7x6hlbqx)

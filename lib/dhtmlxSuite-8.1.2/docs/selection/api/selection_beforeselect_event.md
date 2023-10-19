@@ -28,9 +28,8 @@ component.selection.events.on("beforeSelect", function(id) {
 
 Starting from v7.0, you can also apply the simplified version of the event:
 
-~~~js
-component.events.on("beforeSelect", function(id) {
+```javascript
     console.log(id);
     return false;
 });
-~~~
+```

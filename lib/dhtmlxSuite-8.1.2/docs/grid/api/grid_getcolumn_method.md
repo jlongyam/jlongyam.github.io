@@ -24,8 +24,7 @@ const column = grid.getColumn("b"); // ->
 
 The returned object contains the following set of properties:
 
-~~~js
-{
+```javascript
 	id: string|number,
 	width: number,
 	header: object[],
@@ -52,7 +51,7 @@ The returned object contains the following set of properties:
 	$cellCss: array, // readonly, an array of objects with CSS classes (as key:value pairs) for each cell of a column
 	$uniqueData: array, // readonly, an array that contains some unique data, can't be redefined
 }
-~~~
+```
 
 You will find the description of these properties [here](grid/api/api_gridcolumn_properties.md).
 

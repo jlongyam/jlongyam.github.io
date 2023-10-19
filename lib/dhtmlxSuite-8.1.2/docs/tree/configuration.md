@@ -15,9 +15,8 @@ when just some children of a parent item are checked.
 
 In order to enable checkboxes for items, make use of the [](tree/api/tree_checkbox_config.md) configuration option:
 
-~~~js
-const tree = new dhx.Tree("tree_container", {checkbox: true});
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Inline editing, drag-and-drop and checkboxes](https://snippet.dhtmlx.com/hyfz6ai7)
 
@@ -25,11 +24,10 @@ const tree = new dhx.Tree("tree_container", {checkbox: true});
 
 To initialize a tree in the collapsed state, use the [collapsed](tree/api/tree_collapsed_config.md) property:
 
-~~~js
-const tree = new dhx.Tree("tree_container", {
+```javascript
     collapsed: true,
 });
-~~~
+```
 
 **Related sample**: [Tree. Collapsed mode](https://snippet.dhtmlx.com/cqbg0wsf)
 
@@ -39,9 +37,8 @@ const tree = new dhx.Tree("tree_container", {
 
 It is possible to enable editing of the text of Tree items before initialization of the component using the [](tree/api/tree_editable_config.md) configuration property:
 
-~~~js
-const tree = new dhx.Tree("tree_container", {editable: true});
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Inline editing, drag-and-drop and checkboxes](https://snippet.dhtmlx.com/hyfz6ai7)
 
@@ -49,9 +46,8 @@ const tree = new dhx.Tree("tree_container", {editable: true});
 
 You can switch on key navigation in a tree with the [](tree/api/tree_keynavigation_config.md) property before initialization of the component: 
 
-~~~js
-const tree = new dhx.Tree("tree_container", {keyNavigation: true});
-~~~
+```javascript
+```
 
 After that you need to select any item and then apply Arrow keys:
 
@@ -86,8 +82,7 @@ After that you need to select any item and then apply Arrow keys:
 
 The default configuration of Tree provides you with the selection feature that allows highlighting a Tree item. To disable selection in a Tree you need to set the [](tree/api/tree_selection_config.md) configuration property to *false*:
 
-~~~js
-const tree = new dhx.Tree("tree_container", {
+```javascript
     selection: false,
 });
-~~~
+```

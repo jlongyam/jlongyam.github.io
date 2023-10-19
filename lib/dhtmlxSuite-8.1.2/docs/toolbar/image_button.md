@@ -16,13 +16,12 @@ This is a button with an image. Unlike a [button](toolbar/button.md), it does no
 
 ImageButton can be easily added to a toolbar with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-toolbar.data.add({
+```javascript
     type: "imageButton",
     count: 10,
     src: "../img/avatar.png"
 });
-~~~
+```
 
 ### Properties
 

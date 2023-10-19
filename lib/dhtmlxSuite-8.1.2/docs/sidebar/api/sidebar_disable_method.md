@@ -24,9 +24,8 @@ sidebar.disable(["search", "currentButton", "edit"]);
 
 Starting from v7.0, it is possible to disable all items at once by using the method without the parameter:
 
-~~~js
-// disables all Sidebar items
+```javascript
 sidebar.disable();
-~~~
+```
 
 [comment]: # (@related: sidebar/work_with_sidebar.md#disabling-and-enabling-controls)

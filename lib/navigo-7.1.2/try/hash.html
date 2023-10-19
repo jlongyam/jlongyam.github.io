@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Try: Navigo</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../style/base/base.default.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../style/utility/scrollable/scrollable.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../style/utility/output/output.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../style/widget/breadcrumb/breadcrumb.css" />
+</head>
+<body>
+  <main>
+    <section>
+    	<ul class="breadcrumb scrollable">
+        <li class="breadcrumb_item"><a href="hash.html">file</a></li>
+    		<li class="breadcrumb_item"><a href="#/home">Home</a></li>
+    		<li class="breadcrumb_item"><a href="#/home/home_VAR">Var</a></li>
+    		<li class="breadcrumb_item"><a href="/data" data-navigo>Data</a></li>
+        <li class="breadcrumb_item"><a href="/multi/OTHER/VAR" data-navigo>Multi</a></li>
+        <li class="breadcrumb_item"><a href="#/One/Two">Two</a></li>
+        <li class="breadcrumb_item"><a href="#/user/42/save?answer=42">Query</a></li>
+        <li class="breadcrumb_item"><a href="#/login">Login</a></li>
+    	</ul>
+    </section>
+    <section>
+    	<pre id="output">OUTPUT</pre>
+      <p><label><input type="checkbox" id="log" /> Admin</label></p>
+      <p><strong>Note</strong>: Using <code>data-navigo</code> are slower</p>
+    </section>
+  </main>
+  <script type="text/javascript" src="../lib/navigo.min.js"></script>
+  <script type="text/javascript">
+  	Page_Home = function() {
+  		output.textContent = 'Home'
+  	};
+    Page_Home_Var = function( p ) {
+      output.textContent = p.v
+    };
+    Page_Data = function() {
+      output.textContent = 'Data'
+    };
+    Page_Multi = function( p ) {
+      output.textContent = p.a + ', ' + p.b
+    }
+    Page_Vars = function( p ) {
+      output.textContent = p.x + ', ' + p.y
+    }
+    Page_Query = function( p, q ) {
+      output.textContent = p.val + ', ' + p.action + ': ' + q
+    }
+    Page_Load = function() {
+      output.textContent = 'Load action ..'
+    };
+    var _Page_Load = {
+      before: function (done, params) {
+        ('before')
+      },
+      after: function (params) {
+        alert('after')
+      },
+      leave: function (params) {
+       alert('leace')
+      }
+    };
+  	router = new Navigo(null, true, '#');
+    // default
+    router.on( function() {
+      output.textContent = 'Default'
+    });
+  	// map
+  	router.on({
+  		'/home': Page_Home,
+      '/home/:v': Page_Home_Var,
+      '/data': Page_Data,
+      '/multi/:a/:b': Page_Multi,
+      '/:x/:y': Page_Vars,
+      '/user/:val/:action': Page_Query
+  	});
+    router.on( '/login', function() {
+       output.textContent = 'log pass ...'
+    }, {
+      before: function( done, p ) {
+        console.log('before');
+        if( log.checked ) {
+          done()
+        }
+        else {
+          alert('access denied');
+          router.navigate('/home');
+          done(false);
+        }
+        // done()
+      },
+      after: function( p ) {
+        console.log('after')
+      },
+      leave: function( p ) {
+        console.log('leave')
+      }
+    });
+  	// 404
+  	router.notFound( function( q ) {
+  		output.textContent = '404'
+  	});
+  	router.resolve();
+  </script>
+</body>
+</html>

@@ -17,7 +17,7 @@ To add DHTMLX Toolbar into an application, you need to take the following simple
 - [Initialize Toolbar](#initialize-toolbar) with the object constructor
 - [Load data into Toolbar](#load-data-into-toolbar)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@ To add DHTMLX Toolbar into an application, you need to take the following simple
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -44,18 +44,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Toolbar and give it an id, e.g. "toolbar_container":
 
-~~~html
+```html
 <div id="toolbar_container"></div>
-~~~
+```
 
 ## Initialize Toolbar
 
@@ -64,11 +64,10 @@ Initialize Toolbar with the `dhx.Toolbar` object constructor. The constructor ta
 - the HTML object on the page that serves as the toolbar container
 - an object with [configuration properties](#configuration-properties)
 
-~~~js
-const toolbar = new dhx.Toolbar("toolbar_container", {
+```javascript
     // config options
 });
-~~~
+```
 
 ### Configuration properties
 

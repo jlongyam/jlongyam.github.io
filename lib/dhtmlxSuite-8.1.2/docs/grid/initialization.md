@@ -20,7 +20,7 @@ To initialize DHTMLX Grid on a page, you need to take the following simple steps
 - [Initialize Grid](#initialize-grid) with the object constructor
 - [Load data into Grid](#load-data-into-grid)
 
-~~~html title="index.html"
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +45,7 @@ To initialize DHTMLX Grid on a page, you need to take the following simple steps
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -58,28 +58,28 @@ After that, create an HTML file and place full paths to JS and CSS files of DHTM
 - *grid.js*
 - *grid.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/grid.js"></script>
 <link rel="stylesheet" href="../../codebase/grid.css">
-~~~
+```
 
 **If you use DHTMLX Grid as a part of the Suite package**, you need to include JS/CSS files of the DHTMLX Suite library:
 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <link type="text/css" href="../codebase/suite.css">
 <script src="../codebase/suite.js" type="text/javascript"></script>
-~~~
+```
 
 ## Create a container
 
 Add a container for Grid and give it an id, for example "grid_container":
 
-~~~html title="index.html"
+```html
 <div id="grid_container"></div>
-~~~
+```
 
 ## Initialize Grid
 
@@ -88,8 +88,7 @@ Initialize Grid with the `dhx.Grid` object constructor. The constructor has two 
 - the HTML container for Grid,
 - optional, an object with configuration properties. If this argument is not passed to the constructor, the settings will be default.
 
-~~~js
-// creating DHTMLX Grid
+```javascript
 const grid = new dhx.Grid("grid_container", {
     columns: [
         { width: 100, id: "a", header: [{ text: "#" }] },
@@ -99,7 +98,7 @@ const grid = new dhx.Grid("grid_container", {
     ],
     headerRowHeight: 50,
 });
-~~~
+```
 
 ### Configuration properties
 

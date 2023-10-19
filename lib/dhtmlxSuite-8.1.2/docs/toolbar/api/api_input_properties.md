@@ -8,8 +8,7 @@ description: You can explore the Input properties of Toolbar in the documentatio
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "input",
 		id?: string | number,
@@ -29,7 +28,7 @@ const data = [
     },
 	// more Toolbar controls
 ]
-~~~
+```
 
 ### Description
 

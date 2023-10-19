@@ -29,18 +29,16 @@ const state2 = toolbar.getState();
 
 Starting from v7.0, the method can return the value/state of the control by its id:
 
-~~~js
-const state1 = toolbar.getState("search"); // -> "toolbar"
+```javascript
 
 const state2 = toolbar.getState("edit"); // -> true/false
-~~~
+```
 
 If id of a control is not passed to the method, the method returns an object with IDs of controls and their values/states:
 
-~~~js
-const state = toolbar.getState(); 
+```javascript
 // -> {"search":"toolbar","edit":true,"align":"right"}
-~~~
+```
 
 @changelog:
 The ability to pass the **id** parameter to the method is added in v7.0.

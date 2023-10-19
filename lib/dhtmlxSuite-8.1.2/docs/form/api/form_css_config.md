@@ -13,7 +13,7 @@ description: You can explore the css Config of Form in the documentation of the 
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-background-primary: rgb(238, 238, 238);
@@ -43,17 +43,16 @@ description: You can explore the css Config of Form in the documentation of the 
     	]
 	});
 </script>
-~~~
+```
 
 **Related sample**: [Form. Styling (custom CSS)](https://snippet.dhtmlx.com/wnscgb50)
 
 Note, that the DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can also apply to change the appearance of Form:
 
-~~~js
-const form = new dhx.Form("form_container", {
+```javascript
     css: "dhx_widget--bg_white"
 });
-~~~
+```
 
 **Related articles**: 
 - [List of CSS classes for styling a widget](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget)

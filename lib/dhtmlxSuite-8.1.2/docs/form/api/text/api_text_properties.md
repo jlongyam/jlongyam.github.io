@@ -8,8 +8,7 @@ description: You can explore the Properties of the Text control of Form in the d
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "text",
     name?: string,
 	id?: string,
@@ -34,7 +33,7 @@ description: You can explore the Properties of the Text control of Form in the d
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

@@ -16,8 +16,7 @@ To use a new CSS class you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~js
-<style>
+```javascript
 	.my_first_class {
 		/*some styles*/
 	}
@@ -26,19 +25,18 @@ To use a new CSS class you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the **css** property in the [message box](message/configuration.md#message-box) ([alert](message/configuration.md#alert-box), [confirm](message/configuration.md#confirm-box)), [tooltip](message/configuration.md#tooltip) configuration:
 
-~~~js
-dhx.message({
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
 	.custom {
 		--dhx-font-color-primary: var(--dhx-color-white);
@@ -54,7 +52,7 @@ For example:
         css: "custom"
     });
 </script>
-~~~
+```
 
 **Related sample**: [Message. Message styling (custom CSS)](https://snippet.dhtmlx.com/7s6p67ht)
 
@@ -66,8 +64,7 @@ For example:
 
 The DHTMLX library provides [a set of own CSS classes](helpers/base_elements.md#list-of-css-classes-for-styling-a-widget) that you can apply to change the appearance either of a message box or a tooltip.
 
-~~~js
-dhx.message({
+```javascript
     css:"dhx_widget--bg_gray"
 });
-~~~
+```

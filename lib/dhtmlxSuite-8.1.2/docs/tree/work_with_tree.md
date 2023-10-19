@@ -14,15 +14,13 @@ You can [enable checkbox for tree items](tree/configuration.md#checkboxes-for-it
 
 To check the checkbox of a particular tree item, apply the [](tree/api/tree_checkitem_method.md) method. It takes the id of an item as a parameter:
 
-~~~js
-tree.checkItem("history");
-~~~
+```javascript
+```
 
 The [](tree/api/tree_uncheckitemnew_method.md) method will uncheck a tree item by its id together with its sub-items. 
 
-~~~js
-tree.uncheckItem("history");
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Check / uncheck Item](https://snippet.dhtmlx.com/uzz6uknx)
 
@@ -30,9 +28,8 @@ tree.uncheckItem("history");
 
 There is a possibility to get the list of all checked items in a tree with the [](tree/api/tree_getchecked_method.md) method. It returns an array of ids of checked items, e.g.:
 
-~~~js
-tree.getChecked(); // -> ["jmf", "rle", "sk", "km", "af", "jw"]
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Get checked items](https://snippet.dhtmlx.com/cz7xypgz)
 
@@ -42,23 +39,20 @@ tree.getChecked(); // -> ["jmf", "rle", "sk", "km", "af", "jw"]
 
 To expand a particular folder in a tree by its id, use the [](tree/api/tree_expand_method.md) method:
 
-~~~js
-tree.expand("history");
-~~~
+```javascript
+```
 
 To collapse a tree item, make use of the [](tree/api/tree_collapse_method.md) method:
 
-~~~js
-tree.collapse("history");
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Expand item](https://snippet.dhtmlx.com/esxb15hm)
 
 You can also alternately expand/collapse a tree item (folder) via the [](tree/api/tree_toggle_method.md) method:
 
-~~~js
-tree.toggle("history");
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Toggle item](https://snippet.dhtmlx.com/qjk56co2)
 
@@ -66,12 +60,11 @@ tree.toggle("history");
 
 It is also possible to expand/collapse all Tree items using the two corresponding methods - [](tree/api/tree_expandall_method.md) and [](tree/api/tree_collapseall_method.md):
 
-~~~js
-// expand all tree items
+```javascript
 tree.expandAll();
 // collapse all tree items
 tree.collapseAll();
-~~~
+```
 
 **Related sample**: [Tree. Expand all items](https://snippet.dhtmlx.com/c0nqyz60)
 
@@ -79,9 +72,8 @@ tree.collapseAll();
 
 There is the [](tree/api/tree_edititem_method.md) method that allows editing a certain tree item. Pass the id of an item to the method to initiate editing:
 
-~~~js
-tree.editItem(id);
-~~~
+```javascript
+```
 
 The method can also take a second parameter to configure the editing process. It may include two properties:
 
@@ -104,24 +96,22 @@ The method can also take a second parameter to configure the editing process. It
 
 For instance:
 
-~~~js
-tree.events.on("itemDblClick", function (id) {
+```javascript
     tree.editItem(id,{ mode: "select", options: [1, 2, 3, 4, 5] });
 });
-~~~
+```
 
 ## Setting/getting Tree state
 
 You can get/set the state of a tree using the Tree API - [](tree/api/tree_setstate_method.md) and [](tree/api/tree_getstate_method.md). **getState()** returns an object with the state of a tree, while **setState()** takes an
 object with tree state as a parameter:
 
-~~~js
-// getting the state of a tree
+```javascript
 const treeState = tree.getState();
  
 // restoring the state of a tree
 tree.setState(treeState);
-~~~
+```
 
 **Related sample**: [Tree. Getting Tree state](https://snippet.dhtmlx.com/xo6y6xi6)
 
@@ -150,8 +140,7 @@ The **treeState** object contains *key:value* pairs, where *key* is the id of a 
 
 Here is an example of a treeState object:
 
-~~~js
-{
+```javascript
 	"books": {
 		"open": true,
 		"selected": 2
@@ -186,7 +175,7 @@ Here is an example of a treeState object:
 		"selected": 0
 	}
 }
-~~~
+```
 
 ## Using Tree Collection API
 
@@ -214,9 +203,8 @@ It is possible to add more items into the initialized Tree on the fly. Use the *
 </table>
 <br/>
 
-~~~js
-tree.data.add({"value": "Life"}, -1, "Magazines");
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Adding and removing items](https://snippet.dhtmlx.com/k0os4lk2)
 
@@ -239,27 +227,24 @@ You can change config options of the item via the **update()** method of Tree Co
 
 For example, you can change the value of an item:
 
-~~~js
-tree.data.update("item_id", {value: "New value"});
-~~~
+```javascript
+```
 
 Or you can disable displaying of a checkbox for a tree item:
 
-~~~js
-tree.data.update("Books", {checkbox:false});
-~~~
+```javascript
+```
 
 ### Getting parent of item
 
 You can get the parent of an item using the [getItem](tree_collection/api/treecollection_getitem_method.md) method of tree collection.
 
-~~~js
-tree.data.getItem("Thrillers").parent
+```javascript
 // "Books"
 
 tree.data.getItem("Books").parent
 // "_ROOT_u1574768464563"
-~~~
+```
 
 where
 
@@ -271,9 +256,8 @@ where
 
 To remove an item, make use of the **remove()** method of Tree Collection. Pass the id of the item that should be removed to the method:
 
-~~~js
-tree.data.remove("id");
-~~~
+```javascript
+```
 
 **Related sample**: [Tree. Adding and removing items](https://snippet.dhtmlx.com/k0os4lk2)
 

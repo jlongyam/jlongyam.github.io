@@ -23,11 +23,10 @@ treegrid.selection.events.on("afterUnSelect", function(row, col){
 
 It is also possible to use the simplified version of the event:
 
-~~~js
-treegrid.events.on("afterUnSelect", function(row, col){
+```javascript
     console.log("afterUnSelect", row, col); 
 });
-~~~
+```
 
 @changelog:
 added in v7.0

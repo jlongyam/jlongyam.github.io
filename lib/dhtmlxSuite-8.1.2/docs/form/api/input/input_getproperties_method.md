@@ -32,8 +32,7 @@ form.getItem("input").getProperties();
 
 The returned object of the **Input** control looks like:
 
-~~~js
-{
+```javascript
 	autocomplete: false,
 	errorMessage: "",
 	height: "content",
@@ -57,7 +56,7 @@ The returned object of the **Input** control looks like:
 	validation: undefined,
 	width: "content"	
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/input/api_input_properties.md).
 

@@ -17,8 +17,7 @@ First, you need to prepare a data set that will be loaded into DataView.
 
 DHTMLX DataView expects loaded data in the JSON format. Here is an example of an appropriate data set:
 
-~~~js
-const dataset = [
+```javascript
   	{
         "value": "Ben",
         "short": "Ben is a very cautious 5-year-old Siberian Husky.",
@@ -35,7 +34,7 @@ const dataset = [
         "thumbnailName": "03.jpg"
     }
 ]
-~~~
+```
 
 Each object in the data set contains a number of *key:value* pairs that represent attributes of DataView items. 
 
@@ -47,15 +46,14 @@ You can specify your own template of rendering DataView items with the help of t
 
 You can load [a predefined data set](#preparing-data-set) into DataView on the initialization stage. Use the [data](dataview/api/dataview_data_config.md) configuration property, as in:
 
-~~~js
-const dataview = new dhx.DataView("dataview_container", {
+```javascript
     itemsInRow: 2,
     gap: 10,
     css: "dhx_widget--bordered",
     template: template,
     data: dataset
 });
-~~~
+```
 
 **Related sample**: [Dataview. Initialization with config.data](https://snippet.dhtmlx.com/s547z4xr)
 
@@ -70,10 +68,9 @@ There are two ways to load data into Combobox after its initialization:
 
 To load data from an external file, make use of the **load()** method of [DataCollection](data_collection.md). It takes the URL of the file with data as a parameter:
 
-~~~js
-const dataview = new dhx.DataView("dataview_container");
+```javascript
 dataview.data.load("../common/dataset.json");
-~~~
+```
 
 **Related sample**: [Dataview. Initialization with data.load()](https://snippet.dhtmlx.com/7rjmp5ol)
 
@@ -81,20 +78,18 @@ The component will make an AJAX call and expect the remote URL to provide valid 
 
 Data loading is asynchronous, so you need to wrap any after-loading code into a promise:
 
-~~~js
-dataview.data.load("/some/data").then(function(){
+```javascript
    // some logic here
 });
-~~~
+```
 
 ### Loading from local source
 
 To load data from a local data source, use the **parse()** method of [DataCollection](data_collection.md). Pass [a predefined data set](#preparing-data-set) as a parameter of this method:
 
-~~~js
-const dataview = new dhx.DataView("dataview_container");
+```javascript
 dataview.data.parse(dataset);
-~~~
+```
 
 **Related sample**: [Dataview. Initialization with data.parse()](https://snippet.dhtmlx.com/shhsmgrq)
 
@@ -103,15 +98,13 @@ dataview.data.parse(dataset);
 To save the current state of a dataview, use the **serialize()** method of [DataCollection](data_collection.md). It converts the data of a dataview into an array of JSON objects. 
 Each JSON object contains a set of *key:value* pairs that represent attributes of DataView items.
 
-~~~js
-const state = dataview1.data.serialize();
-~~~
+```javascript
+```
 
 Then you can parse the data stored in the saved state array to a different dataview. For example:
 
-~~~js
-// creating a new dataview
+```javascript
 const dataview2 = new dhx.DataView(document.body);
 // parsing the state of dataview1 into dataview2
 dataview2.data.parse(state);
-~~~
+```

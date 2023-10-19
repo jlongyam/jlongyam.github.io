@@ -14,20 +14,19 @@ a page and apply icons for Ribbon controls.
 For example, you can use the [Material Design](https://materialdesignicons.com/) icon pack by including [link to its CDN](https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.5.94/css/materialdesignicons.css)
 after the source files of DHTMLX Ribbon as follows:
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/ribbon.js"></script>
 <link rel="stylesheet" href="../../codebase/ribbon.css">
 
 <link href="https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css?v=6.4.4" 
 	media="all" rel="stylesheet" type="text/css">
-~~~
+```
 
 Then you can use the name of the icon as the value of the **icon** property in the [object with the control parameters](ribbon/data_loading.md#json-format-templates) for ribbon:
 
 ![](../assets/ribbon/fa_icons.png)
 
-~~~js
-const data = [
+```javascript
 	{
 		type: "block",
 		"items": [
@@ -60,7 +59,7 @@ const data = [
 		]
 	}
 ];
-~~~
+```
 
 **Related sample**: [Ribbon. Custom icons](https://snippet.dhtmlx.com/sfkou9gp)
 
@@ -78,7 +77,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case)
 
-~~~html
+```html
 <style>
 	.my-first-class {
 		/*some styles*/
@@ -88,19 +87,18 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](ribbon/api/ribbon_css_config.md) property in the Ribbon configuration:
 
-~~~js
-const ribbon = new dhx.Ribbon("ribbon_container", {
+```javascript
     css:"my_first_class my_second_class"
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
     .custom {
         --dhx-background-secondary: var(--dhx-color-white);
@@ -116,4 +114,4 @@ For example:
 
 	ribbon.data.parse(data);
 </script>
-~~~
+```

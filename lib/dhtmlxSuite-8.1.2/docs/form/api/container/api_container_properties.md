@@ -8,8 +8,7 @@ description: You can explore the Properties of the Container control of Form in 
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "container",
     name?: string,
     id?: string,
@@ -22,7 +21,7 @@ description: You can explore the Properties of the Container control of Form in 
     padding?: string | number, // "8px" by default
     width?: string | number | "content", // "content" by default
 }
-~~~
+```
 
 ### Description
 

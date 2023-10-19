@@ -10,8 +10,7 @@ description: You can explore the Message properties in the documentation of the 
 
 ### Usage
 
-~~~js
-dhx.message({
+```javascript
 	text?: string,
 	icon?: string,
 	css?: string,
@@ -20,7 +19,7 @@ dhx.message({
 	position?: "top-left" | "top-right" | "bottom-left" | "bottom-right",
 	expire?: number,
 });
-~~~
+```
 
 ### Description
 
@@ -65,14 +64,13 @@ The configuration object of a message box may take the following parameters:
 
 ### Example
 
-~~~js
-dhx.message({
+```javascript
     text:"Message text", 
     icon:"dxi-clock", 
     css:"expire", 
     expire:1000
 });
-~~~
+```
 
 **Related samples**: 
 
@@ -83,8 +81,7 @@ dhx.message({
 
 ### Usage
 
-~~~js
-dhx.alert({
+```javascript
 	text: string,
 	header?: string,
 	css?: string,
@@ -93,7 +90,7 @@ dhx.alert({
 	blockerCss?: string,
 	htmlEnable?: boolean,
 });
-~~~
+```
 
 ### Description
 
@@ -136,14 +133,13 @@ The configuration object of an alert box may take the following parameters:
 
 ### Example
 
-~~~js
-dhx.alert({
+```javascript
     header:"Alert Header",
     text:"Alert text",
     buttonsAlignment:"center",
 	htmlEnable: false
 });
-~~~
+```
 
 **Related samples**: 
 
@@ -154,8 +150,7 @@ dhx.alert({
 
 ### Usage
 
-~~~js
-dhx.confirm({
+```javascript
 	text: string,
 	header?: string,
 	css?: string,
@@ -164,7 +159,7 @@ dhx.confirm({
 	blockerCss?: string,
 	htmlEnable?: boolean,
 });
-~~~
+```
 
 ### Description
 
@@ -207,15 +202,14 @@ The configuration object of a confirm box may take the following parameters:
 
 ### Example
 
-~~~js
-dhx.confirm({
+```javascript
     header:"Confirm Header",
     text:"Confirm text",
     buttons:["cancel", "apply"],
     buttonsAlignment:"center",
 	htmlEnable: false
 });
-~~~
+```
 
 **Related samples**: 
 
@@ -226,8 +220,7 @@ dhx.confirm({
 
 ### Usage
 
-~~~js
-dhx.tooltip({
+```javascript
 	node: HTMLElement | string,
 	margin?: number,
 	position?: "right" | "bottom" |"center" | "left" | "top",
@@ -237,7 +230,7 @@ dhx.tooltip({
 	hideDelay?: number,
 	htmlEnable?: boolean,
 });
-~~~
+```
 
 ### Description
 
@@ -282,14 +275,13 @@ The configuration object of a tooltip may take the following parameters:
 
 ### Example
 
-~~~js
-dhx.tooltip("Tooltip From Right", {
+```javascript
 	node: "fourth", 
     position: "right",
     margin: 2,
 	htmlEnable: true
 });
-~~~
+```
 
 **Related Samples:**
 

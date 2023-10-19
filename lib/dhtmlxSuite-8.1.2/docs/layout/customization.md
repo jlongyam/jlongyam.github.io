@@ -18,7 +18,7 @@ For this you need to take the following steps:
 
 - add a new CSS class(es) with desired settings in the &lt;style&gt; section of your HTML page or in your file with styles (don't forget to include your file on the page in this case):
 
-~~~html
+```html
 <style>
 	.my_first_class {
 		/*some styles*/
@@ -28,12 +28,11 @@ For this you need to take the following steps:
 		/*some styles*/
 	}
 </style>
-~~~
+```
 
 - specify the name of the created CSS class (or names of classes separated by spaces) as the value of the [css](layout/api/cell/layout_cell_css_config.md) property in the configuration of a Layout cell:
 
-~~~js
-const layout = new dhx.Layout("layout_container",{
+```javascript
     row: [
 		{
 			header: "Sub Block Header row",
@@ -41,11 +40,11 @@ const layout = new dhx.Layout("layout_container",{
 		}
     ]    
 });
-~~~
+```
 
 For example:
 
-~~~html
+```html
 <style>
 	.layout {
 		color: #fff;
@@ -90,4 +89,4 @@ For example:
 		]
 	});
 </script>
-~~~
+```

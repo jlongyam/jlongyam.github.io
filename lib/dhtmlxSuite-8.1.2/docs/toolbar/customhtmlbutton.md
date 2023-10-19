@@ -16,13 +16,12 @@ This is an item that contains any custom HTML content (for example, an image, ic
 
 Any custom HTML content can be easily added to a toolbar with the help of the **add()** method of [Tree Collection](tree_collection.md):
 
-~~~js
-toolbar.data.add({
+```javascript
 	type: "customHTML",
 	html: "<img src='../logo.svg' alt=''/>",
 	css: "logo-container"
 });
-~~~
+```
 
 ### Properties
 

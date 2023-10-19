@@ -42,8 +42,7 @@ const treegrid = new dhx.TreeGrid("treegrid_container", {
 
 1\. Starting with v7.1, you can specify the height of the cell via setting the number value to the **height** option when defining the data set: 
 
-~~~js {8}
-const dataset = [
+```javascript
 	{
     	"name": "Argentina",
         "native": "Argentina",
@@ -60,7 +59,7 @@ const dataset = [
         "capital": "Pago Pago"
     },
 ];
-~~~
+```
 
 **Related sample**: [TreeGrid. Row height](https://snippet.dhtmlx.com/kvl5y6nq)
 
@@ -68,8 +67,7 @@ const dataset = [
 
 2\. Starting with v7.1, it is possible to use the Date() object when specifying data for the "Date" column:
 
-~~~js {4,8}
-const dataset = [
+```javascript
     {
         "country": "China",
         "date": new Date()
@@ -79,7 +77,7 @@ const dataset = [
         "date": new Date(2010, 02, 10)
 	}
 ];
-~~~
+```
 
 **Related samples**: [Treegrid. Date column and support of the Date() object](https://snippet.dhtmlx.com/tb4o7ytt)
 

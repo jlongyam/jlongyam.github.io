@@ -17,7 +17,7 @@ description: You can explore the addRowCss method of TreeGrid in the documentati
 @descr:
 #### Example
 
-~~~html
+```html
 <style>
     .myCustomClass{
         background:greenyellow;
@@ -28,7 +28,7 @@ description: You can explore the addRowCss method of TreeGrid in the documentati
     ...
     grid.addRowCss("2", "myCustomClass");
 </script>
-~~~
+```
 
 **Related sample**: [TreeGrid. Add row CSS](https://snippet.dhtmlx.com/kort67nu)
 

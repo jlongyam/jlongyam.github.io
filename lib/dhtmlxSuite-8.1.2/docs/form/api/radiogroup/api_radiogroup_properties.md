@@ -8,8 +8,7 @@ description: You can explore the Properties of the RadioGroup and RadioButton co
 
 ### Usage
 
-~~~js
-{
+```javascript
 	type: "radiogroup",
 	name?: string,
 	id?: string,
@@ -71,7 +70,7 @@ description: You can explore the Properties of the RadioGroup and RadioButton co
 	successMessage?: string,
 	errorMessage?: string,
 }
-~~~
+```
 
 ### Description
 

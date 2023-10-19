@@ -17,7 +17,7 @@ To add DHTMLX Layout into an application, you need to take the following simple 
 - [Define Layout structure](#define-layout-structure)
 - [Initialize Layout](#initialize-layout) with the object constructor
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +45,7 @@ To add DHTMLX Layout into an application, you need to take the following simple 
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -56,18 +56,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for the Layout and give it an id, e.g. "layout_container":
 
-~~~html
+```html
 <div id="layout_container"></div>
-~~~
+```
 
 ## Define Layout structure
 
@@ -75,8 +75,7 @@ Layout consists of a set of cells arranged either into rows or into columns. The
 
 For example, you can create a three-level layout structure:
 
-~~~js
-const cols = [
+```javascript
 	{
 		header: "Sub Block Header row"
 	},
@@ -102,7 +101,7 @@ const cols = [
 	{ header: "Sub Block Header" },
 	{ header: "Sub Block Header" }
 ]
-~~~
+```
 
 ## Initialize Layout
 
@@ -111,9 +110,8 @@ Initialize Layout with the `dhx.Layout` object constructor. The constructor take
 - the HTML object on the page that serves as the layout container
 - a configuration object which contains the structure of Layout 
 
-~~~js
-const layout = new dhx.Layout("layout_container", {cols});
-~~~
+```javascript
+```
 
 ### Configuration properties
 

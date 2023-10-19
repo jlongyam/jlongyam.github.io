@@ -17,7 +17,7 @@ To initialize DHTMLX List on a page, you need to take the following simple steps
 - [Initialize List](#initialize-list) with the object constructor
 - [Load data into List](#load-data-into-list)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +35,7 @@ To initialize DHTMLX List on a page, you need to take the following simple steps
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -46,18 +46,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for List and give it an id, for example "list_container":
 
-~~~html title="index.html"
+```html
 <div id="list_container"></div>
-~~~
+```
 
 ## Initialize List
 
@@ -66,13 +66,12 @@ Initialize List with the `dhx.List` object constructor. The constructor has two 
 - the HTML container for List,
 - optional, an object with [configuration properties](#configuration-properties). If this argument is not passed to the constructor, the settings will be default.
 
-~~~js title="index.js"
-// creating DHTMLX List
+```javascript
 const list = new dhx.List("list_container", {
     itemHeight:30,
     // more config options
 });
-~~~
+```
 
 :::info
 To display data in List you should define a [template](list/configuration.md/#template-for-list-items) via the [template](list/api/list_template_config.md/) configuration property.

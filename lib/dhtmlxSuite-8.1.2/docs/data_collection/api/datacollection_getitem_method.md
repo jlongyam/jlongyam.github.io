@@ -26,7 +26,6 @@ const item = component.data.getItem(123);
 
 You can access the original properties of an item like this:
 
-~~~js
-const item = component.data.getItem(123);
+```javascript
 const text = item.text;
-~~~
+```

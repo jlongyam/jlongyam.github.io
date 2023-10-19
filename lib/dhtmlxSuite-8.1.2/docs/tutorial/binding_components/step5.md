@@ -7,8 +7,7 @@ We've already placed the "Load" and "Clear" buttons into Toolbar in the [previou
 
 Now we need to add other buttons to Toolbar in order to edit, add or delete rows in the grid. This is how we add them:
 
-~~~js
-toolbar.data.parse([
+```javascript
     {
         "id": "add",
         "icon": "mdi mdi-plus",
@@ -26,7 +25,7 @@ toolbar.data.parse([
     },
 
 ]);
-~~~
+```
 
 <img src="tutorial/binding_components/toolbar.png"/>
 

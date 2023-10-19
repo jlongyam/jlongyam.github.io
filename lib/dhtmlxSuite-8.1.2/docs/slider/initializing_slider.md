@@ -16,7 +16,7 @@ To initialize DHTMLX Slider on a page, you need to take the following simple ste
 - [Create a container](#create-a-container)
 - [Initialize Slider](#initialize-slider) with the object constructor
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,7 +37,7 @@ To initialize DHTMLX Slider on a page, you need to take the following simple ste
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -48,18 +48,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create a container
 
 Add a container for Slider and give it an id, for example "slider_container":
 
-~~~html title="index.html"
+```html
 <div id="slider_container"></div>
-~~~
+```
 
 ## Initialize Slider
 
@@ -68,14 +68,13 @@ Initialize Slider with the `dhx.Slider` object constructor. The constructor has 
 - the HTML container for Slider,
 - optional, an object with [configuration properties](#configuration-properties). If this argument is not passed to the constructor, the settings will be default.
 
-~~~js title="index.js"
-// creating DHTMLX Slider
+```javascript
 const slider = new dhx.Slider("slider_container", {
     min: 0,
 	max: 100,
 	step: 1
 });
-~~~
+```
 
 ### Configuration properties
 

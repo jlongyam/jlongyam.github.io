@@ -8,8 +8,7 @@ description: You can explore the Grid column properties of Grid in the documenta
 
 ### Usage
 
-~~~js
-columns:[
+```javascript
  {
     id: string | number,
     width?: number,
@@ -74,7 +73,7 @@ columns:[
   },
   // more column objects
 ]
-~~~
+```
 
 ### Description
 

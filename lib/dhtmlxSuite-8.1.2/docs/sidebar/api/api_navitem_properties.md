@@ -8,8 +8,7 @@ description: You can explore the Sidebar NavItem properties of Sidebar in the do
 
 ### Usage
 
-~~~js
-const data = [
+```javascript
 	{
 		type?: "navItem",
 		id?: string | number,
@@ -33,7 +32,7 @@ const data = [
     },
 	// more Sidebar controls
 ]
-~~~
+```
 
 ### Description
 

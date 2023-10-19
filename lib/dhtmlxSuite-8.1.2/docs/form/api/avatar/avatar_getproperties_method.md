@@ -34,8 +34,7 @@ form.getItem("avatar").getProperties();
 
 The returned object of the **Avatar** control looks like:
 
-~~~js
-{
+```javascript
     "css": "",
     "width": "content",
     "height": "content",
@@ -66,7 +65,7 @@ The returned object of the **Avatar** control looks like:
     "headerParams": undefined,
     "updateFromResponse": true
 }
-~~~
+```
 
 You will find the description of these properties [here](form/api/avatar/api_avatar_properties.md).
 

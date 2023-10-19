@@ -1,9 +1,3 @@
----
-sidebar_label: Configuration
-title: JavaScript Message - Configuration 
-description: You can explore the configuration of Message in the documentation of the DHTMLX JavaScript UI library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Suite.
----
-
 # Configuration
 
 In this article you will find the detailed list of properties that you can use inside the constructors of message boxes and tooltip to adjust their configuration.
@@ -16,14 +10,13 @@ In this article you will find the detailed list of properties that you can use i
 
 You can configure a message box on its initialization:
 
-~~~js
-dhx.message({
+```javascript
     text:"Message text", 
     icon:"dxi-clock", 
     css:"expire", 
     expire:1000
 });
-~~~
+```
 
 **Related sample**: [Message. Message Configuration](https://snippet.dhtmlx.com/qfmd877x)
 
@@ -33,7 +26,7 @@ dhx.message({
 
 From v8.0, you can close a message box via the [close()](message/api/message_close_method.md) method of the message box API:
 
-~~~html
+```html
 <section class="dhx_sample-controls">
 	<button id="show" class="dhx_sample-btn dhx_sample-btn--flat" onclick="show()">show</button>
 	<button id="close" class="dhx_sample-btn dhx_sample-btn--flat" onclick="close()">close</button>
@@ -48,7 +41,7 @@ From v8.0, you can close a message box via the [close()](message/api/message_clo
         message?.close()
     });
 </script>
-~~~
+```
 
 **Related sample:** [Message. Show Message](https://snippet.dhtmlx.com/rsxdlicg)
 
@@ -60,13 +53,12 @@ From v8.0, you can close a message box via the [close()](message/api/message_clo
 
 You can define the configuration of an alert box on its initialization:
 
-~~~js
-dhx.alert({
+```javascript
     header:"Alert Header",
     text:"Alert text",
     buttonsAlignment:"center"
 });
-~~~
+```
 
 **Related sample**: [Message. Alert and confirm configuration](https://snippet.dhtmlx.com/dk4a7959)
 
@@ -80,14 +72,13 @@ dhx.alert({
 
 You can configure a confirm box on its initialization:
 
-~~~js
-dhx.confirm({
+```javascript
     header:"Confirm Header",
     text:"Confirm text",
     buttons:["cancel", "apply"],
     buttonsAlignment:"center"
 });
-~~~
+```
 
 **Related sample**: [Message. Alert and confirm configuration](https://snippet.dhtmlx.com/dk4a7959)
 
@@ -97,8 +88,7 @@ dhx.confirm({
 
 To find out which button was pressed, use the callback function that returns a Promise:
 
-~~~js
-dhx.confirm({
+```javascript
 	header: "confirm the action",
 	text: "can you apply?",
 	buttons: ["cancel", "apply"]
@@ -110,7 +100,7 @@ dhx.confirm({
 		console.log("cancelled")
 	}
 });
-~~~
+```
 
 ## Tooltip
 
@@ -120,13 +110,12 @@ dhx.confirm({
 
 You can configure a tooltip on its initialization:
 
-~~~js
-dhx.tooltip("Tooltip From Right", {
+```javascript
 	node: "fourth", 
     position: "right",
     margin: 8
 });
-~~~
+```
 
 **Related Samples:**
 
@@ -149,12 +138,10 @@ You can control the activity of the Tooltip via the pair of methods.
 
 - to switch the tooltip off, use the **disableTooltip()** method:
 
-~~~js
-dhx.disableTooltip();
-~~~
+```javascript
+```
 
 - to switch the tooltip on again, apply the **enableTooltip()** method:
 
-~~~js
-dhx.enableTooltip();
-~~~
+```javascript
+```

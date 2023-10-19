@@ -17,7 +17,7 @@ To initialize DHTMLX TimePicker on a page, you need to take the following simple
 - [Initialize TimePicker](#initialize-timepicker) with the object constructor
 - [Set initial value (optional)](#set-initial-value-optional)
 
-~~~html
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +35,7 @@ To initialize DHTMLX TimePicker on a page, you need to take the following simple
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Include source files
 
@@ -46,18 +46,18 @@ After that, create an HTML file and place full paths to JS and CSS files of the 
 - *suite.js*
 - *suite.css*
 
-~~~html
+```html
 <script type="text/javascript" src="../../codebase/suite.js"></script>
 <link rel="stylesheet" href="../../codebase/suite.css">
-~~~
+```
 
 ## Create container
 
 Add a container for TimePicker and give it an id, for example "timepicker_container":
 
-~~~html title="index.html"
+```html
 <div id="timepicker_container"></div>
-~~~
+```
 
 ## Initialize TimePicker
 
@@ -66,12 +66,11 @@ Initialize TimePicker with the **`dhx.Timepicker`** object constructor. The cons
 - the HTML container for TimePicker,
 - optional, an object with [configuration properties](#configuration-properties). If this argument is not passed to the constructor, the settings will be default.
 
-~~~js title="index.js"
-// creating DHTMLX TimePicker
+```javascript
 const timepicker = new dhx.Timepicker("timepicker_container", {
     // config options
 });
-~~~
+```
 
 ### Configuration properties
 
@@ -83,24 +82,22 @@ The detailed information on TimePicker configuration options can be found in the
 
 You can set initial value for TimePicker before initialization of the component via the [value](timepicker/api/timepicker_value_config.md) configuration option:
 
-~~~js {4}
-const timepicker = new dhx.Timepicker("timepicker_container", {
+```javascript
     controls: true,
     css: "dhx_widget--bordered",
     value: new Date,
 });
-~~~
+```
 
 If you need to set a specific value after initialization of TimePicker, use the [setValue()](timepicker/api/timepicker_setvalue_method.md) method:
 
-~~~js
-// set the value as a string
+```javascript
 timepicker.setValue("00:39");
 // set the value as a Date object
 timepicker.setValue(new Date('January 10, 2019 17:54:00'));
 // set the value as an array
 timepicker.setValue([6,20,"AM"]);
-~~~
+```
 
 ## Example
 
