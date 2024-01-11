@@ -1,0 +1,1 @@
+var file2_var = 'var file2'
